@@ -3,11 +3,6 @@ import { Geist } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import {Button, HStack, Stack} from "@chakra-ui/react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
 
 export default function Home() {
   return (
@@ -18,20 +13,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HStack wrap="wrap" gap="6">
-        <Button size="xs">Button (xs)</Button>
-        <Button size="sm">Button (sm)</Button>
-        <Button size="md">Button (md)</Button>
-        <Button size="lg">Button (lg)</Button>
-        <Button size="xl">Button (xl)</Button>
-        <Stack direction="row" gap="4" align="center">
-          <Button loading={false}>Click me</Button>
-          <Button loading loadingText="Saving...">
-            Click me
-          </Button>
-        </Stack>
+      <HStack wrap="wrap" gap="6" minH={'80vh'}>
+        Hell
       </HStack>
-
     </>
   );
 }
