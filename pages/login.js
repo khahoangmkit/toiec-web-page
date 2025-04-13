@@ -1,4 +1,4 @@
-import {Button, Flex, Heading, Stack, Wrap} from "@chakra-ui/react";
+import {Box, Button, Flex, Heading, Stack, Wrap} from "@chakra-ui/react";
 
 
 export default function Login() {
@@ -21,13 +21,16 @@ export default function Login() {
         rounded={'xl'}
         p={10}
         spacing={8}
+        minH={'160px'}
+        height={'200px'}
         align={'center'}>
         <Heading size="md">Đăng nhập để tiếp tục</Heading>
-
+          <Box paddingTop="3" />
         <Button
           colorScheme="gray"
           variant="outline"
           size="lg"
+          margin={'xl'}
           onClick={handleLogin}
         >
           Đăng nhập với Google
