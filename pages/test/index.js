@@ -9,9 +9,10 @@ import {
   HStack,
   VStack,
   Text,
+  Image,
   RadioGroup
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import data from "../../data/test-1.json";
 
 const groupByPart = (questions) => {
@@ -29,9 +30,16 @@ const mockData = groupByPart(data.questionsJson);
 export default function Page() {
   const [currentQuestion, setCurrentQuestion] = useState(mockData[0].questions[0]);
   const [answers, setAnswers] = useState({});
+  const audioRef = useRef(null);
 
   const handleAnswerChange = (value) => {
     setAnswers({ ...answers, [currentQuestion.index]: value.value});
+  };
+
+  const handleRewind = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 5);
+    }
   };
 
   return (
@@ -86,12 +94,30 @@ export default function Page() {
         <Heading size="md" mb={2}>Câu hỏi {currentQuestion.index}</Heading>
         {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
 
+        {currentQuestion.imgLink && (
+          <Box mb={6} textAlign="center">
+            <Image src={currentQuestion.imgLink} />
+          </Box>
+        )}
+
+        {currentQuestion.audioLink && (
+          <HStack spacing={4} mb={4} align="center">
+            <audio ref={audioRef} controls>
+              <source src={currentQuestion.audioLink} type="audio/mpeg" />
+              Trình duyệt của bạn không hỗ trợ audio.
+            </audio>
+            <Button size="sm" mt={2} onClick={handleRewind} colorScheme="gray">
+              ⏪ Lùi 5 giây
+            </Button>
+          </HStack>
+        )}
+
         <RadioGroup.Root
           onValueChange={(e) => handleAnswerChange(e)}
           value={answers[currentQuestion.index] || ""}
         >
           <VStack align="start" spacing={2}>
-            {(currentQuestion.answer || []).map((choice, index) => (
+            {(currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
               <RadioGroup.Item key={index} value={(index + 1)}>
                 <RadioGroup.ItemHiddenInput />
                 <RadioGroup.ItemIndicator />

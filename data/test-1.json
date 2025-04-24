@@ -12,8 +12,8 @@
       "index": 1,
       "correct": 1,
       "description": null,
-      "audioLink": null,
-      "imgLink": null,
+      "audioLink": "/data/ets_2024/p1_q1.mp3",
+      "imgLink": "/data/ets_2024/p1_q1.png",
       "answer": [],
       "explanation": "<p><strong style=\"color: rgb(230, 0, 0);\">(A) She's eating in a picnic area</strong></p><p>(B) She's waiting in line at a food truck</p><p>(C) She's wiping off a bench</p><p>(D) She's throwing away a plate</p>"
     },
