@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { Geist } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import {Button, HStack, Stack} from "@chakra-ui/react";
 
 

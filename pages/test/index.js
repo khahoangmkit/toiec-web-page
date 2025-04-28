@@ -10,10 +10,11 @@ import {
   VStack,
   Text,
   Image,
-  RadioGroup
+  RadioGroup, IconButton
 } from "@chakra-ui/react";
-import { useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import data from "../../data/test-1.json";
+import AudioCommon from "@/components/common/AudioCommon";
 
 const groupByPart = (questions) => {
   const grouped = {};
@@ -30,17 +31,23 @@ const mockData = groupByPart(data.questionsJson);
 export default function Page() {
   const [currentQuestion, setCurrentQuestion] = useState(mockData[0].questions[0]);
   const [answers, setAnswers] = useState({});
-  const audioRef = useRef(null);
 
   const handleAnswerChange = (value) => {
     setAnswers({ ...answers, [currentQuestion.index]: value.value});
   };
 
-  const handleRewind = () => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 5);
-    }
-  };
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue = ''; // Chrome yêu cầu returnValue, nội dung hiện tại các trình duyệt bỏ qua
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   return (
     <Flex
@@ -86,11 +93,12 @@ export default function Page() {
         boxShadow={'2xl'}
         bg='white'
         rounded={'xl'}
-        p={3}
+        p={4}
+        pl={10}
         w={'80%'}
         spacing={8}
         height={'100vh'}
-        align={'center'}>
+        align={'left'}>
         <Heading size="md" mb={2}>Câu hỏi {currentQuestion.index}</Heading>
         {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
 
@@ -101,15 +109,7 @@ export default function Page() {
         )}
 
         {currentQuestion.audioLink && (
-          <HStack spacing={4} mb={4} align="center">
-            <audio ref={audioRef} controls>
-              <source src={currentQuestion.audioLink} type="audio/mpeg" />
-              Trình duyệt của bạn không hỗ trợ audio.
-            </audio>
-            <Button size="sm" mt={2} onClick={handleRewind} colorScheme="gray">
-              ⏪ Lùi 5 giây
-            </Button>
-          </HStack>
+          <AudioCommon audioLink={currentQuestion.audioLink} />
         )}
 
         <RadioGroup.Root

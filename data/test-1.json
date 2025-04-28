@@ -74,11 +74,11 @@
     },
     {
       "type": "PART_2",
-      "passages": "<audio src=\"https://api.studytoeicmanhha.com/audios/1711939890399.Test_01-07.mp3\" controls=\"\" controlslist=\"nodownload\"></audio><p><br></p>",
+      "passages": "",
       "index": 7,
       "correct": 2,
       "description": null,
-      "audioLink": null,
+      "audioLink": "/data/ets_2024/Test_01-07.mp3",
       "imgLink": null,
       "answer": [],
       "explanation": "<p>How old is this building?</p><p>(A) To ship some materials</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) About ten years old</strong></p><p>(C) Company offices, i think</p>"
@@ -89,7 +89,7 @@
       "index": 8,
       "correct": 3,
       "description": null,
-      "audioLink": null,
+      "audioLink": "/data/ets_2024/Test_01-08.mp3",
       "imgLink": null,
       "answer": [],
       "explanation": "<p>Can you come to my jazz performance tonight?</p><p>(A) I'm sorry i was late for the meeting</p><p>(B) Mostly just local musicians</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Sure, I'll be there!</strong></p>"
