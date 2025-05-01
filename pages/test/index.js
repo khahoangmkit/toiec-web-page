@@ -36,6 +36,31 @@ export default function Page() {
     setAnswers({ ...answers, [currentQuestion.index]: value.value});
   };
 
+  const handleNext = () => {
+    const currentIndex = mockData.findIndex(part => part.questions.includes(currentQuestion));
+    const questionIndex = mockData[currentIndex].questions.indexOf(currentQuestion);
+    if (questionIndex < mockData[currentIndex].questions.length - 1) {
+      setCurrentQuestion(mockData[currentIndex].questions[questionIndex + 1]);
+    } else if (currentIndex < mockData.length - 1) {
+      setCurrentQuestion(mockData[currentIndex + 1].questions[0]);
+    }
+  };
+
+  const handlePrevious = () => {
+    const currentIndex = mockData.findIndex(part => part.questions.includes(currentQuestion));
+    const questionIndex = mockData[currentIndex].questions.indexOf(currentQuestion);
+    if (questionIndex > 0) {
+      setCurrentQuestion(mockData[currentIndex].questions[questionIndex - 1]);
+    } else if (currentIndex > 0) {
+      setCurrentQuestion(mockData[currentIndex - 1].questions[mockData[currentIndex - 1].questions.length - 1]);
+    }
+  };
+
+  const handleSubmit = () => {
+    // Implement submission logic here
+    console.log('Submitted answers:', answers);
+  };
+
   useEffect(() => {
     const handleBeforeUnload = (e) => {
       e.preventDefault();
@@ -75,8 +100,8 @@ export default function Page() {
                   <Button
                     key={q.index}
                     size="sm"
-                    variant={q.index === currentQuestion.index ? "solid" : "outline"}
-                    colorScheme="teal"
+                    variant={q.index === currentQuestion.index ? "solid" : (answers[q.index] ? "solid" : "outline") }
+                    colorPalette={q.index === currentQuestion.index || answers[q.index] ? "green" : "teal"}
                     onClick={() => setCurrentQuestion(q)}
                   >
                     {q.index}
@@ -98,35 +123,43 @@ export default function Page() {
         w={'80%'}
         spacing={8}
         height={'100vh'}
-        align={'left'}>
-        <Heading size="md" mb={2}>Câu hỏi {currentQuestion.index}</Heading>
-        {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
+        align={'left'}
+        divideY="2px">
+        <Stack direction="row" spacing={4} mt={4} mb={4}>
+          <Button onClick={handlePrevious} isDisabled={currentQuestion.index === 0}>Previous</Button>
+          <Button onClick={handleNext} isDisabled={currentQuestion.index === mockData[mockData.length - 1].questions[mockData[mockData.length - 1].questions.length - 1].index}>Next</Button>
+          <Button onClick={handleSubmit} colorScheme="blue">Submit</Button>
+        </Stack>
 
-        {currentQuestion.imgLink && (
-          <Box mb={6} textAlign="center">
-            <Image src={currentQuestion.imgLink} />
-          </Box>
-        )}
+        <Box pt={4}>
+          <Heading size="md" mb={2}>Câu hỏi {currentQuestion.index}</Heading>
+          {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
 
-        {currentQuestion.audioLink && (
-          <AudioCommon audioLink={currentQuestion.audioLink} />
-        )}
+          {currentQuestion.imgLink && (
+            <Box mb={6} textAlign="center">
+              <Image src={currentQuestion.imgLink} />
+            </Box>
+          )}
 
-        <RadioGroup.Root
-          onValueChange={(e) => handleAnswerChange(e)}
-          value={answers[currentQuestion.index] || ""}
-        >
-          <VStack align="start" spacing={2}>
-            {(currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
-              <RadioGroup.Item key={index} value={(index + 1)}>
-                <RadioGroup.ItemHiddenInput />
-                <RadioGroup.ItemIndicator />
-                <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
-              </RadioGroup.Item>
-            ))}
-          </VStack>
-        </RadioGroup.Root>
+          {currentQuestion.audioLink && (
+            <AudioCommon audioLink={currentQuestion.audioLink} />
+          )}
 
+          <RadioGroup.Root
+            onValueChange={(e) => handleAnswerChange(e)}
+            value={answers[currentQuestion.index] || ""}
+          >
+            <VStack align="start" spacing={2}>
+              {(currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
+                <RadioGroup.Item key={index} value={(index + 1)}>
+                  <RadioGroup.ItemHiddenInput />
+                  <RadioGroup.ItemIndicator />
+                  <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
+                </RadioGroup.Item>
+              ))}
+            </VStack>
+          </RadioGroup.Root>
+        </Box>
       </Stack>
     </Flex>
 
