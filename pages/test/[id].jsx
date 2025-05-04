@@ -11,9 +11,9 @@ import {
   RadioGroup, IconButton, Group
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import data from "../../data/test-1.json";
 import AudioCommon from "@/components/common/AudioCommon";
 import ActionHeaderTest from "@/components/common/ActionHeaderTest";
+import {useRouter} from "next/router";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
 
@@ -23,8 +23,6 @@ const groupByPartForSelectQuestion = (questions) => {
     const part = q.type || "UNKNOWN";
     if (!grouped[part]) grouped[part] = [];
     grouped[part].push(q);
-
-
   }
   return Object.entries(grouped).map(([part, qs]) => ({part, questions: qs}));
 };
@@ -54,18 +52,41 @@ const groupQuestions = (questions) => {
   return groups;
 };
 
-const groupedQuestions = groupQuestions(data.questionsJson);
-console.log("======cscs", groupedQuestions)
-
-const partForSelectQuestion = groupByPartForSelectQuestion(data.questionsJson);
-
 export default function Page() {
+  const router = useRouter();
+
   const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
   const [answers, setAnswers] = useState({});
-  const [currentQuestion, setCurrentQuestion] = useState(data.questionsJson[0]);
-  useEffect(() => {
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [groupedQuestions, setGroupedQuestions] = useState([]); // Sử dụng useState cho groupedQuestions
+  const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
+  const [listQuestion, setListQuestion] = useState([]);
 
-    const selectedQuestion = data.questionsJson[currentIndexQuestion - 1];
+
+  useEffect(() => {
+    if (!router.query.id) {
+      return;
+    }
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    fetch(`${apiUrl}/api/test/${router.query.id}`)
+      .then((response) => response.json())
+      .then( res => {
+        const data = res.data;
+        setGroupedQuestions(groupQuestions(data.questionsJson));
+        setPartForSelectQuestion(groupByPartForSelectQuestion(data.questionsJson));
+        setListQuestion(data.questionsJson)
+        setCurrentQuestion(data.questionsJson[0]);
+      })
+      .catch(err => {
+        console.log(err, "error")})
+  }, [router.query.id]);
+
+
+  useEffect(() => {
+    const selectedQuestion = listQuestion[currentIndexQuestion - 1];
+    if (!selectedQuestion) {
+      return;
+    }
 
     const isGroupQuestion = !singleQuestion.includes(selectedQuestion.type);  // Kiểm tra là câu hỏi nhóm
 
@@ -83,10 +104,9 @@ export default function Page() {
     } else {
       setCurrentQuestion(selectedQuestion); // Nếu không phải câu hỏi nhóm, chỉ hiển thị câu hỏi đơn
     }
-  }, [currentIndexQuestion]);
+  }, [currentIndexQuestion, listQuestion]);
 
   const handleAnswerChange = (value, indexQuestion) => {
-    console.log(indexQuestion, '====', value)
     setAnswers({...answers, [indexQuestion]: value.value});
   };
 
@@ -187,7 +207,7 @@ export default function Page() {
           />
         </Stack>
 
-        <Box pt={4}>
+        { currentQuestion && <Box pt={4}>
           {
             singleQuestion.includes(currentQuestion.type) && (
               <>
@@ -261,6 +281,7 @@ export default function Page() {
             )
           }
         </Box>
+        }
       </Stack>
     </Flex>
   );
