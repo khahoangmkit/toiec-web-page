@@ -14,6 +14,7 @@ import {useEffect, useState} from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import ActionHeaderTest from "@/components/common/ActionHeaderTest";
 import {useRouter} from "next/router";
+import {Constant} from "@/constants";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
 
@@ -123,7 +124,8 @@ export default function Page() {
   };
 
   const handleSubmit = () => {
-
+    localStorage.setItem(`${router.query.id}-${Constant.RESULT}`, JSON.stringify(answers));
+    router.push(`/result/${router.query.id}`);
     console.log('Submitted answers:', answers);
   };
 
