@@ -17,27 +17,25 @@ import ActionHeaderTest from "@/components/common/ActionHeaderTest";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
 
-const groupByPart = (questions) => {
+const groupByPartForSelectQuestion = (questions) => {
   const grouped = {};
   for (const q of questions) {
     const part = q.type || "UNKNOWN";
-    if (singleQuestion.includes(part)) {
-      if (!grouped[part]) grouped[part] = [];
-      grouped[part].push(q);
-    }
+    if (!grouped[part]) grouped[part] = [];
+    grouped[part].push(q);
 
 
   }
-  console.log("group question: ", grouped)
   return Object.entries(grouped).map(([part, qs]) => ({part, questions: qs}));
 };
 
 const groupQuestions = (questions) => {
   const groups = [];
   let currentGroup = [];
+  let currentType = '';
 
   questions.forEach((q) => {
-    if (q.audioLink) {
+    if (q.audioLink || q.imgLink || currentType !== q.type) {
       if (currentGroup.length) {
         groups.push(currentGroup);
       }
@@ -45,6 +43,8 @@ const groupQuestions = (questions) => {
     } else {
       currentGroup.push(q);
     }
+
+    currentType = q.type;
   });
 
   if (currentGroup.length) {
@@ -57,27 +57,41 @@ const groupQuestions = (questions) => {
 const groupedQuestions = groupQuestions(data.questionsJson);
 console.log("======cscs", groupedQuestions)
 
-const mockData = groupByPart(data.questionsJson);
+const partForSelectQuestion = groupByPartForSelectQuestion(data.questionsJson);
 
 export default function Page() {
   const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
   const [answers, setAnswers] = useState({});
-  const  [currentQuestion, setCurrentQuestion] = useState(data.questionsJson[0]);
+  const [currentQuestion, setCurrentQuestion] = useState(data.questionsJson[0]);
   useEffect(() => {
-    console.log(mockData, "======mockData")
-    const question = data.questionsJson[currentIndexQuestion-1];
 
-    setCurrentQuestion(question);
+    const selectedQuestion = data.questionsJson[currentIndexQuestion - 1];
 
+    const isGroupQuestion = !singleQuestion.includes(selectedQuestion.type);  // Kiểm tra là câu hỏi nhóm
 
+    if (isGroupQuestion) {
+      // Tìm nhóm câu hỏi hiện tại
+      const group = groupedQuestions.find(g => g.some(q => q.index === selectedQuestion.index));
+      const firstQuestion = group[0];
+      const groupQuestions = group.map(q => q); // Lấy tất cả câu hỏi trong nhóm
+
+      setCurrentQuestion({
+        audioLink: firstQuestion.audioLink,
+        imgLink: firstQuestion.imgLink,
+        questions: groupQuestions
+      })
+    } else {
+      setCurrentQuestion(selectedQuestion); // Nếu không phải câu hỏi nhóm, chỉ hiển thị câu hỏi đơn
+    }
   }, [currentIndexQuestion]);
 
-  const handleAnswerChange = (value) => {
-    setAnswers({...answers, [currentIndexQuestion]: value.value});
+  const handleAnswerChange = (value, indexQuestion) => {
+    console.log(indexQuestion, '====', value)
+    setAnswers({...answers, [indexQuestion]: value.value});
   };
 
   const handleNext = () => {
-    if (currentIndexQuestion <  data.questionsJson.length - 1) {
+    if (currentIndexQuestion < data.questionsJson.length - 1) {
       setCurrentIndexQuestion(currentIndexQuestion + 1);
     }
   };
@@ -128,9 +142,9 @@ export default function Page() {
         spacing={8}
         height={'100vh'}
         align={'center'}>
-        <Heading size="md" mb={4}>Câu hỏi</Heading>
+        <Heading size="md" mb={4}>List question</Heading>
         <VStack align="stretch" spacing={4} overflowY={'scroll'}>
-          {mockData.map((partGroup, idx) => (
+          {partForSelectQuestion.map((partGroup, idx) => (
             <Box key={idx} pt={'6px'}>
               <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
               <HStack wrap="wrap" spacing={2}>
@@ -169,7 +183,7 @@ export default function Page() {
             handlePrevious={handlePrevious}
             handleNext={handleNext}
             handleSubmit={handleSubmit}
-            mockData={mockData}
+            mockData={partForSelectQuestion}
           />
         </Stack>
 
@@ -191,7 +205,7 @@ export default function Page() {
                 )}
 
                 <RadioGroup.Root
-                  onValueChange={(e) => handleAnswerChange(e)}
+                  onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
                   value={answers[currentQuestion.index] || ""}
                 >
                   <VStack align="start" spacing={2}>
@@ -207,10 +221,48 @@ export default function Page() {
               </>
             )
           }
+
+          {
+            (!singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
+              <>
+                {currentQuestion.imgLink && (
+                  <Box mb={6} textAlign="center">
+                    <Image src={currentQuestion.imgLink}/>
+                  </Box>
+                )}
+
+                {currentQuestion.audioLink && (
+                  <AudioCommon audioLink={currentQuestion.audioLink}/>
+                )}
+
+                {
+                  currentQuestion.questions.map((question, indexQuestion) => (
+                    <Box key={`question-${indexQuestion}`}>
+                      <Heading size="md" mt={4} mb={2}>Question {question.index}: {question.description && question.description}</Heading>
+
+                      <RadioGroup.Root
+                        onValueChange={(e) => handleAnswerChange(e, question.index)}
+                        value={answers[question.index] || ""}
+                      >
+                        <VStack align="start" spacing={2}>
+                          {(question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
+                            <RadioGroup.Item key={index} value={(index + 1)}>
+                              <RadioGroup.ItemHiddenInput/>
+                              <RadioGroup.ItemIndicator/>
+                              <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
+                            </RadioGroup.Item>
+                          ))}
+                        </VStack>
+                      </RadioGroup.Root>
+                    </Box>
+                  ))
+                }
+              </>
+            )
+          }
         </Box>
       </Stack>
     </Flex>
-
   );
 
 }

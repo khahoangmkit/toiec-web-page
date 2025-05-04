@@ -1,10 +1,7 @@
 'use client'
 
 import {
-  Box, Button,
-  Flex, HStack, Icon,
-  Menu,
-  Image,
+  Box, HStack, Image,
 } from '@chakra-ui/react'
 import React, {useRef} from "react";
 import {RewindIcon} from "@/components/icon/RewindIcon";
@@ -36,7 +33,7 @@ export default function AudioCommon({ audioLink }) {
         <Image src="/icons/rewind-5-forward.svg" alt="Rewind 5s" boxSize="30px" />
       </Box>
 
-      <audio key={audioLink} ref={audioRef} controls>
+      <audio autoPlay key={audioLink} ref={audioRef} controls>
         <source
           src={audioLink}
           type="audio/mpeg" />

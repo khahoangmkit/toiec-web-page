@@ -12,22 +12,27 @@ export default function ActionHeaderTest({handlePrevious, handleNext, handleSubm
     setOpen(true);
   }
 
+  const confirmSubmitTest = () => {
+    handleSubmit();
+    setOpen(false);
+  }
+
   return (
     <>
       <Flex
         width="100%"
         justifyContent="space-between">
         <Group>
-          <Button onClick={handlePrevious}>Previous</Button>
-          <Button onClick={handleNext}>Next</Button>
+          {/*<Button onClick={handlePrevious}>Previous</Button>*/}
+          {/*<Button onClick={handleNext}>Next</Button>*/}
           <Button onClick={showDialogConfirm} colorPalette="blue">Submit</Button>
         </Group>
 
         <Box>
-          <ButtonTimerGroup
-            initialTime={10}
-            onTimeUp={handleSubmit}
-          />
+          {/*<ButtonTimerGroup*/}
+          {/*  initialTime={10}*/}
+          {/*  onTimeUp={handleSubmit}*/}
+          {/*/>*/}
         </Box>
       </Flex>
 
@@ -43,7 +48,7 @@ export default function ActionHeaderTest({handlePrevious, handleNext, handleSubm
           <Dialog.Positioner>
             <Dialog.Content>
               <Dialog.Header>
-                <Dialog.Title>Sumbit test</Dialog.Title>
+                <Dialog.Title>Submit test</Dialog.Title>
               </Dialog.Header>
               <Dialog.Body>
                 <p>
@@ -54,7 +59,7 @@ export default function ActionHeaderTest({handlePrevious, handleNext, handleSubm
                 <Dialog.ActionTrigger asChild>
                   <Button variant="outline">Cancel</Button>
                 </Dialog.ActionTrigger>
-                <Button onClick={handleSubmit}>Save</Button>
+                <Button onClick={confirmSubmitTest}>Submit</Button>
               </Dialog.Footer>
               <Dialog.CloseTrigger asChild>
                 <CloseButton size="sm" />
