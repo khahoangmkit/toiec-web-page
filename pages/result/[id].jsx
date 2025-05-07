@@ -166,8 +166,8 @@ export default function ResultPage() {
 
         <Heading> Kết quả đề thi: {dataExam?.name}</Heading>
 
-        <Flex direction="column" align="left" justify="center" p={6}>
-          <Box mb={4}>
+        <Flex direction="column" align="left" justify="center" >
+          <Box mb={2}>
             {/*<Text fontSize="xl" fontWeight="bold">Kết quả bài thi</Text>*/}
             <Text py={1}>{`Câu đúng: ${testResults.correct}`} - {`Listening: ${testResults.correctListen} `} - {`Reading: ${testResults.correctRead} `}</Text>
             <Text py={1}>{`Câu sai: ${testResults.incorrect}`}</Text>
@@ -195,12 +195,20 @@ export default function ResultPage() {
                 <Box pt={0} p={8}>
                   <Flex gap="4" wrap="wrap" justify={'start'}>
                     {groupedQuestions[part].map((q) => (
-                      <Box p="4" spaceY="2" key={q.index} width={{base: '100%', md: '30%'}} mb={4}>
+                      <Box p="1" key={q.index} mb={1}>
                         <HStack gap="1">
                           <Text
                             textStyle="md">{q.index} - {getAnswer(q.correct)} :</Text>
                           <Text style={{color: result[q.index] === q.correct ? '#2ecc71' : '#e74c3c'}}>{result[q.index] ? getAnswer(result[q.index]) : "Chưa trả lời"} </Text>
-                          <Text style={{cursor: 'pointer', color: '#2563eb'}} onClick={() => viewDetailQuestion(q)}>[detail]</Text>
+                          {
+                            result[q.index] === q.correct ? (
+                                <Image src="/icons/correct.svg" alt="correct-icon" boxSize="12px" />
+                            ) : (
+                                <Image src="/icons/wrong.svg" alt="wrong-icon" boxSize="12px" />
+                            )
+                          }
+                          <Image style={{cursor: 'pointer'}} onClick={() => viewDetailQuestion(q)} src="/icons/open-external.svg" alt="open-extenal-icon" boxSize="16px" />
+                          {/*<Text style={{cursor: 'pointer', color: '#2563eb'}} >[detail]</Text>*/}
                         </HStack>
                       </Box>
                     ))}

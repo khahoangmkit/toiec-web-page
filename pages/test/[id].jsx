@@ -112,7 +112,7 @@ export default function Page() {
   };
 
   const handleNext = () => {
-    if (currentIndexQuestion < data.questionsJson.length - 1) {
+    if (currentIndexQuestion < listQuestion.length) {
       setCurrentIndexQuestion(currentIndexQuestion + 1);
     }
   };
@@ -180,6 +180,7 @@ export default function Page() {
                   >
                     {q.index}
                   </Button>
+
                 ))}
               </HStack>
             </Box>
@@ -209,56 +210,73 @@ export default function Page() {
           />
         </Stack>
 
-        { currentQuestion && <Box pt={4}>
+        {/*<Stack overflowY={'scroll'}>*/}
+        { currentQuestion && <Box pt={4} height='100%'>
           {
             singleQuestion.includes(currentQuestion.type) && (
               <>
-                <Heading size="md" mb={2}>Question {currentQuestion.index}</Heading>
-                {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
+                <Flex height='100%' direction="row" gap={8}>
+                  {/* Cột 1: Ảnh và audio */}
+                  <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
 
-                {currentQuestion.imgLink && (
-                  <Box mb={6} textAlign="center">
-                    <Image src={currentQuestion.imgLink}/>
+                    {currentQuestion.audioLink && (
+                      <AudioCommon audioLink={currentQuestion.audioLink}/>
+                    )}
+
+                    {currentQuestion.imgLink && (
+                      <Box mb={6} textAlign="center">
+                        <Image src={currentQuestion.imgLink}/>
+                      </Box>
+                    )}
+
                   </Box>
-                )}
 
-                {currentQuestion.audioLink && (
-                  <AudioCommon audioLink={currentQuestion.audioLink}/>
-                )}
+                  {/* Cột 2: Câu hỏi */}
+                  <Box flex={1}>
+                    <Heading size="md" mb={2}>Question {currentQuestion.index}</Heading>
+                    {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
 
-                <RadioGroup.Root
-                  onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
-                  value={answers[currentQuestion.index] || ""}
-                >
-                  <VStack align="start" spacing={2}>
-                    {(currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
-                      <RadioGroup.Item key={index} value={(index + 1)}>
-                        <RadioGroup.ItemHiddenInput/>
-                        <RadioGroup.ItemIndicator/>
-                        <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
-                      </RadioGroup.Item>
-                    ))}
-                  </VStack>
-                </RadioGroup.Root>
+                    <RadioGroup.Root
+                      onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
+                      value={answers[currentQuestion.index] || ""}
+                    >
+                      <VStack align="start" spacing={2}>
+                        {(currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
+                          <RadioGroup.Item key={index} value={(index + 1)}>
+                            <RadioGroup.ItemHiddenInput/>
+                            <RadioGroup.ItemIndicator/>
+                            <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
+                          </RadioGroup.Item>
+                        ))}
+                      </VStack>
+                    </RadioGroup.Root>
+                  </Box>
+                </Flex>
               </>
             )
           }
 
           {
             (!singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
-              <>
-                {currentQuestion.imgLink && (
-                  <Box mb={6} textAlign="center">
-                    <Image src={currentQuestion.imgLink}/>
-                  </Box>
-                )}
+              <Flex direction="row"  height='100%' gap={8} >
+                {/* Cột 1: Ảnh và audio */}
+                <Box  overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
 
-                {currentQuestion.audioLink && (
-                  <AudioCommon audioLink={currentQuestion.audioLink}/>
-                )}
+                  {currentQuestion.audioLink && (
+                    <AudioCommon audioLink={currentQuestion.audioLink}/>
+                  )}
 
-                {
-                  currentQuestion.questions.map((question, indexQuestion) => (
+                  {currentQuestion.imgLink && (
+                    <Box mb={6} textAlign="center">
+                      <Image src={currentQuestion.imgLink}/>
+                    </Box>
+                  )}
+
+                </Box>
+
+                {/* Cột 2: Câu hỏi */}
+                <Box flex={1}>
+                  {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
                       <Heading size="md" mt={4} mb={2}>Question {question.index}: {question.description && question.description}</Heading>
 
@@ -277,13 +295,14 @@ export default function Page() {
                         </VStack>
                       </RadioGroup.Root>
                     </Box>
-                  ))
-                }
-              </>
+                  ))}
+                </Box>
+              </Flex>
             )
           }
         </Box>
         }
+        {/*</Stack>*/}
       </Stack>
     </Flex>
   );
