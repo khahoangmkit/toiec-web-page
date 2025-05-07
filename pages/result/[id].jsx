@@ -28,7 +28,7 @@ const groupByPart = (questions) => {
   });
   return grouped;
 };
-
+const ListenPart = ['PART_1', 'PART_2', 'PART_3', 'PART_4' ]
 export default function ResultPage() {
   const router = useRouter();
   const [result, setResult] = useState(null);
@@ -39,6 +39,8 @@ export default function ResultPage() {
   const [openDialog, setOpenDialog] = useState(false);
   const [testResults, setTestResults] = useState({
     correct: 0,
+    correctListen: 0,
+    correctRead: 0,
     incorrect: 0,
     skipped: 0,
     totalQuestions: 0,
@@ -72,6 +74,8 @@ export default function ResultPage() {
 
         const results = {
           correct: 0,
+          correctListen: 0,
+          correctRead: 0,
           incorrect: 0,
           skipped: 0,
           totalQuestions: data.questionsJson.length,
@@ -84,6 +88,8 @@ export default function ResultPage() {
           if (userAnswer) {
             if (userAnswer === question.correct) {
               results.correct += 1;
+              //  check question correct type
+              ListenPart.includes(question.type) ? results.correctListen += 1 :  results.correctRead += 1;
             } else {
               results.incorrect += 1;
             }
@@ -122,6 +128,38 @@ export default function ResultPage() {
 
   }
 
+  // Hàm lấy audioLink và imgLink cho các PART cần gom nhóm (chia nhóm liên tiếp, lấy media đầu nhóm)
+  function getGroupMediaForParts(question) {
+    const groupParts = ["PART_3", "PART_4", "PART_6", "PART_7"];
+    if (question && groupParts.includes(question.type) && groupedQuestions[question.type]) {
+      const partQuestions = groupedQuestions[question.type];
+      // Chia thành các nhóm liên tiếp dựa vào audioLink hoặc imgLink
+      let groups = [];
+      let currentGroup = [];
+      for (let q of partQuestions) {
+        if (q.audioLink || q.imgLink) {
+          if (currentGroup.length) groups.push(currentGroup);
+          currentGroup = [q];
+        } else {
+          currentGroup.push(q);
+        }
+      }
+      if (currentGroup.length) groups.push(currentGroup);
+      // Tìm nhóm chứa câu hiện tại
+      const group = groups.find(g => g.some(q => q.index === question.index));
+      if (group && group.length) {
+        return {
+          audioLink: group[0].audioLink || null,
+          imgLink: group[0].imgLink || null
+        };
+      }
+    }
+    return {
+      audioLink: question ? question.audioLink : null,
+      imgLink: question ? question.imgLink : null
+    };
+  }
+
   return (
     <Box p={8}>
       <Stack boxShadow="2xl" bg="white" rounded="xl" p={4} spacing={8} width="100%" align="left">
@@ -131,7 +169,7 @@ export default function ResultPage() {
         <Flex direction="column" align="left" justify="center" p={6}>
           <Box mb={4}>
             {/*<Text fontSize="xl" fontWeight="bold">Kết quả bài thi</Text>*/}
-            <Text py={1}>{`Câu đúng: ${testResults.correct}`}</Text>
+            <Text py={1}>{`Câu đúng: ${testResults.correct}`} - {`Listening: ${testResults.correctListen} `} - {`Reading: ${testResults.correctRead} `}</Text>
             <Text py={1}>{`Câu sai: ${testResults.incorrect}`}</Text>
             <Text py={1}>{`Câu hỏi bỏ qua: ${testResults.skipped}`}</Text>
             <Text py={1}>{`Tổng số câu hỏi: ${testResults.totalQuestions}`}</Text>
@@ -203,18 +241,22 @@ export default function ResultPage() {
                     <Box mt={3} p={2} bg="yellow.50" borderRadius="md">
                       <>
                         {/*<Heading size="md" mb={2}>Question {currentQuestion.index}</Heading>*/}
-                        {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
-
-                        {currentQuestion.imgLink && (
-                          <Box mb={6} textAlign="center">
-                            <Image src={currentQuestion.imgLink}/>
-                          </Box>
-                        )}
-
-                        {currentQuestion.audioLink && (
-                          <AudioCommon audioLink={currentQuestion.audioLink}/>
-                        )}
-
+                        {(() => {
+                          const media = getGroupMediaForParts(currentQuestion);
+                          return (
+                            <>
+                              {media.imgLink && (
+                                <Box mb={6} textAlign="center">
+                                  <Image src={media.imgLink}/>
+                                </Box>
+                              )}
+                              {media.audioLink && (
+                                <AudioCommon audioLink={media.audioLink}/>
+                              )}
+                            </>
+                          );
+                        })()}
+                        {currentQuestion.description && <Text mb={2} fontWeight='bold'>{currentQuestion.description}</Text>}
                         <RadioGroup.Root
                           onValueChange={() => null}
                           value={result[currentQuestion.index] || ""}
