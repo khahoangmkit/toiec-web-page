@@ -260,7 +260,7 @@ export default function Page() {
             (!singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
               <Flex direction="row"  height='100%' gap={8} >
                 {/* Cột 1: Ảnh và audio */}
-                <Box  overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
+                <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
 
                   {currentQuestion.audioLink && (
                     <AudioCommon audioLink={currentQuestion.audioLink}/>
