@@ -4,7 +4,6 @@ import {
   Box, HStack, Image,
 } from '@chakra-ui/react'
 import React, {useRef} from "react";
-import {RewindIcon} from "@/components/icon/RewindIcon";
 
 
 export default function AudioCommon({ audioLink }) {
@@ -39,9 +38,6 @@ export default function AudioCommon({ audioLink }) {
           type="audio/mpeg" />
         Trình duyệt của bạn không hỗ trợ audio.
       </audio>
-
-
-      <RewindIcon />
     </HStack>
   )
 }
