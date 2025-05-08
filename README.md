@@ -1,40 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# TOIEC Web Page - Triển khai trên server Ubuntu
 
-## Getting Started
+Đây là dự án [Next.js](https://nextjs.org) sử dụng PostgreSQL và Prisma. Dưới đây là hướng dẫn chi tiết để triển khai ứng dụng trên máy chủ Ubuntu.
 
-First, run the development server:
+---
+
+## 1. Cài đặt Node.js và npm
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+sudo apt update
+sudo apt install -y nodejs npm
+node -v   # kiểm tra version, nên >= 18
+npm -v
+```
+Nếu version Node.js thấp, nên cài Node.js mới từ NodeSource:
+```bash
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/[id].jsx`. The page auto-updates as you edit the file.
+## 2. Cài đặt PostgreSQL
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+sudo apt install -y postgresql postgresql-contrib
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Tạo database và user
+```bash
+sudo -u postgres psql
+```
+Trong giao diện psql:
+```sql
+CREATE DATABASE toiecdb;
+CREATE USER toiecuser WITH PASSWORD 'yourpassword';
+GRANT ALL PRIVILEGES ON DATABASE toiecdb TO toiecuser;
+\q
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Cập nhật biến môi trường
+Chỉnh file `.env` hoặc `.env.local`:
+```
+DATABASE_URL="postgresql://toiecuser:yourpassword@localhost:5432/toiecdb"
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 3. Clone mã nguồn và cài dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+```bash
+git clone <link-repo-cua-ban>
+cd toiec-web-page
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy file `.env.local` từ máy local lên server (nếu có) và chỉnh sửa cho phù hợp.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 4. Build và migrate database
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```bash
+npm run build
+npx prisma migrate deploy
+```
+Hoặc nếu lần đầu:
+```bash
+npx prisma migrate dev
+```
+
+---
+
+## 5. Chạy ứng dụng production
+
+```bash
+npm start
+```
+Mặc định app chạy ở cổng 3000: http://<ip-server>:3000
+
+---
+
+## 6. (Khuyến nghị) Chạy nền bằng PM2
+
+```bash
+npm install -g pm2
+pm2 start npm --name "toiec-web-page" -- start
+pm2 save
+pm2 startup
+```
+
+---
+
+## 7. Troubleshooting
+- Kiểm tra biến môi trường, đặc biệt là `DATABASE_URL`.
+- Kiểm tra quyền truy cập database.
+- Xem log bằng `pm2 logs` hoặc kiểm tra lỗi khi chạy `npm start`.
+
+---
+
+## Tham khảo
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Prisma Documentation](https://www.prisma.io/docs)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+
+---
+
+Nếu gặp lỗi hoặc cần hỗ trợ, hãy gửi log hoặc mô tả lỗi để được trợ giúp!
