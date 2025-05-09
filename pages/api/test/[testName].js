@@ -1,6 +1,8 @@
 import fs from 'fs';
+import cors from '../../../lib/cors';
 
 export default async function handler(req, res) {
+  await cors(req, res)
   const { testName } = req.query;
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
