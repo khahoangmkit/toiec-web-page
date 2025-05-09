@@ -32,7 +32,7 @@ export default function AudioCommon({ audioLink }) {
         <Image src="/icons/rewind-5-forward.svg" alt="Rewind 5s" boxSize="30px" />
       </Box>
 
-      <audio autoPlay key={audioLink} ref={audioRef} controls>
+      <audio autoPlay key={audioLink} ref={audioRef} controls controlsList="nodownload">
         <source
           src={audioLink}
           type="audio/mpeg" />
