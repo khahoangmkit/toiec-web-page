@@ -6,7 +6,7 @@ import {
 import React, {useRef} from "react";
 
 
-export default function AudioCommon({ audioLink }) {
+export default function AudioCommon({ audioLink, onNextQuestion }) {
 
   const audioRef = useRef(null);
 
@@ -27,12 +27,22 @@ export default function AudioCommon({ audioLink }) {
         <Image src="/icons/rewind-5.svg" alt="Rewind 5s" boxSize="30px" />
       </Box>
 
-
       <Box style={{cursor: "pointer"}} onClick={handleRewindNext}>
         <Image src="/icons/rewind-5-forward.svg" alt="Rewind 5s" boxSize="30px" />
       </Box>
 
-      <audio autoPlay key={audioLink} ref={audioRef} controls controlsList="nodownload">
+      <audio
+        autoPlay
+        key={audioLink}
+        ref={audioRef}
+        controls
+        controlsList="nodownload"
+        onEnded={() => {
+          if (typeof onNextQuestion === 'function') {
+            onNextQuestion();
+          }
+        }}
+      >
         <source
           src={audioLink}
           type="audio/mpeg" />

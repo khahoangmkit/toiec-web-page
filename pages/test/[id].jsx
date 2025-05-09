@@ -98,6 +98,7 @@ export default function Page() {
       const groupQuestions = group.map(q => q); // Lấy tất cả câu hỏi trong nhóm
 
       setCurrentQuestion({
+        type: firstQuestion.type,
         audioLink: firstQuestion.audioLink,
         imgLink: firstQuestion.imgLink,
         questions: groupQuestions
@@ -145,7 +146,24 @@ export default function Page() {
   // }, []);
 
   const handleTimeUp = () => {
-    alert("hello ads")
+    alert("time up")
+  }
+
+  function nextQuestion(question) {
+    if (!question) return;
+    if (singleQuestion.includes(question.type)) {
+      const idx = listQuestion.findIndex(q => q.index === question.index);
+      if (idx === -1) return;
+      // Câu đơn: sang câu tiếp theo
+      if (idx < listQuestion.length - 1) {
+        setCurrentIndexQuestion(listQuestion[idx + 1].index);
+      }
+    } else {
+      if (question.questions.length) {
+        const lastQuestionInGroup = question.questions[question.questions.length - 1];
+        setCurrentIndexQuestion(lastQuestionInGroup.index + 1)
+      }
+    }
   }
 
   return (
@@ -220,7 +238,7 @@ export default function Page() {
                   <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
 
                     {currentQuestion.audioLink && (
-                      <AudioCommon audioLink={currentQuestion.audioLink}/>
+                      <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)} audioLink={currentQuestion.audioLink}/>
                     )}
 
                     {currentQuestion.imgLink && (
@@ -263,7 +281,7 @@ export default function Page() {
                 <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
 
                   {currentQuestion.audioLink && (
-                    <AudioCommon audioLink={currentQuestion.audioLink}/>
+                    <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)} audioLink={currentQuestion.audioLink}/>
                   )}
 
                   {currentQuestion.imgLink && (
