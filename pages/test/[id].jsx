@@ -8,7 +8,7 @@ import {
   VStack,
   Text,
   Image,
-  RadioGroup, IconButton, Group
+  RadioGroup
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
 import AudioCommon from "@/components/common/AudioCommon";
@@ -17,6 +17,7 @@ import {useRouter} from "next/router";
 import {Constant} from "@/constants";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
+const ListenQuestion = ["PART_1", "PART_2","PART_3", "PART_4"]
 
 const groupByPartForSelectQuestion = (questions) => {
   const grouped = {};
@@ -62,6 +63,7 @@ export default function Page() {
   const [groupedQuestions, setGroupedQuestions] = useState([]); // Sử dụng useState cho groupedQuestions
   const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
   const [listQuestion, setListQuestion] = useState([]);
+  const [timer, setTimer] = useState(7200);
 
 
   useEffect(() => {
@@ -189,10 +191,8 @@ export default function Page() {
         <Stack width={'100%'} direction="row" spacing={4} mt={4} mb={4}>
           <ActionHeaderTest
             currentQuestion={currentQuestion}
-            handlePrevious={handlePrevious}
-            handleNext={handleNext}
+            totalTime={timer}
             handleSubmit={handleSubmit}
-            mockData={partForSelectQuestion}
           />
         </Stack>
 
@@ -322,6 +322,7 @@ export default function Page() {
                     key={q.index}
                     minW='46px'
                     size="sm"
+                    disabled={ListenQuestion.includes(q.type)}
                     variant={q.index === currentIndexQuestion ? "solid" : (answers[q.index] ? "solid" : "outline")}
                     colorPalette={q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal"}
                     onClick={() => setCurrentIndexQuestion(q.index)}
