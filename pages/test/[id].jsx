@@ -71,7 +71,7 @@ export default function Page() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     fetch(`${apiUrl}/api/test/${router.query.id}`)
       .then((response) => response.json())
-      .then( res => {
+      .then(res => {
         const data = res.data;
         setGroupedQuestions(groupQuestions(data.questionsJson));
         setPartForSelectQuestion(groupByPartForSelectQuestion(data.questionsJson));
@@ -79,7 +79,8 @@ export default function Page() {
         setCurrentQuestion(data.questionsJson[0]);
       })
       .catch(err => {
-        console.log(err, "error")})
+        console.log(err, "error")
+      })
   }, [router.query.id]);
 
 
@@ -173,39 +174,6 @@ export default function Page() {
       justify={'space-around'}
       py={4}
       bg='gray.50'>
-      <Stack
-        boxShadow={'2xl'}
-        bg='white'
-        rounded={'xl'}
-        p={3}
-        w={'18%'}
-        spacing={8}
-        height={'100vh'}
-        align={'center'}>
-        <Heading size="md" mb={4}>List question</Heading>
-        <VStack align="stretch" spacing={4} overflowY={'scroll'}>
-          {partForSelectQuestion.map((partGroup, idx) => (
-            <Box key={idx} pt={'6px'}>
-              <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
-              <HStack wrap="wrap" spacing={2}>
-                {partGroup.questions.map((q) => (
-                  <Button
-                    key={q.index}
-                    size="sm"
-                    variant={q.index === currentIndexQuestion ? "solid" : (answers[q.index] ? "solid" : "outline")}
-                    colorPalette={q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal"}
-                    onClick={() => setCurrentIndexQuestion(q.index)}
-                  >
-                    {q.index}
-                  </Button>
-
-                ))}
-              </HStack>
-            </Box>
-          ))}
-        </VStack>
-      </Stack>
-
 
       <Stack
         boxShadow={'2xl'}
@@ -229,25 +197,31 @@ export default function Page() {
         </Stack>
 
         {/*<Stack overflowY={'scroll'}>*/}
-        { currentQuestion && <Box pt={4} height='100%'>
+        {currentQuestion && <Box pt={4} height='100%'>
           {
             singleQuestion.includes(currentQuestion.type) && (
               <>
                 <Flex height='100%' direction="row" gap={8}>
-                  {/* Cột 1: Ảnh và audio */}
-                  <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
+                  {/* Cột 1: Ảnh và audio  trừ part 5 ko chia */}
+                  {
+                    currentQuestion.type !== "PART_5" &&
+                    <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}
+                         bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center"
+                         justifyContent="flex-start">
 
-                    {currentQuestion.audioLink && (
-                      <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)} audioLink={currentQuestion.audioLink}/>
-                    )}
+                      {currentQuestion.audioLink && (
+                        <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
+                                     audioLink={currentQuestion.audioLink}/>
+                      )}
 
-                    {currentQuestion.imgLink && (
-                      <Box mb={6} textAlign="center">
-                        <Image src={currentQuestion.imgLink}/>
-                      </Box>
-                    )}
+                      {currentQuestion.imgLink && (
+                        <Box mb={6} textAlign="center">
+                          <Image src={currentQuestion.imgLink}/>
+                        </Box>
+                      )}
 
-                  </Box>
+                    </Box>
+                  }
 
                   {/* Cột 2: Câu hỏi */}
                   <Box flex={1}>
@@ -276,12 +250,15 @@ export default function Page() {
 
           {
             (!singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
-              <Flex direction="row"  height='100%' gap={8} >
+              <Flex direction="row" height='100%' gap={8}>
                 {/* Cột 1: Ảnh và audio */}
-                <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}  bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start">
+                <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%'
+                     style={{maxHeight: 'calc(100% - 80px)'}} bg="gray.100" p={6} borderRadius="md" display="flex"
+                     flexDirection="column" alignItems="center" justifyContent="flex-start">
 
                   {currentQuestion.audioLink && (
-                    <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)} audioLink={currentQuestion.audioLink}/>
+                    <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
+                                 audioLink={currentQuestion.audioLink}/>
                   )}
 
                   {currentQuestion.imgLink && (
@@ -296,7 +273,8 @@ export default function Page() {
                 <Box flex={1}>
                   {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
-                      <Heading size="md" mt={4} mb={2}>Question {question.index}: {question.description && question.description}</Heading>
+                      <Heading size="md" mt={4}
+                               mb={2}>Question {question.index}: {question.description && question.description}</Heading>
 
                       <RadioGroup.Root
                         onValueChange={(e) => handleAnswerChange(e, question.index)}
@@ -321,6 +299,41 @@ export default function Page() {
         </Box>
         }
         {/*</Stack>*/}
+      </Stack>
+
+
+      <Stack
+        boxShadow={'2xl'}
+        bg='white'
+        rounded={'xl'}
+        p={3}
+        w={'18%'}
+        spacing={8}
+        height={'100vh'}
+        align={'center'}>
+        <Heading size="md" mb={4}>List question</Heading>
+        <VStack align="stretch" spacing={4} overflowY={'scroll'}>
+          {partForSelectQuestion.map((partGroup, idx) => (
+            <Box key={idx} pt={'6px'}>
+              <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
+              <HStack wrap="wrap" spacing={2}>
+                {partGroup.questions.map((q) => (
+                  <Button
+                    key={q.index}
+                    minW='46px'
+                    size="sm"
+                    variant={q.index === currentIndexQuestion ? "solid" : (answers[q.index] ? "solid" : "outline")}
+                    colorPalette={q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal"}
+                    onClick={() => setCurrentIndexQuestion(q.index)}
+                  >
+                    {q.index}
+                  </Button>
+
+                ))}
+              </HStack>
+            </Box>
+          ))}
+        </VStack>
       </Stack>
     </Flex>
   );
