@@ -8,62 +8,37 @@ import {
   VStack,
   Text,
   Image,
-  RadioGroup
+  RadioGroup,
+  Tabs,
+  CheckboxGroup,
+  Checkbox, Fieldset,
+  Input, For
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import AudioCommon from "@/components/common/AudioCommon";
-import ActionHeaderTest from "@/components/common/ActionHeaderTest";
 import {useRouter} from "next/router";
 import {Constant} from "@/constants";
+import ExamDetail from "@/components/common/ExamDetail";
 
-const singleQuestion = ["PART_1", "PART_2", "PART_5"];
-const ListenQuestion = ["PART_1", "PART_2","PART_3", "PART_4"]
 
-const groupByPartForSelectQuestion = (questions) => {
-  const grouped = {};
-  for (const q of questions) {
-    const part = q.type || "UNKNOWN";
-    if (!grouped[part]) grouped[part] = [];
-    grouped[part].push(q);
+const optionAction = [
+  {
+    name: 'Làm full test',
+    value: 1,
+  },
+  {
+    name: '',
+    value: 2
   }
-  return Object.entries(grouped).map(([part, qs]) => ({part, questions: qs}));
-};
-
-const groupQuestions = (questions) => {
-  const groups = [];
-  let currentGroup = [];
-  let currentType = '';
-
-  questions.forEach((q) => {
-    if (q.audioLink || q.imgLink || currentType !== q.type) {
-      if (currentGroup.length) {
-        groups.push(currentGroup);
-      }
-      currentGroup = [q];
-    } else {
-      currentGroup.push(q);
-    }
-
-    currentType = q.type;
-  });
-
-  if (currentGroup.length) {
-    groups.push(currentGroup);
-  }
-
-  return groups;
-};
-
+]
 export default function Page() {
   const router = useRouter();
 
-  const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
-  const [answers, setAnswers] = useState({});
-  const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [groupedQuestions, setGroupedQuestions] = useState([]); // Sử dụng useState cho groupedQuestions
-  const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
+  const [showExam, setShowExam] = useState(false);
+
   const [listQuestion, setListQuestion] = useState([]);
   const [timer, setTimer] = useState(7200);
+  const [selectedParts, setSelectedParts] = useState([]);
+  const [practiceTime, setPracticeTime] = useState('');
 
 
   useEffect(() => {
@@ -75,10 +50,7 @@ export default function Page() {
       .then((response) => response.json())
       .then(res => {
         const data = res.data;
-        setGroupedQuestions(groupQuestions(data.questionsJson));
-        setPartForSelectQuestion(groupByPartForSelectQuestion(data.questionsJson));
-        setListQuestion(data.questionsJson)
-        setCurrentQuestion(data.questionsJson[0]);
+        setListQuestion(data.questionsJson);
       })
       .catch(err => {
         console.log(err, "error")
@@ -86,257 +58,118 @@ export default function Page() {
   }, [router.query.id]);
 
 
-  useEffect(() => {
-    const selectedQuestion = listQuestion[currentIndexQuestion - 1];
-    if (!selectedQuestion) {
-      return;
-    }
-
-    const isGroupQuestion = !singleQuestion.includes(selectedQuestion.type);  // Kiểm tra là câu hỏi nhóm
-
-    if (isGroupQuestion) {
-      // Tìm nhóm câu hỏi hiện tại
-      const group = groupedQuestions.find(g => g.some(q => q.index === selectedQuestion.index));
-      const firstQuestion = group[0];
-      const groupQuestions = group.map(q => q); // Lấy tất cả câu hỏi trong nhóm
-
-      setCurrentQuestion({
-        type: firstQuestion.type,
-        audioLink: firstQuestion.audioLink,
-        imgLink: firstQuestion.imgLink,
-        questions: groupQuestions
-      })
-    } else {
-      setCurrentQuestion(selectedQuestion); // Nếu không phải câu hỏi nhóm, chỉ hiển thị câu hỏi đơn
-    }
-  }, [currentIndexQuestion, listQuestion]);
-
-  const handleAnswerChange = (value, indexQuestion) => {
-    setAnswers({...answers, [indexQuestion]: value.value});
-  };
-
-  const handleNext = () => {
-    if (currentIndexQuestion < listQuestion.length) {
-      setCurrentIndexQuestion(currentIndexQuestion + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentIndexQuestion > 1) {
-      setCurrentIndexQuestion(currentIndexQuestion - 1);
-    }
-  };
-
-  const handleSubmit = () => {
-    localStorage.setItem(`${router.query.id}-${Constant.RESULT}`, JSON.stringify(answers));
+  const handleSubmit = (result) => {
+    localStorage.setItem(`${router.query.id}-${Constant.RESULT}`, JSON.stringify(result));
     router.push(`/result/${router.query.id}`);
-    console.log('Submitted answers:', answers);
+    console.log('Submitted answers:', result);
   };
-
-  // Handle Reload page
-
-  // useEffect(() => {
-  //   const handleBeforeUnload = (e) => {
-  //     e.preventDefault();
-  //     e.returnValue = ''; // Chrome yêu cầu returnValue, nội dung hiện tại các trình duyệt bỏ qua
-  //   };
-  //
-  //   window.addEventListener('beforeunload', handleBeforeUnload);
-  //
-  //   return () => {
-  //     window.removeEventListener('beforeunload', handleBeforeUnload);
-  //   };
-  // }, []);
-
-  const handleTimeUp = () => {
-    alert("time up")
-  }
-
-  function nextQuestion(question) {
-    if (!question) return;
-    if (singleQuestion.includes(question.type)) {
-      const idx = listQuestion.findIndex(q => q.index === question.index);
-      if (idx === -1) return;
-      // Câu đơn: sang câu tiếp theo
-      if (idx < listQuestion.length - 1) {
-        setCurrentIndexQuestion(listQuestion[idx + 1].index);
-      }
-    } else {
-      if (question.questions.length) {
-        const lastQuestionInGroup = question.questions[question.questions.length - 1];
-        setCurrentIndexQuestion(lastQuestionInGroup.index + 1)
-      }
-    }
-  }
 
   return (
-    <Flex
-      minH={'80vh'}
-      align={'top'}
-      justify={'space-around'}
-      py={4}
-      bg='gray.50'>
+    <>
+      {
+        !showExam && (
+          <Stack
+            minH={'80vh'}
+            bg='white'
+            rounded={'xl'}
+            p={8}
+            align={'center'}
+          >
 
-      <Stack
-        boxShadow={'2xl'}
-        bg='white'
-        rounded={'xl'}
-        p={4}
-        pl={10}
-        w={'80%'}
-        spacing={8}
-        height={'100vh'}
-        align={'left'}
-        divideY="2px">
-        <Stack width={'100%'} direction="row" spacing={4} mt={4} mb={4}>
-          <ActionHeaderTest
-            currentQuestion={currentQuestion}
-            totalTime={timer}
-            handleSubmit={handleSubmit}
-          />
-        </Stack>
+            <Tabs.Root defaultValue={1} width={'800px'}>
+              <Tabs.List>
+                  <Tabs.Trigger value={1}>
+                    <Text fontWeight="bold">Làm full test</Text>
+                  </Tabs.Trigger>
+                <Tabs.Trigger value={2}>
+                    <Text fontWeight="bold">Luyện tập</Text>
+                  </Tabs.Trigger>
+              </Tabs.List>
 
-        {/*<Stack overflowY={'scroll'}>*/}
-        {currentQuestion && <Box pt={4} height='100%'>
-          {
-            singleQuestion.includes(currentQuestion.type) && (
-              <>
-                <Flex height='100%' direction="row" gap={8}>
-                  {/* Cột 1: Ảnh và audio  trừ part 5 ko chia */}
-                  {
-                    currentQuestion.type !== "PART_5" &&
-                    <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}
-                         bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center"
-                         justifyContent="flex-start">
-
-                      {currentQuestion.audioLink && (
-                        <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
-                                     audioLink={currentQuestion.audioLink}/>
-                      )}
-
-                      {currentQuestion.imgLink && (
-                        <Box mb={6} textAlign="center">
-                          <Image src={currentQuestion.imgLink}/>
-                        </Box>
-                      )}
-
-                    </Box>
-                  }
-
-                  {/* Cột 2: Câu hỏi */}
-                  <Box flex={1}>
-                    <Heading size="md" mb={2}>Question {currentQuestion.index}</Heading>
-                    {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
-
-                    <RadioGroup.Root
-                      onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
-                      value={answers[currentQuestion.index] || ""}
-                    >
-                      <VStack align="start" spacing={2}>
-                        {(currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
-                          <RadioGroup.Item key={index} value={(index + 1)}>
-                            <RadioGroup.ItemHiddenInput/>
-                            <RadioGroup.ItemIndicator/>
-                            <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
-                          </RadioGroup.Item>
-                        ))}
-                      </VStack>
-                    </RadioGroup.Root>
-                  </Box>
-                </Flex>
-              </>
-            )
-          }
-
-          {
-            (!singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
-              <Flex direction="row" height='100%' gap={8}>
-                {/* Cột 1: Ảnh và audio */}
-                <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%'
-                     style={{maxHeight: 'calc(100% - 80px)'}} bg="gray.100" p={6} borderRadius="md" display="flex"
-                     flexDirection="column" alignItems="center" justifyContent="flex-start">
-
-                  {currentQuestion.audioLink && (
-                    <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
-                                 audioLink={currentQuestion.audioLink}/>
-                  )}
-
-                  {currentQuestion.imgLink && (
-                    <Box mb={6} textAlign="center">
-                      <Image src={currentQuestion.imgLink}/>
-                    </Box>
-                  )}
-
+              <Tabs.Content value={1}>
+                <Box background="tomato" width="100%" padding="4" mb={2} color="white">
+                  Sẵn sàng để bắt đầu làm full test? Để đạt được kết quả tốt nhất, bạn cần dành ra 120 phút cho bài test này.
                 </Box>
 
-                {/* Cột 2: Câu hỏi */}
-                <Box flex={1}>
-                  {currentQuestion.questions.map((question, indexQuestion) => (
-                    <Box key={`question-${indexQuestion}`}>
-                      <Heading size="md" mt={4}
-                               mb={2}>Question {question.index}: {question.description && question.description}</Heading>
-
-                      <RadioGroup.Root
-                        onValueChange={(e) => handleAnswerChange(e, question.index)}
-                        value={answers[question.index] || ""}
-                      >
-                        <VStack align="start" spacing={2}>
-                          {(question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
-                            <RadioGroup.Item key={index} value={(index + 1)}>
-                              <RadioGroup.ItemHiddenInput/>
-                              <RadioGroup.ItemIndicator/>
-                              <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
-                            </RadioGroup.Item>
-                          ))}
-                        </VStack>
-                      </RadioGroup.Root>
-                    </Box>
-                  ))}
+                <Box>
+                  <Button size="sm" colorPalette="teal" variant="solid" onClick={() => setShowExam(true)}> Bắt đầu thi</Button>
                 </Box>
-              </Flex>
-            )
-          }
-        </Box>
-        }
-        {/*</Stack>*/}
-      </Stack>
+              </Tabs.Content>
+              <Tabs.Content value={2}>
+                <Box background="tomato" width="100%" padding="4" mb={2} color="white">
+                  Hình thức luyện tập từng phần và chọn mức thời gian phù hợp sẽ giúp bạn tập trung vào giải đúng các
+                  câu hỏi thay vì phải chịu áp lực hoàn thành bài thi.
+                </Box>
 
+                {/* Chọn phần thi */}
+                <Box mb={3}>
+                  <Text fontWeight="bold" mb={1}>Chọn phần thi muốn luyện tập:</Text>
+                  <Fieldset.Root>
+                    <CheckboxGroup defaultValue={[]} name="framework">
+                      <Fieldset.Legend fontSize="sm" mb="2">
+                        Select framework
+                      </Fieldset.Legend>
+                      <Fieldset.Content>
+                        <For each={["Part 1", "Part 2", "Part 3", "Part 4", "Part 5", "Part 6", "Part 7"]}>
+                          {(value) => (
+                            <Checkbox.Root key={value} value={value}>
+                              <Checkbox.HiddenInput />
+                              <Checkbox.Control />
+                              <Checkbox.Label>{value}</Checkbox.Label>
+                            </Checkbox.Root>
+                          )}
+                        </For>
+                      </Fieldset.Content>
+                    </CheckboxGroup>
+                  </Fieldset.Root>
+                </Box>
 
-      <Stack
-        boxShadow={'2xl'}
-        bg='white'
-        rounded={'xl'}
-        p={3}
-        w={'18%'}
-        spacing={8}
-        height={'100vh'}
-        align={'center'}>
-        <Heading size="md" mb={4}>List question</Heading>
-        <VStack align="stretch" spacing={4} overflowY={'scroll'}>
-          {partForSelectQuestion.map((partGroup, idx) => (
-            <Box key={idx} pt={'6px'}>
-              <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
-              <HStack wrap="wrap" spacing={2}>
-                {partGroup.questions.map((q) => (
+                {/* Nhập thời gian làm bài */}
+                <Box mb={3}>
+                  <Text fontWeight="bold" mb={1}>Nhập thời gian làm bài (phút):</Text>
+                  <Input
+                    type="number"
+                    min={1}
+                    max={200}
+                    width="120px"
+                    value={practiceTime}
+                    onChange={e => setPracticeTime(e.target.value)}
+                  />
+                </Box>
+
+                <Box>
                   <Button
-                    key={q.index}
-                    minW='46px'
                     size="sm"
-                    disabled={ListenQuestion.includes(q.type)}
-                    variant={q.index === currentIndexQuestion ? "solid" : (answers[q.index] ? "solid" : "outline")}
-                    colorPalette={q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal"}
-                    onClick={() => setCurrentIndexQuestion(q.index)}
+                    colorPalette="teal"
+                    variant="solid"
+                    onClick={() => {
+                      // Lọc câu hỏi theo part đã chọn và set lại timer
+                      const filtered = listQuestion.filter(q => selectedParts.includes(q.type));
+                      setListQuestion(filtered);
+                      setTimer(Number(practiceTime) * 60);
+                      setShowExam(true);
+                    }}
+                    isDisabled={selectedParts.length === 0 || !practiceTime}
                   >
-                    {q.index}
+                    Luyện tập
                   </Button>
+                </Box>
+              </Tabs.Content>
+            </Tabs.Root>
 
-                ))}
-              </HStack>
-            </Box>
-          ))}
-        </VStack>
-      </Stack>
-    </Flex>
+          </Stack>
+
+
+        )
+      }
+      {
+        showExam && <ExamDetail
+          listQuestion={listQuestion}
+          timer={timer}
+          onSubmit={(e) => handleSubmit(e)}
+        ></ExamDetail>
+      }
+    </>
   );
 
 }
