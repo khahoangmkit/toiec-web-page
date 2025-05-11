@@ -63,10 +63,11 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
     setGroupedQuestions(groupQuestions(listQuestion));
     setPartForSelectQuestion(groupByPartForSelectQuestion(listQuestion));
     setCurrentQuestion(listQuestion[0]);
+    setCurrentIndexQuestion(listQuestion[0].index)
   }, [listQuestion]);
 
   useEffect(() => {
-    const selectedQuestion = listQuestion[currentIndexQuestion - 1];
+    const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
     if (!selectedQuestion) {
       return;
     }
@@ -88,18 +89,6 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
 
   const handleAnswerChange = (value, indexQuestion) => {
     setAnswers({...answers, [indexQuestion]: value.value});
-  };
-
-  const handleNext = () => {
-    if (currentIndexQuestion < listQuestion.length) {
-      setCurrentIndexQuestion(currentIndexQuestion + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentIndexQuestion > 1) {
-      setCurrentIndexQuestion(currentIndexQuestion - 1);
-    }
   };
 
   const handleSubmit = () => {
@@ -301,7 +290,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                       key={q.index}
                       minW='46px'
                       size="sm"
-                      disabled={disableSelectListen && ListenQuestion.includes(q.type)}
+                      // disabled={disableSelectListen && ListenQuestion.includes(q.type)}
                       variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
                       colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
                       onClick={() => setCurrentIndexQuestion(q.index)}
