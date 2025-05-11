@@ -50,7 +50,7 @@ const groupQuestions = (questions) => {
   return groups;
 };
 
-export default function ExamDetail({listQuestion = [], timer = 7200, onSubmit}) {
+export default function ExamDetail({listQuestion = [], timer = 7200, disableSelectListen = false, onSubmit}) {
   const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
   const [answers, setAnswers] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -267,7 +267,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, onSubmit}) 
                     key={q.index}
                     minW='46px'
                     size="sm"
-                    disabled={ListenQuestion.includes(q.type)}
+                    disabled={disableSelectListen &&ListenQuestion.includes(q.type)}
                     variant={q.index === currentIndexQuestion ? "solid" : (answers[q.index] ? "solid" : "outline")}
                     colorPalette={q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal"}
                     onClick={() => setCurrentIndexQuestion(q.index)}

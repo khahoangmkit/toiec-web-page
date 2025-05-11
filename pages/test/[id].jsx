@@ -1,44 +1,60 @@
 import {
   Box,
   Button,
-  Flex,
-  Heading,
   Stack,
-  HStack,
-  VStack,
   Text,
-  Image,
-  RadioGroup,
   Tabs,
   CheckboxGroup,
   Checkbox, Fieldset,
   Input, For
 } from "@chakra-ui/react";
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import {Constant} from "@/constants";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { Constant } from "@/constants";
 import ExamDetail from "@/components/common/ExamDetail";
+import { toaster } from "@/components/ui/toaster";
 
 
-const optionAction = [
+const listPartOption = [
   {
-    name: 'Làm full test',
-    value: 1,
+    name: 'Part 1',
+    value: 'PART_1',
   },
   {
-    name: '',
-    value: 2
-  }
+    name: 'Part 2',
+    value: 'PART_2',
+  },
+  {
+    name: 'Part 3',
+    value: 'PART_3',
+  },
+  {
+    name: 'Part 4',
+    value: 'PART_4',
+  },
+  {
+    name: 'Part 5',
+    value: 'PART_5',
+  },
+  {
+    name: 'Part 6',
+    value: 'PART_6',
+  },
+  {
+    name: 'Part 7',
+    value: 'PART_7',
+  },
 ]
 export default function Page() {
   const router = useRouter();
 
   const [showExam, setShowExam] = useState(false);
 
+  const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
   const [timer, setTimer] = useState(7200);
   const [selectedParts, setSelectedParts] = useState([]);
-  const [practiceTime, setPracticeTime] = useState('');
+  const [practiceTime, setPracticeTime] = useState(0);
 
 
   useEffect(() => {
@@ -64,6 +80,33 @@ export default function Page() {
     console.log('Submitted answers:', result);
   };
 
+  function startPractice() {
+    if (selectedParts.length === 0) {
+      toaster.create({
+        title: `Vui lòng chọn phần thi muốn luyện tập`,
+        type: 'error',
+      })
+      return;
+    }
+
+    if (!practiceTime) {
+      toaster.create({
+        title: `Vui lòng chọn thời gian luyện tập`,
+        type: 'error',
+      })
+      return;
+    }
+    const filtered = listQuestion.filter(q => selectedParts.includes(q.type));
+    setListQuestion(filtered);
+    setTimer(Number(practiceTime) * 60);
+    setIsFullTest(false);
+    setShowExam(true);
+  }
+
+  function onChangeCheckBox(e) {
+    setSelectedParts(e);
+  }
+
   return (
     <>
       {
@@ -78,21 +121,23 @@ export default function Page() {
 
             <Tabs.Root defaultValue={1} width={'800px'}>
               <Tabs.List>
-                  <Tabs.Trigger value={1}>
-                    <Text fontWeight="bold">Làm full test</Text>
-                  </Tabs.Trigger>
+                <Tabs.Trigger value={1}>
+                  <Text fontWeight="bold">Làm full test</Text>
+                </Tabs.Trigger>
                 <Tabs.Trigger value={2}>
-                    <Text fontWeight="bold">Luyện tập</Text>
-                  </Tabs.Trigger>
+                  <Text fontWeight="bold">Luyện tập</Text>
+                </Tabs.Trigger>
               </Tabs.List>
 
               <Tabs.Content value={1}>
                 <Box background="tomato" width="100%" padding="4" mb={2} color="white">
-                  Sẵn sàng để bắt đầu làm full test? Để đạt được kết quả tốt nhất, bạn cần dành ra 120 phút cho bài test này.
+                  Sẵn sàng để bắt đầu làm full test? Để đạt được kết quả tốt nhất, bạn cần dành ra 120 phút cho bài test
+                  này.
                 </Box>
 
                 <Box>
-                  <Button size="sm" colorPalette="teal" variant="solid" onClick={() => setShowExam(true)}> Bắt đầu thi</Button>
+                  <Button size="sm" colorPalette="teal" variant="solid" onClick={() => setShowExam(true)}> Bắt đầu
+                    thi</Button>
                 </Box>
               </Tabs.Content>
               <Tabs.Content value={2}>
@@ -103,22 +148,24 @@ export default function Page() {
 
                 {/* Chọn phần thi */}
                 <Box mb={3}>
-                  <Text fontWeight="bold" mb={1}>Chọn phần thi muốn luyện tập:</Text>
                   <Fieldset.Root>
-                    <CheckboxGroup defaultValue={[]} name="framework">
-                      <Fieldset.Legend fontSize="sm" mb="2">
-                        Select framework
+                    <CheckboxGroup
+                      defaultValue={[]}
+                      name="framework"
+                      value={selectedParts}
+                      onValueChange={(e) => onChangeCheckBox(e)}
+                    >
+                      <Fieldset.Legend fontWeight="bold" fontSize="sm" mb="2">
+                        Chọn phần thi muốn luyện tập:
                       </Fieldset.Legend>
                       <Fieldset.Content>
-                        <For each={["Part 1", "Part 2", "Part 3", "Part 4", "Part 5", "Part 6", "Part 7"]}>
-                          {(value) => (
-                            <Checkbox.Root key={value} value={value}>
-                              <Checkbox.HiddenInput />
-                              <Checkbox.Control />
-                              <Checkbox.Label>{value}</Checkbox.Label>
-                            </Checkbox.Root>
-                          )}
-                        </For>
+                        {listPartOption.map((item, idx) => (
+                          <Checkbox.Root key={idx} value={item.value}>
+                            <Checkbox.HiddenInput/>
+                            <Checkbox.Control/>
+                            <Checkbox.Label>{item.name}</Checkbox.Label>
+                          </Checkbox.Root>
+                        ))}
                       </Fieldset.Content>
                     </CheckboxGroup>
                   </Fieldset.Root>
@@ -142,13 +189,7 @@ export default function Page() {
                     size="sm"
                     colorPalette="teal"
                     variant="solid"
-                    onClick={() => {
-                      // Lọc câu hỏi theo part đã chọn và set lại timer
-                      const filtered = listQuestion.filter(q => selectedParts.includes(q.type));
-                      setListQuestion(filtered);
-                      setTimer(Number(practiceTime) * 60);
-                      setShowExam(true);
-                    }}
+                    onClick={() => startPractice()}
                     isDisabled={selectedParts.length === 0 || !practiceTime}
                   >
                     Luyện tập
@@ -159,13 +200,13 @@ export default function Page() {
 
           </Stack>
 
-
         )
       }
       {
         showExam && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
+          disableSelectListen={isFullTest}
           onSubmit={(e) => handleSubmit(e)}
         ></ExamDetail>
       }

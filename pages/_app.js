@@ -1,9 +1,9 @@
-import "@/styles/globals.css";
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
 import { GeistSans } from "geist/font/sans";
 import HeaderNav from "@/components/HeaderNav";
 import Footer from "@/components/Footer";
 import { SessionProvider } from "next-auth/react";
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function App({Component, pageProps}) {
   return (
@@ -13,6 +13,7 @@ export default function App({Component, pageProps}) {
           <HeaderNav></HeaderNav>
           <Component {...pageProps} />
           <Footer></Footer>
+          <Toaster/>
         </SessionProvider>
       </ChakraProvider>
     </main>
