@@ -10,10 +10,10 @@ import {
   Image,
   RadioGroup
 } from "@chakra-ui/react";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import ActionHeaderTest from "@/components/common/ActionHeaderTest";
-import {Constant} from "@/constants";
+import { Constant } from "@/constants";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
 const ListenQuestion = ["PART_1", "PART_2", "PART_3", "PART_4"];
@@ -57,6 +57,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
   const [groupedQuestions, setGroupedQuestions] = useState([]);
   const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
   const [flaggedQuestions, setFlaggedQuestions] = useState([]);
+  const [filterType, setFilterType] = useState('all'); // 'all', 'flagged', 'unanswered'
 
   useEffect(() => {
     setGroupedQuestions(groupQuestions(listQuestion));
@@ -182,12 +183,14 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                   <Box flex={1}>
                     <Heading size="md" mb={2}>
                       Question {currentQuestion.index}
-                      <Box as="span" ml={2} style={{cursor:'pointer'}} onClick={() => {
+                      <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
                         setFlaggedQuestions(prev => prev.includes(currentQuestion.index)
                           ? prev.filter(i => i !== currentQuestion.index)
                           : [...prev, currentQuestion.index]);
                       }}>
-                        <Image src={flaggedQuestions.includes(currentQuestion.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'} alt="Flag" boxSize="24px" display="inline"/>
+                        <Image
+                          src={flaggedQuestions.includes(currentQuestion.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
+                          alt="Flag" boxSize="24px" display="inline"/>
                       </Box>
                     </Heading>
                     {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
@@ -235,12 +238,14 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                     <Box key={`question-${indexQuestion}`}>
                       <Heading size="md" mt={4} mb={2}>
                         Question {question.index}: {question.description && question.description}
-                        <Box as="span" ml={2} style={{cursor:'pointer'}} onClick={() => {
+                        <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
                           setFlaggedQuestions(prev => prev.includes(question.index)
                             ? prev.filter(i => i !== question.index)
                             : [...prev, question.index]);
                         }}>
-                          <Image src={flaggedQuestions.includes(question.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'} alt="Flag" boxSize="24px" display="inline"/>
+                          <Image
+                            src={flaggedQuestions.includes(question.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
+                            alt="Flag" boxSize="24px" display="inline"/>
                         </Box>
                       </Heading>
                       <RadioGroup.Root
@@ -273,26 +278,37 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
         w={'18%'}
         spacing={8}
         height={'100vh'}
-        align={'center'}>
-        <Heading size="md" mb={4}>List question</Heading>
-        <VStack align="stretch" spacing={4} overflowY={'scroll'}>
+        align={'start'}>
+        <Heading size="md" mb={2}>List question</Heading>
+        <HStack mb={2} spacing={2} width="100%" justify="center" pb={2} borderBottom="1px solid" borderColor="gray.200">
+          <Button size="sm" variant={filterType === 'unanswered' ? 'solid' : 'outline'} colorPalette={'blue'} onClick={() => setFilterType('unanswered')}>Chưa trả lời</Button>
+          <Button size="sm" variant={filterType === 'flagged' ? 'solid' : 'outline'} colorPalette={'yellow'} onClick={() => setFilterType('flagged')}>Đánh dấu</Button>
+          <Button size="sm" variant={filterType === 'all' ? 'solid' : 'outline'} colorPalette={'teal'} onClick={() => setFilterType('all')}>Tất cả</Button>
+        </HStack>
+        <VStack align="stretch" minW={"100%"} spacing={4} overflowY={'scroll'}>
           {partForSelectQuestion.map((partGroup, idx) => (
             <Box key={idx} pt={'6px'}>
               <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
               <HStack wrap="wrap" spacing={2}>
-                {partGroup.questions.map((q) => (
-                  <Button
-                    key={q.index}
-                    minW='46px'
-                    size="sm"
-                    disabled={disableSelectListen &&ListenQuestion.includes(q.type)}
-                    variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
-                    colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
-                    onClick={() => setCurrentIndexQuestion(q.index)}
-                  >
-                    {q.index}
-                  </Button>
-                ))}
+                {partGroup.questions
+                  .filter((q) => {
+                    if (filterType === 'flagged') return flaggedQuestions.includes(q.index);
+                    if (filterType === 'unanswered') return !answers[q.index];
+                    return true;
+                  })
+                  .map((q) => (
+                    <Button
+                      key={q.index}
+                      minW='46px'
+                      size="sm"
+                      disabled={disableSelectListen && ListenQuestion.includes(q.type)}
+                      variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
+                      colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
+                      onClick={() => setCurrentIndexQuestion(q.index)}
+                    >
+                      {q.index}
+                    </Button>
+                  ))}
               </HStack>
             </Box>
           ))}
