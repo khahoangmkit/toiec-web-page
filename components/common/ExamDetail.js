@@ -56,6 +56,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [groupedQuestions, setGroupedQuestions] = useState([]);
   const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
+  const [flaggedQuestions, setFlaggedQuestions] = useState([]);
 
   useEffect(() => {
     setGroupedQuestions(groupQuestions(listQuestion));
@@ -179,7 +180,16 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                   }
                   {/* Cột 2: Câu hỏi */}
                   <Box flex={1}>
-                    <Heading size="md" mb={2}>Question {currentQuestion.index}</Heading>
+                    <Heading size="md" mb={2}>
+                      Question {currentQuestion.index}
+                      <Box as="span" ml={2} style={{cursor:'pointer'}} onClick={() => {
+                        setFlaggedQuestions(prev => prev.includes(currentQuestion.index)
+                          ? prev.filter(i => i !== currentQuestion.index)
+                          : [...prev, currentQuestion.index]);
+                      }}>
+                        <Image src={flaggedQuestions.includes(currentQuestion.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'} alt="Flag" boxSize="24px" display="inline"/>
+                      </Box>
+                    </Heading>
                     {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
                     <RadioGroup.Root
                       onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
@@ -223,8 +233,16 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                 <Box flex={1}>
                   {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
-                      <Heading size="md" mt={4}
-                               mb={2}>Question {question.index}: {question.description && question.description}</Heading>
+                      <Heading size="md" mt={4} mb={2}>
+                        Question {question.index}: {question.description && question.description}
+                        <Box as="span" ml={2} style={{cursor:'pointer'}} onClick={() => {
+                          setFlaggedQuestions(prev => prev.includes(question.index)
+                            ? prev.filter(i => i !== question.index)
+                            : [...prev, question.index]);
+                        }}>
+                          <Image src={flaggedQuestions.includes(question.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'} alt="Flag" boxSize="24px" display="inline"/>
+                        </Box>
+                      </Heading>
                       <RadioGroup.Root
                         onValueChange={(e) => handleAnswerChange(e, question.index)}
                         value={answers[question.index] || ""}
@@ -268,8 +286,8 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                     minW='46px'
                     size="sm"
                     disabled={disableSelectListen &&ListenQuestion.includes(q.type)}
-                    variant={q.index === currentIndexQuestion ? "solid" : (answers[q.index] ? "solid" : "outline")}
-                    colorPalette={q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal"}
+                    variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
+                    colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
                     onClick={() => setCurrentIndexQuestion(q.index)}
                   >
                     {q.index}
