@@ -1,4 +1,3 @@
-import { GeistSans } from "geist/font/sans";
 import HeaderNav from "@/components/HeaderNav";
 import Footer from "@/components/Footer";
 import { SessionProvider } from "next-auth/react";
@@ -7,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export default function App({Component, pageProps}) {
   return (
-    <main className={GeistSans.className}>
+    <main>
       <ChakraProvider value={defaultSystem}>
         <SessionProvider>
           <HeaderNav></HeaderNav>
