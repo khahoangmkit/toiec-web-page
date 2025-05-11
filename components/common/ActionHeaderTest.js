@@ -3,7 +3,7 @@ import ButtonTimerGroup from "@/components/common/Timer";
 import {useState} from "react";
 
 
-export default function ActionHeaderTest({handlePrevious, handleNext, handleSubmit}) {
+export default function ActionHeaderTest({totalTime, handleNext, handleSubmit}) {
 
 
   const [open, setOpen] = useState(false)
@@ -21,19 +21,18 @@ export default function ActionHeaderTest({handlePrevious, handleNext, handleSubm
     <>
       <Flex
         width="100%"
-        justifyContent="space-between">
-        <Group>
-          {/*<Button onClick={handlePrevious}>Previous</Button>*/}
-          {/*<Button onClick={handleNext}>Next</Button>*/}
-          <Button onClick={showDialogConfirm} colorPalette="blue">Submit</Button>
-        </Group>
+        gap={4}
+        align={'center'}
+        justifyContent="end">
 
         <Box>
-          {/*<ButtonTimerGroup*/}
-          {/*  initialTime={10}*/}
-          {/*  onTimeUp={handleSubmit}*/}
-          {/*/>*/}
+          <ButtonTimerGroup
+            initialTime={totalTime}
+            onTimeUp={handleSubmit}
+          />
         </Box>
+
+         <Button onClick={showDialogConfirm} colorPalette="blue">Submit</Button>
       </Flex>
 
       {/* Dialog cảnh báo */}

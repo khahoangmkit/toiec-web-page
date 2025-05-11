@@ -160,19 +160,52 @@ export default function ResultPage() {
     };
   }
 
+  function backToHome() {
+    router.push("/");
+  }
+
   return (
     <Box p={8}>
       <Stack boxShadow="2xl" bg="white" rounded="xl" p={4} spacing={8} width="100%" align="left">
 
-        <Heading> Kết quả đề thi: {dataExam?.name}</Heading>
+        <Flex align={'center'} gap={4}>
+          <Heading> Kết quả đề thi: {dataExam?.name}</Heading>
+          <Button
+            size="sm"
+            colorPalette="teal"
+            variant="outline"
+            onClick={backToHome}
+          >Quay lại trang chủ</Button>
+        </Flex>
 
         <Flex direction="column" align="left" justify="center" >
-          <Box mb={2}>
-            {/*<Text fontSize="xl" fontWeight="bold">Kết quả bài thi</Text>*/}
-            <Text py={1}>{`Câu đúng: ${testResults.correct}`} - {`Listening: ${testResults.correctListen} `} - {`Reading: ${testResults.correctRead} `}</Text>
-            <Text py={1}>{`Câu sai: ${testResults.incorrect}`}</Text>
-            <Text py={1}>{`Câu hỏi bỏ qua: ${testResults.skipped}`}</Text>
-            <Text py={1}>{`Tổng số câu hỏi: ${testResults.totalQuestions}`}</Text>
+          <Box mb={2} mt={2}>
+            <HStack spacing={4}>
+              <Box bg="green.100" color="green.800" px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" fontWeight="bold" boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text fontSize="lg">Tổng câu đúng</Text>
+                <Text fontSize="2xl">{testResults.correct}</Text>
+              </Box>
+              <Box bg="blue.100" color="blue.800" px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" fontWeight="bold" boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text fontSize="lg">Số câu nghe đúng</Text>
+                <Text fontSize="xl">{testResults.correctListen}</Text>
+              </Box>
+              <Box bg="purple.100" color="purple.800" px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" fontWeight="bold" boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text fontSize="lg">Số câu đọc đúng</Text>
+                <Text fontSize="xl">{testResults.correctRead}</Text>
+              </Box>
+              <Box bg="red.100" color="red.800" px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" fontWeight="bold" boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text fontSize="lg">Sai</Text>
+                <Text fontSize="2xl">{testResults.incorrect}</Text>
+              </Box>
+              <Box bg="yellow.100" color="yellow.800" px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" fontWeight="bold" boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text fontSize="lg">Bỏ qua</Text>
+                <Text fontSize="2xl">{testResults.skipped}</Text>
+              </Box>
+              <Box bg="gray.200" color="gray.900" px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" fontWeight="bold" boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text fontSize="lg">Tổng</Text>
+                <Text fontSize="2xl">{testResults.totalQuestions}</Text>
+              </Box>
+            </HStack>
           </Box>
         </Flex>
       </Stack>
