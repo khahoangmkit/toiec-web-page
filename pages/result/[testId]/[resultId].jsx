@@ -28,14 +28,14 @@ const groupByPart = (questions) => {
   });
   return grouped;
 };
-const ListenPart = ['PART_1', 'PART_2', 'PART_3', 'PART_4' ]
+const ListenPart = ['PART_1', 'PART_2', 'PART_3', 'PART_4' ];
 export default function ResultPage() {
   const router = useRouter();
+  const { testId, resultId } = router.query;
   const [result, setResult] = useState(null);
   const [dataExam, setDataExam] = useState(null);
   const [groupedQuestions, setGroupedQuestions] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState(null);
-
   const [openDialog, setOpenDialog] = useState(false);
   const [testResults, setTestResults] = useState({
     correct: 0,
@@ -46,32 +46,51 @@ export default function ResultPage() {
     totalQuestions: 0,
   });
 
-
+  // Fetch result by resultId
   useEffect(() => {
-    if (!router.query.id) {
+    if (!resultId) {
       return;
     }
-    // fetch Result Exam
-    const resultData = localStorage.getItem(`${router.query.id}-${Constant.RESULT}`);
-    if (resultData) {
-      const parsedData = JSON.parse(resultData);
-      console.log("da", parsedData)
-      setResult(parsedData);
+    if (Number(resultId) === 0) {
+
+      const resultData = localStorage.getItem('result-test-local');
+      if (resultData) {
+        const parsedData = JSON.parse(resultData);
+        console.log("da", parsedData)
+        setResult(parsedData);
+      }
+      return;
     }
 
-
-  }, [router.query.id]);
-
-  useEffect(() => {
-    // fetch Data
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    fetch(`${apiUrl}/api/test/${router.query.id}`)
+    fetch(`${apiUrl}/api/result?id=${resultId}`)
+      .then((response) => response.json())
+      .then(res => {
+        if (res && res.data) {
+          setResult(res.data.answers);
+        } else {
+          setResult(null);
+        }
+      })
+      .catch(err => {
+        console.log(err, "error fetching result");
+        setResult(null);
+      });
+  }, [resultId]);
+
+  // Fetch test data by testId
+  useEffect(() => {
+    if (!testId) {
+      return;
+    }
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    fetch(`${apiUrl}/api/test/${testId}`)
       .then((response) => response.json())
       .then(res => {
         const data = res.data;
         setDataExam(data);
         setGroupedQuestions(groupByPart(data.questionsJson));
-
+        if (!result) return;
         const results = {
           correct: 0,
           correctListen: 0,
@@ -80,15 +99,12 @@ export default function ResultPage() {
           skipped: 0,
           totalQuestions: data.questionsJson.length,
         };
-
         // Check answers for each question
         data.questionsJson.forEach(question => {
           const userAnswer = result[question.index];
-
           if (userAnswer) {
             if (userAnswer === question.correct) {
               results.correct += 1;
-              //  check question correct type
               ListenPart.includes(question.type) ? results.correctListen += 1 :  results.correctRead += 1;
             } else {
               results.incorrect += 1;
@@ -98,13 +114,11 @@ export default function ResultPage() {
           }
         });
         setTestResults(results);
-
       })
       .catch(err => {
         console.log(err, "error")
       })
-
-  }, [result]);
+  }, [testId, result]);
 
   function getAnswer(index) {
     switch (index) {
@@ -123,9 +137,7 @@ export default function ResultPage() {
 
   function viewDetailQuestion(question) {
     setCurrentQuestion(question)
-
     setOpenDialog(true);
-
   }
 
   // Hàm lấy audioLink và imgLink cho các PART cần gom nhóm (chia nhóm liên tiếp, lấy media đầu nhóm)
@@ -163,6 +175,8 @@ export default function ResultPage() {
   function backToHome() {
     router.push("/");
   }
+
+  // ... UI render code giữ nguyên từ file cũ, chỉ thay đổi lấy testId/resultId từ router.query
 
   return (
     <Box p={8}>
@@ -232,12 +246,12 @@ export default function ResultPage() {
                         <HStack gap="1">
                           <Text
                             textStyle="md">{q.index} - {getAnswer(q.correct)} :</Text>
-                          <Text style={{color: result[q.index] === q.correct ? '#2ecc71' : '#e74c3c'}}>{result[q.index] ? getAnswer(result[q.index]) : "Chưa trả lời"} </Text>
+                          <Text style={{color: result?.[q.index] === q.correct ? '#2ecc71' : '#e74c3c'}}>{result?.[q.index] ? getAnswer(result?.[q.index]) : "Chưa trả lời"} </Text>
                           {
-                            result[q.index] === q.correct ? (
-                                <Image src="/icons/correct.svg" alt="correct-icon" boxSize="12px" />
+                            result?.[q.index] === q.correct ? (
+                              <Image src="/icons/correct.svg" alt="correct-icon" boxSize="12px" />
                             ) : (
-                                <Image src="/icons/wrong.svg" alt="wrong-icon" boxSize="12px" />
+                              <Image src="/icons/wrong.svg" alt="wrong-icon" boxSize="12px" />
                             )
                           }
                           <Image style={{cursor: 'pointer'}} onClick={() => viewDetailQuestion(q)} src="/icons/open-external.svg" alt="open-extenal-icon" boxSize="16px" />
@@ -331,5 +345,5 @@ export default function ResultPage() {
         </Portal>
       </Dialog.Root>
     </Box>
-  )
+  );
 }

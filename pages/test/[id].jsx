@@ -96,8 +96,8 @@ export default function Page() {
       toaster.create({ title: "Lưu kết quả thất bại", type: "error" });
     }
 
-    localStorage.setItem(`${router.query.id}-${Constant.RESULT}`, JSON.stringify(result));
-    router.push(`/result/${router.query.id}`);
+    localStorage.setItem('result-test-local', JSON.stringify(result));
+    router.push(`/result/${router.query.id}/0`);
   };
 
   function startPractice() {
