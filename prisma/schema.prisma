@@ -56,3 +56,14 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Result {
+  id          String   @id @default(cuid())
+  userId      String
+  testId      String
+  answers     Json
+  score       Int
+  flow        String
+  parts       Json     // Lưu danh sách các phần người dùng chọn
+  submittedAt DateTime @default(now())
+}

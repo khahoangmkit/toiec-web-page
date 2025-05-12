@@ -18,10 +18,12 @@ export default NextAuth({
     }),
   ],
   adapter: PrismaAdapter(prisma),
-  // callbacks: {
-  //   async session({ session, user }) {
-  //     session.user.id = user.id
-  //     return session
-  //   },
-  // },
+  callbacks: {
+    async session({ session, user }) {
+      if (user && user.id) {
+        session.user.id = user.id;
+      }
+      return session;
+    },
+  },
 })

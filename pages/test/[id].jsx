@@ -13,7 +13,7 @@ import { useRouter } from "next/router";
 import { Constant } from "@/constants";
 import ExamDetail from "@/components/common/ExamDetail";
 import { toaster } from "@/components/ui/toaster";
-
+import { useSession } from "next-auth/react";
 
 const listPartOption = [
   {
@@ -47,6 +47,7 @@ const listPartOption = [
 ]
 export default function Page() {
   const router = useRouter();
+  const { data: session } = useSession();
 
   const [showExam, setShowExam] = useState(false);
 
@@ -74,10 +75,29 @@ export default function Page() {
   }, [router.query.id]);
 
 
-  const handleSubmit = (result) => {
+  const handleSubmit = async (result) => {
+    try {
+      const res = await fetch("/api/result", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: session.user.id,
+          testId: router.query.id,
+          answers: result.answers || result,
+          score: result.score || 0,
+          flow: result.flow || "practice",
+          parts: result.parts || selectedParts || [],
+        }),
+        credentials: "include",
+      });
+      if (!res.ok) throw new Error("Lưu kết quả thất bại");
+    } catch (e) {
+      console.error(e);
+      toaster.create({ title: "Lưu kết quả thất bại", type: "error" });
+    }
+
     localStorage.setItem(`${router.query.id}-${Constant.RESULT}`, JSON.stringify(result));
     router.push(`/result/${router.query.id}`);
-    console.log('Submitted answers:', result);
   };
 
   function startPractice() {
