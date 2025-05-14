@@ -93,16 +93,10 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
 
   const handleSubmit = () => {
     if (onSubmit) {
+      console.log('answers', answers);
       onSubmit(answers);
-    } else {
-      // fallback: lưu localStorage (nếu cần)
-      alert("Nộp bài thành công!");
     }
   };
-
-  const handleTimeUp = () => {
-    alert("time up")
-  }
 
   function nextQuestion(question) {
     if (!question) return;

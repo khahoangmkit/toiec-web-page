@@ -44,7 +44,9 @@ const listPartOption = [
     name: 'Part 7',
     value: 'PART_7',
   },
-]
+];
+const ListenQuestion = ["PART_1", "PART_2", "PART_3", "PART_4"];
+
 export default function Page() {
   const router = useRouter();
   const { data: session } = useSession();
@@ -53,6 +55,8 @@ export default function Page() {
 
   const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
+  const [testName, setTestName] = useState("");
+
   const [timer, setTimer] = useState(7200);
   const [selectedParts, setSelectedParts] = useState([]);
   const [practiceTime, setPracticeTime] = useState(0);
@@ -68,6 +72,7 @@ export default function Page() {
       .then(res => {
         const data = res.data;
         setListQuestion(data.questionsJson);
+        setTestName(data.name);
       })
       .catch(err => {
         console.log(err, "error")
@@ -77,15 +82,39 @@ export default function Page() {
 
   const handleSubmit = async (result) => {
     try {
+      let listeningCorrect = 0;
+      let readingCorrect = 0;
+      let totalListening = 0;
+      let totalReading = 0;
+
+      listQuestion.forEach(quest => {
+        const isListening = ListenQuestion.includes(quest.type);
+        const userAnswer = (result.answers || result)[quest.index];
+        const isCorrect = userAnswer === quest.correct;
+
+        if (isListening) {
+          totalListening++;
+          if (isCorrect) listeningCorrect++;
+        } else {
+          totalReading++;
+          if (isCorrect) readingCorrect++;
+        }
+      });
+
       const res = await fetch("/api/result", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           userId: session.user.id,
           testId: router.query.id,
+          testName,
+          nameTest: result.nameTest,
           answers: result.answers || result,
-          score: result.score || 0,
-          flow: result.flow || "practice",
+          listeningCorrect,
+          readingCorrect,
+          totalListening,
+          totalReading,
+          isFullTest,
           parts: result.parts || selectedParts || [],
         }),
         credentials: "include",

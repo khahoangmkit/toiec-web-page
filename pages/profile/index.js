@@ -53,7 +53,8 @@ export default function PageProfile() {
               <Table.Row>
                 <Table.ColumnHeader>STT</Table.ColumnHeader>
                 <Table.ColumnHeader>Tên bài</Table.ColumnHeader>
-                <Table.ColumnHeader>Số câu đúng</Table.ColumnHeader>
+                <Table.ColumnHeader>Phần nghe</Table.ColumnHeader>
+                <Table.ColumnHeader>Phần đọc</Table.ColumnHeader>
                 <Table.ColumnHeader>Ngày làm bài</Table.ColumnHeader>
                 <Table.ColumnHeader></Table.ColumnHeader>
               </Table.Row>
@@ -62,8 +63,9 @@ export default function PageProfile() {
               {results.map((result, idx) => (
                 <Table.Row key={result.id}>
                   <Table.Cell>{idx + 1}</Table.Cell>
-                  <Table.Cell>{result.testId}</Table.Cell>
-                  <Table.Cell>{result.score}</Table.Cell>
+                  <Table.Cell>{result.testName}</Table.Cell>
+                  <Table.Cell>{result.listeningCorrect} / {result.totalListening}</Table.Cell>
+                  <Table.Cell>{result.readingCorrect} / {result.totalReading}</Table.Cell>
                   <Table.Cell>{formatDate(result.submittedAt)}</Table.Cell>
                   <Table.Cell textAlign="end">
                     <Button onClick={() => viewDetail(result)} colorPalette="blue" size="sm">Xem chi tiết</Button>

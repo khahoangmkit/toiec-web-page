@@ -31,7 +31,7 @@ export default function HeaderNav() {
                 <Portal>
                   <Menu.Positioner>
                     <Menu.Content>
-                      <Menu.Item onClick={() => router.push('profile')}>Your profile</Menu.Item>
+                      <Menu.Item onClick={() => router.push('/profile')}>Your profile</Menu.Item>
                       <Menu.Item onClick={() => signOut()}>Sign out</Menu.Item>
                     </Menu.Content>
                   </Menu.Positioner>

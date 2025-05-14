@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  const { testId, userId, answers, score, flow, parts } = req.body;
+  const { testId, userId, answers, isFullTest, parts, testName, listeningCorrect, readingCorrect, totalListening, totalReading } = req.body;
   if (!userId) {
     return res.status(401).json({ message: "Unauthorized" });
   }
@@ -47,10 +47,14 @@ export default async function handler(req, res) {
       data: {
         userId,
         testId,
+        testName,
         answers,
-        score,
-        flow,
-        parts,
+        isFullTest,
+        listeningCorrect,
+        readingCorrect,
+        totalListening,
+        totalReading,
+        parts
       },
     });
     return res.status(200).json({ message: "Result saved", result });
