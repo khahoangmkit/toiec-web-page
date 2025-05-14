@@ -48,11 +48,13 @@ export default function PageProfile() {
         {loading ? <Spinner/> : results.length === 0 ? (
           <Text color="gray.500">Chưa có lịch sử làm bài.</Text>
         ) : (
-          <Table.Root variant="simple" size="md">
-            <Table.Header>
+          <Table.ScrollArea rounded="md" height="500px">
+          <Table.Root variant="simple" size="md" stickyHeader>
+            <Table.Header  bg="bg.subtle">
               <Table.Row>
                 <Table.ColumnHeader>STT</Table.ColumnHeader>
                 <Table.ColumnHeader>Tên bài</Table.ColumnHeader>
+                <Table.ColumnHeader>Các phần thi</Table.ColumnHeader>
                 <Table.ColumnHeader>Phần nghe</Table.ColumnHeader>
                 <Table.ColumnHeader>Phần đọc</Table.ColumnHeader>
                 <Table.ColumnHeader>Ngày làm bài</Table.ColumnHeader>
@@ -64,6 +66,7 @@ export default function PageProfile() {
                 <Table.Row key={result.id}>
                   <Table.Cell>{idx + 1}</Table.Cell>
                   <Table.Cell>{result.testName}</Table.Cell>
+                  <Table.Cell>{result.parts.length === 0 ? "Full Test": result.parts.join(", ")}</Table.Cell>
                   <Table.Cell>{result.listeningCorrect} / {result.totalListening}</Table.Cell>
                   <Table.Cell>{result.readingCorrect} / {result.totalReading}</Table.Cell>
                   <Table.Cell>{formatDate(result.submittedAt)}</Table.Cell>
@@ -74,6 +77,7 @@ export default function PageProfile() {
               ))}
             < /Table.Body>
           </Table.Root>
+          </Table.ScrollArea>
         )}
       </Box>
     </Flex>

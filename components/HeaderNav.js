@@ -16,7 +16,7 @@ export default function HeaderNav() {
     <>
       <Box background="#f39c12" width="100%" padding="4" color='white'>
         <Flex alignItems='center' justifyContent='space-between'>
-          <Box>Logo</Box>
+          <Box style={{cursor: "pointer"}} onClick={() => router.push('/')}>Logo</Box>
 
           {status === "loading" ? <Box/> : !session ?
             (<Button onClick={() => signIn('google')}>Login</Button>)
