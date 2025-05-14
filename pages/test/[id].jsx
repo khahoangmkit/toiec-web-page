@@ -290,7 +290,7 @@ export default function Page() {
             </Text>
             {/* Audio test section */}
             <Box mb={4} display="flex" flexDirection="column" alignItems="center">
-              <audio ref={audioRef} autoPlay   src="/data/ets_2024_test_1/audio/question_0_audio_1711805799507.Test_01-01.mp3" loop />
+              <audio ref={audioRef} autoPlay   src="/introduct-test.mp3" loop />
               <Box display="flex" alignItems="center">
                 <Text fontSize="sm" mr={2}>Âm lượng</Text>
                 <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume} style={{width: 120}} />
