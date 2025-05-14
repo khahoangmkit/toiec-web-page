@@ -71,6 +71,11 @@ Hoặc nếu lần đầu:
 npx prisma migrate dev
 ```
 
+Nếu thay đổi schema  
+```angular2html
+npx prisma migrate dev --name "update-schema"
+```
+
 ---
 
 ## 5. Chạy ứng dụng production
