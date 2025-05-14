@@ -56,3 +56,18 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Result {
+  id          String   @id @default(cuid())
+  userId      String
+  testId      String
+  testName    String  @default("")
+  answers     Json
+  isFullTest  Boolean @default(false)
+  listeningCorrect Int @default(0)
+  readingCorrect   Int @default(0)
+  totalListening   Int @default(0)
+  totalReading     Int @default(0)
+  parts       Json     // Lưu danh sách các phần người dùng chọn
+  submittedAt DateTime @default(now())
+}

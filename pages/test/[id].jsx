@@ -8,12 +8,12 @@ import {
   Checkbox, Fieldset,
   Input, For
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import { Constant } from "@/constants";
 import ExamDetail from "@/components/common/ExamDetail";
 import { toaster } from "@/components/ui/toaster";
-
+import { useSession } from "next-auth/react";
 
 const listPartOption = [
   {
@@ -44,18 +44,40 @@ const listPartOption = [
     name: 'Part 7',
     value: 'PART_7',
   },
-]
+];
+const ListenQuestion = ["PART_1", "PART_2", "PART_3", "PART_4"];
+
 export default function Page() {
   const router = useRouter();
+  const { data: session } = useSession();
 
   const [showExam, setShowExam] = useState(false);
+  const [stepIntro, setStepIntro] = useState(0);
 
   const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
+  const [testName, setTestName] = useState("");
+
   const [timer, setTimer] = useState(7200);
   const [selectedParts, setSelectedParts] = useState([]);
   const [practiceTime, setPracticeTime] = useState(0);
 
+  // Hàm nextStep để chuyển bước
+  const nextStep = () => setStepIntro(stepIntro + 1);
+
+  // Ref và hàm điều khiển audio test
+  const audioRef = useRef(null);
+  const handlePlay = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play();
+    }
+  };
+  const handleVolume = (e) => {
+    if (audioRef.current) {
+      audioRef.current.volume = e.target.value;
+    }
+  };
 
   useEffect(() => {
     if (!router.query.id) {
@@ -67,17 +89,60 @@ export default function Page() {
       .then(res => {
         const data = res.data;
         setListQuestion(data.questionsJson);
+        setTestName(data.name);
       })
       .catch(err => {
         console.log(err, "error")
       })
   }, [router.query.id]);
 
+  const handleSubmit = async (result) => {
+    try {
+      let listeningCorrect = 0;
+      let readingCorrect = 0;
+      let totalListening = 0;
+      let totalReading = 0;
 
-  const handleSubmit = (result) => {
-    localStorage.setItem(`${router.query.id}-${Constant.RESULT}`, JSON.stringify(result));
-    router.push(`/result/${router.query.id}`);
-    console.log('Submitted answers:', result);
+      listQuestion.forEach(quest => {
+        const isListening = ListenQuestion.includes(quest.type);
+        const userAnswer = (result.answers || result)[quest.index];
+        const isCorrect = userAnswer === quest.correct;
+
+        if (isListening) {
+          totalListening++;
+          if (isCorrect) listeningCorrect++;
+        } else {
+          totalReading++;
+          if (isCorrect) readingCorrect++;
+        }
+      });
+
+      const res = await fetch("/api/result", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userId: session.user.id,
+          testId: router.query.id,
+          testName,
+          nameTest: result.nameTest,
+          answers: result.answers || result,
+          listeningCorrect,
+          readingCorrect,
+          totalListening,
+          totalReading,
+          isFullTest,
+          parts: result.parts || selectedParts || [],
+        }),
+        credentials: "include",
+      });
+      if (!res.ok) throw new Error("Lưu kết quả thất bại");
+    } catch (e) {
+      console.error(e);
+      toaster.create({ title: "Lưu kết quả thất bại", type: "error" });
+    }
+
+    localStorage.setItem('result-test-local', JSON.stringify(result));
+    router.push(`/result/${router.query.id}/0`);
   };
 
   function startPractice() {
@@ -100,17 +165,22 @@ export default function Page() {
     setListQuestion(filtered);
     setTimer(Number(practiceTime) * 60);
     setIsFullTest(false);
-    setShowExam(true);
+    setStepIntro(3);
   }
 
   function onChangeCheckBox(e) {
     setSelectedParts(e);
   }
 
+  function startFullTest() {
+    setStepIntro(1);
+    setShowExam(true);
+  }
+
   return (
     <>
       {
-        !showExam && (
+        stepIntro === 0 && (
           <Stack
             minH={'80vh'}
             bg='white'
@@ -136,7 +206,7 @@ export default function Page() {
                 </Box>
 
                 <Box>
-                  <Button size="sm" colorPalette="teal" variant="solid" onClick={() => setShowExam(true)}> Bắt đầu
+                  <Button size="sm" colorPalette="teal" variant="solid" onClick={() => startFullTest()}> Bắt đầu
                     thi</Button>
                 </Box>
               </Tabs.Content>
@@ -203,7 +273,67 @@ export default function Page() {
         )
       }
       {
-        showExam && <ExamDetail
+        stepIntro === 1 && (
+          <Box
+            minH={'80vh'}
+            background="white"
+            boxShadow="lg"
+            borderRadius="lg"
+            padding={6}
+            mb={4}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <Text fontSize="lg" color="gray.800" mb={4} textAlign="center">
+              Gioi thieu mo dau test am thanh
+            </Text>
+            {/* Audio test section */}
+            <Box mb={4} display="flex" flexDirection="column" alignItems="center">
+              <audio ref={audioRef} autoPlay   src="/data/ets_2024_test_1/audio/question_0_audio_1711805799507.Test_01-01.mp3" loop />
+              <Box display="flex" alignItems="center">
+                <Text fontSize="sm" mr={2}>Âm lượng</Text>
+                <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume} style={{width: 120}} />
+              </Box>
+            </Box>
+            <Button colorPalette="teal" onClick={nextStep}>
+              Tiếp tục
+            </Button>
+          </Box>
+        )
+      }
+      {
+        stepIntro === 2 && (
+          <Box
+            minH={'80vh'}
+            background="white"
+            boxShadow="lg"
+            borderRadius="lg"
+            padding={6}
+            mb={4}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <Text fontSize="lg" color="gray.800" mb={4} textAlign="center">
+              Gioi thieu part 1 thi
+            </Text>
+            {/* Audio test section */}
+            <Box mb={4} display="flex" flexDirection="column" alignItems="center">
+              <audio ref={audioRef} src="/introduct-test.mp3" autoPlay loop />
+              <Box display="flex" alignItems="center">
+                <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume} style={{width: 120}} />
+              </Box>
+            </Box>
+            <Button colorPalette="teal"  onClick={nextStep}>
+              Bắt đầu làm bài
+            </Button>
+          </Box>
+        )
+      }
+
+      {
+        stepIntro === 3 && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
           disableSelectListen={isFullTest}

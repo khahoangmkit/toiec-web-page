@@ -16,7 +16,7 @@ export default function HeaderNav() {
     <>
       <Box background="#f39c12" width="100%" padding="4" color='white'>
         <Flex alignItems='center' justifyContent='space-between'>
-          <Box>Logo</Box>
+          <Box style={{cursor: "pointer"}} onClick={() => router.push('/')}>Logo</Box>
 
           {status === "loading" ? <Box/> : !session ?
             (<Button onClick={() => signIn('google')}>Login</Button>)
@@ -31,7 +31,7 @@ export default function HeaderNav() {
                 <Portal>
                   <Menu.Positioner>
                     <Menu.Content>
-                      <Menu.Item onClick={() => router.push('profile')}>Your profile</Menu.Item>
+                      <Menu.Item onClick={() => router.push('/profile')}>Your profile</Menu.Item>
                       <Menu.Item onClick={() => signOut()}>Sign out</Menu.Item>
                     </Menu.Content>
                   </Menu.Positioner>
