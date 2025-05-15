@@ -1,0 +1,1650 @@
+﻿.pswp {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.pswp--open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pswp__bg {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pswp--close {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+.marker {
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.2vw;
+}
+
+
+
+.child-box2 {
+    position: absolute;
+    left: 9999rem;
+    opacity: 0;
+    /*padding-top: 5px;
+    opacity: 0;
+    width: 100%;
+    -webkit-transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+    transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s;
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);*/
+    display: block;
+    top: -50%;
+    width: 160%;
+    background-color: #fff;
+    padding: 10px;
+    padding-left:42px;
+}
+
+.nav-convenient li {
+    font-family: "Plus Jakarta Sans";
+    font-size:20px;
+}
+
+.nav-convenient li.active {
+    font-size: 22px;
+    font-weight: 600;
+}
+.green-wrap {
+    padding-top:0px;
+}
+
+.nav-convenient li.active::after {
+    background-color: #fff;
+}
+
+
+
+
+
+
+.natural-title{
+    text-align:center;
+}
+
+.parkzone-service-inr{
+    max-width:98%;
+}
+
+.parkzone-service-left {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.parkzone-service-right {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-top: 10.32%;
+}
+
+.parkzone-service-left .img-js {
+    height: 100%;
+}
+.parkzone-service-right{
+    padding-right:60px;
+}
+
+.parkzone-button {
+    top: 2px;
+    left: 53px;
+}
+
+.service-brief{
+    width:90%;
+}
+/*.parkzone-button li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }*/
+.sticky_pin {
+    z-index: 200;
+    background: #fff;
+}
+.max-container {
+    width:100%
+   
+}
+.sticky {
+  /*  position: -webkit-sticky;
+    position: sticky;
+    top: 0;*/
+}
+
+.stick-fixed {
+    position: fixed;
+    top: 0;
+    background-color: #367156;
+}
+
+
+.menu_pin {
+    position: relative;
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
+    /*background-color: #367156;*/
+    /*margin-bottom: 80px;*/
+}
+
+.menu_pin .container {
+    max-width: 1600px;
+    text-align: center;
+}
+
+.max-container .container {
+    padding: 0;
+}
+
+.menu_pin .tabs li {
+    display: inline-block;
+}
+
+    .menu_pin .tabs li a {
+        color: #3B6753;
+        font-size: 18px;
+        font-weight:700;
+        text-decoration:none;
+        line-height: 80px;
+        padding: 0 50px;
+        display: block;
+        position: relative;
+    }
+
+.stick-fixed .menu_pin .tabs li a {
+    color: #FFF;
+    font-weight:normal;
+}
+
+.menu_pin .tabs li.active a {
+    font-weight: bold;
+}
+.menu_pin::before {
+    content: "";
+    background: #EAEAEA;
+    bottom: -1px;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+}
+
+.menu_pin .tabs li.active a:before {
+    content: '';
+    background: #b66326;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.project-logo {
+    position: absolute;
+    right: 0;    
+    width:80px;
+    height:auto;
+}
+
+
+.project-logo .side-name {
+    display:none;
+}
+
+    .fixed .project-logo .side-name {
+        display: block;
+    }
+
+.fixed .project-logo
+{
+    top: 0px;
+    width: 80px;
+}
+.fixed .project-logo .logo-pic {
+    display: none;
+}
+
+.img-js .pic {
+    height:auto;
+}
+
+.left-group-tab .nav-convenient {
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.natural-title {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.disconnect-txt ol li{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.disconnect-c1 {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding-left:6%;
+    padding-right:0;
+}
+.disconnect-image-c1 {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+.collection-brief {
+    background-color: #00000061;
+}
+
+.collection-brief p {
+    color: #fff;
+}
+
+.disconnect-image-65 {
+    flex: 0 0 65%;
+    max-width: 65%;
+}
+
+.disconnect-info-35 {
+    flex: 0 0 35%;
+    max-width: 35%;
+}
+
+.disconnect-info-right {
+    padding-left: 6.25%;
+    padding-right: 0px;
+}
+.disconnect-cnt {
+    margin-bottom: 0px;
+}
+
+.floating-360 {
+    /*display: none;*/
+    /*background-color: #EFF0EB;*/
+}
+
+    .floating-360 p {
+      /*  color: #000;*/
+    }
+
+    .floating-360 .pic-floating {
+         /*width: 23px; */
+         width:auto;
+    }
+
+.banner-pic-custom::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+.col3 {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.col9 {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.r1 {
+    font-size: 55px;
+    color: #367156;
+    display: flex;
+    vertical-align: top;
+}
+
+.r1-sub {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-left: 10px;
+    color: #caa546;
+}
+
+.r2 {
+    font-size: 11px;
+}
+.event-slide-next {
+    transform: rotate(270deg) !important;
+    color:black;
+}
+.event-slide-prev {
+    transform: rotate(90deg) !important;
+    color: black;
+}
+.event-bg{
+    background:#ededed;
+}
+
+
+/*.parkzone-team-custom
+{
+    padding-top:50px;
+    padding-bottom:50px;
+}*/
+
+.swiper-pagination-bullet-active {
+    background-color: #367156;
+}
+
+.main-slider h4, .main-slider-1 h4 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.main-slider, .main-slider-1 {
+    /*background-color: #cfcfcf;*/
+    padding:10px;
+    padding-bottom:15px;
+    position:relative;
+}
+
+    .main-slider .swiper-button-next, .main-slider .swiper-button-prev {
+        color: #313F38;
+
+    }
+
+    .main-slider-1 .swiper-button-next, .main-slider-1 .swiper-button-prev {
+        color: #313F38;
+    }
+
+    .main-slider .swiper-button-next, .main-slider-1 .swiper-button-next {
+        right: -10%;
+    }
+
+    .main-slider .swiper-button-prev, .main-slider-1 .swiper-button-prev {
+        left: -10%;
+    }
+
+/*.main-slider .swiper-slide, .main-slider-1 .swiper-slide {
+    padding:5px;
+    padding-bottom:10px;
+}
+
+.main-slider .swiper-slide:nth-child(2) {
+    padding-left:0px;
+    padding-right:0px;
+}
+*/
+.kien-tao-item-content{
+    padding-right:10px;
+}
+.thanhxuan-valley {
+    padding-bottom:0px;
+}
+.parkzone-collection {
+    padding:0px;
+}
+
+.parkzone-collection-inr h2 {
+    margin-bottom: 0px;
+}
+
+html {
+    font-size: clamp(14px,1vw,16px);
+}
+
+.brief{
+    /*margin-left:25px;*/
+}
+
+.journeys-slider .swiper-slide {
+    background-color: #FAFAFA;
+}
+
+.library-brief{
+    width:100%;
+}
+
+/*.trang-chu .nature-info {
+    padding-left : 5%;
+}*/
+
+.the-story .parkzone-natural 
+{
+    padding-top:0px;
+}
+
+.gallery-page .brief-right 
+{
+    padding-left:5%;
+}
+
+.gallery-page .info-number
+{
+   /* float:right;
+    padding-right:5%;
+    width:50%;*/
+}
+
+ul.ul-circle {
+    list-style: circle;
+    padding-left: 30px;
+    color: #515151;
+    padding-top: 10px;
+    color: #3B6753;
+    font-size:1rem;
+}
+
+     ul.ul-circle li {
+        line-height: 30px;
+    }
+
+.song-cung-thanh-xuan .journeys-brief {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+}
+
+.gallery-page .disconnect-custom
+{
+    padding-left:0px;
+}
+
+.thanhxuan-convenient{
+    padding-top:0px;
+}
+.the-story .thanhxuan-convenient-inr h2 {
+    margin-bottom: 0px;
+}
+
+.pd-top-bottom-80-50 {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.pd-top-bottom-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.pd-top-50 {
+    padding-top: 50px;
+}
+.pd-bottom-50 {
+    padding-bottom: 50px;
+}
+.video-bimgroup {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*h3{
+    padding-bottom:15px;
+}
+*/
+
+h2{
+    padding-top:60px;
+    padding-bottom:40px;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+h3 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+h4 {
+    padding-bottom: 10px;
+}
+.the-story .parkzone-journeys{
+    padding-top:0px;
+}
+
+.the-story .parkzone-collection
+{
+    padding-top: 0px;
+}
+.parkzone-team-inr h2{
+    margin-bottom:0px;
+}
+
+.outer-video{
+    width:65%;
+}
+
+.outer-video2 {
+    width: 95%;
+    position:relative;
+    padding-right:4%;
+}
+.video-wrapper-bimgroup {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper-bimgroup iframe{
+    width:100%;
+   /* position:absolute;
+    left:0;
+    top:0;*/
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+p {
+    text-align:justify;
+}
+
+.journeys-slider{
+    margin-bottom:30px;
+}
+
+.doi-ngu-kien-tao .title{
+    padding-top:40px;
+}
+
+.quan-ly-nghi-duong {
+    margin-top:20px
+}
+
+.parkzone-team{
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+.the-story .collection-slider{
+    width:65%;
+    margin:auto 0;
+}
+
+.the-story .parkzone-collection-slider {
+    display:flex;
+    justify-content:center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+    .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 33%; /* Chiếm 1/3 ảnh phía dưới */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+
+.disconnect-info{
+    padding-top:0px;
+}
+.loai-hoa .pattern-item__disconnect-left{
+    bottom:-165px;
+}
+
+.loai-hoa .pattern-item__disconnect-right {
+    bottom: -165px;
+}
+
+.disconnect {
+    padding:0px;
+}
+
+.section32 {
+    padding-top:80px;
+}
+
+.thanhxuan-convenient-inr h2 {
+    margin-bottom:0px;
+}
+.thanhxuan {
+    padding:0px;
+}
+.thanhxuan-cnt h2{
+    margin-bottom:0px;
+}
+.trang-chu .nature-info {
+    padding-left:8.5%;
+}
+.parkzone-spain-inr h2 {
+    margin-bottom:0px;
+}
+.trang-chu .parkzone-team-inr h2 {
+    padding-top:40px;
+}
+
+.valley-home .valley-life-bief p {
+    padding-right: 0;
+}
+
+.valley-home .valley-life-bief h2 {
+padding-top:0px;
+}
+.nav li .child-menu li {
+    margin-bottom:0px;
+}
+
+.patterns-1 .pattern-item__disconnect-left 
+{
+    bottom:-160px;
+}
+
+.patterns-1 .pattern-item__disconnect-right {
+    bottom:-400px;
+}
+
+.pattern-story2 .pattern-item__disconnect-right {
+    bottom: -404px;
+}
+
+.thanhxuan-cnt {
+    padding-bottom: 80px;
+}
+.song-cung-thanh-xuan .gioi-thieu .collection-slider .swiper-pagination {
+    bottom:-10px;
+}
+
+.song-cung-thanh-xuan .gioi-thieu .swiper-pagination-bullet {
+    bottom: -10px;
+    border: 2px solid #1B3B36;
+}
+
+.the-story .swiper-pagination-bullet {
+    bottom: -10px;
+    border: 1px solid #1B3B36;
+}
+
+.thanhxuan-map {
+    padding:0px;
+}
+.thanhxuan-map-inr h2 {
+    margin-bottom:0px;
+}
+
+.gioi-thieu h3 {
+    padding:0px !important;
+}
+.natural-box {
+    margin-bottom:0px;
+}
+.parkzone-journeys {
+    padding:0px;
+}
+
+.parkzone-service {
+    padding:0px;
+}
+
+.gallery-page .map-1 {
+    padding-top:80px;
+}
+
+.the-story .collection-brief {
+    width:100%;
+    padding:5px;
+    margin-bottom:0px;
+    
+}
+
+.the-story .collection-brief p {
+    margin-bottom: 0px;
+    text-align:left;
+}
+.the-story .collection-slider .swiper-pagination {
+    bottom:-8%;
+}
+
+.trang-chu .spain-info p {
+    color: #3B6753 !important;
+}
+
+.pl0{
+    padding-left:0 !important;
+}
+
+.the-story .image-container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    /*max-width: 600px;*/ /* Adjust as needed */
+}
+
+    .the-story .image-container .image {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .the-story .image-container .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 20%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); /* Black gradient */
+    }
+
+    .the-story .image-container .text {
+        position: absolute;
+        bottom: 1%; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%); /* Center the text horizontally */
+        color: white; /* White text color */
+        font-size: 24px; /* Adjust font size as needed */
+        text-align: center; /* Center text alignment */
+        padding: 0 10px; /* Optional padding for better readability */
+        z-index:100;
+    }
+
+.journeys-brief p {
+    text-align:left;
+}
+
+.journeys-brief {
+    padding:10px;
+}
+.collection-slider .swiper-button-next {
+    right:-12%;
+}
+
+.collection-slider .swiper-button-prev {
+    left: -12%;
+}
+
+.text-3-row {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.section-news .post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+.article-content {
+    padding:30px;
+}
+
+h2.color-green b {
+    font-weight: 700 !important;
+}
+
+.floating-360 {
+    display: flex;
+}
+
+.parkzone-spain-inr {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.bdtien {
+    margin-top:60px;
+}
+
+.blog-tintuc .journeys-line::before {
+    background-color: transparent;
+}
+
+/*.banner-box .banner-pic img.pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;*/ /* Full chiều cao màn hình */
+    /*margin: 0;
+}*/
+
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: 'ValueSansPro';
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.the-story .kien-tao-item-logo img {
+    max-width: 250px
+}
+
+.ls-bdti {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.song-cung-thanh-xuan .mat-bang .swiper-pagination-horizontal {
+ 
+}
+
+.song-cung-thanh-xuan .mat-bang .swiper-pagination-bullet {
+    border: 1px solid #1B3B36;
+}
+
+.box-1 {
+    margin-top:32px;
+}
+
+
+.library-slider .swiper-pagination{
+    bottom:12%;
+}
+
+.swiper-pagination-bullet {
+    border: 2px solid #367156;
+}
+
+
+
+
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+    padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+    padding: 0;
+}
+
+
+/* 
+
+for zoom animation 
+uncomment this part if you haven't added this code anywhere else
+
+*/
+
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
+.contact-floating {
+    right:30px;
+}
+    .contact-floating .item-floating {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 48%;
+        width: 2.625rem;
+        height: 2.625rem;
+        background-color: #EFF0EB;
+    }
+.pagination li {
+    color:green;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination ul {
+    display:flex;
+}
+
+.body-content .title {
+    padding-bottom: 15px;
+}
+
+.body-content p:first-of-type {
+    margin-top: 15px !important;
+}
+
+.body-content p {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+
+.date-blog
+{
+    font-size:1rem;
+    font-style:italic;
+}
+.pagination .is-active li {
+    background-color: green;
+    color: #fff;
+}
+    .pagination li:hover, .pagination li.current {
+        background-color: green !important;
+        border-color: green !important;
+    }
+
+.contact-floating {
+    top:80%;
+}
+
+.nav .child-box {
+    width:196px;
+}
+
+
+.intercontinental h2 {
+    text-align: center;
+    width: 100%;
+    color: #3B6753;
+}
+
+.intercontinental h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.intercontinental .nature-info{
+    padding-top:0px;
+    padding-left:5%;
+}
+
+
+.country-club .nature-info {
+    padding-top: 0px;
+    padding-left: 5%;
+}
+
+
+.country-club h2 {
+    text-align: center;
+    width: 100%;
+    color: #3B6753;
+}
+
+.country-club h3 {
+    text-align: center;
+    width: 100%;
+    color: #3B6753;
+}
+
+
+.country-club .canh-quan h3 {
+   /* font-size: 2.5rem;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;*/
+
+}
+
+.country-club h2.color-green, .intercontinental h2.color-green {
+    font-size: 1.75rem;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    /* font-size: 2.5rem;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;*/
+}
+
+.chung-chi {
+    margin-top:60px;
+}
+
+.wj h3{
+    padding-bottom: 8px;
+}
+.wj .subtitle {
+    text-align: center;
+    padding-bottom: 12px;
+    font-size:1.2rem;
+}
+
+.discover {
+    font-size:14px;
+}
+
+.country-club .chung-chi-xanh {
+   text-align:right;
+}
+.country-club .chung-chi-xanh img{
+    width:80%;
+    max-width:80%;
+}
+
+.country-club .chung-chi .disconnect-info {
+    display:flex;
+    align-items:center;
+}
+@media screen and (max-width: 1380px) {
+    .the-story .parkzone-collection-inr, .parkzone-journeys-inr {
+        max-width:none;
+    }
+    .trang-chu .bdtien {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .valley-home .valley-life-pic {
+        flex: 0 0 54.14785%;
+        max-width: 54.14785%;
+    }
+
+    .valley-home .valley-life-bief {
+        flex: 0 0 41.766%;
+        max-width: 41.766%;
+    }
+
+    .child-menu {
+        padding: 10px !important;
+        border: none !important;
+        background-color: rgba(255,255,255,0.8) !important;
+        border-radius:5px;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 1380px) {
+    /*.gallery-page .info-number {
+        float: left;
+        padding-right: 3%;
+        padding-left: 13%;
+        width: 84%;
+    }*/
+}
+
+
+    @media screen and (min-width: 1024px) {
+        /* #thanh-xuan-valley > a::before {
+        content: '';
+        position: absolute;
+        right: -24px;
+        top: 17px;
+        width: 16px;
+        height: 10px;
+        background: url(../images/arrow-down.svg) no-repeat center center;
+        background-size: 100% auto;
+    }*/
+    }
+
+    @media (min-width: 1025px) and (max-width: 1440px) {
+
+        .header-inr {
+            width: 100%;
+        }
+
+        .navigation {
+            padding-left: 100px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .stick-fixed {
+            top: 60px;
+            background-color: #fff;
+        }
+
+            .stick-fixed .menu_pin .tabs li a {
+                color: #3B6753;
+                font-weight: normal;
+            }
+
+        .max-container {
+            display: none;
+        }
+
+        .map-markers {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .menu_pin .tabs {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            white-space: nowrap;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .gallery-page .info-number {
+            width: 100%;
+            text-align: justify;
+            float: none;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .project-logo {
+            display: none;
+        }
+
+        .disconnect-c1 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 15%;
+            padding-right: 0;
+        }
+
+        .disconnect-image-c1 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .gallery-page .disconnect-image {
+            overflow: hidden;
+            padding: 0;
+        }
+
+            .disconnect-image img {
+                width: 100% !important;
+            }
+
+        .col3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .col9 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .m-flex {
+            flex-direction: column;
+        }
+
+        .footer-cnt {
+            font-size: 15px;
+        }
+
+        .park-zone .disconnect {
+            padding-top: 100px;
+        }
+
+        .brief {
+            margin-top: 0px;
+        }
+
+
+        .collection-brief {
+            width: 100%;
+        }
+
+        .valley-life-pic {
+           /* flex: 38%;
+            max-width: 38%;*/
+        }
+
+        #groupTab .outer_wrap {
+            display: none;
+        }
+
+        .grouptab-block .outer_wrap {
+            display: none;
+        }
+
+        .trang-chu .spain-slider .swiper-button-prev {
+            left: 3%;
+            top: -3%;
+            color: green;
+        }
+
+        .trang-chu .spain-slider .swiper-button-next {
+            right: 3%;
+            top:-3%;
+            color:green;
+        }
+
+        .spain-info p {
+            font-size: 16px;
+        }
+
+        .the-story .natural-title {
+            flex: 0;
+        }
+        h2 {
+            font-size:1.75rem;
+            padding-top:30px;
+            padding-bottom:20px;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            padding-top:10px;
+            padding-bottom:5px;
+        }
+        .trang-chu .nature-info {
+            padding-left:0px;
+        }
+
+        .parkzone-spain-inr {
+            max-width:100%;
+        }
+
+        .nav li span.pc {
+            display:none;
+        }
+        .bdtien {
+            margin-top: 0px;
+        }
+
+        .natural-title {
+            padding-top:20px; 
+            padding-bottom:20px;
+        }
+
+        .natural-box {
+            width:100%;
+        }
+
+        .outer-video {
+            width:100%;
+        }
+
+        .kien-tao-item-content {
+            padding-right:0px;
+        }
+
+        .wrap__journeys {
+            width:100%;
+        }
+
+        .the-story .collection-slider {
+            width:100%;
+        }
+
+        .collection-pic {
+            height:auto;
+        }
+
+        .kien-tao-item-logo {
+            padding-left:0px;
+        }
+        .marcel {
+            padding-top:20px;
+        }
+        .disconnect {
+            padding: 0 5%;
+        }
+
+        .service-brief {
+            width:100%;
+        }
+        .gallery-page .disconnect-info-right  {
+        padding-left:0px;
+        }
+
+        .gallery-page .disconnect-info {
+            padding:0px;
+        }
+
+        .gallery-page .brief-right {
+            padding-left:0px;
+        }
+
+        .gallery-page .natural-title img {
+            width:100%;
+            max-width:100%;
+        }
+
+        .ho-suoi {
+            padding: 0 5%;
+            padding-top:32px;
+        }
+
+        .hoa-mobile .natural-title h3 {
+            padding-bottom:0px;
+            padding-top:0px;
+        }
+
+        .ban-dia-hoa-loai-hoa .natural-title, .ban-dia-hoa-loai-hoa .natural-title h3 {
+            padding-bottom: 0px !important;
+        }
+        
+
+        .gallery-page .natural-title h3 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .gallery-page .tham-thuc-vat .disconnect-cnt {
+            flex-direction:column;
+        }
+        html {
+            font-size:14px;
+        }
+        p
+        {
+            font-size:14px;
+        }
+        .trang-chu .tieude-trang{
+            padding:0 5%;
+        }
+
+        .info1 {
+            display:block !important;
+        }
+
+        .ls-bdti {
+            padding-left:5%;
+            padding-right:5%;
+        }
+
+        #tong-quan .brief {
+            padding: 0 5%;
+        }
+
+        .song-cung-thanh-xuan .gioi-thieu {
+            padding: 0 5%;
+        }
+
+        .song-cung-thanh-xuan .spain-slider .swiper-button-prev {
+            top:-3%;
+            left:3%;
+        }
+        .song-cung-thanh-xuan .spain-slider .swiper-button-next {
+            top: -3%;
+            right: 3%;
+        }
+
+        .valley-home .box-1  {
+            flex-direction:column;
+        }
+
+        .box-1 .valley-box {
+            flex-direction:column;
+        }
+
+        .valley-home .tien-ich-trong-nha .spain-slider .swiper-button-prev, .valley-home .tien-ich-trong-nha .spain-slider .swiper-button-next {
+            top:-2%;
+        }
+
+        #thegioi h2 {
+            padding-bottom:20px;
+        }
+
+        .logo-pic {
+            width:50%;
+        }
+
+        .fixed .logo-pic {
+            width: 70%;
+        }
+
+        .nav .child-box {
+            width: 90%;
+        }
+
+        .intercontinental .nature-info {
+            padding-left: 0;
+            padding-top:10px;
+        }
+        .intercontinental .disconnect-image {
+            padding: 0 5%;
+        }
+        .intercontinental .nature{
+            padding-bottom:0px;
+        }
+
+        .country-club .disconnect-image {
+            padding: 0 5%;
+        }
+
+        .intercontinental .disconnect-info {
+            padding-bottom: 0px;
+        }
+
+        .country-club .disconnect-info{
+            padding-bottom:0px;
+        }
+
+        .country-club .nature-info{
+            padding-left:0px;
+            padding-top:10px;
+        }
+
+        .country-club .canh-quan h3 {
+            /*padding-top:0px;*/
+            padding-bottom:20px;
+        }
+
+        .country-club .nature {
+            padding-bottom:0px;
+        }
+
+        .country-club .spain-slider .swiper-button-prev, .country-club .spain-slider .swiper-button-next {
+            top: -4%;
+        }
+
+        .country-club h2.color-green, .intercontinental h2.color-green {
+            padding-top: 50px;
+            margin-bottom: 0px;
+        }
+
+        .country-club .chung-chi-xanh {
+            text-align: left;
+        }
+
+            .country-club .chung-chi-xanh img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+
+    }
+
+    @media screen and (min-width:1024px) {
+        .sub, .sub3, .sub4 {
+            position: relative;
+        }
+
+            .sub:hover .child-box2 {
+                opacity: 1;
+                left: 100%;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-transition: opacity 0.15s linear, transform 0.15s linear;
+                transition: opacity 0.15s linear, transform 0.15s linear;
+            }
+
+            .sub:hover a:first-child {
+                font-weight: 700;
+            }
+
+            .sub3:hover .child-box2 {
+                opacity: 1;
+                left: 100%;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-transition: opacity 0.15s linear, transform 0.15s linear;
+                transition: opacity 0.15s linear, transform 0.15s linear;
+                top: -100%;
+            }
+
+            .sub4:hover .child-box2 {
+                opacity: 1;
+                left: 100%;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-transition: opacity 0.15s linear, transform 0.15s linear;
+                transition: opacity 0.15s linear, transform 0.15s linear;
+                top: -250%;
+            }
+
+            .sub3:hover a:first-child {
+                font-weight: 700;
+            }
+
+            .sub4:hover a:first-child {
+                font-weight: 700;
+            }
+
+        .child-box2 a {
+            color: #377156;
+            display: flex;
+            font-weight: normal !important;
+        }
+
+        .arrow-icon {
+            opacity: 1;
+        }
+    }
+
+.gallery-page .thanhxuan-convenient 
+{
+    padding-top:0px;
+}
+    @media screen and (min-width:1024px) {
+
+        .home-c-1 {
+            margin-top: 20px;
+        }
+
+       
+    }
+
+
+
+
+
+
+    /*Footer*/
+    @media screen and (min-width:1024px) {
+        .nav1 > li:nth-child(2) {
+            width: 160px;
+            margin-right: 0px;
+        }
+
+        .nav1 > li:nth-child(3) {
+            margin-left: 125px;
+            margin-right: 10px;
+        }
+
+        .nav1 > li:nth-child(3) {
+            width: 180px;
+        }
+
+        .nav1 > li:nth-child(1) {
+            width: 200px;
+        }
+
+        .nav1 > li:nth-child(4) {
+            width: 175px;
+        }
+    }
+
+    @media screen and (max-width:1023px) {
+        .parkzone-service-right, .parkzone-service-left {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .parkzone-service-right {
+            padding-top: 10%;
+        }
+
+        .parkzone-service-right {
+            padding-right: 10px;
+        }
+
+        .disconnect-info-35 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .disconnect-image-65 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .revert-mobile {
+            flex-direction: row-reverse;
+        }
+
+        .disconnect-cnt {
+            margin-bottom: 0px;
+        }
+
+        .valley-wrap {
+            padding-top: 0px;
+        }
+    }
