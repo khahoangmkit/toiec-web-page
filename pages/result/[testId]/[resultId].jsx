@@ -176,8 +176,6 @@ export default function ResultPage() {
     router.push("/");
   }
 
-  // ... UI render code giữ nguyên từ file cũ, chỉ thay đổi lấy testId/resultId từ router.query
-
   return (
     <Box p={8}>
       <Stack boxShadow="2xl" bg="white" rounded="xl" p={4} spacing={8} width="100%" align="left">

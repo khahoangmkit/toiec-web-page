@@ -170,6 +170,10 @@ export default function Home() {
     router.push(`/test/${id}`);
   }
 
+  function goToPracticeByPart(id) {
+    router.push(`/practice/${id}`);
+  }
+
   return (
     <>
       <Head>
@@ -250,7 +254,9 @@ export default function Home() {
                       <Text fontWeight='bold'>{part.name}</Text>
                       <Text>{part.desc}</Text>
 
-                      <Button colorPalette="teal" variant="solid">
+                      <Button
+                        onClick={() => {goToPracticeByPart(part.id)}}
+                        colorPalette="teal" variant="solid">
                         Luyện thi
                       </Button>
                     </Box>

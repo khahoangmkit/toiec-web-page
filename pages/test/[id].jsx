@@ -104,7 +104,7 @@ export default function Page() {
       let totalReading = 0;
 
       listQuestion.forEach(quest => {
-        const isListening = ListenQuestion.includes(quest.type);
+        const isListening = Constant.ListenQuestion.includes(quest.type);
         const userAnswer = (result.answers || result)[quest.index];
         const isCorrect = userAnswer === quest.correct;
 

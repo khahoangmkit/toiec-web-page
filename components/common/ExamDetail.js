@@ -60,6 +60,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
   const [filterType, setFilterType] = useState('all'); // 'all', 'flagged', 'unanswered'
 
   useEffect(() => {
+    if (!listQuestion.length) return;
     setGroupedQuestions(groupQuestions(listQuestion));
     setPartForSelectQuestion(groupByPartForSelectQuestion(listQuestion));
     setCurrentQuestion(listQuestion[0]);
