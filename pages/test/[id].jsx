@@ -51,7 +51,7 @@ export default function Page() {
   const {data: session} = useSession();
 
   const [showExam, setShowExam] = useState(false);
-  const [stepIntro, setStepIntro] = useState(4);
+  const [stepIntro, setStepIntro] = useState(0);
 
   const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
