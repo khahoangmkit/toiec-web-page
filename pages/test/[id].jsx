@@ -304,7 +304,7 @@ export default function Page() {
               </Box>
 
               <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
-                Volume test This is Volume Test. If you don't hear clearly, adjust the volume control on your computer, or
+                This is Volume Test. If you don't hear clearly, adjust the volume control on your computer, or
                 contact the administrators for assistance.
               </Text>
               <Button colorPalette="teal" onClick={nextStep}>
@@ -333,7 +333,17 @@ export default function Page() {
                  bg='white'
                  rounded={'xl'}>
 
-              <Heading pb={1} borderBottomWidth="1px">DIRECTIONS</Heading>
+              {/* Audio test section */}
+              <Box mb={4} display="flex" borderBottomWidth="1px" flexDirection="row" justifyContent='space-between'>
+                <Heading pb={1}>DIRECTIONS</Heading>
+
+                <audio ref={audioRef} autoPlay src="/directions.mp3" loop/>
+                <Box display="flex" gap={1} alignItems="center">
+                  <Image src="/icons/sound-max.svg" boxSize="26px"></Image>
+                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
+                         style={{width: 120}}/>
+                </Box>
+              </Box>
 
               <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
                 In the Listening test, you will be asked to demonstrate how well you understand spoken English. The entire
@@ -411,7 +421,7 @@ export default function Page() {
         stepIntro === 4 && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
-          disableSelectListen={isFullTest}
+          isFullTest={isFullTest}
           onSubmit={(e) => handleSubmit(e)}
         ></ExamDetail>
       }
