@@ -14,6 +14,7 @@ import {useEffect, useRef, useState} from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import ActionHeaderTest from "@/components/common/ActionHeaderTest";
 import {Constant} from "@/constants";
+import { useRouter } from "next/router";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
 
@@ -52,7 +53,7 @@ const groupQuestions = (questions) => {
 export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest = false, onSubmit}) {
 
   const audioRef = useRef(null);
-
+  const router = useRouter();
 
   const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
   const [answers, setAnswers] = useState({});
@@ -94,6 +95,30 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     }
   }, [currentIndexQuestion, listQuestion, groupedQuestions]);
 
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue = "Bạn có chắc chắn muốn thoát khỏi trạng thái làm bài ?";
+      return e.returnValue;
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    const handleRouteChangeStart = (url) => {
+      if (window.confirm("Bạn có chắc chắn muốn thoát khỏi trạng thái làm bài ?")) {
+        // Cho phép điều hướng
+      } else {
+        // Chặn điều hướng
+        router.events.emit('routeChangeError');
+        throw "routeChange aborted.";
+      }
+    };
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+    };
+  }, [router]);
 
   const handleVolume = (e) => {
     if (audioRef.current) {
