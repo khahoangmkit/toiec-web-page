@@ -167,15 +167,15 @@ export default function Page() {
                     </Box>
                     <Box px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center" boxShadow="md"
                          display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-                      <Text pt={30}>Tổng</Text>
-                      <Text fontSize="lg" fontWeight="bold">{listQuestion.length}</Text>
+                      <Text pt={30}>Tổng điểm</Text>
+                      <Text fontSize="lg" fontWeight="bold">{(testResults.correctAnswers * 5)}</Text>
                     </Box>
                   </HStack>
                 </Box>
               </Flex>
             </Stack>
 
-            <AnswersComponent listQuestion={listQuestion} result={answers}></AnswersComponent>
+            <AnswersComponent listQuestion={listQuestion} result={answers} />
           </Box>
         )
       }

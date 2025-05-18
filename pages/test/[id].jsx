@@ -165,7 +165,7 @@ export default function Page() {
     setListQuestion(filtered);
     setTimer(Number(practiceTime) * 60);
     setIsFullTest(false);
-    setStepIntro(3);
+    setStepIntro(4);
   }
 
   function onChangeCheckBox(e) {
@@ -290,21 +290,23 @@ export default function Page() {
                  bg='white'
                  rounded={'xl'}>
 
-              <Heading pb={1} borderBottomWidth="1px">Volume test</Heading>
+
+              {/* Audio test section */}
+              <Box mb={4} display="flex" borderBottomWidth="1px" flexDirection="row" justifyContent='space-between'>
+                <Heading pb={1}>Volume test</Heading>
+
+                <audio ref={audioRef} autoPlay src="/VoiecTest.mp3" loop/>
+                <Box display="flex" gap={1} alignItems="center">
+                  <Image src="/icons/sound-max.svg" boxSize="26px"></Image>
+                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
+                         style={{width: 120}}/>
+                </Box>
+              </Box>
 
               <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
                 Volume test This is Volume Test. If you don't hear clearly, adjust the volume control on your computer, or
                 contact the administrators for assistance.
               </Text>
-              {/* Audio test section */}
-              <Box mb={4} display="flex" flexDirection="column" alignItems="start">
-                <audio ref={audioRef} autoPlay src="/VoiecTest.mp3" loop/>
-                <Box display="flex" alignItems="center">
-                  <Text fontSize="md" mr={2}>Âm lượng</Text>
-                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
-                         style={{width: 120}}/>
-                </Box>
-              </Box>
               <Button colorPalette="teal" onClick={nextStep}>
                 Tiếp tục
               </Button>
@@ -364,7 +366,16 @@ export default function Page() {
                  boxShadow={'2xl'}
                  bg='white'
                  rounded={'xl'}>
-              <Heading pb={1} borderBottomWidth="1px">LISTENING TEST</Heading>
+              <Box mb={4} borderBottomWidth="1px" display="flex" flexDirection="row" justifyContent='space-between'>
+                <Heading pb={1}>LISTENING TEST</Heading>
+
+                <audio ref={audioRef} src="/introduct-test.mp3" autoPlay loop/>
+                <Box display="flex" gap={1} alignItems="center">
+                  <Image src="/icons/sound-max.svg" boxSize="26px"></Image>
+                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
+                         style={{width: 120}}/>
+                </Box>
+              </Box>
 
               <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
                 In the Listening test, you will be asked to demonstrate how well you understand spoken English.
@@ -387,15 +398,7 @@ export default function Page() {
                 Statement (C), "They're sitting at a table," is the best description of the picture, so you should select
                 answer (C) and mark it on your answer sheet
               </Text>
-              {/* Audio test section */}
-              <Box mb={4} display="flex" flexDirection="column" alignItems="start">
-                <audio ref={audioRef} src="/introduct-test.mp3" autoPlay loop/>
-                <Box display="flex" alignItems="start">
-                  <Text fontSize="md" mr={2}>Âm lượng</Text>
-                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
-                         style={{width: 120}}/>
-                </Box>
-              </Box>
+
               <Button colorPalette="teal" onClick={nextStep}>
                 Bắt đầu làm bài
               </Button>

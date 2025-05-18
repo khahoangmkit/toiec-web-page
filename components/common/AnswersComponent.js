@@ -101,9 +101,8 @@ export default function AnswersComponent({listQuestion = [], result = {}}) {
   }
 
   return (
-    <Box p={8}>
-
-      <Stack boxShadow="2xl" mt={8} bg="white" rounded="xl" p={3} spacing={8} height={'70vh'} width="100%" align="left">
+    <>
+      <Stack boxShadow="2xl" mt={8} bg="white" rounded="xl" p={4} spacing={8} height={'70vh'} width="100%" align="left">
         <Heading fontWeight="bold" mt={4}>Đáp án:</Heading>
         <VStack align="stretch" spacing={4} height={'100%'} overflowY="scroll">
           <Tabs.Root defaultValue="PART_1">
@@ -231,7 +230,7 @@ export default function AnswersComponent({listQuestion = [], result = {}}) {
           </Dialog.Positioner>
         </Portal>
       </Dialog.Root>
-    </Box>
+    </>
   )
 
 }
