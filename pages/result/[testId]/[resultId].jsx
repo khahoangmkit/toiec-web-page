@@ -2,15 +2,11 @@ import {
   Box,
   Button,
   Flex,
-  Tabs,
   Heading,
   HStack,
   Stack,
   Text,
-  VStack,
-  Dialog,
-  Portal,
-  CloseButton, Image, RadioGroup
+  Image
 } from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
@@ -36,6 +32,7 @@ export default function ResultPage() {
 
   const [result, setResult] = useState(null);
   const [listQuestions, setListQuestions] = useState([]);
+  const [partSelected, setPartSelected] = useState(["PART_1", "PART_2", "PART_3", "PART_4","PART_5", "PART_6", "PART_7"]);
 
   const [dataExam, setDataExam] = useState(null);
   const [testResults, setTestResults] = useState({
@@ -57,7 +54,8 @@ export default function ResultPage() {
       const resultData = localStorage.getItem('result-test-local');
       if (resultData) {
         const parsedData = JSON.parse(resultData);
-        setResult(parsedData);
+        setResult(parsedData.result);
+        setPartSelected(parsedData.parts.length > 0 ? parsedData.parts : setPartSelected);
       }
       return;
     }
@@ -68,6 +66,7 @@ export default function ResultPage() {
       .then(res => {
         if (res && res.data) {
           setResult(res.data.answers);
+          setPartSelected(res.data.parts.length > 0 ? res.data.parts : setPartSelected);
         } else {
           setResult(null);
         }
@@ -109,7 +108,7 @@ export default function ResultPage() {
             } else {
               results.incorrect += 1;
             }
-          } else {
+          } else if (partSelected.includes(question.type)) {
             results.skipped += 1;
           }
         });

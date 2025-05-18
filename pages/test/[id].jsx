@@ -6,7 +6,7 @@ import {
   Tabs,
   CheckboxGroup,
   Checkbox, Fieldset,
-  Input, For, Heading, Image
+  Input, Heading, Image
 } from "@chakra-ui/react";
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
@@ -50,7 +50,6 @@ export default function Page() {
   const router = useRouter();
   const {data: session} = useSession();
 
-  const [showExam, setShowExam] = useState(false);
   const [stepIntro, setStepIntro] = useState(0);
 
   const [isFullTest, setIsFullTest] = useState(true);
@@ -135,7 +134,7 @@ export default function Page() {
       toaster.create({title: "Lưu kết quả thất bại", type: "error"});
     }
 
-    localStorage.setItem('result-test-local', JSON.stringify(result));
+    localStorage.setItem('result-test-local', JSON.stringify({result, parts: result.parts || selectedParts || []}));
     router.push(`/result/${router.query.id}/0`);
   };
 
@@ -168,7 +167,6 @@ export default function Page() {
 
   function startFullTest() {
     setStepIntro(1);
-    setShowExam(true);
   }
 
   return (
