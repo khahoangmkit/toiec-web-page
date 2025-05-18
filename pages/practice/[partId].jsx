@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import ExamDetail from "@/components/common/ExamDetail";
 import {
   Box,
@@ -15,8 +15,8 @@ import {
   Text,
   VStack
 } from "@chakra-ui/react";
-import {useRouter} from "next/router";
-import {Constant} from "@/constants";
+import { useRouter } from "next/router";
+import { Constant } from "@/constants";
 import AudioCommon from "@/components/common/AudioCommon";
 import AnswersComponent from "@/components/common/AnswersComponent";
 
@@ -98,24 +98,30 @@ export default function Page() {
             flexDirection="column"
             alignItems="center"
           >
-            <Text fontSize="lg" color="gray.800" mb={4} textAlign="center">
-              Bắt đầu luyện tập <strong> {getPartName(partId)}</strong>
-            </Text>
-            <Box mb={3}>
-              <Text fontWeight="bold" mb={1}>Nhập thời gian làm bài (phút):</Text>
-              <Input
-                type="number"
-                min={1}
-                max={200}
-                width="120px"
-                value={practiceTime / 60}
-                onChange={e => setPracticeTime(Number(e.target.value) * 60)}
-              />
-            </Box>
+            <Box p={4}
+                 width={'800px'}
+                 boxShadow={'2xl'}
+                 bg='white'
+                 rounded={'xl'}>
+              <Text fontSize="lg" color="gray.800" mb={4} textAlign="center">
+                Bắt đầu luyện tập <strong> {getPartName(partId)}</strong>
+              </Text>
+              <Box mb={3}>
+                <Text fontWeight="bold" mb={1}>Nhập thời gian làm bài (phút):</Text>
+                <Input
+                  type="number"
+                  min={1}
+                  max={200}
+                  width="120px"
+                  value={practiceTime / 60}
+                  onChange={e => setPracticeTime(Number(e.target.value) * 60)}
+                />
+              </Box>
 
-            <Button colorPalette="teal" onClick={nextStep}>
-              Bắt đầu
-            </Button>
+              <Button colorPalette="teal" onClick={nextStep}>
+                Bắt đầu
+              </Button>
+            </Box>
           </Box>
         )
       }
@@ -175,7 +181,7 @@ export default function Page() {
               </Flex>
             </Stack>
 
-            <AnswersComponent listQuestion={listQuestion} result={answers} />
+            <AnswersComponent listQuestion={listQuestion} result={answers}/>
           </Box>
         )
       }
