@@ -104,6 +104,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     window.addEventListener("beforeunload", handleBeforeUnload);
 
     const handleRouteChangeStart = (url) => {
+      if (url.includes('/result')) return;
       if (window.confirm("Bạn có chắc chắn muốn thoát khỏi trạng thái làm bài ?")) {
         // Cho phép điều hướng
       } else {
