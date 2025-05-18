@@ -115,6 +115,12 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     }
   }
 
+  function showBtnNextQuestion() {
+    const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
+    if (!selectedQuestion) return ;
+    return Constant.ReadingQuestion.includes(selectedQuestion.type);
+  }
+
   return (
     <Flex
       minH={'calc(100vh - 90px)'}
@@ -139,6 +145,15 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
             totalTime={timer}
             handleSubmit={handleSubmit}
           />
+          {
+            showBtnNextQuestion() && (
+              <Box alignItems='center' pt={2}>
+                <Button colorPalette={'yellow'} onClick={() => nextQuestion(currentQuestion)} mb={2}>
+                  Next
+                </Button>
+              </Box>
+            )
+          }
           <Box alignItems='center' pt={2}>
             <Button colorPalette={showListQuestion ? 'red' : 'teal'} onClick={() => setShowListQuestion(v => !v)} mb={2}>
               {showListQuestion ? 'Hidden' : 'Review'}

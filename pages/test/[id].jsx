@@ -45,14 +45,13 @@ const listPartOption = [
     value: 'PART_7',
   },
 ];
-const ListenQuestion = ["PART_1", "PART_2", "PART_3", "PART_4"];
 
 export default function Page() {
   const router = useRouter();
   const {data: session} = useSession();
 
   const [showExam, setShowExam] = useState(false);
-  const [stepIntro, setStepIntro] = useState(4);
+  const [stepIntro, setStepIntro] = useState(1);
 
   const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
@@ -410,7 +409,7 @@ export default function Page() {
               </Text>
 
               <Button colorPalette="teal" onClick={nextStep}>
-                Bắt đầu làm bài
+                Start Test
               </Button>
             </Box>
           </Box>
