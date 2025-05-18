@@ -66,12 +66,7 @@ export default function Page() {
 
   // Ref và hàm điều khiển audio test
   const audioRef = useRef(null);
-  const handlePlay = () => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play();
-    }
-  };
+
   const handleVolume = (e) => {
     if (audioRef.current) {
       audioRef.current.volume = e.target.value;
@@ -420,7 +415,7 @@ export default function Page() {
         stepIntro === 4 && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
-          isFullTest={false}
+          isFullTest={isFullTest}
           onSubmit={(e) => handleSubmit(e)}
         ></ExamDetail>
       }

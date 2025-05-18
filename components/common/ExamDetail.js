@@ -10,7 +10,7 @@ import {
   Image,
   RadioGroup
 } from "@chakra-ui/react";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import ActionHeaderTest from "@/components/common/ActionHeaderTest";
 import {Constant} from "@/constants";
@@ -50,6 +50,10 @@ const groupQuestions = (questions) => {
 };
 
 export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest = false, onSubmit}) {
+
+  const audioRef = useRef(null);
+
+
   const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
   const [answers, setAnswers] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -58,6 +62,8 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
   const [flaggedQuestions, setFlaggedQuestions] = useState([]);
   const [filterType, setFilterType] = useState('all'); // 'all', 'flagged', 'unanswered'
   const [showListQuestion, setShowListQuestion] = useState(false); // Ẩn mặc định
+  const [showPartIntro, setShowPartIntro] = useState(false);
+  const [nextPart, setNextPart] = useState("");
 
   useEffect(() => {
     if (!listQuestion.length) return;
@@ -88,6 +94,13 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     }
   }, [currentIndexQuestion, listQuestion, groupedQuestions]);
 
+
+  const handleVolume = (e) => {
+    if (audioRef.current) {
+      audioRef.current.volume = e.target.value;
+    }
+  };
+
   const handleAnswerChange = (value, indexQuestion) => {
     setAnswers({...answers, [indexQuestion]: value.value});
   };
@@ -104,13 +117,29 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     if (singleQuestion.includes(question.type)) {
       const idx = listQuestion.findIndex(q => q.index === question.index);
       if (idx === -1) return;
+      // Check if next question is a new part
       if (idx < listQuestion.length - 1) {
-        setCurrentIndexQuestion(listQuestion[idx + 1].index);
+        const nextQ = listQuestion[idx + 1];
+        if (nextQ.type !== question.type && isFullTest && (!Constant.ReadingQuestion.includes(nextQ.type))) {
+          setShowPartIntro(true);
+          setNextPart(nextQ.type);
+          return;
+        }
+        setCurrentIndexQuestion(nextQ.index);
       }
     } else {
       if (question.questions.length) {
         const lastQuestionInGroup = question.questions[question.questions.length - 1];
-        setCurrentIndexQuestion(lastQuestionInGroup.index + 1)
+        const idx = listQuestion.findIndex(q => q.index === lastQuestionInGroup.index);
+        if (idx < listQuestion.length - 1) {
+          const nextQ = listQuestion[idx + 1];
+          if (nextQ.type !== question.type && isFullTest && (!Constant.ReadingQuestion.includes(nextQ.type))) {
+            setShowPartIntro(true);
+            setNextPart(nextQ.type);
+            return;
+          }
+          setCurrentIndexQuestion(nextQ.index);
+        }
       }
     }
   }
@@ -119,6 +148,29 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
     if (!selectedQuestion) return;
     return Constant.ReadingQuestion.includes(selectedQuestion.type);
+  }
+
+  function getAudioIntro(nextPart) {
+    switch (nextPart) {
+      case 'PART_2':
+        return "/part2_intro.mp3";
+      case 'PART_3':
+        return "/part3_intro.mp3";
+      case 'PART_4':
+        return "/part4_intro.mp3";
+    }
+    return "";
+  }
+  function getContentIntro(nextPart) {
+    switch (nextPart) {
+      case 'PART_2':
+        return "Directions: You will hear a question or statement and three responses spoken in English. They will not be printed in your test book and will be spoken only one time. Select the best response to the question or statement and mark the letter (A), (B), or (C) on your answer sheet.";
+      case 'PART_3':
+        return "Directions: You will hear some conversations between two or more people. You will be asked to answer three questions about what the speakers say in each conversation. Select the best response to each question and mark the letter (A), (B), (C), or (D) on your answer sheet. The conversations will not be printed in your test book and will be spoken only one time.";
+      case 'PART_4':
+        return "Directions: You will hear some talks given by a single speaker. You will be asked to answer three questions about what the speaker says in each talk. Select the best response to each question and mark the letter (A), (B), (C), or (D) on your answer sheet. The talks will not be printed in your test book and will be spoken only one time.";
+    }
+    return "";
   }
 
   return (
@@ -162,7 +214,47 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
           </Box>
         </HStack>
 
-        {currentQuestion && <Box pt={4} height='100%'>
+        {/* Show part intro if needed */}
+        {showPartIntro && (
+          <Box py={10} display="flex" textAlign="center" justifyContent="center">
+            <Box p={4}
+                 width={'800px'}
+                 boxShadow={'2xl'}
+                 bg='white'
+                 rounded={'xl'}>
+
+              {/* Audio test section */}
+              <Box mb={4} display="flex" borderBottomWidth="1px" flexDirection="row" justifyContent='space-between'>
+                <Heading pb={1}>{nextPart.replace('_', ' ')}</Heading>
+
+                <audio ref={audioRef} autoPlay src={getAudioIntro(nextPart)} loop/>
+                <Box display="flex" gap={1} alignItems="center">
+                  <Image src="/icons/sound-max.svg" boxSize="26px"></Image>
+                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
+                         style={{width: 120}}/>
+                </Box>
+              </Box>
+
+              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
+                {getContentIntro(nextPart)}
+              </Text>
+
+              <Button colorPalette="teal" onClick={() => {
+                setShowPartIntro(false);
+                // Tìm câu đầu tiên của part mới
+                const idx = listQuestion.findIndex(q => q.type === nextPart);
+                if (idx !== -1) setCurrentIndexQuestion(listQuestion[idx].index);
+              }}>
+                Continue
+              </Button>
+
+            </Box>
+
+          </Box>
+        )}
+
+        {/* Main question UI */}
+        {!showPartIntro && currentQuestion && <Box pt={4} height='100%'>
           {
             singleQuestion.includes(currentQuestion.type) && (
               <>
