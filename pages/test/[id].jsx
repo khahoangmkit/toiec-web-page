@@ -52,7 +52,7 @@ export default function Page() {
   const {data: session} = useSession();
 
   const [showExam, setShowExam] = useState(false);
-  const [stepIntro, setStepIntro] = useState(0);
+  const [stepIntro, setStepIntro] = useState(4);
 
   const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
@@ -308,7 +308,7 @@ export default function Page() {
                 contact the administrators for assistance.
               </Text>
               <Button colorPalette="teal" onClick={nextStep}>
-                Tiếp tục
+                Next
               </Button>
 
             </Box>
@@ -352,7 +352,7 @@ export default function Page() {
               </Text>
 
               <Button colorPalette="teal" onClick={nextStep}>
-                Tiếp tục
+                Next
               </Button>
 
             </Box>

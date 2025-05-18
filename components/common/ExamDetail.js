@@ -16,7 +16,6 @@ import ActionHeaderTest from "@/components/common/ActionHeaderTest";
 import { Constant } from "@/constants";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
-const ListenQuestion = ["PART_1", "PART_2", "PART_3", "PART_4"];
 
 const groupByPartForSelectQuestion = (questions) => {
   const grouped = {};
@@ -160,6 +159,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
                          justifyContent="flex-start">
                       {currentQuestion.audioLink && (
                         <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
+                                     disabled={isFullTest}
                                      audioLink={currentQuestion.audioLink}/>
                       )}
                       {currentQuestion.imgLink && (
@@ -214,6 +214,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
                      flexDirection="column" alignItems="center" justifyContent="flex-start">
                   {currentQuestion.audioLink && (
                     <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
+                                 disabled={isFullTest}
                                  audioLink={currentQuestion.audioLink}/>
                   )}
                   {currentQuestion.imgLink && (
