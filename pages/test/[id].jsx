@@ -51,7 +51,7 @@ export default function Page() {
   const {data: session} = useSession();
 
   const [showExam, setShowExam] = useState(false);
-  const [stepIntro, setStepIntro] = useState(1);
+  const [stepIntro, setStepIntro] = useState(4);
 
   const [isFullTest, setIsFullTest] = useState(true);
   const [listQuestion, setListQuestion] = useState([]);
@@ -420,7 +420,7 @@ export default function Page() {
         stepIntro === 4 && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
-          isFullTest={isFullTest}
+          isFullTest={false}
           onSubmit={(e) => handleSubmit(e)}
         ></ExamDetail>
       }

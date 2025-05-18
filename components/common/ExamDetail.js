@@ -10,10 +10,10 @@ import {
   Image,
   RadioGroup
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import ActionHeaderTest from "@/components/common/ActionHeaderTest";
-import { Constant } from "@/constants";
+import {Constant} from "@/constants";
 
 const singleQuestion = ["PART_1", "PART_2", "PART_5"];
 
@@ -117,7 +117,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
 
   function showBtnNextQuestion() {
     const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
-    if (!selectedQuestion) return ;
+    if (!selectedQuestion) return;
     return Constant.ReadingQuestion.includes(selectedQuestion.type);
   }
 
@@ -134,7 +134,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
         rounded={'xl'}
         p={4}
         pl={10}
-        w={ showListQuestion ? '80%' : '99%' }
+        w={showListQuestion ? '80%' : '99%'}
         spacing={8}
         height={'100vh'}
         align={'left'}
@@ -155,7 +155,8 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
             )
           }
           <Box alignItems='center' pt={2}>
-            <Button colorPalette={showListQuestion ? 'red' : 'teal'} onClick={() => setShowListQuestion(v => !v)} mb={2}>
+            <Button colorPalette={showListQuestion ? 'red' : 'teal'} onClick={() => setShowListQuestion(v => !v)}
+                    mb={2}>
               {showListQuestion ? 'Hidden' : 'Review'}
             </Button>
           </Box>
@@ -177,11 +178,12 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
                                      disabled={isFullTest}
                                      audioLink={currentQuestion.audioLink}/>
                       )}
-                      {currentQuestion.imgLink && (
-                        <Box mb={6} textAlign="center">
-                          <Image src={currentQuestion.imgLink}/>
-                        </Box>
-                      )}
+                      {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
+                        currentQuestion.imgLink.map((imgLink, index) => (
+                          <Box mb={6} textAlign="center">
+                            <Image src={imgLink} key={index}/>)
+                          </Box>
+                        )))}
                     </Box>
                   }
                   {/* Cột 2: Câu hỏi */}
@@ -232,14 +234,16 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
                                  disabled={isFullTest}
                                  audioLink={currentQuestion.audioLink}/>
                   )}
-                  {currentQuestion.imgLink && (
-                    <Box mb={6} textAlign="center">
-                      <Image src={currentQuestion.imgLink}/>
-                    </Box>
+                  {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
+                    currentQuestion.imgLink.map((src, idx) => (
+                      <Box mb={6} key={`img-quest-${idx}`} textAlign="center">
+                        <Image src={src}/>
+                      </Box>
+                    ))
                   )}
                 </Box>
                 {/* Cột 2: Câu hỏi */}
-                <Box flex={1} overflowY={'scroll'}  style={{maxHeight: 'calc(100% - 80px)'}}>
+                <Box flex={1} overflowY={'scroll'} style={{maxHeight: 'calc(100% - 80px)'}}>
                   {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
                       <Heading size="md" mt={4} mb={2}>
@@ -288,10 +292,14 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
           height={'100vh'}
           align={'start'}>
           <Heading size="md" mb={2}>List question</Heading>
-          <HStack mb={2} spacing={2} width="100%" justify="center" pb={2} borderBottom="1px solid" borderColor="gray.200">
-            <Button size="sm" variant={filterType === 'unanswered' ? 'solid' : 'outline'} colorPalette={'blue'} onClick={() => setFilterType('unanswered')}>Chưa trả lời</Button>
-            <Button size="sm" variant={filterType === 'flagged' ? 'solid' : 'outline'} colorPalette={'yellow'} onClick={() => setFilterType('flagged')}>Đánh dấu</Button>
-            <Button size="sm" variant={filterType === 'all' ? 'solid' : 'outline'} colorPalette={'teal'} onClick={() => setFilterType('all')}>Tất cả</Button>
+          <HStack mb={2} spacing={2} width="100%" justify="center" pb={2} borderBottom="1px solid"
+                  borderColor="gray.200">
+            <Button size="sm" variant={filterType === 'unanswered' ? 'solid' : 'outline'} colorPalette={'blue'}
+                    onClick={() => setFilterType('unanswered')}>Chưa trả lời</Button>
+            <Button size="sm" variant={filterType === 'flagged' ? 'solid' : 'outline'} colorPalette={'yellow'}
+                    onClick={() => setFilterType('flagged')}>Đánh dấu</Button>
+            <Button size="sm" variant={filterType === 'all' ? 'solid' : 'outline'} colorPalette={'teal'}
+                    onClick={() => setFilterType('all')}>Tất cả</Button>
           </HStack>
           <VStack align="stretch" minW={"100%"} spacing={4} overflowY={'scroll'}>
             {partForSelectQuestion.map((partGroup, idx) => (
