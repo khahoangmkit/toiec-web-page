@@ -118,7 +118,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
 
   return (
     <Flex
-      minH={'80vh'}
+      minH={'calc(100vh - 90px)'}
       align={'top'}
       justify={'space-around'}
       py={4}
@@ -294,8 +294,8 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                         minW='46px'
                         size="sm"
                         disabled={disableSelectListen && Constant.ListenQuestion.includes(q.type)}
-                        variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
-                        colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
+                        variant={flaggedQuestions.includes(q.index) || answers[q.index] ? "solid" : "outline"}
+                        colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (answers[q.index] ? "green" : "teal")}
                         onClick={() => setCurrentIndexQuestion(q.index)}
                       >
                         {q.index}
