@@ -6,7 +6,7 @@ import {
   Tabs,
   CheckboxGroup,
   Checkbox, Fieldset,
-  Input, For
+  Input, For, Heading, Image
 } from "@chakra-ui/react";
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
@@ -49,7 +49,7 @@ const ListenQuestion = ["PART_1", "PART_2", "PART_3", "PART_4"];
 
 export default function Page() {
   const router = useRouter();
-  const { data: session } = useSession();
+  const {data: session} = useSession();
 
   const [showExam, setShowExam] = useState(false);
   const [stepIntro, setStepIntro] = useState(0);
@@ -119,7 +119,7 @@ export default function Page() {
 
       const res = await fetch("/api/result", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
           userId: session.user.id,
           testId: router.query.id,
@@ -138,7 +138,7 @@ export default function Page() {
       if (!res.ok) throw new Error("Lưu kết quả thất bại");
     } catch (e) {
       console.error(e);
-      toaster.create({ title: "Lưu kết quả thất bại", type: "error" });
+      toaster.create({title: "Lưu kết quả thất bại", type: "error"});
     }
 
     localStorage.setItem('result-test-local', JSON.stringify(result));
@@ -276,7 +276,6 @@ export default function Page() {
         stepIntro === 1 && (
           <Box
             minH={'80vh'}
-            background="white"
             boxShadow="lg"
             borderRadius="lg"
             padding={6}
@@ -285,20 +284,32 @@ export default function Page() {
             flexDirection="column"
             alignItems="center"
           >
-            <Text fontSize="lg" color="gray.800" mb={4} textAlign="center">
-              Gioi thieu mo dau test am thanh
-            </Text>
-            {/* Audio test section */}
-            <Box mb={4} display="flex" flexDirection="column" alignItems="center">
-              <audio ref={audioRef} autoPlay   src="/introduct-test.mp3" loop />
-              <Box display="flex" alignItems="center">
-                <Text fontSize="sm" mr={2}>Âm lượng</Text>
-                <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume} style={{width: 120}} />
+            <Box p={4}
+                 width={'800px'}
+                 boxShadow={'2xl'}
+                 bg='white'
+                 rounded={'xl'}>
+
+              <Heading pb={1} borderBottomWidth="1px">Volume test</Heading>
+
+              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
+                Volume test This is Volume Test. If you don't hear clearly, adjust the volume control on your computer, or
+                contact the administrators for assistance.
+              </Text>
+              {/* Audio test section */}
+              <Box mb={4} display="flex" flexDirection="column" alignItems="start">
+                <audio ref={audioRef} autoPlay src="/VoiecTest.mp3" loop/>
+                <Box display="flex" alignItems="center">
+                  <Text fontSize="md" mr={2}>Âm lượng</Text>
+                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
+                         style={{width: 120}}/>
+                </Box>
               </Box>
+              <Button colorPalette="teal" onClick={nextStep}>
+                Tiếp tục
+              </Button>
+
             </Box>
-            <Button colorPalette="teal" onClick={nextStep}>
-              Tiếp tục
-            </Button>
           </Box>
         )
       }
@@ -306,7 +317,6 @@ export default function Page() {
         stepIntro === 2 && (
           <Box
             minH={'80vh'}
-            background="white"
             boxShadow="lg"
             borderRadius="lg"
             padding={6}
@@ -315,25 +325,87 @@ export default function Page() {
             flexDirection="column"
             alignItems="center"
           >
-            <Text fontSize="lg" color="gray.800" mb={4} textAlign="center">
-              Gioi thieu part 1 thi
-            </Text>
-            {/* Audio test section */}
-            <Box mb={4} display="flex" flexDirection="column" alignItems="center">
-              <audio ref={audioRef} src="/introduct-test.mp3" autoPlay loop />
-              <Box display="flex" alignItems="center">
-                <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume} style={{width: 120}} />
-              </Box>
+            <Box p={4}
+                 width={'800px'}
+                 boxShadow={'2xl'}
+                 bg='white'
+                 rounded={'xl'}>
+
+              <Heading pb={1} borderBottomWidth="1px">DIRECTIONS</Heading>
+
+              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
+                In the Listening test, you will be asked to demonstrate how well you understand spoken English. The entire
+                Listening test will last approximately 45 minutes. There are four parts, and directions are given for each
+                part. You must mark your answers on the separate answer sheet. Do not write your answers in your test book
+              </Text>
+
+              <Button colorPalette="teal" onClick={nextStep}>
+                Tiếp tục
+              </Button>
+
             </Box>
-            <Button colorPalette="teal"  onClick={nextStep}>
-              Bắt đầu làm bài
-            </Button>
+          </Box>
+        )
+      }
+      {
+        stepIntro === 3 && (
+          <Box
+            minH={'80vh'}
+            boxShadow="lg"
+            borderRadius="lg"
+            padding={6}
+            mb={4}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <Box p={4}
+                 width={'800px'}
+                 boxShadow={'2xl'}
+                 bg='white'
+                 rounded={'xl'}>
+              <Heading pb={1} borderBottomWidth="1px">LISTENING TEST</Heading>
+
+              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
+                In the Listening test, you will be asked to demonstrate how well you understand spoken English.
+                The entire Listening test will last approximately 45 minutes. There are four parts, and directions are
+                given for each part. You must mark your answers on the separate answer sheet. Do not write your answers in
+                your test book.
+              </Text>
+
+              <Heading pb={1} borderBottomWidth="1px">PART 1</Heading>
+
+              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
+                <strong>Directions:</strong> For each question in this part, you will hear four statements about a picture
+                in your test book. When you hear the statements, you must select the one statement that best describes
+                what you see in the picture. Then find the number of the question on your answer sheet and mark your
+                answer. The statements will not be printed in your test book and will be spoken only one time.
+              </Text>
+
+              <Image src="/intro_toiec.png"></Image>
+              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
+                Statement (C), "They're sitting at a table," is the best description of the picture, so you should select
+                answer (C) and mark it on your answer sheet
+              </Text>
+              {/* Audio test section */}
+              <Box mb={4} display="flex" flexDirection="column" alignItems="start">
+                <audio ref={audioRef} src="/introduct-test.mp3" autoPlay loop/>
+                <Box display="flex" alignItems="start">
+                  <Text fontSize="md" mr={2}>Âm lượng</Text>
+                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
+                         style={{width: 120}}/>
+                </Box>
+              </Box>
+              <Button colorPalette="teal" onClick={nextStep}>
+                Bắt đầu làm bài
+              </Button>
+            </Box>
           </Box>
         )
       }
 
       {
-        stepIntro === 3 && <ExamDetail
+        stepIntro === 4 && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
           disableSelectListen={isFullTest}

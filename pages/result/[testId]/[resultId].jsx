@@ -28,7 +28,7 @@ const groupByPart = (questions) => {
   });
   return grouped;
 };
-const ListenPart = ['PART_1', 'PART_2', 'PART_3', 'PART_4' ];
+
 export default function ResultPage() {
   const router = useRouter();
   const { testId, resultId } = router.query;
@@ -56,7 +56,6 @@ export default function ResultPage() {
       const resultData = localStorage.getItem('result-test-local');
       if (resultData) {
         const parsedData = JSON.parse(resultData);
-        console.log("da", parsedData)
         setResult(parsedData);
       }
       return;
@@ -105,7 +104,7 @@ export default function ResultPage() {
           if (userAnswer) {
             if (userAnswer === question.correct) {
               results.correct += 1;
-              ListenPart.includes(question.type) ? results.correctListen += 1 :  results.correctRead += 1;
+              Constant.ListenQuestion.includes(question.type) ? results.correctListen += 1 :  results.correctRead += 1;
             } else {
               results.incorrect += 1;
             }

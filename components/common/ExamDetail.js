@@ -285,7 +285,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                       key={q.index}
                       minW='46px'
                       size="sm"
-                      // disabled={disableSelectListen && ListenQuestion.includes(q.type)}
+                      disabled={disableSelectListen && Constant.ListenQuestion.includes(q.type)}
                       variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
                       colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
                       onClick={() => setCurrentIndexQuestion(q.index)}
