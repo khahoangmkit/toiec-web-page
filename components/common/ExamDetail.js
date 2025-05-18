@@ -58,8 +58,10 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
   const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
   const [flaggedQuestions, setFlaggedQuestions] = useState([]);
   const [filterType, setFilterType] = useState('all'); // 'all', 'flagged', 'unanswered'
+  const [showListQuestion, setShowListQuestion] = useState(false); // Ẩn mặc định
 
   useEffect(() => {
+    if (!listQuestion.length) return;
     setGroupedQuestions(groupQuestions(listQuestion));
     setPartForSelectQuestion(groupByPartForSelectQuestion(listQuestion));
     setCurrentQuestion(listQuestion[0]);
@@ -116,7 +118,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
 
   return (
     <Flex
-      minH={'80vh'}
+      minH={'calc(100vh - 90px)'}
       align={'top'}
       justify={'space-around'}
       py={4}
@@ -127,18 +129,23 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
         rounded={'xl'}
         p={4}
         pl={10}
-        w={'80%'}
+        w={ showListQuestion ? '80%' : '99%' }
         spacing={8}
         height={'100vh'}
         align={'left'}
         divideY="2px">
-        <Stack width={'100%'} direction="row" spacing={4} mt={4} mb={4}>
+        <HStack width={'100%'} direction="row" spacing={4}>
           <ActionHeaderTest
             currentQuestion={currentQuestion}
             totalTime={timer}
             handleSubmit={handleSubmit}
           />
-        </Stack>
+          <Box alignItems='center' pt={2}>
+            <Button colorPalette={showListQuestion ? 'red' : 'teal'} onClick={() => setShowListQuestion(v => !v)} mb={2}>
+              {showListQuestion ? 'Hidden' : 'Review'}
+            </Button>
+          </Box>
+        </HStack>
 
         {currentQuestion && <Box pt={4} height='100%'>
           {
@@ -216,7 +223,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
                   )}
                 </Box>
                 {/* Cột 2: Câu hỏi */}
-                <Box flex={1}>
+                <Box flex={1} overflowY={'scroll'}  style={{maxHeight: 'calc(100% - 80px)'}}>
                   {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
                       <Heading size="md" mt={4} mb={2}>
@@ -253,50 +260,53 @@ export default function ExamDetail({listQuestion = [], timer = 7200, disableSele
           }
         </Box>}
       </Stack>
-      <Stack
-        boxShadow={'2xl'}
-        bg='white'
-        rounded={'xl'}
-        p={3}
-        w={'18%'}
-        spacing={8}
-        height={'100vh'}
-        align={'start'}>
-        <Heading size="md" mb={2}>List question</Heading>
-        <HStack mb={2} spacing={2} width="100%" justify="center" pb={2} borderBottom="1px solid" borderColor="gray.200">
-          <Button size="sm" variant={filterType === 'unanswered' ? 'solid' : 'outline'} colorPalette={'blue'} onClick={() => setFilterType('unanswered')}>Chưa trả lời</Button>
-          <Button size="sm" variant={filterType === 'flagged' ? 'solid' : 'outline'} colorPalette={'yellow'} onClick={() => setFilterType('flagged')}>Đánh dấu</Button>
-          <Button size="sm" variant={filterType === 'all' ? 'solid' : 'outline'} colorPalette={'teal'} onClick={() => setFilterType('all')}>Tất cả</Button>
-        </HStack>
-        <VStack align="stretch" minW={"100%"} spacing={4} overflowY={'scroll'}>
-          {partForSelectQuestion.map((partGroup, idx) => (
-            <Box key={idx} pt={'6px'}>
-              <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
-              <HStack wrap="wrap" spacing={2}>
-                {partGroup.questions
-                  .filter((q) => {
-                    if (filterType === 'flagged') return flaggedQuestions.includes(q.index);
-                    if (filterType === 'unanswered') return !answers[q.index];
-                    return true;
-                  })
-                  .map((q) => (
-                    <Button
-                      key={q.index}
-                      minW='46px'
-                      size="sm"
-                      // disabled={disableSelectListen && ListenQuestion.includes(q.type)}
-                      variant={q.index === currentIndexQuestion || flaggedQuestions.includes(q.index) ? "solid" : (answers[q.index] ? "solid" : "outline")}
-                      colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (q.index === currentIndexQuestion || answers[q.index] ? "green" : "teal")}
-                      onClick={() => setCurrentIndexQuestion(q.index)}
-                    >
-                      {q.index}
-                    </Button>
-                  ))}
-              </HStack>
-            </Box>
-          ))}
-        </VStack>
-      </Stack>
+
+      {showListQuestion && (
+        <Stack
+          boxShadow={'2xl'}
+          bg='white'
+          rounded={'xl'}
+          p={3}
+          w={'18%'}
+          spacing={8}
+          height={'100vh'}
+          align={'start'}>
+          <Heading size="md" mb={2}>List question</Heading>
+          <HStack mb={2} spacing={2} width="100%" justify="center" pb={2} borderBottom="1px solid" borderColor="gray.200">
+            <Button size="sm" variant={filterType === 'unanswered' ? 'solid' : 'outline'} colorPalette={'blue'} onClick={() => setFilterType('unanswered')}>Chưa trả lời</Button>
+            <Button size="sm" variant={filterType === 'flagged' ? 'solid' : 'outline'} colorPalette={'yellow'} onClick={() => setFilterType('flagged')}>Đánh dấu</Button>
+            <Button size="sm" variant={filterType === 'all' ? 'solid' : 'outline'} colorPalette={'teal'} onClick={() => setFilterType('all')}>Tất cả</Button>
+          </HStack>
+          <VStack align="stretch" minW={"100%"} spacing={4} overflowY={'scroll'}>
+            {partForSelectQuestion.map((partGroup, idx) => (
+              <Box key={idx} pt={'6px'}>
+                <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
+                <HStack wrap="wrap" spacing={2}>
+                  {partGroup.questions
+                    .filter((q) => {
+                      if (filterType === 'flagged') return flaggedQuestions.includes(q.index);
+                      if (filterType === 'unanswered') return !answers[q.index];
+                      return true;
+                    })
+                    .map((q) => (
+                      <Button
+                        key={q.index}
+                        minW='46px'
+                        size="sm"
+                        disabled={disableSelectListen && Constant.ListenQuestion.includes(q.type)}
+                        variant={flaggedQuestions.includes(q.index) || answers[q.index] ? "solid" : "outline"}
+                        colorPalette={flaggedQuestions.includes(q.index) ? "yellow" : (answers[q.index] ? "green" : "teal")}
+                        onClick={() => setCurrentIndexQuestion(q.index)}
+                      >
+                        {q.index}
+                      </Button>
+                    ))}
+                </HStack>
+              </Box>
+            ))}
+          </VStack>
+        </Stack>
+      )}
     </Flex>
   );
 }
