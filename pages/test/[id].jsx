@@ -192,8 +192,8 @@ export default function Page() {
               </Tabs.List>
 
               <Tabs.Content value={1}>
-                <Box background="tomato" width="100%" padding="4" mb={2} color="white">
-                  Sẵn sàng để bắt đầu làm full test? Để đạt được kết quả tốt nhất, bạn cần dành ra 120 phút cho bài test
+                <Box backgroundColor="#04adc9" borderRadius='md' width="100%" padding="4" mb={2} color="white">
+                  Sẵn sàng để bắt đầu làm full test?<br/> Để đạt được kết quả tốt nhất, bạn cần dành ra 120 phút cho bài test
                   này.
                 </Box>
 
@@ -203,7 +203,7 @@ export default function Page() {
                 </Box>
               </Tabs.Content>
               <Tabs.Content value={2}>
-                <Box background="tomato" width="100%" padding="4" mb={2} color="white">
+                <Box backgroundColor="#04adc9" borderRadius='md' width="100%" padding="4" mb={2} color="white">
                   Hình thức luyện tập từng phần và chọn mức thời gian phù hợp sẽ giúp bạn tập trung vào giải đúng các
                   câu hỏi thay vì phải chịu áp lực hoàn thành bài thi.
                 </Box>

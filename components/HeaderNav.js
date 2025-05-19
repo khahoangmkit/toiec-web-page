@@ -2,8 +2,8 @@
 
 import {
   Box, Button,
-  Flex, Menu,
-  Portal, Avatar
+  Flex, Menu, Text,
+  Portal, Avatar, Image
 } from '@chakra-ui/react'
 import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
@@ -14,9 +14,15 @@ export default function HeaderNav() {
 
   return (
     <>
-      <Box background="#f39c12" width="100%" padding="4" color='white'>
+      <Box background="linear-gradient(to right, #2a3380 0%, #04adc9 100%);" border="1px #283382" width="100%" padding="2" color='white'>
         <Flex alignItems='center' justifyContent='space-between'>
-          <Box style={{cursor: "pointer"}} onClick={() => router.push('/')}>Logo</Box>
+          <Flex alignItems={'center'}>
+            <Box style={{cursor: "pointer"}} onClick={() => router.push('/')}>
+              <Image src="/logo_toeic_white.png" height='60px'/>
+            </Box>
+            <Text color='#fff' fontWeight='bold'>HỆ THỐNG THI TRỰC TUYẾN </Text>
+
+          </Flex>
 
           {status === "loading" ? <Box/> : !session ?
             (<Button onClick={() => signIn('google')}>Login</Button>)

@@ -131,9 +131,10 @@ export default function ResultPage() {
           <Heading> Kết quả đề thi: {dataExam?.name}</Heading>
           <Button
             size="sm"
-            colorPalette="teal"
+            colorPalette="#283382"
             variant="outline"
             onClick={backToHome}
+            color={'#283382'}
           >Quay lại trang chủ</Button>
         </Flex>
 
@@ -165,9 +166,8 @@ export default function ResultPage() {
                 <Text>Bỏ qua</Text>
                 <Text fontSize="lg" fontWeight="bold">{testResults.skipped}</Text>
               </Box>
-              <Box px={5} py={3} borderRadius="lg" width="200px" height="110px" textAlign="center"  boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-                <Text pt={30}>Tổng điểm</Text>
-                <Text fontSize="lg" fontWeight="bold">{(testResults.correct * 5)}</Text>
+              <Box px={5} py={3} borderRadius="lg" background={'linear-gradient(to right, #b7e3e9 0%, #fffbe1 100%)'} style={{backgroundColor: ""}} width="200px" height="110px" textAlign="center"  boxShadow="md" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+                <Text textStyle="6xl" fontWeight="bold" color={'#025d84'}>{(testResults.correct * 5)}</Text>
               </Box>
             </HStack>
           </Box>
