@@ -13,7 +13,7 @@ import { useRouter } from "next/router";
 import { Constant } from "@/constants";
 import ExamDetail from "@/components/common/ExamDetail";
 import { toaster } from "@/components/ui/toaster";
-import { useSession } from "next-auth/react";
+import {signIn, useSession} from "next-auth/react";
 
 const listPartOption = [
   {
@@ -48,7 +48,8 @@ const listPartOption = [
 
 export default function Page() {
   const router = useRouter();
-  const {data: session} = useSession();
+  const {data: session, status} = useSession();
+
 
   const [stepIntro, setStepIntro] = useState(0);
 
@@ -75,6 +76,9 @@ export default function Page() {
   useEffect(() => {
     if (!router.query.id) {
       return;
+    }
+    if (!session) {
+      signIn('google', { callbackUrl: router.asPath });
     }
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     fetch(`${apiUrl}/api/test/${router.query.id}`)

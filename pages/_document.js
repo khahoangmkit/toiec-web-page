@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" suppressHydrationWarning>
       <Head>
-        <title>Toiec Hà Đông - Luyện thi TOEIC online, đề thi thử chuẩn</title>
+        <title>TOEIC Hà Đông - Luyện thi TOEIC online, đề thi thử chuẩn</title>
         <meta name="description"
               content="990toeichadong.com - Nền tảng luyện thi TOEIC online, cung cấp đề thi thử TOEIC mới nhất, mẹo làm bài, giải thích chi tiết, luyện tập các kỹ năng nghe, đọc, giúp bạn đạt điểm cao TOEIC."/>
         <meta name="keywords"
@@ -16,14 +16,14 @@ export default function Document() {
         <link rel="canonical" href="https://990toeichadong.com/"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://990toeichadong.com/"/>
-        <meta property="og:title" content="Toiec Hà Đông - Luyện thi TOEIC online, đề thi thử chuẩn"/>
+        <meta property="og:title" content="TOEIC Hà Đông - Luyện thi TOEIC online, đề thi thử chuẩn"/>
         <meta property="og:description"
               content="990toeichadong.com - Nền tảng luyện thi TOEIC online, cung cấp đề thi thử TOEIC mới nhất, mẹo làm bài, giải thích chi tiết, luyện tập các kỹ năng nghe, đọc, giúp bạn đạt điểm cao TOEIC."/>
         <meta property="og:image" content="/og-image.jpg"/>
         <meta property="og:site_name" content="990toeichadong.com"/>
         <meta property="og:locale" content="vi_VN"/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Toiec Hà Đông - Luyện thi TOEIC online, đề thi thử chuẩn"/>
+        <meta name="twitter:title" content="TOEIC Hà Đông - Luyện thi TOEIC online, đề thi thử chuẩn"/>
         <meta name="twitter:description"
               content="990toeichadong.com - Nền tảng luyện thi TOEIC online, cung cấp đề thi thử TOEIC mới nhất, mẹo làm bài, giải thích chi tiết, luyện tập các kỹ năng nghe, đọc, giúp bạn đạt điểm cao TOEIC."/>
         <meta name="twitter:image" content="/og-image.jpg"/>

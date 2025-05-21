@@ -25,7 +25,7 @@ export default function HeaderNav() {
           </Flex>
 
           {status === "loading" ? <Box/> : !session ?
-            (<Button onClick={() => signIn('google')}>Login</Button>)
+            (<Button borderRadius="full" fontWeight="bold" variant="outline" onClick={() => signIn('google')}>Login</Button>)
             :
             (
               <Menu.Root positioning={{ placement: "bottom" }}>
