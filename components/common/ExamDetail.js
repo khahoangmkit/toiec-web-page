@@ -269,7 +269,9 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
               </Flex>
             )
           }
-          <Box alignItems='center' p={2} borderRadius={'md'} border={'1px solid #f2f2f2'}>
+          <Box _hover={{
+            opacity: 0.7
+          }} alignItems='center' p={2} borderRadius={'md'} border={'1px solid #f2f2f2'} style={{cursor: "pointer"}}>
 
               <Image onClick={() => setShowListQuestion(v => !v)} src="/icons/menu-icon.svg" alt='icon-menu' boxSize="32px"></Image>
           </Box>

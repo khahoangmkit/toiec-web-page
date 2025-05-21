@@ -5,7 +5,7 @@ import {
   Tabs,
   Image,
   Text,
-  Flex, Stack
+  Flex, Stack, Table
 } from "@chakra-ui/react";
 import {useRouter} from "next/router";
 import {signIn, useSession} from "next-auth/react";
@@ -161,11 +161,21 @@ export default function Home() {
         }
       ]
     }
-  ]
+  ];
 
-  const reviews = [
-    {id: 1, name: "Nguyễn Văn A", img: "/profile_avatar.png", comment: "Trang web rất hữu ích, giao diện dễ dùng."},
-    {id: 2, name: "Trần Thị B", img: "/profile_avatar.png", comment: "Nhờ luyện đề ở đây mình đã tăng 150 điểm!"},
+  const topStudents = [
+    {
+      fullName: "Nguyễn Mạnh Quân",
+      readingCorrect: 90,
+      listeningCorrect: 95,
+      totalCorrect: 185
+    },
+    {
+      fullName: "Nguyễn Văn Dũng",
+      readingCorrect: 23,
+      listeningCorrect: 45,
+      totalCorrect: 68
+    }
   ];
 
   function goToFullTest(id) {
@@ -312,17 +322,33 @@ export default function Home() {
 
       {/* Đánh giá của học sinh */}
       <Box width='100%' maxW="1200px"  bg='white' rounded='xl' p={8}  mx="auto"  my={2} boxShadow="xl">
-        <Text fontSize="2xl" fontWeight="bold" mb={4}>Đánh giá của học sinh</Text>
-        <Flex gap={4} wrap="wrap" justify={'start'}>
-          {reviews.map(r => (
-            <Box key={r.id} p={6} borderWidth="1px" borderRadius="2xl" bg="white" transition="transform 0.2s, box-shadow 0.2s" _hover={{ boxShadow: 'dark-lg', transform: 'translateY(-4px) scale(1.03)' }}>
-              <Flex align="center" gap={4} mb={2}>
-                <Text fontWeight="bold">{r.name}</Text>
-              </Flex>
-              <Text fontSize="sm">"{r.comment}"</Text>
-            </Box>
-          ))}
-        </Flex>
+        <Text fontSize="2xl" fontWeight="bold" mb={4}>Top 10 học viên có thành tích xuất sắc</Text>
+
+
+        <Table.ScrollArea rounded="md" height="500px">
+          <Table.Root variant="simple" size="md" stickyHeader>
+            <Table.Header>
+              <Table.Row   bg="bg.subtle">
+                <Table.ColumnHeader fontWeight="bold">Top</Table.ColumnHeader>
+                <Table.ColumnHeader fontWeight="bold">Tên học viên</Table.ColumnHeader>
+                <Table.ColumnHeader fontWeight="bold">Phần nghe</Table.ColumnHeader>
+                <Table.ColumnHeader fontWeight="bold">Phần đọc</Table.ColumnHeader>
+                <Table.ColumnHeader fontWeight="bold">Tổng điểm</Table.ColumnHeader>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              {topStudents.map((student, idx) => (
+                <Table.Row key={idx}>
+                  <Table.Cell>{idx + 1}</Table.Cell>
+                  <Table.Cell>{student.fullName}</Table.Cell>
+                  <Table.Cell>{student.readingCorrect * 5}</Table.Cell>
+                  <Table.Cell>{student.listeningCorrect * 5}</Table.Cell>
+                  <Table.Cell>{student.totalCorrect * 5}</Table.Cell>
+                </Table.Row>
+              ))}
+            < /Table.Body>
+          </Table.Root>
+        </Table.ScrollArea>
       </Box>
 
       </Stack>

@@ -37,8 +37,12 @@ export default function HeaderNav() {
                 <Portal>
                   <Menu.Positioner>
                     <Menu.Content>
-                      <Menu.Item onClick={() => router.push('/profile')}>Your profile</Menu.Item>
-                      <Menu.Item onClick={() => signOut()}>Sign out</Menu.Item>
+                      <Menu.Item _hover={{
+                        bg: '#e4e4e7'
+                      }} onClick={() => router.push('/profile')}>Your profile</Menu.Item>
+                      <Menu.Item _hover={{
+                        bg: '#e4e4e7'
+                      }} onClick={() => signOut()}>Sign out</Menu.Item>
                     </Menu.Content>
                   </Menu.Positioner>
                 </Portal>

@@ -151,13 +151,6 @@ export default function Page() {
       return;
     }
 
-    // if (!practiceTime) {
-    //   toaster.create({
-    //     title: `Vui lòng chọn thời gian luyện tập`,
-    //     type: 'error',
-    //   })
-    //   return;
-    // }
     const filtered = listQuestion.filter(q => selectedParts.includes(q.type));
     setListQuestion(filtered);
     setTimer(Number(practiceTime) * 60);
@@ -313,7 +306,11 @@ export default function Page() {
                 This is Volume Test. If you don't hear clearly, adjust the volume control on your computer, or
                 contact the administrators for assistance.
               </Text>
-              <Button colorPalette="teal" onClick={nextStep}>
+              <Button bg="#283382"
+                      _hover={{
+                        bg: "#2aa9c7",   // Màu nền khi hover
+                      }}
+                      colorPalette="teal" onClick={nextStep}>
                 Next
               </Button>
 
@@ -415,7 +412,11 @@ export default function Page() {
                 answer (C) and mark it on your answer sheet
               </Text>
 
-              <Button colorPalette="teal" onClick={nextStep}>
+              <Button bg="#283382"
+                      _hover={{
+                        bg: "#2aa9c7",   // Màu nền khi hover
+                      }}
+                      colorPalette="teal" onClick={nextStep}>
                 Start Test
               </Button>
             </Box>
