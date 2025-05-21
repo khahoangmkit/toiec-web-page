@@ -317,52 +317,52 @@ export default function Page() {
           </Box>
         )
       }
+      {/*{*/}
+      {/*  stepIntro === 2 && (*/}
+      {/*    <Box*/}
+      {/*      minH={'80vh'}*/}
+      {/*      boxShadow="lg"*/}
+      {/*      borderRadius="lg"*/}
+      {/*      padding={6}*/}
+      {/*      mb={4}*/}
+      {/*      display="flex"*/}
+      {/*      flexDirection="column"*/}
+      {/*      alignItems="center"*/}
+      {/*    >*/}
+      {/*      <Box p={4}*/}
+      {/*           width={'800px'}*/}
+      {/*           boxShadow={'2xl'}*/}
+      {/*           bg='white'*/}
+      {/*           rounded={'xl'}>*/}
+
+      {/*        /!* Audio test section *!/*/}
+      {/*        <Box mb={4} display="flex" borderBottomWidth="1px" flexDirection="row" justifyContent='space-between'>*/}
+      {/*          <Heading pb={1}>DIRECTIONS</Heading>*/}
+
+      {/*          <audio ref={audioRef} autoPlay src="/directions.mp3" loop/>*/}
+      {/*          <Box display="flex" gap={1} alignItems="center">*/}
+      {/*            <Image src="/icons/sound-max.svg" boxSize="26px"></Image>*/}
+      {/*            <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}*/}
+      {/*                   style={{width: 120}}/>*/}
+      {/*          </Box>*/}
+      {/*        </Box>*/}
+
+      {/*        <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">*/}
+      {/*          In the Listening test, you will be asked to demonstrate how well you understand spoken English. The entire*/}
+      {/*          Listening test will last approximately 45 minutes. There are four parts, and directions are given for each*/}
+      {/*          part. You must mark your answers on the separate answer sheet. Do not write your answers in your test book*/}
+      {/*        </Text>*/}
+
+      {/*        <Button colorPalette="teal" onClick={nextStep}>*/}
+      {/*          Next*/}
+      {/*        </Button>*/}
+
+      {/*      </Box>*/}
+      {/*    </Box>*/}
+      {/*  )*/}
+      {/*}*/}
       {
         stepIntro === 2 && (
-          <Box
-            minH={'80vh'}
-            boxShadow="lg"
-            borderRadius="lg"
-            padding={6}
-            mb={4}
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-          >
-            <Box p={4}
-                 width={'800px'}
-                 boxShadow={'2xl'}
-                 bg='white'
-                 rounded={'xl'}>
-
-              {/* Audio test section */}
-              <Box mb={4} display="flex" borderBottomWidth="1px" flexDirection="row" justifyContent='space-between'>
-                <Heading pb={1}>DIRECTIONS</Heading>
-
-                <audio ref={audioRef} autoPlay src="/directions.mp3" loop/>
-                <Box display="flex" gap={1} alignItems="center">
-                  <Image src="/icons/sound-max.svg" boxSize="26px"></Image>
-                  <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}
-                         style={{width: 120}}/>
-                </Box>
-              </Box>
-
-              <Text pt={1} fontSize="md" color="gray.800" mb={4} textAlign="start">
-                In the Listening test, you will be asked to demonstrate how well you understand spoken English. The entire
-                Listening test will last approximately 45 minutes. There are four parts, and directions are given for each
-                part. You must mark your answers on the separate answer sheet. Do not write your answers in your test book
-              </Text>
-
-              <Button colorPalette="teal" onClick={nextStep}>
-                Next
-              </Button>
-
-            </Box>
-          </Box>
-        )
-      }
-      {
-        stepIntro === 3 && (
           <Box
             minH={'80vh'}
             boxShadow="lg"
@@ -420,7 +420,7 @@ export default function Page() {
       }
 
       {
-        stepIntro === 4 && <ExamDetail
+        stepIntro === 3 && <ExamDetail
           listQuestion={listQuestion}
           timer={timer}
           isFullTest={isFullTest}
