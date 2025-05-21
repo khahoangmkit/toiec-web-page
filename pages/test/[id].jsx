@@ -77,7 +77,7 @@ export default function Page() {
     if (!router.query.id) {
       return;
     }
-    if (!session) {
+    if (status !== "loading" && !session) {
       signIn('google', { callbackUrl: router.asPath });
     }
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
