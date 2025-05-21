@@ -232,11 +232,9 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
               </Box>
             )
           }
-          <Box alignItems='center' pt={2}>
-            <Button colorPalette={showListQuestion ? 'red' : 'teal'} onClick={() => setShowListQuestion(v => !v)}
-                    mb={2}>
-              {showListQuestion ? 'Hidden' : 'Review'}
-            </Button>
+          <Box alignItems='center' p={2} borderRadius={'md'} border={'1px solid #f2f2f2'}>
+
+              <Image onClick={() => setShowListQuestion(v => !v)} src="/icons/menu-icon.svg" alt='icon-menu' boxSize="32px"></Image>
           </Box>
         </HStack>
 
