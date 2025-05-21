@@ -163,6 +163,10 @@ export default function Page() {
   }
 
   function startFullTest() {
+    if (!session) {
+      signIn('google', { callbackUrl: router.asPath });
+      return;
+    }
     setStepIntro(1);
   }
 
