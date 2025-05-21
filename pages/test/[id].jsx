@@ -158,7 +158,7 @@ export default function Page() {
     setListQuestion(filtered);
     setTimer(Number(practiceTime) * 60);
     setIsFullTest(false);
-    setStepIntro(4);
+    setStepIntro(3);
   }
 
   function onChangeCheckBox(e) {
