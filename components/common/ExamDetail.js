@@ -34,7 +34,7 @@ const groupQuestions = (questions) => {
   let currentType = '';
 
   questions.forEach((q) => {
-    if (q.audioLink || q.imgLink || currentType !== q.type) {
+    if (q.audioLink || q.imgLink.length || currentType !== q.type) {
       if (currentGroup.length) {
         groups.push(currentGroup);
       }
@@ -322,7 +322,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
             singleQuestion.includes(currentQuestion.type) && (
               <>
                 <Flex height='100%' direction="row" gap={8}>
-                  {/* Cột 1: Ảnh và audio  trừ part 5 ko chia */}
+                  {/* Cột 1: Ảnh và audios  trừ part 5 ko chia */}
                   {
                     currentQuestion.type !== "PART_5" &&
                     <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}
@@ -380,7 +380,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
           {
             (!singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
               <Flex direction="row" height='100%' gap={8}>
-                {/* Cột 1: Ảnh và audio */}
+                {/* Cột 1: Ảnh và audios */}
                 <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%'
                      style={{maxHeight: 'calc(100% - 80px)'}} bg="gray.100" p={6} borderRadius="md" display="flex"
                      flexDirection="column" alignItems="center" justifyContent="flex-start">

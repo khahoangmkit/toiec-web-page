@@ -64,7 +64,7 @@ export default function Page() {
   // Hàm nextStep để chuyển bước
   const nextStep = () => setStepIntro(stepIntro + 1);
 
-  // Ref và hàm điều khiển audio test
+  // Ref và hàm điều khiển audios test
   const audioRef = useRef(null);
 
   const handleVolume = (e) => {
@@ -349,7 +349,7 @@ export default function Page() {
       {/*        <Box mb={4} display="flex" borderBottomWidth="1px" flexDirection="row" justifyContent='space-between'>*/}
       {/*          <Heading pb={1}>DIRECTIONS</Heading>*/}
 
-      {/*          <audio ref={audioRef} autoPlay src="/directions.mp3" loop/>*/}
+      {/*          <audios ref={audioRef} autoPlay src="/directions.mp3" loop/>*/}
       {/*          <Box display="flex" gap={1} alignItems="center">*/}
       {/*            <Image src="/icons/sound-max.svg" boxSize="26px"></Image>*/}
       {/*            <input type="range" min={0} max={1} step={0.01} defaultValue={1} onChange={handleVolume}*/}

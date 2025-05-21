@@ -91,7 +91,7 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_6_audio_1711939890399.Test_01-07.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -106,7 +106,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -121,7 +121,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -136,7 +136,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -151,7 +151,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -166,7 +166,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -181,7 +181,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -196,7 +196,7 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -211,7 +211,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -226,7 +226,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -241,7 +241,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -256,7 +256,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -271,7 +271,7 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -286,7 +286,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -301,7 +301,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -316,7 +316,7 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -331,7 +331,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -346,7 +346,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -361,7 +361,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -376,7 +376,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -391,7 +391,7 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -406,7 +406,7 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -421,7 +421,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -436,7 +436,7 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -451,7 +451,7 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "A",
         "B",
@@ -466,7 +466,7 @@
       "correct": 4,
       "description": "What event does the woman mention?",
       "audioLink": "/data/ets_2024_test_1/audio/question_31_audio_1711946888852.Test_01-32-34.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A job fair",
         "(B) A cooking class",
@@ -482,7 +482,7 @@
       "correct": 2,
       "description": "What does the woman ask for?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A guest list",
         "(B) A dessert recipe",
@@ -498,7 +498,7 @@
       "correct": 2,
       "description": "What does the man recommend doing?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Returning some merchandise",
         "(B) Watching a video",
@@ -514,7 +514,7 @@
       "correct": 1,
       "description": "What department do the speakers most likely work in?",
       "audioLink": "/data/ets_2024_test_1/audio/question_34_audio_1711954013490.Test_01-35-37.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Accounting",
         "(B) Research and development",
@@ -530,7 +530,7 @@
       "correct": 3,
       "description": "What problem does the woman mention?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A report has not been submitted.",
         "(B) An invoice is not accurate.",
@@ -546,7 +546,7 @@
       "correct": 2,
       "description": "What does the man say he will do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Delete an electronic file",
         "(B) Authorize a reimbursement",
@@ -562,7 +562,7 @@
       "correct": 1,
       "description": "What industry do the speakers most likely work in?",
       "audioLink": "/data/ets_2024_test_1/audio/question_37_audio_1711955442500.Test_01-38-40.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Shipping",
         "(B) Manufacturing",
@@ -578,7 +578,7 @@
       "correct": 3,
       "description": "What is the reason for a delay?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A schedule was written incorrectly.",
         "(B) Some equipment is not properly set up.",
@@ -594,7 +594,7 @@
       "correct": 4,
       "description": "What does the man say he will do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Update a shift schedule",
         "(B) Clear a work space",
@@ -610,7 +610,7 @@
       "correct": 3,
       "description": "Why is the woman at the restaurant?",
       "audioLink": "/data/ets_2024_test_1/audio/question_40_audio_1711964944544.Test_01-41-43.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To celebrate a retirement",
         "(B) To perform an inspection",
@@ -626,7 +626,7 @@
       "correct": 4,
       "description": "What does the woman mean when she says, \"it's very hot today\"?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) She is unable to accept an invitation.",
         "(B) A cooling system is not working.",
@@ -642,7 +642,7 @@
       "correct": 1,
       "description": "What does the man say about a parking garage?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It is free for customers.",
         "(B) It is under construction.",
@@ -658,7 +658,7 @@
       "correct": 3,
       "description": "Where does the woman most likely work?",
       "audioLink": "/data/ets_2024_test_1/audio/question_43_audio_1712025383497.Test_01-44-46.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) At a university",
         "(B) At a publishing company",
@@ -674,7 +674,7 @@
       "correct": 4,
       "description": "What does Murat ask about?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) How much an item costs",
         "(B) When an event will begin",
@@ -690,7 +690,7 @@
       "correct": 2,
       "description": "What does the woman suggest doing?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Offering a discount",
         "(B) Displaying informational materials",
@@ -706,7 +706,7 @@
       "correct": 2,
       "description": "What type of industry do the speakers most likely work in?",
       "audioLink": "/data/ets_2024_test_1/audio/question_46_audio_1712043211355.Test_01-47-49.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Textile manufacturing",
         "(B) Food production",
@@ -722,7 +722,7 @@
       "correct": 3,
       "description": "What business challenge are the speakers discussing?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Lack of qualified personnel",
         "(B) Rising production costs",
@@ -738,7 +738,7 @@
       "correct": 1,
       "description": "What does the man say he will do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Research more information",
         "(B) Negotiate a discount",
@@ -754,7 +754,7 @@
       "correct": 3,
       "description": "Why is the man calling?",
       "audioLink": "/data/ets_2024_test_1/audio/question_49_audio_1712043260513.Test_01-50-52.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To explain a business merger",
         "(B) To describe a new company policy",
@@ -770,7 +770,7 @@
       "correct": 4,
       "description": "What does the man say a client is interested in doing?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Purchasing another business",
         "(B) Finding a new office space",
@@ -786,7 +786,7 @@
       "correct": 1,
       "description": "What does the woman ask the man to send?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A project description",
         "(B) An event invitation",
@@ -802,7 +802,7 @@
       "correct": 1,
       "description": "What problem does the woman mention?",
       "audioLink": "/data/ets_2024_test_1/audio/question_52_audio_1712043278380.Test_01-53-55.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A vehicle is out of service.",
         "(B) An employee is late.",
@@ -818,7 +818,7 @@
       "correct": 2,
       "description": "Where do the speakers most likely work?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) At a recording studio",
         "(B) At a catering company",
@@ -834,7 +834,7 @@
       "correct": 3,
       "description": "What does the man say he will do next?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Arrange for a car repair",
         "(B) Order some kitchen supplies",
@@ -850,7 +850,7 @@
       "correct": 3,
       "description": "Why is the man calling the woman?",
       "audioLink": "/data/ets_2024_test_1/audio/question_55_audio_1716796911837.Test_01-56-58.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To plan a company event",
         "(B) To confirm a work deadline",
@@ -866,7 +866,7 @@
       "correct": 1,
       "description": "Who most likely is the woman?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A newspaper editor",
         "(B) A university professor",
@@ -882,7 +882,7 @@
       "correct": 4,
       "description": "What will the woman most likely do next?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Negotiate a contract",
         "(B) Explain an office policy",
@@ -898,7 +898,7 @@
       "correct": 2,
       "description": "What are the speakers mainly discussing?",
       "audioLink": "/data/ets_2024_test_1/audio/question_58_audio_1712043319067.Test_01-59-61.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A new transportation route",
         "(B) A company merger",
@@ -914,7 +914,7 @@
       "correct": 1,
       "description": "Why does the woman say, \"they also talked about it last year\"?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To express doubt",
         "(B) To explain a process",
@@ -930,7 +930,7 @@
       "correct": 4,
       "description": "What does the woman want to avoid?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Paying a certification fee",
         "(B) Training additional staff",
@@ -964,7 +964,7 @@
       "correct": 3,
       "description": "Look at the graphic. What is the price of the item the man recommends?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) $21",
         "(B) $18",
@@ -980,7 +980,7 @@
       "correct": 1,
       "description": "What is the woman going to send to the man?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A graphic file",
         "(B) A list of names",
@@ -1014,7 +1014,7 @@
       "correct": 3,
       "description": "Look at the graphic. Which piece of artwork will no longer be included?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A Careful Glance",
         "(B) Promises",
@@ -1030,7 +1030,7 @@
       "correct": 2,
       "description": "What does the woman say she will do right away?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Speak with an artist",
         "(B) Edit a recording",
@@ -1064,7 +1064,7 @@
       "correct": 4,
       "description": "Look at the graphic. Which site has already been completed?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Site A",
         "(B) Site B",
@@ -1080,7 +1080,7 @@
       "correct": 1,
       "description": "What does the man suggest focusing on?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Work opportunities",
         "(B) Wind turbine costs",
@@ -1096,7 +1096,7 @@
       "correct": 4,
       "description": "Who has recorded the message?",
       "audioLink": "/data/ets_2024_test_1/audio/question_70_audio_1712112353478.Test_01-71-73.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A city mayor's office",
         "(B) A maintenance department",
@@ -1112,7 +1112,7 @@
       "correct": 1,
       "description": "What are the listeners asked to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Move their vehicies",
         "(B) Pay their parking fines",
@@ -1128,7 +1128,7 @@
       "correct": 3,
       "description": "What does the speaker say was mailed last week?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) An election ballot",
         "(B) A maintenance plan",
@@ -1144,7 +1144,7 @@
       "correct": 3,
       "description": "What is the topic of the episode?",
       "audioLink": "/data/ets_2024_test_1/audio/question_73_audio_1712114809101.Test_01-74-76.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Garden landscaping",
         "(B) Window installation",
@@ -1160,7 +1160,7 @@
       "correct": 2,
       "description": "What does the speaker emphasize about (A) Change a policy some tools?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) They should be cleaned regularly.",
         "(B) They should be of high quality.",
@@ -1176,7 +1176,7 @@
       "correct": 3,
       "description": "What does the speaker recommend doing every year?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Treating some wood",
         "(B) Consulting an electrician",
@@ -1192,7 +1192,7 @@
       "correct": 2,
       "description": "Who most likely is the speaker?",
       "audioLink": "/data/ets_2024_test_1/audio/question_76_audio_1712114800772.Test_01-77-79.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A radio show host",
         "(B) A tour guide",
@@ -1208,7 +1208,7 @@
       "correct": 1,
       "description": "What will happen at two o'clock?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A lecture will begin.",
         "(B) A demonstration will be given.",
@@ -1224,7 +1224,7 @@
       "correct": 3,
       "description": "What is Orchid Caretakers?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A book",
         "(B) An album",
@@ -1240,7 +1240,7 @@
       "correct": 1,
       "description": "What event is taking place?",
       "audioLink": "/data/ets_2024_test_1/audio/question_79_audio_1712114786202.Test_01-80-82.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A fund-raising concert",
         "(B) A sports competition",
@@ -1256,7 +1256,7 @@
       "correct": 2,
       "description": "What does the organization plan to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Change a policy",
         "(B) Repair a building",
@@ -1272,7 +1272,7 @@
       "correct": 3,
       "description": "What does the speaker encourage the listeners to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Order tickets early",
         "(B) Visit a community center",
@@ -1288,7 +1288,7 @@
       "correct": 1,
       "description": "What is the topic of the workshop?",
       "audioLink": "/data/ets_2024_test_1/audio/question_82_audio_1712114828229.Test_01-83-85.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Time management",
         "(B) Public speaking",
@@ -1304,7 +1304,7 @@
       "correct": 2,
       "description": "What does the speaker imply when he says, \"Erina's at the back of the room\"?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A guest speaker has just arrived.",
         "(B) Assistance is available.",
@@ -1320,7 +1320,7 @@
       "correct": 3,
       "description": "What will the listeners do next?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Sign their names on a list",
         "(B) Take a break",
@@ -1336,7 +1336,7 @@
       "correct": 4,
       "description": "What is a historical site famous for?",
       "audioLink": "/data/ets_2024_test_1/audio/question_85_audio_1712126492805.Test_01-86-88.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Its defensive walls",
         "(B) Its royal inhabitants",
@@ -1352,7 +1352,7 @@
       "correct": 1,
       "description": "Why does the speaker apologize?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) The listeners cannot take pictures.",
         "(B) An area is closed to the listeners.",
@@ -1368,7 +1368,7 @@
       "correct": 3,
       "description": "What does the speaker ask the listeners to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Show their tickets",
         "(B) Put on protective clothing",
@@ -1384,7 +1384,7 @@
       "correct": 1,
       "description": "What is the speaker mainly discussing?",
       "audioLink": "/data/ets_2024_test_1/audio/question_88_audio_1712126506433.Test_01-89-91.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) An advertising campaign",
         "(B) A market expansion",
@@ -1400,7 +1400,7 @@
       "correct": 2,
       "description": "What does the speaker imply when he says, \"this is a priority\"?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Overtime pay has been approved.",
         "(B) A deadline must be met.",
@@ -1416,7 +1416,7 @@
       "correct": 3,
       "description": "What will the listeners do next?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) View a presentation",
         "(B) Review a budget",
@@ -1432,7 +1432,7 @@
       "correct": 1,
       "description": "Where do the listeners most likely work?",
       "audioLink": "/data/ets_2024_test_1/audio/question_91_audio_1712126522190.Test_01-92-94.mp3",
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) At a hospital",
         "(B) At a restaurant",
@@ -1448,7 +1448,7 @@
       "correct": 2,
       "description": "What is the main purpose of the talk?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To make a request",
         "(B) To address staff complaints",
@@ -1464,7 +1464,7 @@
       "correct": 4,
       "description": "What does the speaker imply when she says, \"That will require management approval\"?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A process has not been followed.",
         "(B) The listeners may be asked to work extra shifts.",
@@ -1498,7 +1498,7 @@
       "correct": 1,
       "description": "Look at the graphic. Where does the speaker say refreshments will be served?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Location 1",
         "(B) Location 2",
@@ -1514,7 +1514,7 @@
       "correct": 4,
       "description": "What are the listeners reminded to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Complete a survey",
         "(B) Donate some money",
@@ -1548,7 +1548,7 @@
       "correct": 1,
       "description": "Look at the graphic. At what depth should samples be collected this month?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) 12 inches",
         "(B) 4 inches",
@@ -1564,7 +1564,7 @@
       "correct": 4,
       "description": "What does the speaker encourage the listeners to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Turn off mobile phones",
         "(B) Have some refreshments",
@@ -1580,7 +1580,7 @@
       "correct": 2,
       "description": "Former Sendai Company CEO Ken Nakata spoke about------- career experiences.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) he",
         "(B) his",
@@ -1596,7 +1596,7 @@
       "correct": 4,
       "description": "Passengers who will be taking a ------- domestic flight should go to Terminal A.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) connectivity",
         "(B) connects",
@@ -1612,7 +1612,7 @@
       "correct": 3,
       "description": "Fresh and ------- apple-cider donuts are available at Oakcrest Orchard's retail shop for £6 per dozen.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) eaten",
         "(B) open",
@@ -1628,7 +1628,7 @@
       "correct": 2,
       "description": "Zahn Flooring has the widest selection of ------- in the United Kingdom.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) paints",
         "(B) tiles",
@@ -1644,7 +1644,7 @@
       "correct": 4,
       "description": "One responsibility of the IT department is to ensure that the company is using ------- software.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) update",
         "(B) updating",
@@ -1660,7 +1660,7 @@
       "correct": 4,
       "description": "It is wise to check a company's dress code -------visiting its head office.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) so",
         "(B) how",
@@ -1676,7 +1676,7 @@
       "correct": 1,
       "description": "Wexler Store's management team expects that employees will ------- support any new hires.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) enthusiastically",
         "(B) enthusiasm",
@@ -1692,7 +1692,7 @@
       "correct": 4,
       "description": "Wheel alignments and brake system ------- are part of our vehicle service plan.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) inspects",
         "(B) inspector",
@@ -1708,7 +1708,7 @@
       "correct": 1,
       "description": "Registration for the Marketing Coalition Conference is now open ------- September 30",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) until",
         "(B) into",
@@ -1724,7 +1724,7 @@
       "correct": 2,
       "description": "Growth in the home entertainment industry has been -------this quarter.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) separate",
         "(B) limited",
@@ -1740,7 +1740,7 @@
       "correct": 1,
       "description": "Hawson Furniture will be making ------- on the east side of town on Thursday.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) deliveries",
         "(B) delivered",
@@ -1756,7 +1756,7 @@
       "correct": 2,
       "description": "The Marlton City Council does not have the authority to ------- parking on city streets.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) drive",
         "(B) prohibit",
@@ -1772,7 +1772,7 @@
       "correct": 1,
       "description": "Project Earth Group is ------- for ways to reduce transport-related greenhouse gas emissions.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) looking",
         "(B) seeing",
@@ -1788,7 +1788,7 @@
       "correct": 3,
       "description": "Our skilled tailors are happy to design a custom-made suit that fits your style and budget -------.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) perfect",
         "(B) perfects",
@@ -1804,7 +1804,7 @@
       "correct": 4,
       "description": "Project manager Hannah Chung has proved to be very------- with completing company projects.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) helpfulness",
         "(B) help",
@@ -1820,7 +1820,7 @@
       "correct": 3,
       "description": "Lehua Vacation Club members will receive double points -------the month of August at participating hotels.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) onto",
         "(B) above",
@@ -1836,7 +1836,7 @@
       "correct": 4,
       "description": "The costumes were not received ------- enough to be used in the first dress rehearsal.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) far",
         "(B) very",
@@ -1852,7 +1852,7 @@
       "correct": 2,
       "description": "As a former publicist for several renowned orchestras, Mr. Wu would excel in the role of event -------.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) organized",
         "(B) organizer",
@@ -1868,7 +1868,7 @@
       "correct": 1,
       "description": "The northbound lane on Davis Street will be ------- closed because of the city's bridge reinforcement project.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) temporarily",
         "(B) competitively",
@@ -1884,7 +1884,7 @@
       "correct": 1,
       "description": "Airline representatives must handle a wide range of passenger issues, ------- missed connections to lost luggage.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) from",
         "(B) under",
@@ -1900,7 +1900,7 @@
       "correct": 4,
       "description": "The meeting notes were------- deleted, but Mr. Hahm was able to recreate them from memory.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) accident",
         "(B) accidental",
@@ -1916,7 +1916,7 @@
       "correct": 1,
       "description": "The current issue of Farming Scene magazine predicts that the price of corn will rise 5 percent over the ------- year.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) next",
         "(B) with",
@@ -1932,7 +1932,7 @@
       "correct": 2,
       "description": "Anyone who still -------to take the fire safety training should do so before the end of the month.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) needing",
         "(B) needs",
@@ -1948,7 +1948,7 @@
       "correct": 1,
       "description": "Emerging technologies have ------- begun to transform the shipping industry in ways that were once unimaginable.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) already",
         "(B) exactly",
@@ -1964,7 +1964,7 @@
       "correct": 4,
       "description": "The company handbook outlines the high ------- that employees are expected to meet every day.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) experts",
         "(B) accounts",
@@ -1980,7 +1980,7 @@
       "correct": 4,
       "description": "Because ------- of the board members have scheduling conflicts, the board meeting will be moved to a date when all can attend.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) any",
         "(B) everybody",
@@ -1996,7 +1996,7 @@
       "correct": 3,
       "description": "The project ------- the collaboration of several teams across the company.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) passed",
         "(B) decided",
@@ -2012,7 +2012,7 @@
       "correct": 3,
       "description": "We cannot send the store's coupon booklet to the printers until it------- by Ms. Jean.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) is approving",
         "(B) approves",
@@ -2028,7 +2028,7 @@
       "correct": 3,
       "description": "-------the closure of Verdigold Transport Services, we are looking for a new shipping company.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) In spite of",
         "(B) Just as",
@@ -2044,7 +2044,7 @@
       "correct": 2,
       "description": "The ------- information provided by Uniss Bank's brochure helps applicants understand the terms of their loans.",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) arbitrary",
         "(B) supplemental",
@@ -2078,7 +2078,7 @@
       "correct": 4,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) to use",
         "(B) used to",
@@ -2094,7 +2094,7 @@
       "correct": 1,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Best of all",
         "(B) For example",
@@ -2110,7 +2110,7 @@
       "correct": 2,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) we",
         "(B) they",
@@ -2144,7 +2144,7 @@
       "correct": 1,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) attention",
         "(B) proposals",
@@ -2160,7 +2160,7 @@
       "correct": 2,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Several other events have gone surprisingly well.",
         "(B) Thank you also for your flexibility in planning the event.",
@@ -2176,7 +2176,7 @@
       "correct": 2,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) will benefit",
         "(B) to benefit",
@@ -2210,7 +2210,7 @@
       "correct": 3,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To sign up for a card, visit your local library branch.",
         "(B) For questions about library membership, please visit our Web site.",
@@ -2226,7 +2226,7 @@
       "correct": 2,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Also",
         "(B) Should",
@@ -2242,7 +2242,7 @@
       "correct": 3,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) specifically",
         "(B) specifics",
@@ -2276,7 +2276,7 @@
       "correct": 2,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) researching",
         "(B) creating",
@@ -2292,7 +2292,7 @@
       "correct": 4,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) If not",
         "(B) By comparison",
@@ -2308,7 +2308,7 @@
       "correct": 1,
       "description": null,
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) receives",
         "(B) is receiving",
@@ -2342,7 +2342,7 @@
       "correct": 2,
       "description": "What kind of item is most likely discussed?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A desktop computer",
         "(B) A piece of furniture",
@@ -2376,7 +2376,7 @@
       "correct": 3,
       "description": "What is indicated about 11 :00 A.M Winnipeg time?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It is when the Winnipeg office closes for lunch.",
         "(B) It is when staff in Toulouse begin their workday.",
@@ -2410,7 +2410,7 @@
       "correct": 4,
       "description": "What is suggested about And ito's?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It was started by an international chef.",
         "(B) It offers limited menu options.",
@@ -2444,7 +2444,7 @@
       "correct": 2,
       "description": "What will happen next?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Ms. Chi will get new site coordinates.",
         "(B) Ms. Chi and Ms. Lim will be out for a while.",
@@ -2478,7 +2478,7 @@
       "correct": 4,
       "description": "What does the notice indicate about the weather?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It caused transportation delays.",
         "(B) It included heavier rain than usual.",
@@ -2494,7 +2494,7 @@
       "correct": 2,
       "description": "What service does the notice mention?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Staffing for local businesses",
         "(B) Food collection and distribution",
@@ -2528,7 +2528,7 @@
       "correct": 1,
       "description": "What is stated about large bags?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) They can be put in a locked box for a fee.",
         "(B) They must be left outside the building.",
@@ -2544,7 +2544,7 @@
       "correct": 2,
       "description": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Please refrain from making phone calls or texting at all times.\"",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) [1]",
         "(B) [2]",
@@ -2578,7 +2578,7 @@
       "correct": 3,
       "description": "What is suggested about Ms. Ayala?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) She is receiving a professional award.",
         "(B) She has worked as a pastry chef.",
@@ -2594,7 +2594,7 @@
       "correct": 4,
       "description": "What is indicated about the multilayer cake?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It has been a best-selling product with clients.",
         "(B) It is the most expensive cake at Sweeter Specialties.",
@@ -2610,7 +2610,7 @@
       "correct": 3,
       "description": "The word \"judged\" in paragraph 2, line 3, is closest in meaning to",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) criticized",
         "(B) settled",
@@ -2644,7 +2644,7 @@
       "correct": 4,
       "description": "The word \"running\" in paragraph 1, line 7, is closest in meaning to",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) adjusting",
         "(B) controlling",
@@ -2660,7 +2660,7 @@
       "correct": 1,
       "description": "What is indicated about Ms. Yakovleva?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) She cares about saving water.",
         "(B) She recently moved to a new home.",
@@ -2694,7 +2694,7 @@
       "correct": 2,
       "description": "In the information, what is NOT mentioned as being offered to employees?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Payment for educational expenses",
         "(B) Free airline tickets",
@@ -2710,7 +2710,7 @@
       "correct": 3,
       "description": "What is mentioned about Skyler Airlines?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It flies to the most destinations around the world.",
         "(B) It is planning to merge with another airline.",
@@ -2726,7 +2726,7 @@
       "correct": 1,
       "description": "In which of the positions marked [1 ], [2], [3], and [4] does the following sentence best belong? \"Our openings cover a broad range of skill sets.\"",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) [1]",
         "(B) [2]",
@@ -2760,7 +2760,7 @@
       "correct": 2,
       "description": "At 9:22A.M., what does Ms. Lorenz imply when she writes, \"let's not overlook that\"?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) More staff should attend a meeting.",
         "(B) Information from the user studies is important.",
@@ -2776,7 +2776,7 @@
       "correct": 3,
       "description": "Who most likely is Mr. Harven?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A store manager",
         "(B) An amateur athlete",
@@ -2792,7 +2792,7 @@
       "correct": 3,
       "description": "When do the writers plan to meet to review a slide presentation?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) On Monday",
         "(B) On Wednesday",
@@ -2827,7 +2827,7 @@
       "correct": 3,
       "description": "In the press release, the word \"reflects\" in paragraph 1, line 4, is closest in meaning to",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) results in",
         "(B) changes",
@@ -2843,7 +2843,7 @@
       "correct": 3,
       "description": "What is indicated about Kitchen Swifts?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It raised its prices for all customers.",
         "(B) It revised its delivery schedule.",
@@ -2859,7 +2859,7 @@
       "correct": 1,
       "description": "What is most likely true about Ms. Guan?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) She went to Mr. Cordero's restaurant.",
         "(B) She recently went to Sydney for a vacation.",
@@ -2875,7 +2875,7 @@
       "correct": 2,
       "description": "What did Ms. Guan suggest about Enriqua's in the review?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It has a limited lunch menu.",
         "(B) It takes dinner reservations.",
@@ -2909,7 +2909,7 @@
       "correct": 4,
       "description": "Why will Mr. Boyle travel from Stranraer to Kirkcolm?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To make a delivery",
         "(B) To attend a meeting",
@@ -2925,7 +2925,7 @@
       "correct": 2,
       "description": "What is indicated in the e-mail?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Mr. Boyle's sister is a cofounder of Ceoleire Classics.",
         "(B) Mr. Boyle has been disappointed by air- and train-freight companies.",
@@ -2941,7 +2941,7 @@
       "correct": 3,
       "description": "What is most likely true about Ms. Savard?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) She often travels for her job.",
         "(B) She paid extra to have items hand delivered.",
@@ -2957,7 +2957,7 @@
       "correct": 3,
       "description": "How is Mr. Boyle traveling to Cairnryan on June 5?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) By car",
         "(B) By train",
@@ -2992,7 +2992,7 @@
       "correct": 4,
       "description": "According to the advertisement, what does TTA provide to students who finish a class?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) A resume-writing workshop",
         "(B) A discount on a follow-up class",
@@ -3008,7 +3008,7 @@
       "correct": 2,
       "description": "What is most likely true about Mr. Egbe?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) He helped design a discussion forum.",
         "(B) He has previously taken a TTA class.",
@@ -3024,7 +3024,7 @@
       "correct": 1,
       "description": "What TTA class is Mr. Egbe enrolled in?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Introduction to Social Media Marketing",
         "(B) Become a Successful Freelance Writer",
@@ -3040,7 +3040,7 @@
       "correct": 2,
       "description": "What section did Mr. Egbe most likely add to the outline after speaking with Mr. Akpan?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Section 1",
         "(B) Section 2",
@@ -3076,7 +3076,7 @@
       "correct": 3,
       "description": "According to the article, what is the most popular menu item at Orange Bay Kitchen?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Red snapper",
         "(B) Oxtail soup",
@@ -3092,7 +3092,7 @@
       "correct": 1,
       "description": "What is suggested about Ms. Peterkin's visit to Orange Bay Kitchen?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) She was there on a Friday.",
         "(B) She dined alone.",
@@ -3108,7 +3108,7 @@
       "correct": 2,
       "description": "What is a purpose of the e-mail?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) To answer a question",
         "(B) To offer an apology",
@@ -3124,7 +3124,7 @@
       "correct": 3,
       "description": "Whom did Ms. Peterkin meet at Orange Bay Kitchen?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Ms. Roats",
         "(B) Mr. Deslandes",
@@ -3160,7 +3160,7 @@
       "correct": 3,
       "description": "Why most likely did Green Canyon receive a discount on its order dated June 10 ?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) It is a charitable organization.",
         "(B) It belongs to the Frequent Buyer Club.",
@@ -3176,7 +3176,7 @@
       "correct": 3,
       "description": "According to the notice, what is changing at Orbys Distributors?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Its e-mail address",
         "(B) Its list of incentives",
@@ -3192,7 +3192,7 @@
       "correct": 4,
       "description": "What is suggested about Mr. Tesoriero?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) He asked to meet with Mr. Singh.",
         "(B) He is interested in employment at Orbys Distributors.",
@@ -3208,7 +3208,7 @@
       "correct": 2,
       "description": "What does Mr. Singh ask Ms. Peterson to do?",
       "audioLink": null,
-      "imgLink": null,
+      "imgLink": [],
       "answer": [
         "(A) Make a bill payment",
         "(B) Solve a problem",
