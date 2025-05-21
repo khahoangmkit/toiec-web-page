@@ -151,6 +151,11 @@ export default function Page() {
       return;
     }
 
+    if (!session) {
+      signIn('google', { callbackUrl: router.asPath });
+      return;
+    }
+
     const filtered = listQuestion.filter(q => selectedParts.includes(q.type));
     setListQuestion(filtered);
     setTimer(Number(practiceTime) * 60);
