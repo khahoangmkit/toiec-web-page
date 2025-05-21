@@ -336,7 +336,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
                       {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
                         currentQuestion.imgLink.map((imgLink, index) => (
                           <Box mb={6} textAlign="center">
-                            <Image src={imgLink} key={index}/>)
+                            <Image src={imgLink} key={index}/>
                           </Box>
                         )))}
                     </Box>
