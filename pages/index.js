@@ -265,7 +265,7 @@ export default function Home() {
 
                       <Flex  justifyContent="space-between">
                         <Text fontWeight='bold'>{part.name}</Text>
-                        <Image src='/icons/lock.svg' alt='lock-icon' boxSize='16px'/>
+                        <Image style={{cursor: 'pointer'}} src='/icons/lock.svg' alt='lock-icon' boxSize='16px'/>
                       </Flex>
                       <Text height={'48px'}>{part.desc}</Text>
 
