@@ -220,9 +220,12 @@ export default function Home() {
 
                       <Button
                         onClick={() => {goToFullTest(part.id)}}
-                        colorPalette="teal"
+                        bg="#283382"
+                        _hover={{
+                          bg: "#2aa9c7",   // Màu nền khi hover
+                        }}
                         variant="solid">
-                        Luyện thi
+                        Take test
                       </Button>
                     </Box>
                   ))}
@@ -250,14 +253,31 @@ export default function Home() {
               <Tabs.Content key={idx} value={section.value}>
                 <Flex gap={4} wrap="wrap" justify={'start'}>
                   {section.parts.map((part, idp) => (
-                    <Box borderWidth={1} borderRadius='2xl' p="6" spaceY="2" key={`part-${idp}`} width={{base: '100%', md: '30%'}} mb={4} transition="transform 0.2s, box-shadow 0.2s" _hover={{ boxShadow: 'dark-lg', transform: 'translateY(-4px) scale(1.03)' }}>
-                      <Text fontWeight='bold'>{part.name}</Text>
-                      <Text>{part.desc}</Text>
+                    <Box borderWidth={1}
+                         borderRadius='2xl'
+                         p="6"
+                         spaceY="2"
+                         key={`part-${idp}`}
+                         width={{base: '100%', md: '30%'}}
+                         mb={4}
+                         transition="transform 0.2s, box-shadow 0.2s"
+                         _hover={{ boxShadow: 'dark-lg', transform: 'translateY(-4px) scale(1.03)' }}>
+
+                      <Flex  justifyContent="space-between">
+                        <Text fontWeight='bold'>{part.name}</Text>
+                        <Image src='/icons/lock.svg' alt='lock-icon' boxSize='16px'/>
+                      </Flex>
+                      <Text height={'48px'}>{part.desc}</Text>
 
                       <Button
                         onClick={() => {goToPracticeByPart(part.id)}}
-                        colorPalette="teal" variant="solid">
-                        Luyện thi
+                        bg="#283382"
+                        _hover={{
+                          bg: "#2aa9c7",   // Màu nền khi hover
+                        }}
+                        disabled
+                        variant="solid">
+                        Take test
                       </Button>
                     </Box>
                   ))}
