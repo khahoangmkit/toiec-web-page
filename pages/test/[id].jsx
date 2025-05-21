@@ -147,13 +147,13 @@ export default function Page() {
       return;
     }
 
-    if (!practiceTime) {
-      toaster.create({
-        title: `Vui lòng chọn thời gian luyện tập`,
-        type: 'error',
-      })
-      return;
-    }
+    // if (!practiceTime) {
+    //   toaster.create({
+    //     title: `Vui lòng chọn thời gian luyện tập`,
+    //     type: 'error',
+    //   })
+    //   return;
+    // }
     const filtered = listQuestion.filter(q => selectedParts.includes(q.type));
     setListQuestion(filtered);
     setTimer(Number(practiceTime) * 60);
@@ -198,8 +198,14 @@ export default function Page() {
                 </Box>
 
                 <Box>
-                  <Button size="sm" colorPalette="teal" variant="solid" onClick={() => startFullTest()}> Bắt đầu
-                    thi</Button>
+                  <Button size="sm"
+                          bg="#283382"
+                          _hover={{
+                            bg: "#2aa9c7",   // Màu nền khi hover
+                          }}
+                          variant="solid" onClick={() => startFullTest()}>
+                    Start test
+                  </Button>
                 </Box>
               </Tabs.Content>
               <Tabs.Content value={2}>
@@ -251,10 +257,14 @@ export default function Page() {
                     size="sm"
                     colorPalette="teal"
                     variant="solid"
+                    bg="#283382"
+                    _hover={{
+                      bg: "#2aa9c7",   // Màu nền khi hover
+                    }}
                     onClick={() => startPractice()}
                     isDisabled={selectedParts.length === 0 || !practiceTime}
                   >
-                    Luyện tập
+                    Start practice
                   </Button>
                 </Box>
               </Tabs.Content>
