@@ -170,6 +170,39 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
     }
   }
 
+
+  function previousQuestion(currentQuestion) {
+    if (!currentQuestion) return;
+    if (singleQuestion.includes(currentQuestion.type)) {
+      const idx = listQuestion.findIndex(q => q.index === currentQuestion.index);
+      if (idx === -1) return;
+      // Check if previous question is a new part
+      if (idx > 0) {
+        const prevQ = listQuestion[idx - 1];
+        if (prevQ.type !== currentQuestion.type && isFullTest && (!Constant.ReadingQuestion.includes(prevQ.type))) {
+          setShowPartIntro(true);
+          setNextPart(prevQ.type);
+          return;
+        }
+        setCurrentIndexQuestion(prevQ.index);
+      }
+    } else {
+      if (currentQuestion.questions.length) {
+        const firstQuestionInGroup = currentQuestion.questions[0];
+        const idx = listQuestion.findIndex(q => q.index === firstQuestionInGroup.index);
+        if (idx > 0) {
+          const prevQ = listQuestion[idx - 1];
+          if (prevQ.type !== currentQuestion.type && isFullTest && (!Constant.ReadingQuestion.includes(prevQ.type))) {
+            setShowPartIntro(true);
+            setNextPart(prevQ.type);
+            return;
+          }
+          setCurrentIndexQuestion(prevQ.index);
+        }
+      }
+    }
+  }
+
   function showBtnNextQuestion() {
     const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
     if (!selectedQuestion) return;
@@ -217,19 +250,23 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
         height={'100vh'}
         align={'left'}
         divideY="2px">
-        <HStack width={'100%'} direction="row" spacing={4}>
+        <HStack width={'100%'} direction="row"  gap="4">
           <ActionHeaderTest
             currentQuestion={currentQuestion}
             totalTime={timer}
             handleSubmit={handleSubmit}
           />
+          <Box height='56px' borderLeft='2px solid #1d81ae'></Box>
           {
             showBtnNextQuestion() && (
-              <Box alignItems='center' pt={2}>
-                <Button colorPalette={'yellow'} onClick={() => nextQuestion(currentQuestion)} mb={2}>
+              <Flex gap='4' direction='row' alignItems='center' pt={2}>
+                <Button variant="surface" colorPalette={'orange'} onClick={() => previousQuestion(currentQuestion)} mb={2}>
+                  Previous
+                </Button>
+                <Button variant="surface" colorPalette={'orange'} onClick={() => nextQuestion(currentQuestion)} mb={2}>
                   Next
                 </Button>
-              </Box>
+              </Flex>
             )
           }
           <Box alignItems='center' p={2} borderRadius={'md'} border={'1px solid #f2f2f2'}>
