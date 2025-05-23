@@ -173,13 +173,12 @@ export default function AnswersComponent({listQuestion = [], result = {}}) {
                         </Box>
                       ))}
                     </VStack>
-                    <Text fontWeight="semibold" color="green.600">Đáp án
-                      đúng: {getAnswer(currentQuestion.correct)}</Text>
+                    <Text fontWeight="semibold" color="green.600">Đáp án đúng: {getAnswer(currentQuestion.correct)}</Text>
                     {result && result[currentQuestion.index] && result[currentQuestion.index] !== currentQuestion.correct && (
                       <Text color="red.500">Bạn chọn: {getAnswer(result[currentQuestion.index])}</Text>
                     )}
-                    <Box mt={3} p={2} bg="yellow.50" borderRadius="md">
-                      <>
+                    <Flex direction="row" gap={4} mt={3} p={2} bg="yellow.50" borderRadius="md">
+                      <Box minW={500}>
                         {/*<Heading size="md" mb={2}>Question {currentQuestion.index}</Heading>*/}
                         {(() => {
                           const media = getGroupMediaForParts(currentQuestion);
@@ -212,17 +211,20 @@ export default function AnswersComponent({listQuestion = [], result = {}}) {
                             ))}
                           </VStack>
                         </RadioGroup.Root>
-                      </>
-                      <Text fontWeight="bold" my={2}>Giải thích:</Text>
-                      {currentQuestion.explanation ? (
-                        <Box
-                          as="div"
-                          dangerouslySetInnerHTML={{__html: currentQuestion.explanation}}
-                        />
-                      ) : (
-                        <Text>Không có giải thích.</Text>
-                      )}
-                    </Box>
+                      </Box>
+                      <Box>
+                        <Text fontWeight="bold" my={2}>Giải thích:</Text>
+                        {currentQuestion.explanation ? (
+                          <Box
+                            as="div"
+                            dangerouslySetInnerHTML={{__html: currentQuestion.explanation}}
+                          />
+                        ) : (
+                          <Text>Không có giải thích.</Text>
+                        )}
+                      </Box>
+
+                    </Flex>
                   </Box>
                 )}
               </Dialog.Body>

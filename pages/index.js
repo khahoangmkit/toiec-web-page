@@ -166,12 +166,14 @@ export default function Home() {
   const topStudents = [
     {
       fullName: "Nguyễn Mạnh Quân",
+      testName: 'ETS 2024 - Test 3',
       readingCorrect: 90,
       listeningCorrect: 95,
       totalCorrect: 185
     },
     {
       fullName: "Nguyễn Văn Dũng",
+      testName: 'ETS 2023 - Test 3',
       readingCorrect: 23,
       listeningCorrect: 45,
       totalCorrect: 68
@@ -225,7 +227,7 @@ export default function Home() {
         align="center">
 
       <Box width='100%' maxW="1200px" bg='white' rounded='xl' p={4} mx="auto" overflow="hidden" mb={2} boxShadow="xl">
-        <Image src="/banner.jpg" alt="Banner" width="100%" height="100%" objectFit="cover"/>
+        <Image src="/banner.jpeg" alt="Banner" width="100%" height="100%" objectFit="cover"/>
       </Box>
 
       {/* Luyện đề thi */}
@@ -331,6 +333,7 @@ export default function Home() {
               <Table.Row   bg="bg.subtle">
                 <Table.ColumnHeader fontWeight="bold">Top</Table.ColumnHeader>
                 <Table.ColumnHeader fontWeight="bold">Tên học viên</Table.ColumnHeader>
+                <Table.ColumnHeader fontWeight="bold">TEST</Table.ColumnHeader>
                 <Table.ColumnHeader fontWeight="bold">Phần nghe</Table.ColumnHeader>
                 <Table.ColumnHeader fontWeight="bold">Phần đọc</Table.ColumnHeader>
                 <Table.ColumnHeader fontWeight="bold">Tổng điểm</Table.ColumnHeader>
@@ -341,6 +344,7 @@ export default function Home() {
                 <Table.Row key={idx}>
                   <Table.Cell>{idx + 1}</Table.Cell>
                   <Table.Cell>{student.fullName}</Table.Cell>
+                  <Table.Cell>{student.testName}</Table.Cell>
                   <Table.Cell>{student.readingCorrect * 5}</Table.Cell>
                   <Table.Cell>{student.listeningCorrect * 5}</Table.Cell>
                   <Table.Cell>{student.totalCorrect * 5}</Table.Cell>
