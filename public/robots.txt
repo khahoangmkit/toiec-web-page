@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://990toeichadong.com/sitemap.xml
