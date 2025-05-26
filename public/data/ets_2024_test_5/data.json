@@ -92,7 +92,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713924901775.Test_05-07.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>There’s a meeting in the conference room soon, right?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Yes, it’s for the whole department. </strong></p><p>(B) No, put it in the closet.</p><p>(C) The rent is too high.</p>"
     },
     {
@@ -103,7 +107,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713924943484.Test_05-08.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Why hasn’t the mural in the lobby been painted yet?</p><p>(A) Red and yellow.</p><p>B) Please pick up the ladder.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Because the artist is out of town</strong></p>"
     },
     {
@@ -114,7 +122,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713924967499.Test_05-09.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Do you prefer writing in the morning or the afternoon?</p><p>(A) My publisher requested edits.</p><p>(B) Thanks for providing a solution.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Mornings are usually better for me</strong></p>"
     },
     {
@@ -125,7 +137,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713926707759.Test_05-10.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>I suggest we paint the waiting room light blue</p><p>(A) Doctor Park has an opening at three.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) That’s a good idea. </strong></p><p>(C) I prefer the red jacket.</p>"
     },
     {
@@ -136,7 +152,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713926769374.Test_05-11.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Did you know that the music school is closed on Sundays?</p><p>(A) Forty dollars an hour.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) No, I didn’t know that. </strong></p><p>(C) I saw the piano recital.</p>"
     },
     {
@@ -147,7 +167,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713926857773.Test_05-12.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>How do I find the office manager?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) The receptionist would know. </strong></p><p>(B) Desk lamps and headsets.</p><p>(C) Twelve euros.</p>"
     },
     {
@@ -158,7 +182,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713926915532.Test_05-13.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>When did you place the order for the lumber?</p><p>(A) Yes, it’s a great place for hiking.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) It’s out of stock right now. </strong></p><p>(C) The warehouse on William Street.</p>"
     },
     {
@@ -169,7 +197,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927191935.Test_05-14.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Where is the new packaging machine?</p><p>(A) Ten packages a minute.</p><p>(B) We met last Thursday.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) We decided to keep the old one</strong></p>"
     },
     {
@@ -180,7 +212,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927283403.Test_05-15.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>I’ll be out of the office this afternoon.</p><p>(A) An awfully long commute.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) OK—I’ll update your schedule. </strong></p><p>(C) It’s right down the hallway</p>"
     },
     {
@@ -191,7 +227,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927301788.Test_05-16.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Are you taking a vacation once this project is over?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Yes—I’m planning a trip to Barcelona.</strong></p><p>(B) This is your second time, isn’t it?</p><p>(C) Blueprints for a high-rise building</p>"
     },
     {
@@ -202,7 +242,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927453952.Test_05-17.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Let’s post the sales report to our team’s Web page.</p><p>(A) We’re sharing a taxi to the airport.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I can do that. </strong></p><p>(C) A recent hiring decision.</p>"
     },
     {
@@ -213,7 +257,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927498712.Test_05-18.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Which airline are you planning on using?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) The usual one.</strong></p><p>(B) A one-way ticket.</p><p>(C) Yes, you can use mine</p>"
     },
     {
@@ -224,7 +272,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927508720.Test_05-19.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Where’s this shipment of parts being sent?</p><p>(A) Around five thirty this evening.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) To the assembly plant in Dublin. </strong></p><p>(C) Just half the order</p>"
     },
     {
@@ -235,7 +287,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927583299.Test_05-20.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Who paid for lunch?</p><p>(A) I just ate.</p><p>(B) It closes at five.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Alberto did.</strong></p>"
     },
     {
@@ -246,7 +302,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927621147.Test_05-21.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>How many employees work in your department?</p><p>(A) I don’t mind taking notes at the meeting.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) A couple dozen, I think. </strong></p><p>(C) It’s seven meters long</p>"
     },
     {
@@ -257,7 +317,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713927656580.Test_05-22.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>We should leave for our training course soon, shouldn’t we?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) We still have a few minutes. </strong></p><p>(B) There’s a map on the wall.</p><p>(C) Two sessions per day</p>"
     },
     {
@@ -268,7 +332,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713928286538.Test_05-23.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Isn’t there a limit on travel expenses?</p><p>(A) To fix the vending machine.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) One hundred dollars per day. </strong></p><p>(C) Next to the travel agency</p>"
     },
     {
@@ -279,7 +347,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713928320498.Test_05-24.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>When should I tell the director that I’m interested in the management position?</p><p>(A) Yes, we’re extending our business hours.</p><p>(B) Didn’t Andrey direct the play?</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I’m not on the hiring team</strong></p>"
     },
     {
@@ -290,7 +362,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713928364610.Test_05-25.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>The layout of the footwear department has changed</p><p>(A) There’s a charging station in the cafe.</p><p>(B) Yes, a three-bedroom apartment.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) The store has a new manager</strong></p>"
     },
     {
@@ -301,7 +377,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713928398770.Test_05-26.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Can you look at this month’s revenue report?</p><p>(A) The news program is informative.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I have some free time tomorrow afternoon. </strong></p><p>(C) He started that position in July</p>"
     },
     {
@@ -312,7 +392,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713928819300.Test_05-27.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Why haven’t the windows been replaced yet?</p><p>(A) Not too much wind, no.</p><p>(B) Look in the filing cabinet.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Did you see the cost estimate?</strong></p>"
     },
     {
@@ -323,7 +407,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713928857762.Test_05-28.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Isn’t your suitcase going to be heavier than the permitted weight?</p><p>(A) The building permit arrived today.</p><p>(B) There are seats in the lobby.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I’ll have to pay a little bit extra</strong></p>"
     },
     {
@@ -334,7 +422,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713929055400.Test_05-29.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Who manufactures the engines for our machines?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Koji is in charge of supplier contracts</strong>.</p><p>(B) I’m sorry—the storage room is full.</p><p>(C) That’s a cargo airplane</p>"
     },
     {
@@ -345,7 +437,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713929093227.Test_05-30.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Should we meet at the department store on Fifth Street or the one on Grover Lane?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Let’s ask Patricia first. </strong></p><p>(B) No, I don’t mind.</p><p>(C) How much does it cost?</p>"
     },
     {
@@ -356,7 +452,11 @@
       "description": null,
       "audioLink": "/data/ets_2024_test_5/audios/1713929130793.Test_05-31.mp3",
       "imgLink": [],
-      "answer": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
       "explanation": "<p>Which band is playing at the club tonight?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) There’s always a comedy show on Thursday nights. </strong></p><p>(B) Yes, I’ve played the piano for many years.</p><p>(C) Their number one hit</p>"
     },
     {
