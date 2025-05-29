@@ -92,16 +92,16 @@ export default function Home() {
           id: 'ets_2023_test_3',
           desc: 'Thời gian: 120 phút'
         },
-        // {
-        //   name: "ETS 2023 - Test 4",
-        //   id: 'ets_2023_test_4',
-        //   desc: 'Thời gian: 120 phút'
-        // },
-        // {
-        //   name: "ETS 2023 - Test 5",
-        //   id: 'ets_2023_test_5',
-        //   desc: 'Thời gian: 120 phút'
-        // },
+        {
+          name: "ETS 2023 - Test 4",
+          id: 'ets_2023_test_4',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 5",
+          id: 'ets_2023_test_5',
+          desc: 'Thời gian: 120 phút'
+        },
       ]
     },
     {
@@ -191,17 +191,45 @@ export default function Home() {
   const topStudents = [
     {
       fullName: "Nguyễn Mạnh Quân",
-      testName: 'ETS 2024 - Test 3',
+      testName: 'ETS 2024 - Test 1',
       readingCorrect: 90,
       listeningCorrect: 95,
       totalCorrect: 185
     },
     {
       fullName: "Nguyễn Văn Dũng",
-      testName: 'ETS 2023 - Test 3',
-      readingCorrect: 23,
-      listeningCorrect: 45,
-      totalCorrect: 68
+      testName: 'ETS 2024 - Test 1',
+      readingCorrect: 85,
+      listeningCorrect: 90,
+      totalCorrect: 175
+    },
+    {
+      fullName: "Đặng Thị Hằng Nga",
+      testName: 'ETS 2024 - Test 2',
+      readingCorrect: 85,
+      listeningCorrect: 85,
+      totalCorrect: 170
+    },
+    {
+      fullName: "Đỗ Thu Trang",
+      testName: 'ETS 2024 - Test 3',
+      readingCorrect: 80,
+      listeningCorrect: 80,
+      totalCorrect: 160
+    },
+    {
+      fullName: "Nguyễn Thị Ngọc Linh",
+      testName: 'ETS 2024 - Test 3',
+      readingCorrect: 65,
+      listeningCorrect: 75,
+      totalCorrect: 140
+    },
+    {
+      fullName: "Nguyễn Tiến Toàn",
+      testName: 'ETS 2024 - Test 3',
+      readingCorrect: 55,
+      listeningCorrect: 65,
+      totalCorrect: 120
     }
   ];
 
@@ -215,6 +243,19 @@ export default function Home() {
 
   function goToPracticeByPart(id) {
     router.push(`/practice/${id}`);
+  }
+
+  function getContentRank(idx) {
+    switch (idx) {
+      case 0:
+        return <Image src="/icons/top1.png" alt="first" width="30px"/>
+      case 1:
+        return <Image src="/icons/top2.png" alt="second" width="30px"/>
+      case 2:
+        return <Image src="/icons/top3.png" alt="third" width="30px"/>
+      default:
+        return <div style={{width:"30px", textAlign: "center"}} >{idx + 1}</div>;
+    }
   }
 
   return (
@@ -367,7 +408,7 @@ export default function Home() {
             <Table.Body>
               {topStudents.map((student, idx) => (
                 <Table.Row key={idx}>
-                  <Table.Cell>{idx + 1}</Table.Cell>
+                  <Table.Cell>{getContentRank(idx)}</Table.Cell>
                   <Table.Cell>{student.fullName}</Table.Cell>
                   <Table.Cell>{student.testName}</Table.Cell>
                   <Table.Cell>{student.readingCorrect * 5}</Table.Cell>
