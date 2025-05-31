@@ -390,7 +390,7 @@ export default function Home() {
 
       {/* Đánh giá của học sinh */}
       <Box width='100%' maxW="1200px"  bg='white' rounded='xl' p={8}  mx="auto"  my={2} boxShadow="xl">
-        <Text fontSize="2xl" fontWeight="bold" mb={4}>Top 10 học viên có thành tích xuất sắc</Text>
+        <Text fontSize="2xl" fontWeight="bold" mb={4}>Leaderboard</Text>
 
 
         <Table.ScrollArea rounded="md" height="500px">
