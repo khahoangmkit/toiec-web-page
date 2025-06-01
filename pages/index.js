@@ -77,31 +77,31 @@ export default function Home() {
       name: "ETS 2023",
       value: 2,
       parts: [
-        {
-          name: "ETS 2023 - Test 1",
-          id: 'ets_2023_test_1',
-          desc: 'Thời gian: 120 phút'
-        },
-        {
-          name: "ETS 2023 - Test 2",
-          id: 'ets_2023_test_2',
-          desc: 'Thời gian: 120 phút'
-        },
-        {
-          name: "ETS 2023 - Test 3",
-          id: 'ets_2023_test_3',
-          desc: 'Thời gian: 120 phút'
-        },
-        {
-          name: "ETS 2023 - Test 4",
-          id: 'ets_2023_test_4',
-          desc: 'Thời gian: 120 phút'
-        },
-        {
-          name: "ETS 2023 - Test 5",
-          id: 'ets_2023_test_5',
-          desc: 'Thời gian: 120 phút'
-        },
+        // {
+        //   name: "ETS 2023 - Test 1",
+        //   id: 'ets_2023_test_1',
+        //   desc: 'Thời gian: 120 phút'
+        // },
+        // {
+        //   name: "ETS 2023 - Test 2",
+        //   id: 'ets_2023_test_2',
+        //   desc: 'Thời gian: 120 phút'
+        // },
+        // {
+        //   name: "ETS 2023 - Test 3",
+        //   id: 'ets_2023_test_3',
+        //   desc: 'Thời gian: 120 phút'
+        // },
+        // {
+        //   name: "ETS 2023 - Test 4",
+        //   id: 'ets_2023_test_4',
+        //   desc: 'Thời gian: 120 phút'
+        // },
+        // {
+        //   name: "ETS 2023 - Test 5",
+        //   id: 'ets_2023_test_5',
+        //   desc: 'Thời gian: 120 phút'
+        // },
       ]
     },
     {
