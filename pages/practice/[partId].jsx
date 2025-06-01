@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 import { Constant } from "@/constants";
 import AudioCommon from "@/components/common/AudioCommon";
 import AnswersComponent from "@/components/common/AnswersComponent";
+import ExamPractice from "@/components/common/ExamPractice";
 
 export default function Page() {
   const router = useRouter();
@@ -127,12 +128,11 @@ export default function Page() {
       }
 
       {
-        stepIntro === 1 && <ExamDetail
+        stepIntro === 1 && <ExamPractice
           listQuestion={listQuestion}
           timer={practiceTime}
-          disableSelectListen={false}
           onSubmit={(e) => handleSubmit(e)}
-        ></ExamDetail>
+        ></ExamPractice>
       }
 
       {

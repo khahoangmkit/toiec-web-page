@@ -1,0 +1,579 @@
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  HStack,
+  VStack,
+  Text,
+  Image,
+  RadioGroup
+} from "@chakra-ui/react";
+import {useEffect, useRef, useState} from "react";
+import AudioCommon from "@/components/common/AudioCommon";
+import {Constant} from "@/constants";
+import { useRouter } from "next/router";
+import ButtonTimerGroup from "@/components/common/Timer";
+
+
+const groupByPartForSelectQuestion = (questions) => {
+  const grouped = {};
+  for (const q of questions) {
+    const part = q.type || "UNKNOWN";
+    if (!grouped[part]) grouped[part] = [];
+    grouped[part].push(q);
+  }
+  return Object.entries(grouped).map(([part, qs]) => ({part, questions: qs}));
+};
+
+const groupQuestions = (questions) => {
+  const groups = [];
+  let currentGroup = [];
+  let currentType = '';
+
+  questions.forEach((q) => {
+    if (q.audioLink || q.imgLink.length || currentType !== q.type) {
+      if (currentGroup.length) {
+        groups.push(currentGroup);
+      }
+      currentGroup = [q];
+    } else {
+      currentGroup.push(q);
+    }
+    currentType = q.type;
+  });
+  if (currentGroup.length) {
+    groups.push(currentGroup);
+  }
+  return groups;
+};
+
+export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}) {
+  const audioRef = useRef(null);
+  const router = useRouter();
+
+  const [currentIndexQuestion, setCurrentIndexQuestion] = useState(1);
+  const [answers, setAnswers] = useState({});
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [groupedQuestions, setGroupedQuestions] = useState([]);
+  const [partForSelectQuestion, setPartForSelectQuestion] = useState([]);
+  const [flaggedQuestions, setFlaggedQuestions] = useState([]);
+  const [filterType, setFilterType] = useState('all'); // 'all', 'flagged', 'unanswered'
+  const [showListQuestion, setShowListQuestion] = useState(true); // Show by default for practice mode
+  const [currentExplanation, setCurrentExplanation] = useState("");
+  const [checkedAnswers, setCheckedAnswers] = useState({}); // Track which answers have been checked
+
+  useEffect(() => {
+    if (!listQuestion.length) return;
+    setGroupedQuestions(groupQuestions(listQuestion));
+    setPartForSelectQuestion(groupByPartForSelectQuestion(listQuestion));
+    setCurrentQuestion(listQuestion[0]);
+    setCurrentIndexQuestion(listQuestion[0].index)
+  }, [listQuestion]);
+
+  useEffect(() => {
+    const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
+    if (!selectedQuestion) {
+      return;
+    }
+    const isGroupQuestion = !Constant.singleQuestion.includes(selectedQuestion.type);
+    if (isGroupQuestion) {
+      const group = groupedQuestions.find(g => g.some(q => q.index === selectedQuestion.index));
+      if (!group) return;
+      const firstQuestion = group[0];
+      const groupQuestionsArr = group.map(q => q);
+      setCurrentQuestion({
+        type: firstQuestion.type,
+        audioLink: firstQuestion.audioLink,
+        imgLink: firstQuestion.imgLink,
+        questions: groupQuestionsArr
+      });
+    } else {
+      setCurrentQuestion(selectedQuestion);
+    }
+    setCurrentExplanation("");
+  }, [currentIndexQuestion, listQuestion, groupedQuestions]);
+
+  useEffect(() => {
+    if (!currentQuestion) return;
+    
+    // Update explanation based on current question
+    if (Constant.singleQuestion.includes(currentQuestion.type)) {
+      if (isAnswerChecked(currentQuestion.index)) {
+        setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
+      }
+    } else if (currentQuestion.questions) {
+      // For group questions, combine explanations of checked questions
+      const checkedExplanations = currentQuestion.questions
+        .filter(q => isAnswerChecked(q.index))
+        .map(q => 
+          `<div><strong>Question ${q.index}:</strong> ${q.explanation || "Không có giải thích."}</div>`
+        ).join("");
+      
+      if (checkedExplanations) {
+        setCurrentExplanation(checkedExplanations);
+      }
+    }
+  }, [currentQuestion, currentIndexQuestion]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue = "Bạn có chắc chắn muốn thoát khỏi trạng thái luyện tập ?";
+      return e.returnValue;
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    const handleRouteChangeStart = (url) => {
+      if (url.includes('/result')) return;
+      if (window.confirm("Bạn có chắc chắn muốn thoát khỏi trạng thái luyện tập ?")) {
+        // Cho phép điều hướng
+      } else {
+        // Chặn điều hướng
+        router.events.emit('routeChangeError');
+        throw "routeChange aborted.";
+      }
+    };
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+    };
+  }, [router]);
+
+  const handleVolume = (e) => {
+    if (audioRef.current) {
+      audioRef.current.volume = e.target.value;
+    }
+  };
+
+  const handleAnswerChange = (value, indexQuestion) => {
+    // Don't allow changing answers that have been checked
+    if (isAnswerChecked(indexQuestion)) {
+      return;
+    }
+    
+    setAnswers({...answers, [indexQuestion]: value.value});
+  };
+
+  const handleSubmit = () => {
+    if (onSubmit) {
+      console.log('answers', answers);
+      onSubmit(answers);
+    }
+  };
+
+  function nextQuestion(question) {
+    if (!question) return;
+    if (Constant.singleQuestion.includes(question.type)) {
+      const idx = listQuestion.findIndex(q => q.index === question.index);
+      if (idx === -1) return;
+      if (idx < listQuestion.length - 1) {
+        const nextQ = listQuestion[idx + 1];
+        setCurrentIndexQuestion(nextQ.index);
+      }
+    } else {
+      if (question.questions.length) {
+        const lastQuestionInGroup = question.questions[question.questions.length - 1];
+        const idx = listQuestion.findIndex(q => q.index === lastQuestionInGroup.index);
+        if (idx < listQuestion.length - 1) {
+          const nextQ = listQuestion[idx + 1];
+          setCurrentIndexQuestion(nextQ.index);
+        }
+      }
+    }
+  }
+
+  function previousQuestion(currentQuestion) {
+    if (!currentQuestion) return;
+    if (Constant.singleQuestion.includes(currentQuestion.type)) {
+      const idx = listQuestion.findIndex(q => q.index === currentQuestion.index);
+      if (idx === -1) return;
+      if (idx > 0) {
+        const prevQ = listQuestion[idx - 1];
+        setCurrentIndexQuestion(prevQ.index);
+      }
+    } else {
+      if (currentQuestion.questions.length) {
+        const firstQuestionInGroup = currentQuestion.questions[0];
+        const idx = listQuestion.findIndex(q => q.index === firstQuestionInGroup.index);
+        if (idx > 0) {
+          const prevQ = listQuestion[idx - 1];
+          setCurrentIndexQuestion(prevQ.index);
+        }
+      }
+    }
+  }
+
+  function showBtnNextQuestion() {
+    const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
+    if (!selectedQuestion) return;
+    return true; // Always show navigation buttons in practice mode
+  }
+
+  function getAnswer(index) {
+    switch (index) {
+      case 1:
+        return "A";
+      case 2:
+        return "B";
+      case 3:
+        return "C";
+      case 4:
+        return "D";
+      default:
+        return null;
+    }
+  }
+
+  function handleCheckAnswer(questionIndex) {
+    if (!isQuestionAnswered(questionIndex)) {
+      // Don't mark as checked if not answered
+      return;
+    }
+    
+    setCheckedAnswers(prev => ({
+      ...prev,
+      [questionIndex]: true
+    }));
+    
+    // Automatically show explanation for the current question
+    if (Constant.singleQuestion.includes(currentQuestion.type)) {
+      setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
+    } else if (!Constant.singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) {
+      // For group questions, find the specific question
+      const question = currentQuestion.questions.find(q => q.index === questionIndex);
+      if (question) {
+        setCurrentExplanation(question.explanation || "Không có giải thích cho câu hỏi này.");
+      }
+    }
+  }
+
+  function checkAnswer(questionIndex) {
+    const question = listQuestion.find(q => q.index === questionIndex);
+    if (!question) return false;
+    
+    return answers[questionIndex] === question.correct;
+  }
+
+  function isQuestionAnswered(questionIndex) {
+    return !!answers[questionIndex];
+  }
+
+  function isAnswerChecked(questionIndex) {
+    return !!checkedAnswers[questionIndex];
+  }
+
+  return (
+    <Flex
+      minH={'calc(100vh - 90px)'}
+      align={'top'}
+      justify={'space-around'}
+      py={4}
+      bg='gray.50'>
+      <Stack
+        boxShadow={'2xl'}
+        bg='white'
+        rounded={'xl'}
+        p={4}
+        pl={10}
+        w={showListQuestion ? '80%' : '99%'}
+        spacing={8}
+        height={'100vh'}
+        align={'left'}
+        divideY="2px">
+        <HStack width={'100%'} direction="row" gap="4">
+          <Box width={'80%'} display={'flex'} justifyContent={'end'}>
+            {/*<Box width={'120px'} alignContent={'center'}>*/}
+              <ButtonTimerGroup
+                initialTime={timer}
+                onTimeUp={handleSubmit}
+              />
+            {/*</Box>*/}
+          </Box>
+
+          <Box height='56px' borderLeft='2px solid #1d81ae'></Box>
+          {
+            showBtnNextQuestion() && (
+              <Flex gap='4' direction='row' alignItems='center' pt={2}>
+                <Button variant="surface" colorPalette={'orange'} onClick={() => previousQuestion(currentQuestion)} mb={2}>
+                  Previous
+                </Button>
+                <Button variant="surface" colorPalette={'orange'} onClick={() => nextQuestion(currentQuestion)} mb={2}>
+                  Next
+                </Button>
+              </Flex>
+            )
+          }
+          <Box _hover={{
+            opacity: 0.7
+          }}
+               minWidth='46px'
+               alignItems='center' p={2} borderRadius={'md'} border={'1px solid #f2f2f2'} style={{cursor: "pointer"}}>
+            <Image onClick={() => setShowListQuestion(v => !v)} src="/icons/menu-icon.svg" alt='icon-menu' boxSize="32px"></Image>
+          </Box>
+        </HStack>
+
+        {/* Main question UI */}
+        {currentQuestion && <Box pt={4} height='100%'>
+          {
+            Constant.singleQuestion.includes(currentQuestion.type) && (
+              <>
+                <Flex height='100%' direction="row" gap={8}>
+                  {/* Cột 1: Ảnh và audios  trừ part 5 ko chia */}
+                  {
+                    currentQuestion.type !== "PART_5" &&
+                    <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}
+                         bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center"
+                         justifyContent="flex-start">
+                      {currentQuestion.audioLink && (
+                        <AudioCommon onNextQuestion={null}
+                                     disabled={false}
+                                     audioLink={currentQuestion.audioLink}/>
+                      )}
+                      {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
+                        currentQuestion.imgLink.map((imgLink, index) => (
+                          <Box mb={6} textAlign="center" key={index}>
+                            <Image src={imgLink} />
+                          </Box>
+                        )))}
+                    </Box>
+                  }
+                  {/* Cột 2: Câu hỏi */}
+                  <Box flex={1}>
+                    <Heading size="md" mb={2}>
+                      Question {currentQuestion.index}
+                      <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
+                        setFlaggedQuestions(prev => prev.includes(currentQuestion.index)
+                          ? prev.filter(i => i !== currentQuestion.index)
+                          : [...prev, currentQuestion.index]);
+                      }}>
+                        <Image
+                          src={flaggedQuestions.includes(currentQuestion.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
+                          alt="Flag" boxSize="24px" display="inline"/>
+                      </Box>
+                      {isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) && (
+                        <Box as="span" ml={2}>
+                          <Image
+                            src={checkAnswer(currentQuestion.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}
+                            alt={checkAnswer(currentQuestion.index) ? "Correct" : "Wrong"} 
+                            boxSize="24px" 
+                            display="inline"/>
+                        </Box>
+                      )}
+                    </Heading>
+                    {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
+                    <RadioGroup.Root
+                      onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
+                      value={answers[currentQuestion.index] || ""}
+                      disabled={isAnswerChecked(currentQuestion.index)}
+                    >
+                      <VStack align="start" spacing={2}>
+                        {(currentQuestion.answer && currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
+                          <RadioGroup.Item 
+                            key={index} 
+                            value={(index + 1)}
+                            disabled={isAnswerChecked(currentQuestion.index)}
+                            style={{
+                              backgroundColor: isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) && 
+                                (currentQuestion.correct === index + 1 ? '#d4edda' : 
+                                (answers[currentQuestion.index] === index + 1 && answers[currentQuestion.index] !== currentQuestion.correct ? '#f8d7da' : 'transparent')),
+                              padding: '2px 12px',
+                              borderRadius: '4px',
+                              opacity: isAnswerChecked(currentQuestion.index) ? (answers[currentQuestion.index] === index + 1 || currentQuestion.correct === index + 1 ? 1 : 0.6) : 1
+                            }}
+                          >
+                            <RadioGroup.ItemHiddenInput/>
+                            <RadioGroup.ItemIndicator/>
+                            <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
+                          </RadioGroup.Item>
+                        ))}
+                      </VStack>
+                    </RadioGroup.Root>
+                    
+                    {isQuestionAnswered(currentQuestion.index) && !isAnswerChecked(currentQuestion.index) && (
+                      <Button 
+                        mt={3} 
+                        colorPalette="blue" 
+                        onClick={() => handleCheckAnswer(currentQuestion.index)}
+                      >
+                        Check Answer
+                      </Button>
+                    )}
+                    
+                    {/* Show explanation automatically if answer has been checked */}
+                    {isAnswerChecked(currentQuestion.index) && (
+                      <Box mt={4} p={3} bg="blue.50" borderRadius="md">
+                        <Text fontWeight="bold">Explanation:</Text>
+                        <Box dangerouslySetInnerHTML={{ __html: currentExplanation }} />
+                      </Box>
+                    )}
+                  </Box>
+                </Flex>
+              </>
+            )
+          }
+
+          {
+            (!Constant.singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
+              <Flex direction="row" height='100%' gap={8}>
+                {/* Cột 1: Ảnh và audios */}
+                <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%'
+                     style={{maxHeight: 'calc(100% - 80px)'}} bg="gray.100" p={6} borderRadius="md" display="flex"
+                     flexDirection="column" alignItems="center" justifyContent="flex-start">
+                  {currentQuestion.audioLink && (
+                    <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
+                                 disabled={false}
+                                 audioLink={currentQuestion.audioLink}/>
+                  )}
+                  {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
+                    currentQuestion.imgLink.map((src, idx) => (
+                      <Box mb={6} key={`img-quest-${idx}`} textAlign="center">
+                        <Image src={src}/>
+                      </Box>
+                    ))
+                  )}
+                </Box>
+                {/* Cột 2: Câu hỏi */}
+                <Box flex={1} overflowY={'scroll'} style={{maxHeight: 'calc(100% - 80px)'}}>
+                  {currentQuestion.questions.map((question, indexQuestion) => (
+                    <Box key={`question-${indexQuestion}`}>
+                      <Heading size="md" mt={4} mb={2}>
+                        Question {question.index}: {question.description && question.description}
+                        <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
+                          setFlaggedQuestions(prev => prev.includes(question.index)
+                            ? prev.filter(i => i !== question.index)
+                            : [...prev, question.index]);
+                        }}>
+                          <Image
+                            src={flaggedQuestions.includes(question.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
+                            alt="Flag" boxSize="24px" display="inline"/>
+                        </Box>
+                        {isQuestionAnswered(question.index) && isAnswerChecked(question.index) && (
+                          <Box as="span" ml={2}>
+                            <Image
+                              src={checkAnswer(question.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}
+                              alt={checkAnswer(question.index) ? "Correct" : "Wrong"} 
+                              boxSize="24px" 
+                              display="inline"/>
+                          </Box>
+                        )}
+                      </Heading>
+                      <RadioGroup.Root
+                        onValueChange={(e) => handleAnswerChange(e, question.index)}
+                        value={answers[question.index] || ""}
+                        disabled={isAnswerChecked(question.index)}
+                      >
+                        <VStack align="start" spacing={2}>
+                          {(question.answer && question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
+                            <RadioGroup.Item 
+                              key={index} 
+                              value={(index + 1)}
+                              disabled={isAnswerChecked(question.index)}
+                              style={{
+                                backgroundColor: isQuestionAnswered(question.index) && isAnswerChecked(question.index) && 
+                                  (question.correct === index + 1 ? '#d4edda' : 
+                                  (answers[question.index] === index + 1 && answers[question.index] !== question.correct ? '#f8d7da' : 'transparent')),
+                                padding: '8px 12px',
+                                borderRadius: '4px',
+                                opacity: isAnswerChecked(question.index) ? (answers[question.index] === index + 1 || question.correct === index + 1 ? 1 : 0.6) : 1
+                              }}
+                            >
+                              <RadioGroup.ItemHiddenInput/>
+                              <RadioGroup.ItemIndicator/>
+                              <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
+                            </RadioGroup.Item>
+                          ))}
+                        </VStack>
+                      </RadioGroup.Root>
+                      
+                      {isQuestionAnswered(question.index) && !isAnswerChecked(question.index) && (
+                        <Button 
+                          mt={3} 
+                          colorPalette="blue" 
+                          onClick={() => handleCheckAnswer(question.index)}
+                        >
+                          Check Answer
+                        </Button>
+                      )}
+                      
+                      {/* Show explanation automatically if answer has been checked */}
+                      {isAnswerChecked(question.index) && question.explanation && (
+                        <Box mt={2} mb={4} p={3} bg="blue.50" borderRadius="md">
+                          <Text fontWeight="bold">Explanation:</Text>
+                          <Box dangerouslySetInnerHTML={{ __html: question.explanation }} />
+                        </Box>
+                      )}
+                    </Box>
+                  ))}
+                </Box>
+              </Flex>
+            )
+          }
+        </Box>}
+      </Stack>
+
+      {showListQuestion && (
+        <Stack
+          boxShadow={'2xl'}
+          bg='white'
+          rounded={'xl'}
+          p={3}
+          w={'18%'}
+          spacing={8}
+          height={'100vh'}
+          align={'start'}>
+          <Heading size="md" mb={2}>List question</Heading>
+          <HStack mb={2} spacing={2} width="100%" justify="center" pb={2} borderBottom="1px solid"
+                  borderColor="gray.200">
+            <Button size="sm" variant={filterType === 'unanswered' ? 'solid' : 'outline'} colorPalette={'blue'}
+                    onClick={() => setFilterType('unanswered')}>Chưa trả lời</Button>
+            <Button size="sm" variant={filterType === 'flagged' ? 'solid' : 'outline'} colorPalette={'yellow'}
+                    onClick={() => setFilterType('flagged')}>Đánh dấu</Button>
+            <Button size="sm" variant={filterType === 'all' ? 'solid' : 'outline'} colorPalette={'teal'}
+                    onClick={() => setFilterType('all')}>Tất cả</Button>
+          </HStack>
+          <VStack align="stretch" minW={"100%"} spacing={4} overflowY={'scroll'}>
+            {partForSelectQuestion.map((partGroup, idx) => (
+              <Box key={idx} pt={'6px'}>
+                <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
+                <HStack wrap="wrap" spacing={2}>
+                  {partGroup.questions
+                    .filter((q) => {
+                      if (filterType === 'flagged') return flaggedQuestions.includes(q.index);
+                      if (filterType === 'unanswered') return !answers[q.index];
+                      return true;
+                    })
+                    .map((q) => {
+                      // Determine button color based on answer status
+                      let colorPalette = "teal";
+                      if (answers[q.index] && isAnswerChecked(q.index)) {
+                        colorPalette = checkAnswer(q.index) ? "green" : "red";
+                      } else if (flaggedQuestions.includes(q.index)) {
+                        colorPalette = "yellow";
+                      }
+                      
+                      return (
+                        <Button
+                          key={q.index}
+                          minW='46px'
+                          size="sm"
+                          variant={flaggedQuestions.includes(q.index) || answers[q.index] ? "solid" : "outline"}
+                          colorPalette={colorPalette}
+                          onClick={() => setCurrentIndexQuestion(q.index)}
+                        >
+                          {q.index}
+                        </Button>
+                      );
+                    })}
+                </HStack>
+              </Box>
+            ))}
+          </VStack>
+        </Stack>
+      )}
+    </Flex>
+  );
+}

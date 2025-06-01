@@ -32,7 +32,7 @@ export default function ButtonTimerGroup({ initialTime, onTimeUp }) {
   const formattedTime = `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
 
   return (
-    <Text fontSize="xl" color={'#283382'} px={2} py={1} borderRadius="md" border="1px solid #283382">
+    <Text fontSize="xl" minW="80px" textAlign="center" color={'#283382'} px={2} py={1} borderRadius="md" border="1px solid #283382">
       {initialTime === 0 ? formattedTime : time <= 0 ? "00:00" : formattedTime}
     </Text>
   );
