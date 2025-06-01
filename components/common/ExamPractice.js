@@ -8,14 +8,15 @@ import {
   VStack,
   Text,
   Image,
-  RadioGroup
+  Checkbox,
+  RadioGroup, Textarea
 } from "@chakra-ui/react";
 import {useEffect, useRef, useState} from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import {Constant} from "@/constants";
 import { useRouter } from "next/router";
 import ButtonTimerGroup from "@/components/common/Timer";
-
+import * as Diff from 'diff';
 
 const groupByPartForSelectQuestion = (questions) => {
   const grouped = {};
@@ -63,13 +64,16 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   const [showListQuestion, setShowListQuestion] = useState(true); // Show by default for practice mode
   const [currentExplanation, setCurrentExplanation] = useState("");
   const [checkedAnswers, setCheckedAnswers] = useState({}); // Track which answers have been checked
+  const [showDictionary, setShowDictionary] = useState(false); // Track which answers have been checked
+  const [dictationText, setDictationText] = useState({}); // Store dictation text for each question
+  const [dictationResults, setDictationResults] = useState({}); // Store dictation comparison results
 
   useEffect(() => {
     if (!listQuestion.length) return;
     setGroupedQuestions(groupQuestions(listQuestion));
     setPartForSelectQuestion(groupByPartForSelectQuestion(listQuestion));
     setCurrentQuestion(listQuestion[0]);
-    setCurrentIndexQuestion(listQuestion[0].index)
+    setCurrentIndexQuestion(listQuestion[0].index);
   }, [listQuestion]);
 
   useEffect(() => {
@@ -101,21 +105,31 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     // Update explanation based on current question
     if (Constant.singleQuestion.includes(currentQuestion.type)) {
       if (isAnswerChecked(currentQuestion.index)) {
-        setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
+        // If we have stored dictation results, use them
+        if (dictationResults[currentQuestion.index]) {
+          setCurrentExplanation(dictationResults[currentQuestion.index]);
+        } else {
+          setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
+        }
       }
     } else if (currentQuestion.questions) {
-      // For group questions, combine explanations of checked questions
-      const checkedExplanations = currentQuestion.questions
+      // For group questions
+      const questionWithResults = currentQuestion.questions
         .filter(q => isAnswerChecked(q.index))
-        .map(q => 
-          `<div><strong>Question ${q.index}:</strong> ${q.explanation || "Không có giải thích."}</div>`
-        ).join("");
+        .map(q => {
+          // If we have stored dictation results for this question, use them
+          if (dictationResults[q.index]) {
+            return dictationResults[q.index];
+          } else {
+            return `<div><strong>Question ${q.index}:</strong> ${q.explanation || "Không có giải thích."}</div>`;
+          }
+        }).join("");
       
-      if (checkedExplanations) {
-        setCurrentExplanation(checkedExplanations);
+      if (questionWithResults) {
+        setCurrentExplanation(questionWithResults);
       }
     }
-  }, [currentQuestion, currentIndexQuestion]);
+  }, [currentQuestion, currentIndexQuestion, dictationResults]);
 
   useEffect(() => {
     const handleBeforeUnload = (e) => {
@@ -241,12 +255,54 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     
     // Automatically show explanation for the current question
     if (Constant.singleQuestion.includes(currentQuestion.type)) {
-      setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
+      let explanation = currentQuestion.explanation || "Không có giải thích cho câu hỏi này.";
+      
+      // If dictation is enabled and this is a dictation-compatible question type
+      if (showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && dictationText[questionIndex]) {
+        const userText = dictationText[questionIndex];
+        
+        // Get the correct text, prioritizing dictationText field if available
+        let correctText = currentQuestion.dictationText || currentQuestion.explanation || "";
+        
+        // Strip HTML tags from the correct text if it contains HTML
+        const plainCorrectText = stripHtml(correctText);
+        
+        // Generate diff HTML and get similarity
+        const { html: diffHtml, similarity } = generateDiffHtml(userText, plainCorrectText);
+        const similarityPercentage = Math.round(similarity * 100);
+        
+        // Add dictation comparison to explanation
+        explanation = `
+          <div class="dictation-comparison">
+            <p><strong>Your dictation: <br/></strong></p>
+            <pre style="white-space: pre-wrap; word-break: break-word; background-color: #f8f9fa; padding: 10px; border-radius: 4px; font-family: inherit;">${userText}</pre>
+            <p><strong>Comparison:</strong></p>
+            <div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px; margin-bottom: 8px;">
+              ${diffHtml}
+            </div>
+            <p><strong>Similarity:</strong> ${similarityPercentage}%</p>
+          </div>
+          <hr/>
+          <div class="explanation">
+            <p><strong>Explanation:</strong></p>
+            ${explanation}
+          </div>
+        `;
+        
+        // Store the result for future reference
+        setDictationResults(prev => ({
+          ...prev,
+          [questionIndex]: explanation
+        }));
+      }
+      
+      setCurrentExplanation(explanation);
     } else if (!Constant.singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) {
       // For group questions, find the specific question
       const question = currentQuestion.questions.find(q => q.index === questionIndex);
       if (question) {
-        setCurrentExplanation(question.explanation || "Không có giải thích cho câu hỏi này.");
+        const explanation = question.explanation || "Không có giải thích cho câu hỏi này.";
+        setCurrentExplanation(explanation);
       }
     }
   }
@@ -264,6 +320,73 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
 
   function isAnswerChecked(questionIndex) {
     return !!checkedAnswers[questionIndex];
+  }
+
+  // Function to strip HTML tags and normalize text for comparison
+  function stripHtml(html) {
+    if (!html) return "";
+    // Create a temporary element to parse the HTML
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+    // Get the text content and normalize it
+    let text = temp.textContent || temp.innerText || "";
+    // Remove answer choice indicators like (A), (B), (C), (D)
+    text = text.replace(/\([A-D]\)/g, "");
+    // Remove extra whitespace
+    text = text.replace(/\s+/g, " ").trim();
+    return text;
+  }
+
+  // Function to generate HTML with highlighted differences and calculate similarity using diff
+  function generateDiffHtml(userText, correctText) {
+    if (!userText || !correctText) return { html: "", similarity: 0 };
+    
+    // Convert to lowercase for better comparison, but preserve line breaks for display
+    const userTextLower = userText.toLowerCase().trim();
+    const correctTextLower = correctText.toLowerCase().trim();
+    
+    // For comparison, replace line breaks with spaces
+    const userTextForCompare = userTextLower.replace(/\n/g, ' ');
+    const correctTextForCompare = correctTextLower.replace(/\n/g, ' ');
+    
+    // Generate diff
+    const diff = Diff.diffWords(userTextForCompare, correctTextForCompare);
+    
+    // Calculate similarity based on diff results
+    let totalLength = 0;
+    let matchedLength = 0;
+    
+    diff.forEach(part => {
+      if (part.added) {
+        totalLength += part.value.length;
+      } else if (part.removed) {
+        totalLength += part.value.length;
+      } else {
+        // Matched parts
+        matchedLength += part.value.length;
+        totalLength += part.value.length;
+      }
+    });
+    
+    // Calculate similarity as percentage of matched text
+    const similarity = totalLength > 0 ? matchedLength / totalLength : 0;
+    
+    // Create HTML with highlighted differences
+    let html = '';
+    diff.forEach((part) => {
+      const style = part.added ? 'background-color: #e6ffe6; color: green; text-decoration: underline;' : 
+                   part.removed ? 'background-color: #ffe6e6; color: red; text-decoration: line-through;' : '';
+      
+      if (part.added) {
+        html += `<span style="${style}">+${part.value}</span>`;
+      } else if (part.removed) {
+        html += `<span style="${style}">-${part.value}</span>`;
+      } else {
+        html += `<span style="${style}">${part.value}</span>`;
+      }
+    });
+    
+    return { html, similarity };
   }
 
   return (
@@ -285,13 +408,24 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         align={'left'}
         divideY="2px">
         <HStack width={'100%'} direction="row" gap="4">
-          <Box width={'80%'} display={'flex'} justifyContent={'end'}>
-            {/*<Box width={'120px'} alignContent={'center'}>*/}
-              <ButtonTimerGroup
-                initialTime={timer}
-                onTimeUp={handleSubmit}
-              />
-            {/*</Box>*/}
+          <Box width={'80%'} display={'flex'} gap={4} justifyContent={'end'}>
+            <Box alignContent={'center'}>
+              <Checkbox.Root
+                colorPalette={'green'}
+                checked={showDictionary}
+                onCheckedChange={(e) => setShowDictionary(!!e.checked)}
+              >
+                <Checkbox.HiddenInput />
+                <Checkbox.Control />
+                <Checkbox.Label>Dictation</Checkbox.Label>
+              </Checkbox.Root>
+            </Box>
+
+            <ButtonTimerGroup
+              initialTime={timer}
+              onTimeUp={handleSubmit}
+            />
+
           </Box>
 
           <Box height='56px' borderLeft='2px solid #1d81ae'></Box>
@@ -392,7 +526,24 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                         ))}
                       </VStack>
                     </RadioGroup.Root>
-                    
+
+                    {
+                      showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
+                        <Textarea
+                          mt={3}
+                          placeholder="Type what you hear..."
+                          value={dictationText[currentQuestion.index] || ""}
+                          onChange={(e) => setDictationText(prev => ({
+                            ...prev,
+                            [currentQuestion.index]: e.target.value
+                          }))}
+                          disabled={isAnswerChecked(currentQuestion.index)}
+                          height="100px"
+                          resize="vertical"
+                        />
+                      )
+                    }
+
                     {isQuestionAnswered(currentQuestion.index) && !isAnswerChecked(currentQuestion.index) && (
                       <Button 
                         mt={3} 
@@ -506,6 +657,23 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                           <Box dangerouslySetInnerHTML={{ __html: question.explanation }} />
                         </Box>
                       )}
+                      
+                      {
+                        showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
+                          <Textarea
+                            mt={3}
+                            placeholder="Type what you hear..."
+                            value={dictationText[question.index] || ""}
+                            onChange={(e) => setDictationText(prev => ({
+                              ...prev,
+                              [question.index]: e.target.value
+                            }))}
+                            disabled={isAnswerChecked(question.index)}
+                            height="100px"
+                            resize="vertical"
+                          />
+                        )
+                      }
                     </Box>
                   ))}
                 </Box>
