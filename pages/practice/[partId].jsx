@@ -89,7 +89,7 @@ export default function Page() {
         stepIntro === 0 && (
           <Box
             minH={'80vh'}
-            background="white"
+            bg="white"
             boxShadow="lg"
             borderRadius="lg"
             padding={6}

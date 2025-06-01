@@ -14,6 +14,7 @@ import { Constant } from "@/constants";
 import ExamDetail from "@/components/common/ExamDetail";
 import { toaster } from "@/components/ui/toaster";
 import {signIn, useSession} from "next-auth/react";
+import CommentSection from "@/components/common/CommentSection";
 
 const listPartOption = [
   {
@@ -275,6 +276,9 @@ export default function Page() {
                 </Box>
               </Tabs.Content>
             </Tabs.Root>
+
+            {/*<CommentSection testId={testId} />*/}
+            <CommentSection testId={router.query.id} session={session}/>
 
           </Stack>
 
