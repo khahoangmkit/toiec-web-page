@@ -73,261 +73,261 @@ export default function Home() {
       ]
     },
 
-    // {
-    //   name: "ETS 2023",
-    //   value: 2,
-    //   parts: [
-    //     {
-    //       name: "ETS 2023 - Test 1",
-    //       id: 'ets_2023_test_1',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 2",
-    //       id: 'ets_2023_test_2',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 3",
-    //       id: 'ets_2023_test_3',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 4",
-    //       id: 'ets_2023_test_4',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 5",
-    //       id: 'ets_2023_test_5',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 6",
-    //       id: 'ets_2023_test_6',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 7",
-    //       id: 'ets_2023_test_7',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 8",
-    //       id: 'ets_2023_test_8',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 9",
-    //       id: 'ets_2023_test_9',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2023 - Test 10",
-    //       id: 'ets_2023_test_10',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //   ]
-    // },
-    // {
-    //   name: "ETS 2022",
-    //   value: 3,
-    //   parts: [
-    //     {
-    //       name: "ETS 2022 - Test 1",
-    //       id: 'ets_2022_test_1',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 2",
-    //       id: 'ets_2022_test_2',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 3",
-    //       id: 'ets_2022_test_3',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 4",
-    //       id: 'ets_2022_test_4',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 5",
-    //       id: 'ets_2022_test_5',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 6",
-    //       id: 'ets_2022_test_6',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 7",
-    //       id: 'ets_2022_test_7',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 8",
-    //       id: 'ets_2022_test_8',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 9",
-    //       id: 'ets_2022_test_9',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2022 - Test 10",
-    //       id: 'ets_2022_test_10',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //   ]
-    // },
-    // {
-    //   name: "ETS 2021",
-    //   value: 4,
-    //   parts: [
-    //     {
-    //       name: "ETS 2021 - Test 1",
-    //       id: 'ets_2021_test_1',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2021 - Test 2",
-    //       id: 'ets_2021_test_2',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2021 - Test 3",
-    //       id: 'ets_2021_test_3',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2021 - Test 4",
-    //       id: 'ets_2021_test_4',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2021 - Test 5",
-    //       id: 'ets_2021_test_5',
-    //       desc: 'Thời gian: 120 phút'
-    //     }
-    //   ]
-    // },
-    // {
-    //   name: "ETS 2020",
-    //   value: 5,
-    //   parts: [
-    //     {
-    //       name: "ETS 2020 - Test 1",
-    //       id: 'ets_2020_test_1',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 2",
-    //       id: 'ets_2020_test_2',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 3",
-    //       id: 'ets_2020_test_3',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 4",
-    //       id: 'ets_2020_test_4',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 5",
-    //       id: 'ets_2020_test_5',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 6",
-    //       id: 'ets_2020_test_6',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 7",
-    //       id: 'ets_2020_test_7',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 8",
-    //       id: 'ets_2020_test_8',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 9",
-    //       id: 'ets_2020_test_9',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2020 - Test 10",
-    //       id: 'ets_2020_test_10',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //   ]
-    // },
-    // {
-    //   name: "ETS 2019",
-    //   value: 6,
-    //   parts: [
-    //     {
-    //       name: "ETS 2019 - Test 1",
-    //       id: 'ets_2019_test_1',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 2",
-    //       id: 'ets_2019_test_2',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 3",
-    //       id: 'ets_2019_test_3',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 4",
-    //       id: 'ets_2019_test_4',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 5",
-    //       id: 'ets_2019_test_5',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 6",
-    //       id: 'ets_2019_test_6',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 7",
-    //       id: 'ets_2019_test_7',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 8",
-    //       id: 'ets_2019_test_8',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 9",
-    //       id: 'ets_2019_test_9',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //     {
-    //       name: "ETS 2019 - Test 10",
-    //       id: 'ets_2019_test_10',
-    //       desc: 'Thời gian: 120 phút'
-    //     },
-    //   ]
-    // }
+    {
+      name: "ETS 2023",
+      value: 2,
+      parts: [
+        {
+          name: "ETS 2023 - Test 1",
+          id: 'ets_2023_test_1',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 2",
+          id: 'ets_2023_test_2',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 3",
+          id: 'ets_2023_test_3',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 4",
+          id: 'ets_2023_test_4',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 5",
+          id: 'ets_2023_test_5',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 6",
+          id: 'ets_2023_test_6',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 7",
+          id: 'ets_2023_test_7',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 8",
+          id: 'ets_2023_test_8',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 9",
+          id: 'ets_2023_test_9',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2023 - Test 10",
+          id: 'ets_2023_test_10',
+          desc: 'Thời gian: 120 phút'
+        },
+      ]
+    },
+    {
+      name: "ETS 2022",
+      value: 3,
+      parts: [
+        {
+          name: "ETS 2022 - Test 1",
+          id: 'ets_2022_test_1',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 2",
+          id: 'ets_2022_test_2',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 3",
+          id: 'ets_2022_test_3',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 4",
+          id: 'ets_2022_test_4',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 5",
+          id: 'ets_2022_test_5',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 6",
+          id: 'ets_2022_test_6',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 7",
+          id: 'ets_2022_test_7',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 8",
+          id: 'ets_2022_test_8',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 9",
+          id: 'ets_2022_test_9',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2022 - Test 10",
+          id: 'ets_2022_test_10',
+          desc: 'Thời gian: 120 phút'
+        },
+      ]
+    },
+    {
+      name: "ETS 2021",
+      value: 4,
+      parts: [
+        {
+          name: "ETS 2021 - Test 1",
+          id: 'ets_2021_test_1',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2021 - Test 2",
+          id: 'ets_2021_test_2',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2021 - Test 3",
+          id: 'ets_2021_test_3',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2021 - Test 4",
+          id: 'ets_2021_test_4',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2021 - Test 5",
+          id: 'ets_2021_test_5',
+          desc: 'Thời gian: 120 phút'
+        }
+      ]
+    },
+    {
+      name: "ETS 2020",
+      value: 5,
+      parts: [
+        {
+          name: "ETS 2020 - Test 1",
+          id: 'ets_2020_test_1',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 2",
+          id: 'ets_2020_test_2',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 3",
+          id: 'ets_2020_test_3',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 4",
+          id: 'ets_2020_test_4',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 5",
+          id: 'ets_2020_test_5',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 6",
+          id: 'ets_2020_test_6',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 7",
+          id: 'ets_2020_test_7',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 8",
+          id: 'ets_2020_test_8',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 9",
+          id: 'ets_2020_test_9',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2020 - Test 10",
+          id: 'ets_2020_test_10',
+          desc: 'Thời gian: 120 phút'
+        },
+      ]
+    },
+    {
+      name: "ETS 2019",
+      value: 6,
+      parts: [
+        {
+          name: "ETS 2019 - Test 1",
+          id: 'ets_2019_test_1',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 2",
+          id: 'ets_2019_test_2',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 3",
+          id: 'ets_2019_test_3',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 4",
+          id: 'ets_2019_test_4',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 5",
+          id: 'ets_2019_test_5',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 6",
+          id: 'ets_2019_test_6',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 7",
+          id: 'ets_2019_test_7',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 8",
+          id: 'ets_2019_test_8',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 9",
+          id: 'ets_2019_test_9',
+          desc: 'Thời gian: 120 phút'
+        },
+        {
+          name: "ETS 2019 - Test 10",
+          id: 'ets_2019_test_10',
+          desc: 'Thời gian: 120 phút'
+        },
+      ]
+    }
   ];
 
   const toiecTestSection = [
