@@ -11,9 +11,9 @@ import {
   Checkbox,
   RadioGroup, Textarea
 } from "@chakra-ui/react";
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import AudioCommon from "@/components/common/AudioCommon";
-import {Constant} from "@/constants";
+import { Constant } from "@/constants";
 import { useRouter } from "next/router";
 import ButtonTimerGroup from "@/components/common/Timer";
 import * as Diff from 'diff';
@@ -101,7 +101,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
 
   useEffect(() => {
     if (!currentQuestion) return;
-    
+
     // Update explanation based on current question
     if (Constant.singleQuestion.includes(currentQuestion.type)) {
       if (isAnswerChecked(currentQuestion.index)) {
@@ -124,7 +124,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
             return `<div><strong>Question ${q.index}:</strong> ${q.explanation || "Không có giải thích."}</div>`;
           }
         }).join("");
-      
+
       if (questionWithResults) {
         setCurrentExplanation(questionWithResults);
       }
@@ -168,7 +168,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     if (isAnswerChecked(indexQuestion)) {
       return;
     }
-    
+
     setAnswers({...answers, [indexQuestion]: value.value});
   };
 
@@ -247,30 +247,30 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
       // Don't mark as checked if not answered
       return;
     }
-    
+
     setCheckedAnswers(prev => ({
       ...prev,
       [questionIndex]: true
     }));
-    
+
     // Automatically show explanation for the current question
     if (Constant.singleQuestion.includes(currentQuestion.type)) {
       let explanation = currentQuestion.explanation || "Không có giải thích cho câu hỏi này.";
-      
+
       // If dictation is enabled and this is a dictation-compatible question type
       if (showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && dictationText[questionIndex]) {
         const userText = dictationText[questionIndex];
-        
+
         // Get the correct text, prioritizing dictationText field if available
         let correctText = currentQuestion.dictationText || currentQuestion.explanation || "";
-        
+
         // Strip HTML tags from the correct text if it contains HTML
         const plainCorrectText = stripHtml(correctText);
-        
+
         // Generate diff HTML and get similarity
-        const { html: diffHtml, similarity } = generateDiffHtml(userText, plainCorrectText);
+        const {html: diffHtml, similarity} = generateDiffHtml(userText, plainCorrectText);
         const similarityPercentage = Math.round(similarity * 100);
-        
+
         // Add dictation comparison to explanation
         explanation = `
           <div class="dictation-comparison">
@@ -288,29 +288,26 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
             ${explanation}
           </div>
         `;
-        
+
         // Store the result for future reference
         setDictationResults(prev => ({
           ...prev,
           [questionIndex]: explanation
         }));
       }
-      
+
       setCurrentExplanation(explanation);
-    } else if (!Constant.singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) {
-      // For group questions, find the specific question
-      const question = currentQuestion.questions.find(q => q.index === questionIndex);
-      if (question) {
-        const explanation = question.explanation || "Không có giải thích cho câu hỏi này.";
-        setCurrentExplanation(explanation);
-      }
+    } else if (currentQuestion.questions) {
+      // For group questions
+      const explanationContent = generateGroupExplanation();
+      setCurrentExplanation(explanationContent);
     }
   }
 
   function checkAnswer(questionIndex) {
     const question = listQuestion.find(q => q.index === questionIndex);
     if (!question) return false;
-    
+
     return answers[questionIndex] === question.correct;
   }
 
@@ -339,23 +336,23 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
 
   // Function to generate HTML with highlighted differences and calculate similarity using diff
   function generateDiffHtml(userText, correctText) {
-    if (!userText || !correctText) return { html: "", similarity: 0 };
-    
+    if (!userText || !correctText) return {html: "", similarity: 0};
+
     // Convert to lowercase for better comparison, but preserve line breaks for display
     const userTextLower = userText.toLowerCase().trim();
     const correctTextLower = correctText.toLowerCase().trim();
-    
+
     // For comparison, replace line breaks with spaces
     const userTextForCompare = userTextLower.replace(/\n/g, ' ');
     const correctTextForCompare = correctTextLower.replace(/\n/g, ' ');
-    
+
     // Generate diff
     const diff = Diff.diffWords(userTextForCompare, correctTextForCompare);
-    
+
     // Calculate similarity based on diff results
     let totalLength = 0;
     let matchedLength = 0;
-    
+
     diff.forEach(part => {
       if (part.added) {
         totalLength += part.value.length;
@@ -367,16 +364,16 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         totalLength += part.value.length;
       }
     });
-    
+
     // Calculate similarity as percentage of matched text
     const similarity = totalLength > 0 ? matchedLength / totalLength : 0;
-    
+
     // Create HTML with highlighted differences
     let html = '';
     diff.forEach((part) => {
-      const style = part.added ? 'background-color: #e6ffe6; color: green; text-decoration: underline;' : 
-                   part.removed ? 'background-color: #ffe6e6; color: red; text-decoration: line-through;' : '';
-      
+      const style = part.added ? 'background-color: #e6ffe6; color: green; text-decoration: underline;' :
+        part.removed ? 'background-color: #ffe6e6; color: red; text-decoration: line-through;' : '';
+
       if (part.added) {
         html += `<span style="${style}">+${part.value}</span>`;
       } else if (part.removed) {
@@ -385,8 +382,47 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         html += `<span style="${style}">${part.value}</span>`;
       }
     });
-    
-    return { html, similarity };
+
+    return {html, similarity};
+  }
+
+  // Function to check if all questions in a group have been answered
+  function areAllGroupQuestionsAnswered() {
+    if (!currentQuestion || !currentQuestion.questions) return false;
+
+    return currentQuestion.questions.every(question =>
+      isQuestionAnswered(question.index)
+    );
+  }
+
+  // Function to check if any question in a group has been checked
+  function isAnyGroupQuestionChecked() {
+    if (!currentQuestion || !currentQuestion.questions) return false;
+
+    return currentQuestion.questions.some(question =>
+      isAnswerChecked(question.index)
+    );
+  }
+
+  // Function to handle checking all answers in a group
+  function handleCheckAllGroupAnswers() {
+    if (!currentQuestion || !currentQuestion.questions) return;
+
+    // Check each question in the group
+    currentQuestion.questions.forEach(question => {
+      if (isQuestionAnswered(question.index)) {
+        handleCheckAnswer(question.index);
+      }
+    });
+  }
+
+  // Generate a single explanation for all questions in a group
+  function generateGroupExplanation() {
+    if (!currentQuestion || !currentQuestion.questions) return "";
+
+    const explanationContent = currentQuestion.questions[0].explanation;
+
+    return explanationContent;
   }
 
   return (
@@ -415,8 +451,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                 checked={showDictionary}
                 onCheckedChange={(e) => setShowDictionary(!!e.checked)}
               >
-                <Checkbox.HiddenInput />
-                <Checkbox.Control />
+                <Checkbox.HiddenInput/>
+                <Checkbox.Control/>
                 <Checkbox.Label>Dictation</Checkbox.Label>
               </Checkbox.Root>
             </Box>
@@ -432,7 +468,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
           {
             showBtnNextQuestion() && (
               <Flex gap='4' direction='row' alignItems='center' pt={2}>
-                <Button variant="surface" colorPalette={'orange'} onClick={() => previousQuestion(currentQuestion)} mb={2}>
+                <Button variant="surface" colorPalette={'orange'} onClick={() => previousQuestion(currentQuestion)}
+                        mb={2}>
                   Previous
                 </Button>
                 <Button variant="surface" colorPalette={'orange'} onClick={() => nextQuestion(currentQuestion)} mb={2}>
@@ -446,7 +483,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
           }}
                minWidth='46px'
                alignItems='center' p={2} borderRadius={'md'} border={'1px solid #f2f2f2'} style={{cursor: "pointer"}}>
-            <Image onClick={() => setShowListQuestion(v => !v)} src="/icons/menu-icon.svg" alt='icon-menu' boxSize="32px"></Image>
+            <Image onClick={() => setShowListQuestion(v => !v)} src="/icons/menu-icon.svg" alt='icon-menu'
+                   boxSize="32px"></Image>
           </Box>
         </HStack>
 
@@ -470,7 +508,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
                         currentQuestion.imgLink.map((imgLink, index) => (
                           <Box mb={6} textAlign="center" key={index}>
-                            <Image src={imgLink} />
+                            <Image src={imgLink}/>
                           </Box>
                         )))}
                     </Box>
@@ -488,15 +526,20 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                           src={flaggedQuestions.includes(currentQuestion.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
                           alt="Flag" boxSize="24px" display="inline"/>
                       </Box>
-                      {isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) && (
-                        <Box as="span" ml={2}>
-                          <Image
-                            src={checkAnswer(currentQuestion.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}
-                            alt={checkAnswer(currentQuestion.index) ? "Correct" : "Wrong"} 
-                            boxSize="24px" 
-                            display="inline"/>
-                        </Box>
-                      )}
+
+                      {/*
+                      ==============
+                      show Icon correct, incorrect
+                      */}
+                      {/*{isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) && (*/}
+                      {/*  <Box as="span" ml={2}>*/}
+                      {/*    <Image*/}
+                      {/*      src={checkAnswer(currentQuestion.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}*/}
+                      {/*      alt={checkAnswer(currentQuestion.index) ? "Correct" : "Wrong"}*/}
+                      {/*      boxSize="24px"*/}
+                      {/*      display="inline"/>*/}
+                      {/*  </Box>*/}
+                      {/*)}*/}
                     </Heading>
                     {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
                     <RadioGroup.Root
@@ -506,14 +549,14 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     >
                       <VStack align="start" spacing={2}>
                         {(currentQuestion.answer && currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
-                          <RadioGroup.Item 
-                            key={index} 
+                          <RadioGroup.Item
+                            key={index}
                             value={(index + 1)}
                             disabled={isAnswerChecked(currentQuestion.index)}
                             style={{
-                              backgroundColor: isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) && 
-                                (currentQuestion.correct === index + 1 ? '#d4edda' : 
-                                (answers[currentQuestion.index] === index + 1 && answers[currentQuestion.index] !== currentQuestion.correct ? '#f8d7da' : 'transparent')),
+                              backgroundColor: isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) &&
+                                (currentQuestion.correct === index + 1 ? '#d4edda' :
+                                  (answers[currentQuestion.index] === index + 1 && answers[currentQuestion.index] !== currentQuestion.correct ? '#f8d7da' : 'transparent')),
                               padding: '2px 12px',
                               borderRadius: '4px',
                               opacity: isAnswerChecked(currentQuestion.index) ? (answers[currentQuestion.index] === index + 1 || currentQuestion.correct === index + 1 ? 1 : 0.6) : 1
@@ -545,20 +588,20 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     }
 
                     {isQuestionAnswered(currentQuestion.index) && !isAnswerChecked(currentQuestion.index) && (
-                      <Button 
-                        mt={3} 
-                        colorPalette="blue" 
+                      <Button
+                        mt={3}
+                        colorPalette="blue"
                         onClick={() => handleCheckAnswer(currentQuestion.index)}
                       >
                         Check Answer
                       </Button>
                     )}
-                    
+
                     {/* Show explanation automatically if answer has been checked */}
                     {isAnswerChecked(currentQuestion.index) && (
                       <Box mt={4} p={3} bg="blue.50" borderRadius="md">
                         <Text fontWeight="bold">Explanation:</Text>
-                        <Box dangerouslySetInnerHTML={{ __html: currentExplanation }} />
+                        <Box dangerouslySetInnerHTML={{__html: currentExplanation}}/>
                       </Box>
                     )}
                   </Box>
@@ -567,6 +610,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
             )
           }
 
+          {/*Show List question group */}
           {
             (!Constant.singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
               <Flex direction="row" height='100%' gap={8}>
@@ -602,15 +646,19 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                             src={flaggedQuestions.includes(question.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
                             alt="Flag" boxSize="24px" display="inline"/>
                         </Box>
-                        {isQuestionAnswered(question.index) && isAnswerChecked(question.index) && (
-                          <Box as="span" ml={2}>
-                            <Image
-                              src={checkAnswer(question.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}
-                              alt={checkAnswer(question.index) ? "Correct" : "Wrong"} 
-                              boxSize="24px" 
-                              display="inline"/>
-                          </Box>
-                        )}
+                        {/*
+                          ==============
+                          show Icon correct, incorrect
+                        */}
+                        {/*{isQuestionAnswered(question.index) && isAnswerChecked(question.index) && (*/}
+                        {/*  <Box as="span" ml={2}>*/}
+                        {/*    <Image*/}
+                        {/*      src={checkAnswer(question.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}*/}
+                        {/*      alt={checkAnswer(question.index) ? "Correct" : "Wrong"}*/}
+                        {/*      boxSize="24px"*/}
+                        {/*      display="inline"/>*/}
+                        {/*  </Box>*/}
+                        {/*)}*/}
                       </Heading>
                       <RadioGroup.Root
                         onValueChange={(e) => handleAnswerChange(e, question.index)}
@@ -619,14 +667,14 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       >
                         <VStack align="start" spacing={2}>
                           {(question.answer && question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
-                            <RadioGroup.Item 
-                              key={index} 
+                            <RadioGroup.Item
+                              key={index}
                               value={(index + 1)}
                               disabled={isAnswerChecked(question.index)}
                               style={{
-                                backgroundColor: isQuestionAnswered(question.index) && isAnswerChecked(question.index) && 
-                                  (question.correct === index + 1 ? '#d4edda' : 
-                                  (answers[question.index] === index + 1 && answers[question.index] !== question.correct ? '#f8d7da' : 'transparent')),
+                                backgroundColor: isQuestionAnswered(question.index) && isAnswerChecked(question.index) &&
+                                  (question.correct === index + 1 ? '#d4edda' :
+                                    (answers[question.index] === index + 1 && answers[question.index] !== question.correct ? '#f8d7da' : 'transparent')),
                                 padding: '8px 12px',
                                 borderRadius: '4px',
                                 opacity: isAnswerChecked(question.index) ? (answers[question.index] === index + 1 || question.correct === index + 1 ? 1 : 0.6) : 1
@@ -639,25 +687,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                           ))}
                         </VStack>
                       </RadioGroup.Root>
-                      
-                      {isQuestionAnswered(question.index) && !isAnswerChecked(question.index) && (
-                        <Button 
-                          mt={3} 
-                          colorPalette="blue" 
-                          onClick={() => handleCheckAnswer(question.index)}
-                        >
-                          Check Answer
-                        </Button>
-                      )}
-                      
-                      {/* Show explanation automatically if answer has been checked */}
-                      {isAnswerChecked(question.index) && question.explanation && (
-                        <Box mt={2} mb={4} p={3} bg="blue.50" borderRadius="md">
-                          <Text fontWeight="bold">Explanation:</Text>
-                          <Box dangerouslySetInnerHTML={{ __html: question.explanation }} />
-                        </Box>
-                      )}
-                      
+
                       {
                         showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
                           <Textarea
@@ -676,6 +706,33 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       }
                     </Box>
                   ))}
+
+                  {/* Single Check Answer button for the entire group */}
+                  {areAllGroupQuestionsAnswered() && !isAnyGroupQuestionChecked() && (
+                    <Button
+                      mt={5}
+                      mb={3}
+                      colorPalette="blue"
+                      onClick={handleCheckAllGroupAnswers}
+                      size="lg"
+                      width="100%"
+                    >
+                      Check All Answers
+                    </Button>
+                  )}
+
+                  {/* Single explanation for the entire group */}
+                  {isAnyGroupQuestionChecked() && (
+                    <Box mt={4} mb={5} p={4} bg="blue.50" borderRadius="md" boxShadow="md">
+                      <Heading size="md" mb={3}>Explanation: </Heading>
+                      <Box
+                        dangerouslySetInnerHTML={{__html: generateGroupExplanation()}}
+                        maxHeight="400px"
+                        overflowY="auto"
+                        p={2}
+                      />
+                    </Box>
+                  )}
                 </Box>
               </Flex>
             )
@@ -722,7 +779,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       } else if (flaggedQuestions.includes(q.index)) {
                         colorPalette = "yellow";
                       }
-                      
+
                       return (
                         <Button
                           key={q.index}
