@@ -34,7 +34,7 @@ const groupQuestions = (questions) => {
   let currentType = '';
 
   questions.forEach((q) => {
-    if (q.audioLink || q.imgLink.length || currentType !== q.type) {
+    if (q.passages || q.audioLink || q.imgLink.length || currentType !== q.type) {
       if (currentGroup.length) {
         groups.push(currentGroup);
       }
@@ -86,6 +86,7 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
       const groupQuestionsArr = group.map(q => q);
       setCurrentQuestion({
         type: firstQuestion.type,
+        passages: firstQuestion.passages.replace(/<img[^>]*?>|<\/img>|<audio[^>]*?>|<\/audio>/gi, ''),
         audioLink: firstQuestion.audioLink,
         imgLink: firstQuestion.imgLink,
         questions: groupQuestionsArr
@@ -384,6 +385,15 @@ export default function ExamDetail({listQuestion = [], timer = 7200, isFullTest 
                 <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%'
                      style={{maxHeight: 'calc(100% - 80px)'}} bg="gray.100" p={6} borderRadius="md" display="flex"
                      flexDirection="column" alignItems="center" justifyContent="flex-start">
+                  {
+                    currentQuestion.passages &&
+                    (
+                      <Box
+                        as="div"
+                        dangerouslySetInnerHTML={{__html: currentQuestion.passages}}
+                      />
+                    )
+                  }
                   {currentQuestion.audioLink && (
                     <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
                                  disabled={isFullTest}
