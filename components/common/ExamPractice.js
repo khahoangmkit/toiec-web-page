@@ -9,7 +9,8 @@ import {
   Text,
   Image,
   Checkbox,
-  RadioGroup, Input
+  RadioGroup, Input,
+  Dialog, Portal, CloseButton
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import AudioCommon from "@/components/common/AudioCommon";
@@ -67,6 +68,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   const [showDictionary, setShowDictionary] = useState(false); // Track which answers have been checked
   const [dictationText, setDictationText] = useState({}); // Store dictation text for each question
   const [dictationResults, setDictationResults] = useState({}); // Store dictation comparison results
+  const [showKeywordsDialog, setShowKeywordsDialog] = useState(false); // State for keywords dialog
 
   useEffect(() => {
     if (!listQuestion.length) return;
@@ -453,7 +455,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         divideY="2px">
         <HStack width={'100%'} direction="row" gap="4">
           <Box width={'80%'} display={'flex'} gap={4} justifyContent={'end'}>
-            <Box alignContent={'center'}>
+            <Box display={'flex'} gap={4} alignContent={'center'} justifyContent={'center'}>
               <Checkbox.Root
                 colorPalette={'green'}
                 checked={showDictionary}
@@ -463,6 +465,15 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                 <Checkbox.Control/>
                 <Checkbox.Label>Dictation</Checkbox.Label>
               </Checkbox.Root>
+
+              <Button
+                variant="surface"
+                colorPalette="teal"
+                onClick={() => setShowKeywordsDialog(true)}
+                size="md"
+              >
+                Keywords
+              </Button>
             </Box>
 
             <ButtonTimerGroup
@@ -494,6 +505,36 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
             <Image onClick={() => setShowListQuestion(v => !v)} src="/icons/menu-icon.svg" alt='icon-menu'
                    boxSize="32px"></Image>
           </Box>
+
+          {/* Keywords Dialog */}
+          <Dialog.Root lazyMount open={showKeywordsDialog} onOpenChange={(e) => {
+            setShowKeywordsDialog(e.open);
+          }} size="md" placement="center" scrollBehavior="inside">
+            <Portal>
+              <Dialog.Backdrop/>
+              <Dialog.Positioner>
+                <Dialog.Content>
+                  <Dialog.Header>
+                    <Dialog.Title>Keywords</Dialog.Title>
+                    <Dialog.CloseTrigger asChild>
+                      <CloseButton size="sm"/>
+                    </Dialog.CloseTrigger>
+                  </Dialog.Header>
+                  <Dialog.Body>
+                    {currentQuestion && currentQuestion.keywords && currentQuestion.keywords.length > 0 ? (
+                      <VStack align="start" spacing={2}>
+                        {currentQuestion.keywords.map((keyword, index) => (
+                          <Text key={index}>{keyword}</Text>
+                        ))}
+                      </VStack>
+                    ) : (
+                      <Text>Không có từ vựng cho câu hỏi này.</Text>
+                    )}
+                  </Dialog.Body>
+                </Dialog.Content>
+              </Dialog.Positioner>
+            </Portal>
+          </Dialog.Root>
         </HStack>
 
         {/* Main question UI */}

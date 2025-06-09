@@ -13,7 +13,9 @@
       "correct": 1,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_0_audio_1711805799507.Test_01-01.mp3",
-      "imgLink": ["/data/ets_2024_test_1/images/question_0_image_1711805182169.áº_NH  PART1-PART 7.png"],
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_0_image_1711805182169.áº_NH  PART1-PART 7.png"
+      ],
       "answer": [],
       "explanation": "<p><strong style=\"color: rgb(230, 0, 0);\">(A) She's eating in a picnic area</strong></p><p>(B) She's waiting in line at a food truck</p><p>(C) She's wiping off a bench</p><p>(D) She's throwing away a plate</p>",
       "dictionary": {
@@ -21,7 +23,12 @@
         "B": "She's waiting in line at a food truck",
         "C": "She's wiping off a bench",
         "D": "She's throwing away a plate"
-      }
+      },
+      "keywords": [
+        "eat(v): ăn",
+        "food(n): đồ ăn",
+        "picnic(n): dã ngoại"
+      ]
     },
     {
       "type": "PART_1",
@@ -30,7 +37,9 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_1_audio_1711946693063.Test_01-02.mp3",
-      "imgLink": ["/data/ets_2024_test_1/images/question_1_image_1711946687885.2.png"],
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_1_image_1711946687885.2.png"
+      ],
       "answer": [],
       "explanation": "<p>(A) The man is brushing snow off the roof of a car</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) The man is standing in the snow beside a car</strong></p><p>(C) The man is shoveling snow from a walkway</p><p>(D) The man is running through the snow</p>",
       "dictionary": {
@@ -47,7 +56,9 @@
       "correct": 2,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_2_audio_1711806901730.Test_01-03.mp3",
-      "imgLink": ["/data/ets_2024_test_1/images/question_2_image_1711806401599.3.png"],
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_2_image_1711806401599.3.png"
+      ],
       "answer": [],
       "explanation": "<p>(A) Some workers are hanging art in a gallery</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) Two of people are having a conversation</strong></p><p>(C) One of the men is rearranging cushions on a sofa</p><p>(D) One of the men is painting a picture</p>",
       "dictionary": {
@@ -64,7 +75,9 @@
       "correct": 4,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_3_audio_1711807725777.Test_01-04.mp3",
-      "imgLink": ["/data/ets_2024_test_1/images/question_3_image_1711938875042.4.png"],
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_3_image_1711938875042.4.png"
+      ],
       "answer": [],
       "explanation": "<p>(A) Vehicles are entering a parking garage</p><p>(B) Clothes hangers are scattered on the ground</p><p>(C) Empty racks are lined up next to a building</p><p><strong style=\"color: rgb(230, 0, 0);\">(D) Clothing is being displayed under a tent.</strong></p>",
       "dictionary": {
@@ -81,7 +94,9 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_4_audio_1711938891652.Test_01-05.mp3",
-      "imgLink": ["/data/ets_2024_test_1/images/question_4_image_1711938900809.5.png"],
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_4_image_1711938900809.5.png"
+      ],
       "answer": [],
       "explanation": "<p>(A) Potted plants have been suspended from a ceiling</p><p>(B) Chairs have been stacked in front of an entryway</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) A computer station has been set up on a desk</strong></p><p>(D) A rug has been rolled up against a wall</p>",
       "dictionary": {
@@ -98,7 +113,9 @@
       "correct": 3,
       "description": null,
       "audioLink": "/data/ets_2024_test_1/audio/question_5_audio_1711939160947.Test_01-06.mp3",
-      "imgLink": ["/data/ets_2024_test_1/images/question_5_image_1711939153111.6.png"],
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_5_image_1711939153111.6.png"
+      ],
       "answer": [],
       "explanation": "<p>(A) One of the men is sweeping a patio</p><p>(B) One of the men is replacing some flooring</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) A door has been taken off its frame</strong></p><p>(D) A light fixture has been left on the ground</p>",
       "dictionary": {
