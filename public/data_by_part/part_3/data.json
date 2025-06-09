@@ -1,0 +1,385 @@
+{
+  "createdAt": "2024-03-30T08:36:43.814Z",
+  "updatedAt": "2024-05-27T08:43:01.414Z",
+  "id": "32bd4978-93b6-43df-9ff6-sdd022c09",
+  "name": "Practice Part 2 TOEIC",
+  "description": "Practice Part 2 TOEIC",
+  "duration": "120",
+  "questionsJson": [
+    {
+      "type": "PART_2",
+      "passages": "",
+      "index": 7,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_6_audio_1711939890399.Test_01-07.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>How old is this building?</p><p>(A) To ship some materials</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) About ten years old</strong></p><p>(C) Company offices, i think</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3\"></audio><p><br/></p>",
+      "index": 8,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Can you come to my jazz performance tonight?</p><p>(A) I'm sorry i was late for the meeting</p><p>(B) Mostly just local musicians</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Sure, I'll be there!</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3\"></audio><p><br/></p>",
+      "index": 9,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Which apartment submitted a work order?</p><p>(A) It's what you did for a living</p><p>(B) Submit your assignment here</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) It came from the tenants in B23</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3\"></audio><p><br/></p>",
+      "index": 10,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Will you contact the vendor about changing our delivery date?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Of course, I'll take care of it</strong></p><p>(B) An e-mail receipt</p><p>(C) Could I get change for a dollar?</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3\"></audio><p><br/></p>",
+      "index": 11,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Why was the maintenance worker here?</p><p>(A) No, he didn't</p><p>(B) From three o'clock until four</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Because a light needed to be fixed</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3\"></audio><p><br/></p>",
+      "index": 12,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Did management make a hiring decision yet?</p><p>(A) Put it on the highest shelft</p><p>(B) The personnel department</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, they chose Jacob Borgman</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3\"></audio><p><br/></p>",
+      "index": 13,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Do you want to eat here in our cafeteria or go out?</p><p>(A) He went there yesterday</p><p>(B) Well, maybe a sandwich</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Let's eat here</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3\"></audio><p><br/></p>",
+      "index": 14,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Didn't you e-mail the employment contract to Mr. Patel yesterday?</p><p>(A) Yes, I would agree</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) No, I'll send it now</strong></p><p>(C) Check the emplyee manual</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3\"></audio><p><br/></p>",
+      "index": 15,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Our division's picnic is this Saturday, right?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) There's a lot of rain in the forecast</strong></p><p>(B) Sure, I like salad</p><p>(C) At the end of this corridor</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3\"></audio><p><br/></p>",
+      "index": 16,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Would you like coffee or tea?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Just water, please</strong></p><p>(B) For a few dollars more</p><p>(C) A fifteen-minute break</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3\"></audio><p><br/></p>",
+      "index": 17,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>We achieved our sales targets this month</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) That's excellent news!</strong></p><p>(B) A few times a day</p><p>(C) To the end of April</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3\"></audio><p><br/></p>",
+      "index": 18,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>How often do you travel for your job?</p><p>(A) It turned out well</p><p>(B) Yes, I did find one</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) About once a month</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3\"></audio><p><br/></p>",
+      "index": 19,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>We should hike the Wildflower Trail today</p><p>(A) This seat is available</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I didn't bring boots</strong></p><p>(C) At the visitors' center</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3\"></audio><p><br/></p>",
+      "index": 20,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>You've booked a hotel in London, haven't you?</p><p>(A) Very enjoyable, thanks</p><p>(B) He usually takes the train</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, I made a reservation last week</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3\"></audio><p><br/></p>",
+      "index": 21,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Are there any tickets left for tonight's concert?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) It's sold out</strong></p><p>(B) He's a concert violinist</p><p>(C) They already left</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3\"></audio><p><br/></p>",
+      "index": 22,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Haven't you used this software before?</p><p>(A) Can I take your order?</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I haven't had the chance</strong></p><p>(C) About 40 dollars</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3\"></audio><p><br/></p>",
+      "index": 23,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>When is the new blender going to be released?</p><p>(A) Only with fruits and vegetables</p><p>(B) In the kitchen cabinet</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) The prototype is still being tested</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3\"></audio><p><br/></p>",
+      "index": 24,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Who's picking up our clients at the airport?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) They decided to drive</strong></p><p>(B) At terminal 2</p><p>(C) It's a marketing position</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3\"></audio><p><br/></p>",
+      "index": 25,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Where are the red roses that came in this morning?</p><p>(A) About three liters of water</p><p>(B) No, I didn't check out the sale</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I needed some for a large bouquet</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3\"></audio><p><br/></p>",
+      "index": 26,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>This film has been nominated for several awards</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Why don't we go see it?</strong></p><p>(B) After the annoucement</p><p>(C) He made a great speech</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3\"></audio><p><br/></p>",
+      "index": 27,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Who's interested in starting a car pool program?</p><p>(A) Thanks, but I can't swim</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) Clara's already organizing one</strong></p><p>(C) It’s a very interesting article.</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3\"></audio><p><br/></p>",
+      "index": 28,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Where will I teach my workshop this month?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) We just sent an e-mail to all instructors.</strong></p><p>(B) Five to seven months.</p><p>(C) Yes, it’s a beautiful building.</p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3\"></audio><p><br/></p>",
+      "index": 29,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Why are we moving these sweaters to the back of the store?</p><p>(A) In the new shopping mall.</p><p>(B) Yes, they come in other colors.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Our spring merchandise is arriving soon.</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3\"></audio><p><br/></p>",
+      "index": 30,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>Would you be interested in working on some of these contracts?</p><p>(A) Thank you for meeting me.</p><p>(B) A contact lens prescription.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I have very limited time.</strong></p>"
+    },
+    {
+      "type": "PART_2",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3\"></audio><p><br/></p>",
+      "index": 31,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3",
+      "imgLink": [],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "<p>What type of job are you looking for?</p><p>(A) No, at ten A.M.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I really like working with computers.</strong></p><p>(C) Just a resume is needed.</p>"
+    }
+  ]
+}
