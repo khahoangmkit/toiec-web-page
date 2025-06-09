@@ -9,7 +9,7 @@ import {
   Text,
   Image,
   Checkbox,
-  RadioGroup, Textarea
+  RadioGroup, Input
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import AudioCommon from "@/components/common/AudioCommon";
@@ -114,20 +114,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
       }
     } else if (currentQuestion.questions) {
       // For group questions
-      const questionWithResults = currentQuestion.questions
-        .filter(q => isAnswerChecked(q.index))
-        .map(q => {
-          // If we have stored dictation results for this question, use them
-          if (dictationResults[q.index]) {
-            return dictationResults[q.index];
-          } else {
-            return `<div><strong>Question ${q.index}:</strong> ${q.explanation || "Không có giải thích."}</div>`;
-          }
-        }).join("");
-
-      if (questionWithResults) {
-        setCurrentExplanation(questionWithResults);
-      }
+      const explanationContent = generateGroupExplanation();
+      setCurrentExplanation(explanationContent);
     }
   }, [currentQuestion, currentIndexQuestion, dictationResults]);
 
@@ -258,36 +246,56 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
       let explanation = currentQuestion.explanation || "Không có giải thích cho câu hỏi này.";
 
       // If dictation is enabled and this is a dictation-compatible question type
-      if (showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && dictationText[questionIndex]) {
-        const userText = dictationText[questionIndex];
+      if (showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type)) {
+        // Get the question's dictation inputs
+        const questionDictation = dictationText[questionIndex] || {};
+        
+        // Get the correct text for each option from the question's dictionary field
+        const optionTexts = currentQuestion.dictionary || {};
+        
+        // Generate HTML for each option's comparison
+        let dictationHtml = '';
+        let totalSimilarity = 0;
+        let optionsCount = 0;
+        
+        // Process each option that has user input
+        Object.keys(questionDictation).forEach(option => {
+          const userText = questionDictation[option] || '';
+          if (!userText.trim()) return; // Skip empty inputs
+          
+          // Get correct text for this option from dictionary
+          const correctText = optionTexts[option] || '';
+          if (!correctText) return; // Skip if no reference text
+          
+          const plainCorrectText = stripHtml(correctText);
+          
+          // Generate diff HTML and get similarity
+          const {html: diffHtml, similarity} = generateDiffHtml(userText, plainCorrectText);
 
-        // Get the correct text, prioritizing dictationText field if available
-        let correctText = currentQuestion.dictationText || currentQuestion.explanation || "";
-
-        // Strip HTML tags from the correct text if it contains HTML
-        const plainCorrectText = stripHtml(correctText);
-
-        // Generate diff HTML and get similarity
-        const {html: diffHtml, similarity} = generateDiffHtml(userText, plainCorrectText);
-        const similarityPercentage = Math.round(similarity * 100);
-
-        // Add dictation comparison to explanation
-        explanation = `
-          <div class="dictation-comparison">
-            <p><strong>Your dictation: <br/></strong></p>
-            <pre style="white-space: pre-wrap; word-break: break-word; background-color: #f8f9fa; padding: 10px; border-radius: 4px; font-family: inherit;">${userText}</pre>
-            <p><strong>Comparison:</strong></p>
-            <div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px; margin-bottom: 8px;">
-              ${diffHtml}
+          dictationHtml += `
+            <div class="dictation-option-comparison" style="margin-bottom: 15px;">
+              <div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px; margin-bottom: 8px;">
+                ${option}: ${diffHtml}
+              </div>
             </div>
-            <p><strong>Similarity:</strong> ${similarityPercentage}%</p>
-          </div>
-          <hr/>
-          <div class="explanation">
-            <p><strong>Explanation:</strong></p>
-            ${explanation}
-          </div>
-        `;
+          `;
+          optionsCount++;
+        });
+        
+        // Add dictation comparison to explanation
+        if (dictationHtml) {
+          explanation = `
+            <div class="dictation-comparison">
+             <p><strong>Dictation:</strong></p>
+              ${dictationHtml}
+            </div>
+            <hr/>
+            <div class="explanation">
+              <p><strong>Explanation:</strong></p>
+              ${explanation}
+            </div>
+          `;
+        }
 
         // Store the result for future reference
         setDictationResults(prev => ({
@@ -339,8 +347,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     if (!userText || !correctText) return {html: "", similarity: 0};
 
     // Convert to lowercase for better comparison, but preserve line breaks for display
-    const userTextLower = userText.toLowerCase().trim();
-    const correctTextLower = correctText.toLowerCase().trim();
+    const userTextLower = userText.trim();
+    const correctTextLower = correctText.trim();
 
     // For comparison, replace line breaks with spaces
     const userTextForCompare = userTextLower.replace(/\n/g, ' ');
@@ -497,7 +505,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                   {/* Cột 1: Ảnh và audios  trừ part 5 ko chia */}
                   {
                     currentQuestion.type !== "PART_5" &&
-                    <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%' style={{maxHeight: 'calc(100% - 80px)'}}
+                    <Box overflowY={'scroll'} minWidth='40%' maxWidth='60%'
+                         style={{maxHeight: 'calc(100% - 80px)'}}
                          bg="gray.100" p={6} borderRadius="md" display="flex" flexDirection="column" alignItems="center"
                          justifyContent="flex-start">
                       {currentQuestion.audioLink && (
@@ -559,33 +568,60 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                                   (answers[currentQuestion.index] === index + 1 && answers[currentQuestion.index] !== currentQuestion.correct ? '#f8d7da' : 'transparent')),
                               padding: '2px 12px',
                               borderRadius: '4px',
+                              width: '100%',
                               opacity: isAnswerChecked(currentQuestion.index) ? (answers[currentQuestion.index] === index + 1 || currentQuestion.correct === index + 1 ? 1 : 0.6) : 1
                             }}
                           >
                             <RadioGroup.ItemHiddenInput/>
                             <RadioGroup.ItemIndicator/>
                             <RadioGroup.ItemText>{choice}</RadioGroup.ItemText>
+                            {showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
+                              <Input
+                                placeholder={`Type what you hear for option ${choice}...`}
+                                value={(dictationText[currentQuestion.index] && dictationText[currentQuestion.index][choice]) || ""}
+                                onChange={(e) => setDictationText(prev => ({
+                                  ...prev,
+                                  [currentQuestion.index]: {
+                                    ...(prev[currentQuestion.index] || {}),
+                                    [choice]: e.target.value
+                                  }
+                                }))}
+                                disabled={isAnswerChecked(currentQuestion.index)}
+                                size="sm"
+                              />
+                            )}
                           </RadioGroup.Item>
                         ))}
                       </VStack>
                     </RadioGroup.Root>
 
-                    {
-                      showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
-                        <Textarea
-                          mt={3}
-                          placeholder="Type what you hear..."
-                          value={dictationText[currentQuestion.index] || ""}
-                          onChange={(e) => setDictationText(prev => ({
-                            ...prev,
-                            [currentQuestion.index]: e.target.value
-                          }))}
-                          disabled={isAnswerChecked(currentQuestion.index)}
-                          height="100px"
-                          resize="vertical"
-                        />
-                      )
-                    }
+                    {/*{*/}
+                    {/*  showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (*/}
+                    {/*    <Box mt={3}>*/}
+                    {/*      <Text fontWeight="bold" mb={2}>Dictation:</Text>*/}
+                    {/*      <VStack align="start" spacing={3}>*/}
+                    {/*        {(currentQuestion.answer && currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (*/}
+                    {/*          <Box key={`dictation-${index}`} width="100%">*/}
+                    {/*            <Text mb={1}>Option {choice}:</Text>*/}
+                    {/*            <Input*/}
+                    {/*              placeholder={`Type what you hear for option ${choice}...`}*/}
+                    {/*              value={(dictationText[currentQuestion.index] && dictationText[currentQuestion.index][choice]) || ""}*/}
+                    {/*              onChange={(e) => setDictationText(prev => ({*/}
+                    {/*                ...prev,*/}
+                    {/*                [currentQuestion.index]: {*/}
+                    {/*                  ...(prev[currentQuestion.index] || {}),*/}
+                    {/*                  [choice]: e.target.value*/}
+                    {/*                }*/}
+                    {/*              }))}*/}
+                    {/*              disabled={isAnswerChecked(currentQuestion.index)}*/}
+                    {/*              resize="vertical"*/}
+                    {/*            />*/}
+                    {/*          </Box>*/}
+                    {/*        ))}*/}
+                    {/*      </VStack>*/}
+                    {/*    </Box>*/}
+                    {/*  )*/}
+                    {/*}*/}
 
                     {isQuestionAnswered(currentQuestion.index) && !isAnswerChecked(currentQuestion.index) && (
                       <Button
@@ -688,22 +724,34 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                         </VStack>
                       </RadioGroup.Root>
 
-                      {
-                        showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
-                          <Textarea
-                            mt={3}
-                            placeholder="Type what you hear..."
-                            value={dictationText[question.index] || ""}
-                            onChange={(e) => setDictationText(prev => ({
-                              ...prev,
-                              [question.index]: e.target.value
-                            }))}
-                            disabled={isAnswerChecked(question.index)}
-                            height="100px"
-                            resize="vertical"
-                          />
-                        )
-                      }
+                      {/*{*/}
+                      {/*  showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (*/}
+                      {/*    <Box mt={3} mb={3}>*/}
+                      {/*      <Text fontWeight="bold" mb={2}>Dictation:</Text>*/}
+                      {/*      <VStack align="start" spacing={3}>*/}
+                      {/*        {(question.answer && question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (*/}
+                      {/*          <Box key={`dictation-${question.index}-${index}`} width="100%">*/}
+                      {/*            <Text mb={1}>Option {choice}:</Text>*/}
+                      {/*            <Textarea*/}
+                      {/*              placeholder={`Type what you hear for option ${choice}...`}*/}
+                      {/*              value={(dictationText[question.index] && dictationText[question.index][choice]) || ""}*/}
+                      {/*              onChange={(e) => setDictationText(prev => ({*/}
+                      {/*                ...prev,*/}
+                      {/*                [question.index]: {*/}
+                      {/*                  ...(prev[question.index] || {}),*/}
+                      {/*                  [choice]: e.target.value*/}
+                      {/*                }*/}
+                      {/*              }))}*/}
+                      {/*              disabled={isAnswerChecked(question.index)}*/}
+                      {/*              height="80px"*/}
+                      {/*              resize="vertical"*/}
+                      {/*            />*/}
+                      {/*          </Box>*/}
+                      {/*        ))}*/}
+                      {/*      </VStack>*/}
+                      {/*    </Box>*/}
+                      {/*  )*/}
+                      {/*}*/}
                     </Box>
                   ))}
 
