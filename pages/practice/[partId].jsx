@@ -20,9 +20,11 @@ import { Constant } from "@/constants";
 import AudioCommon from "@/components/common/AudioCommon";
 import AnswersComponent from "@/components/common/AnswersComponent";
 import ExamPractice from "@/components/common/ExamPractice";
+import {useSession} from "next-auth/react";
 
 export default function Page() {
   const router = useRouter();
+  const {data: session} = useSession();
 
   const {partId} = router.query;
 
@@ -36,6 +38,30 @@ export default function Page() {
     inCorrectAnswers: 0,
     skippedAnswers: 0
   });
+
+  const checkUserActivation = async () => {
+    try {
+      const userId = session.user.id;
+      const response = await fetch(`/api/user/status?userId=${userId}`);
+      const data = await response.json();
+
+      if (response.ok && data.user) {
+        if (!data.user.isActive) {
+          router.push('/');
+        }
+      }
+    } catch (error) {
+      console.error("Error checking user activation status:", error);
+    }
+  };
+  useEffect(() => {
+
+    // Check user activation status when session changes
+    if (session) {
+      checkUserActivation();
+    }
+  }, [session]);
+
   useEffect(() => {
     if (!partId) return;
     fetch(`/api/part/${partId}`)

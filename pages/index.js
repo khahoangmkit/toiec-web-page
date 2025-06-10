@@ -5,15 +5,107 @@ import {
   Tabs,
   Image,
   Text,
-  Flex, Stack, Table
+  Flex, Stack, Table,
+  Portal, Dialog, CloseButton, VStack, Input
 } from "@chakra-ui/react";
 import {useRouter} from "next/router";
+import { toaster } from "@/components/ui/toaster";
 import {signIn, useSession} from "next-auth/react";
+import {useState, useEffect} from "react";
 
 export default function Home() {
 
   const router = useRouter();
-  const {data: session, status} = useSession()
+  const {data: session} = useSession();
+  const [isUserActive, setIsUserActive] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [activationCode, setActivationCode] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Check user activation status when session changes
+    if (session) {
+      checkUserActivationStatus();
+    }
+  }, [session]);
+
+  const checkUserActivationStatus = async () => {
+    try {
+      const userId = session.user.id;
+      const response = await fetch(`/api/user/status?userId=${userId}`);
+      const data = await response.json();
+      
+      if (response.ok && data.user) {
+        setIsUserActive(data.user.isActive);
+      }
+    } catch (error) {
+      console.error("Error checking user activation status:", error);
+    }
+  };
+
+  const handleActiveUser = async () => {
+    if (!session) {
+      toaster.create({
+        title: "Vui lòng đăng nhập",
+        description: "Bạn cần đăng nhập trước khi kích hoạt tài khoản",
+        type: "error",
+        closable: true,
+      });
+      return;
+    }
+    
+    if (isUserActive) {
+      toaster.create({
+        title: "Tài khoản đã kích hoạt",
+        description: "Tài khoản của bạn đã được kích hoạt",
+        type: "info",
+        closable: true,
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/user/activate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          code: activationCode,
+          userId: session.user.id
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Có lỗi xảy ra khi kích hoạt tài khoản");
+      }
+
+      toaster.create({
+        title: "Kích hoạt thành công",
+        description: "Tài khoản của bạn đã được kích hoạt thành công",
+        type: "success",
+        duration: 5000,
+        closable: true,
+      });
+      setIsUserActive(true);
+
+    } catch (error) {
+      toaster.create({
+        title: "Lỗi kích hoạt tài khoản",
+        description: error.message || "Có lỗi xảy ra khi kích hoạt tài khoản",
+        type: "error",
+        duration: 5000,
+        closable: true,
+      });
+    } finally {
+      setIsLoading(false);
+      setActivationCode("");
+      setOpenDialog(false);
+    }
+  };
+
   // Dữ liệu mẫu cho các bài test
   const testEts = [
     {
@@ -539,7 +631,10 @@ export default function Home() {
 
         {/* Luyện thi theo từng phần */}
         <Box width='100%' maxW="1200px" bg='white' rounded='xl' p={8} mx="auto" my={2} boxShadow="xl">
-          <Text fontSize="2xl" fontWeight="bold" mb={4}>Luyện thi theo từng phần</Text>
+          <Flex justifyContent="space-between">
+            <Text fontSize="2xl" fontWeight="bold" mb={4}>Luyện thi theo từng phần</Text>
+            { !isUserActive && <Image style={{cursor: 'pointer'}} src='/icons/lock.svg' alt='lock-icon' boxSize='24px' onClick={() => setOpenDialog(true)}/> }
+          </Flex>
           <Tabs.Root lazyMount unmountOnExit defaultValue={1}>
             <Tabs.List>
               {
@@ -566,7 +661,7 @@ export default function Home() {
 
                         <Flex justifyContent="space-between">
                           <Text fontWeight='bold'>{part.name}</Text>
-                          <Image style={{cursor: 'pointer'}} src='/icons/lock.svg' alt='lock-icon' boxSize='16px'/>
+
                         </Flex>
                         <Text height={'48px'}>{part.desc}</Text>
 
@@ -578,7 +673,7 @@ export default function Home() {
                           _hover={{
                             bg: "#2aa9c7",   // Màu nền khi hover
                           }}
-                          disabled
+                          disabled={!isUserActive}
                           variant="solid">
                           Take test
                         </Button>
@@ -625,6 +720,57 @@ export default function Home() {
         </Box>
 
       </Stack>
+      <Dialog.Root lazyMount open={openDialog} onOpenChange={(e) => {
+        setOpenDialog(e.open);
+        if (!e.open) {
+          setActivationCode('');
+        }
+      }} size="md" placement="center">
+        <Portal>
+          <Dialog.Backdrop />
+          <Dialog.Positioner>
+            <Dialog.Content>
+              <Dialog.Header>
+                <Dialog.Title>Kích hoạt tài khoản</Dialog.Title>
+                <Dialog.CloseTrigger asChild>
+                  <CloseButton size="sm" />
+                </Dialog.CloseTrigger>
+              </Dialog.Header>
+              <Dialog.Body>
+                <VStack spacing={4} align="stretch">
+                  <Text>
+                    Để sử dụng tính năng, vui lòng nhập mã thành viên của bạn.
+                  </Text>
+
+                  <Input
+                    width="100%"
+                    value={activationCode}
+                    onChange={e => setActivationCode(e.target.value)}
+                  />
+
+                  {!session && (
+                    <Box bg="yellow.50" p={3} borderRadius="md">
+                      <Text color="yellow.700">
+                        Bạn cần đăng nhập trước khi kích hoạt tài khoản.
+                      </Text>
+                    </Box>
+                  )}
+                </VStack>
+              </Dialog.Body>
+              <Dialog.Footer>
+                <Button
+                  colorPalette="green"
+                  onClick={handleActiveUser}
+                  isLoading={isLoading}
+                  disabled={!session || !activationCode.trim()}
+                >
+                  Activate
+                </Button>
+              </Dialog.Footer>
+            </Dialog.Content>
+          </Dialog.Positioner>
+        </Portal>
+      </Dialog.Root>
     </>
   );
 }
