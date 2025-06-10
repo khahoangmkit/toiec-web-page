@@ -37,7 +37,6 @@ Trong giao diện psql:
 CREATE DATABASE toiecdb;
 CREATE USER toiecuser WITH PASSWORD 'yourpassword';
 GRANT ALL PRIVILEGES ON DATABASE toiecdb TO toiecuser;
-\q
 ```
 
 ### Cập nhật biến môi trường
@@ -75,6 +74,14 @@ Nếu thay đổi schema
 ```angular2html
 npx prisma migrate dev --name "update-schema"
 ```
+
+
+Để apply thay đổi schema lên máy khác khi pull code về(pull các file migrations đã có trong folder migrations đã gen ra bằng lệnh gen ở trên npx prisma migrate dev --name "update-schema")
+```angular2html
+npx prisma migrate deploy
+npx prisma generate
+```
+
 
 ---
 
