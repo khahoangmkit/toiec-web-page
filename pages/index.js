@@ -11,7 +11,7 @@ import {
 import {useRouter} from "next/router";
 import { toaster } from "@/components/ui/toaster";
 import {signIn, useSession} from "next-auth/react";
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 
 export default function Home() {
 
@@ -21,6 +21,7 @@ export default function Home() {
   const [openDialog, setOpenDialog] = useState(false);
   const [activationCode, setActivationCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const activationInputRef = useRef(null);
 
   useEffect(() => {
     // Check user activation status when session changes
@@ -28,6 +29,16 @@ export default function Home() {
       checkUserActivationStatus();
     }
   }, [session]);
+
+  useEffect(() => {
+    if (openDialog) {
+      setTimeout(() => {
+        if (activationInputRef.current) {
+          activationInputRef.current.focus();
+        }
+      }, 100);
+    }
+  }, [openDialog]);
 
   const checkUserActivationStatus = async () => {
     try {
@@ -743,7 +754,9 @@ export default function Home() {
                   </Text>
 
                   <Input
+                    ref={activationInputRef}
                     width="100%"
+                    colorPalette={'teal'}
                     value={activationCode}
                     onChange={e => setActivationCode(e.target.value)}
                   />
