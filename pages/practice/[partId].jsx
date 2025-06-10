@@ -63,6 +63,15 @@ export default function Page() {
   }, [session]);
 
   useEffect(() => {
+    if (stepIntro === 1) {
+      window.scrollTo({
+        top: 76,
+        behavior: "smooth",
+      });
+    }
+  }, [stepIntro]);
+
+  useEffect(() => {
     if (!partId) return;
     fetch(`/api/part/${partId}`)
       .then((res) => res.json())

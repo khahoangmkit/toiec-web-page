@@ -73,6 +73,14 @@ export default function Page() {
       audioRef.current.volume = e.target.value;
     }
   };
+  useEffect(() => {
+    if ( stepIntro === 3) {
+      window.scrollTo({
+        top: 76,
+        behavior: "smooth",
+      });
+    }
+  }, [stepIntro]);
 
   useEffect(() => {
     if (!router.query.id) {
