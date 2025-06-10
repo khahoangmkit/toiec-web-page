@@ -7,379 +7,268 @@
   "duration": "120",
   "questionsJson": [
     {
-      "type": "PART_2",
-      "passages": "",
-      "index": 7,
+      "type": "PART_6",
+      "passages": "<p><strong>Questions 131-134 </strong>refer to the following announcement.<img src=\"/data/ets_2024_test_1/images/question_130_image_1712131009350.11.png\"/></p>",
+      "index": 131,
+      "correct": 4,
+      "description": null,
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_130_image_1712131009350.11.png"
+      ],
+      "answer": [
+        "(A) Children of all ages will enjoy the new exhibits.",
+        "(B) Learn about rainfall patterns across the region.",
+        "(C) Build a set of simple patio furniture with easy-to-acquire materials.",
+        "(D) Next Saturday at 4 P.M., we are hosting a free workshop for the public."
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì câu liền sau nhắc đến việc họ sẽ dạy trồng vườn để giải thích cho nội dung sẽ diễn ra cho buổi hội thảo nên chọn (D).</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">(A) Trẻ em ở mọi lứa tuổi sẽ thích thú với những cuộc triển lãm mới.</span></p><p><span style=\"background-color: transparent;\">(B) Tìm hiểu về lượng mưa trên toàn khu vực.</span></p><p><span style=\"background-color: transparent;\">(C) Làm một bộ bàn ghế sân hiên đơn giản bằng những vật liệu dễ kiếm.</span></p><p><strong style=\"background-color: transparent;\">(D) Thứ Bảy tuần sau lúc 4 giờ chiều, chúng tôi sẽ tổ chức một hội thảo miễn phí cho công chúng.</strong></p>"
+    },
+    {
+      "type": "PART_6",
+      "passages": null,
+      "index": 132,
+      "correct": 4,
+      "description": null,
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) to use",
+        "(B) used to",
+        "(C) by using",
+        "(D) that uses"
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì trong mệnh đề sau which đã có động từ chính “is” nên phải dùng “that” để chỉ “a shallow sunken garden” là chủ ngữ của vế phía sau.</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Chúng tôi sẽ hướng dẫn bạn cách trồng một khu vườn mưa, cái mà đơn giản là một khu vườn trũng nông </span><strong style=\"background-color: transparent;\">MÀ SỬ DỤNG</strong><span style=\"background-color: transparent;\"> hỗn hợp đất đặc biệt để lọc các chất ô nhiễm từ nước mưa chảy từ những con đường và mái nhà gần đó.</span></p>"
+    },
+    {
+      "type": "PART_6",
+      "passages": null,
+      "index": 133,
+      "correct": 1,
+      "description": null,
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Best of all",
+        "(B) For example",
+        "(C) In any event",
+        "(D) As a matter of fact"
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Từ vựng:</strong></p><p><span style=\"background-color: transparent;\">(A) Best of all: Tốt nhất, trên hết</span></p><p><span style=\"background-color: transparent;\">(B) For example: Ví dụ</span></p><p><span style=\"background-color: transparent;\">(C) In any event: trong bất cứ sự kiện</span></p><p><span style=\"background-color: transparent;\">(D) As a matter of fact: Như một vấn đề của thực tế</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Những khu vườn này có thể được tạo cảnh quan bằng các loại cây và hoa bản địa. </span><strong style=\"background-color: transparent;\">TRÊN HẾT</strong><span style=\"background-color: transparent;\">, vườn mưa luôn có lợi cho môi trường địa phương.</span></p>"
+    },
+    {
+      "type": "PART_6",
+      "passages": null,
+      "index": 134,
       "correct": 2,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_6_audio_1711939890399.Test_01-07.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) we",
+        "(B) they",
+        "(C) both",
+        "(D) yours"
       ],
-      "explanation": "<p>How old is this building?</p><p>(A) To ship some materials</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) About ten years old</strong></p><p>(C) Company offices, i think</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì đoạn phía trước đang đề cập đến lợi ích của “rain gardens”, nên câu này hợp lý khi tiếp tục nói về lợi ích của “rain gardens”.&nbsp;</span></p><ul><li><span style=\"background-color: transparent;\">Dùng (B) they thay thế cho “rain gardens” để tránh lặp từ trong đoạn văn.</span></li></ul><p><span style=\"background-color: transparent;\">﻿</span></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Ngoài ra, </span><strong style=\"background-color: transparent;\">CHÚNG</strong><span style=\"background-color: transparent;\"> còn cải thiện khả năng thoát nước và bảo vệ sông suối.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3\"></audio><p><br/></p>",
-      "index": 8,
+      "type": "PART_6",
+      "passages": "<p><strong>Questions 135-138</strong> refer to the following letter.<img src=\"/data/ets_2024_test_1/images/question_134_image_1712131713580.12.png\"/></p>",
+      "index": 135,
       "correct": 3,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_134_image_1712131713580.12.png"
       ],
-      "explanation": "<p>Can you come to my jazz performance tonight?</p><p>(A) I'm sorry i was late for the meeting</p><p>(B) Mostly just local musicians</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Sure, I'll be there!</strong></p>"
+      "answer": [
+        "(A) amazed",
+        "(B) amazement",
+        "(C) amazing",
+        "(D) amazingly"
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì chỗ trống đứng giữa tính từ sở hữu “your” và danh từ “support” nên cần chọn một tính từ là (C) amazing.&nbsp;</span></p><ul><li><span style=\"background-color: transparent;\">Không chọn tính từ (A) amazed vì nó dùng cho chủ ngữ là người với nghĩa là “ngạc nhiên”</span></li></ul><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Cảm ơn sự hỗ trợ </span><strong style=\"background-color: transparent;\">TUYỆT VỜI</strong><span style=\"background-color: transparent;\"> của bạn trong việc giúp tôi lên kế hoạch cho buổi dạ tiệc khai mạc tuần lễ thời trang Tokyo.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3\"></audio><p><br/></p>",
-      "index": 9,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Which apartment submitted a work order?</p><p>(A) It's what you did for a living</p><p>(B) Submit your assignment here</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) It came from the tenants in B23</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3\"></audio><p><br/></p>",
-      "index": 10,
+      "type": "PART_6",
+      "passages": null,
+      "index": 136,
       "correct": 1,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) attention",
+        "(B) proposals",
+        "(C) innovation",
+        "(D) criticism"
       ],
-      "explanation": "<p>Will you contact the vendor about changing our delivery date?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Of course, I'll take care of it</strong></p><p>(B) An e-mail receipt</p><p>(C) Could I get change for a dollar?</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Từ vựng:</strong></p><p><span style=\"background-color: transparent;\">(A) attention (n) sự chú ý&nbsp;</span></p><p><span style=\"background-color: transparent;\">(B) proposals (n) đề xuất</span></p><p><span style=\"background-color: transparent;\">(C) innovation (n) sáng tạo</span></p><p><span style=\"background-color: transparent;\">(D) criticism (n) chỉ trích</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Theo nghĩa của từ thì có thể chọn (A) hoặc (D), nhưng vì câu trước có nói “they loved the designs you contributed for this event” = “họ yêu </span></p><p><span style=\"background-color: transparent;\">thích những thiết kế bạn đóng góp cho sự kiện này” nên không thể chọn (D).</span></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Thiết kế của bạn đã nhận được rất nhiều </span><strong style=\"background-color: transparent;\">SỰ CHÚ Ý</strong><span style=\"background-color: transparent;\"> trên mạng xã hội.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3\"></audio><p><br/></p>",
-      "index": 11,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Why was the maintenance worker here?</p><p>(A) No, he didn't</p><p>(B) From three o'clock until four</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Because a light needed to be fixed</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3\"></audio><p><br/></p>",
-      "index": 12,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Did management make a hiring decision yet?</p><p>(A) Put it on the highest shelft</p><p>(B) The personnel department</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, they chose Jacob Borgman</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3\"></audio><p><br/></p>",
-      "index": 13,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Do you want to eat here in our cafeteria or go out?</p><p>(A) He went there yesterday</p><p>(B) Well, maybe a sandwich</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Let's eat here</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3\"></audio><p><br/></p>",
-      "index": 14,
+      "type": "PART_6",
+      "passages": null,
+      "index": 137,
       "correct": 2,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Several other events have gone surprisingly well.",
+        "(B) Thank you also for your flexibility in planning the event.",
+        "(C) Please stop by our office the next time you are in the city.",
+        "(D) Tokyo is a top tourism destination for many reasons."
       ],
-      "explanation": "<p>Didn't you e-mail the employment contract to Mr. Patel yesterday?</p><p>(A) Yes, I would agree</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) No, I'll send it now</strong></p><p>(C) Check the emplyee manual</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì câu liền sau chỗ trống có nhắc đến những sự chậm trễ khiến việc lập kế hoạch không dễ dàng, nên hợp lý khi điền vào chỗ trống lời khen cho sự linh hoạt khi lên kế hoạch.</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa: </strong><span style=\"background-color: transparent;\">--137--.Tôi nhận ra rằng sự chậm trễ nhiều lần khiến việc lập kế hoạch không hề dễ dàng.</span></p><p><span style=\"background-color: transparent;\">(A) Một số sự kiện khác đã diễn ra tốt đẹp một cách đáng ngạc nhiên.&nbsp;</span></p><p><strong style=\"background-color: transparent;\">(B) Cũng cảm ơn bạn vì sự linh hoạt trong việc lên kế hoạch cho sự kiện.</strong></p><p><span style=\"background-color: transparent;\">(C) Vui lòng ghé qua văn phòng của chúng tôi vào lần tới khi bạn ở thành phố.</span></p><p><span style=\"background-color: transparent;\">(D) Tokyo là điểm đến du lịch hàng đầu vì nhiều lý do.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3\"></audio><p><br/></p>",
-      "index": 15,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Our division's picnic is this Saturday, right?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) There's a lot of rain in the forecast</strong></p><p>(B) Sure, I like salad</p><p>(C) At the end of this corridor</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3\"></audio><p><br/></p>",
-      "index": 16,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you like coffee or tea?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Just water, please</strong></p><p>(B) For a few dollars more</p><p>(C) A fifteen-minute break</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3\"></audio><p><br/></p>",
-      "index": 17,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>We achieved our sales targets this month</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) That's excellent news!</strong></p><p>(B) A few times a day</p><p>(C) To the end of April</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3\"></audio><p><br/></p>",
-      "index": 18,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>How often do you travel for your job?</p><p>(A) It turned out well</p><p>(B) Yes, I did find one</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) About once a month</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3\"></audio><p><br/></p>",
-      "index": 19,
+      "type": "PART_6",
+      "passages": null,
+      "index": 138,
       "correct": 2,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) will benefit",
+        "(B) to benefit",
+        "(C) has benefited",
+        "(D) benefits"
       ],
-      "explanation": "<p>We should hike the Wildflower Trail today</p><p>(A) This seat is available</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I didn't bring boots</strong></p><p>(C) At the visitors' center</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì trong câu đã có động từ chính “is coming up soon” nên loại các động từ được chia đầy đủ là (A), (C) và (D).</span></p><ul><li><span style=\"background-color: transparent;\">(B) đúng</span></li></ul><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:&nbsp;</strong></p><p><span style=\"background-color: transparent;\">Cuộc đấu giá </span><strong style=\"background-color: transparent;\">NHẰM MANG LẠI LỢI ÍCH</strong><span style=\"background-color: transparent;\"> cho chương trình Giải thưởng Nhà thiết kế Trẻ của chúng tôi sắp diễn ra và tôi cũng mong được hợp tác với bạn về vấn đề đó.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3\"></audio><p><br/></p>",
-      "index": 20,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>You've booked a hotel in London, haven't you?</p><p>(A) Very enjoyable, thanks</p><p>(B) He usually takes the train</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, I made a reservation last week</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3\"></audio><p><br/></p>",
-      "index": 21,
+      "type": "PART_6",
+      "passages": "<p><strong>Questions 139-142</strong> refer to the following e-mail.<img src=\"/data/ets_2024_test_1/images/question_138_image_1712131773654.13.png\"/></p>",
+      "index": 139,
       "correct": 1,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_138_image_1712131773654.13.png"
       ],
-      "explanation": "<p>Are there any tickets left for tonight's concert?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) It's sold out</strong></p><p>(B) He's a concert violinist</p><p>(C) They already left</p>"
+      "answer": [
+        "(A) It",
+        "(B) You",
+        "(C) Our",
+        "(D) Each"
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì câu phía trước có nhắc đến “your Mena Chin Library card” sắp hết hạn nên để liền mạch trong câu này cần gia hạn cho “your Mena Chin Library card”</span></p><ul><li><span style=\"background-color: transparent;\">Dùng (A) It để thay cho “your Mena Chin Library card”</span></li></ul><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><strong style=\"background-color: transparent;\">NÓ</strong><span style=\"background-color: transparent;\"> phải được gia hạn nếu bạn có ý định duy trì tư cách thành viên của mình trong năm tới.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3\"></audio><p><br/></p>",
-      "index": 22,
+      "type": "PART_6",
+      "passages": null,
+      "index": 140,
+      "correct": 3,
+      "description": null,
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) To sign up for a card, visit your local library branch.",
+        "(B) For questions about library membership, please visit our Web site.",
+        "(C) Renewal must be completed at least one week before your card expires.",
+        "(D) You may opt out of this program at any time."
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì câu phía trước đang nói về việc cần gia hạn cho “thẻ thư viện Mena Chin” nên hợp lý khi câu này tiếp tục nói về thời gian gia hạn thẻ. Đáp án (C) có “Renewal” nghĩa là việc đổi mới, gia hạn. Ngoài ra, từ “this” trong câu liền sau để chỉ “Renewal” ở đáp án (C).</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa: </strong><span style=\"background-color: transparent;\">--140--. Việc này có thể được thực hiện tại bàn thông tin ở bất kỳ địa điểm chi nhánh nào.</span></p><p><span style=\"background-color: transparent;\">(A) Để đăng ký thẻ, hãy đến chi nhánh thư viện địa phương của bạn.</span></p><p><span style=\"background-color: transparent;\">(B) Nếu có thắc mắc về tư cách thành viên thư viện, vui lòng truy cập trang Web của chúng tôi.</span></p><p><span style=\"background-color: transparent;\">(C) Việc gia hạn phải được hoàn tất ít nhất một tuần trước khi thẻ của bạn hết hạn.</span></p><p><span style=\"background-color: transparent;\">(D) Bạn có thể chọn không tham gia chương trình này bất cứ lúc nào.</span></p>"
+    },
+    {
+      "type": "PART_6",
+      "passages": null,
+      "index": 141,
       "correct": 2,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Also",
+        "(B) Should",
+        "(C) Because",
+        "(D) Although"
       ],
-      "explanation": "<p>Haven't you used this software before?</p><p>(A) Can I take your order?</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I haven't had the chance</strong></p><p>(C) About 40 dollars</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Từ vựng:</strong></p><p><span style=\"background-color: transparent;\">(A) Also: cũng vậy</span></p><p><span style=\"background-color: transparent;\">(B) Should: nên</span></p><p><span style=\"background-color: transparent;\">(C) Because: vì</span></p><p><span style=\"background-color: transparent;\">(D) Although: mặc dù</span></p><p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Đây là câu đảo ngữ của mệnh đề điều kiện loại 1, có dạng:</span></p><ul><li><span style=\"background-color: transparent;\">Should + S + V (hiện tại), S + V (tương lai)</span></li><li><span style=\"background-color: transparent;\">Chọn (B)</span></li></ul><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><strong style=\"background-color: transparent;\">NẾU</strong><span style=\"background-color: transparent;\"> bạn quyết định đóng tài khoản của mình, không cần thực hiện hành động nào.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3\"></audio><p><br/></p>",
-      "index": 23,
+      "type": "PART_6",
+      "passages": null,
+      "index": 142,
       "correct": 3,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) specifically",
+        "(B) specifics",
+        "(C) specified",
+        "(D) specificity"
       ],
-      "explanation": "<p>When is the new blender going to be released?</p><p>(A) Only with fruits and vegetables</p><p>(B) In the kitchen cabinet</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) The prototype is still being tested</strong></p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích:</strong><span style=\"background-color: transparent;\"> Chỗ trống đứng giữa mạo từ “the” và danh từ “date” nên chọn tính từ để bổ nghĩa cho danh từ.</span></p><p><span style=\"background-color: transparent;\">(A) specifically (adv) một cách đặc biệt</span></p><p><span style=\"background-color: transparent;\">(B) specifics (n) chi tiết cụ thể</span></p><p><span style=\"background-color: transparent;\">(C) specified (tính từ dạng V-ed) được chỉ định&nbsp;</span></p><p><span style=\"background-color: transparent;\">(D) specificity (n) đặc tính</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Việc không hoàn tất việc gia hạn trước ngày </span><strong style=\"background-color: transparent;\">ĐƯỢC CHỈ ĐỊNH</strong><span style=\"background-color: transparent;\"> sẽ dẫn đến việc hết hạn các đặc quyền thư viện của bạn.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3\"></audio><p><br/></p>",
-      "index": 24,
+      "type": "PART_6",
+      "passages": "<p><strong>Questions 143-146</strong> refer to the following letter.<img src=\"/data/ets_2024_test_1/images/question_142_image_1712131916834.14.png\"/></p>",
+      "index": 143,
       "correct": 1,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2024_test_1/images/question_142_image_1712131916834.14.png"
       ],
-      "explanation": "<p>Who's picking up our clients at the airport?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) They decided to drive</strong></p><p>(B) At terminal 2</p><p>(C) It's a marketing position</p>"
+      "answer": [
+        "(A) I would like to introduce you to our business.",
+        "(B) Great photographs can make your property stand out.",
+        "(C) We are looking forward to your visit.",
+        "(D) It was the first studio of its kind to open in this area."
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Mở đầu bức thư người viết giới thiệu tên và công việc của mình, nên câu này hợp lý khi nói về lý do viết bức thư là để giới thiệu về doanh nghiệp của ông ấy.</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">(A) Tôi muốn giới thiệu với bạn về doanh nghiệp của chúng tôi.</span></p><p><span style=\"background-color: transparent;\">(B) Những bức ảnh đẹp có thể làm cho cơ sở kinh doanh của bạn nổi bật.</span></p><p><span style=\"background-color: transparent;\">(C) Chúng tôi rất mong chờ chuyến thăm của bạn.</span></p><p><span style=\"background-color: transparent;\">(D) Đây là studio đầu tiên thuộc loại này được mở ở khu vực này.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3\"></audio><p><br/></p>",
-      "index": 25,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Where are the red roses that came in this morning?</p><p>(A) About three liters of water</p><p>(B) No, I didn't check out the sale</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I needed some for a large bouquet</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3\"></audio><p><br/></p>",
-      "index": 26,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>This film has been nominated for several awards</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Why don't we go see it?</strong></p><p>(B) After the annoucement</p><p>(C) He made a great speech</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3\"></audio><p><br/></p>",
-      "index": 27,
+      "type": "PART_6",
+      "passages": null,
+      "index": 144,
       "correct": 2,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) researching",
+        "(B) creating",
+        "(C) purchasing",
+        "(D) displaying"
       ],
-      "explanation": "<p>Who's interested in starting a car pool program?</p><p>(A) Thanks, but I can't swim</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) Clara's already organizing one</strong></p><p>(C) It’s a very interesting article.</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Từ vựng:</strong></p><ul><li><span style=\"background-color: transparent;\">research (v) nghiên cứu</span></li><li><span style=\"background-color: transparent;\">create (v) tạo ra</span></li><li><span style=\"background-color: transparent;\">purchase (v) mua</span></li><li><span style=\"background-color: transparent;\">display (v) trưng bày</span></li></ul><p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì câu trước nói “We take pride in </span><strong style=\"background-color: transparent;\">composing</strong><span style=\"background-color: transparent;\"> interior and exterior shots” = “Chúng tôi tự hào về việc </span><strong style=\"background-color: transparent;\">sáng tác</strong><span style=\"background-color: transparent;\"> các bức ảnh nội thất và ngoại thất”&nbsp;</span></p><ul><li><strong style=\"background-color: transparent;\">Droplight Studio tự tạo ra các bức ảnh của họ.</strong></li></ul><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:&nbsp;</strong></p><p><span style=\"background-color: transparent;\">Droplight Studio không tiếc công sức trong </span><strong style=\"background-color: transparent;\">VIỆC TẠO RA</strong><span style=\"background-color: transparent;\"> những hình ảnh kỹ thuật số vượt trội.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3\"></audio><p><br/></p>",
-      "index": 28,
+      "type": "PART_6",
+      "passages": null,
+      "index": 145,
+      "correct": 4,
+      "description": null,
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) If not",
+        "(B) By comparison",
+        "(C) Otherwise",
+        "(D) Indeed"
+      ],
+      "explanation": "<p><strong style=\"background-color: transparent;\">Từ vựng:</strong></p><p><span style=\"background-color: transparent;\">(A) If not: nếu như không&nbsp;</span></p><p><span style=\"background-color: transparent;\">(B) By comparison: bằng cách so sánh</span></p><p><span style=\"background-color: transparent;\">(C) Otherwise: nếu không thì</span></p><p><span style=\"background-color: transparent;\">(D) Indeed: thật vậy</span></p><p><br></p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><strong style=\"background-color: transparent;\">THẬT VẬY</strong><span style=\"background-color: transparent;\">, kỹ thuật dàn dựng, ánh sáng và thiết bị cấp chuyên nghiệp của chúng tôi cho phép chúng tôi làm nổi bật những đặc điểm tốt nhất của cơ sở kinh doanh.</span></p>"
+    },
+    {
+      "type": "PART_6",
+      "passages": null,
+      "index": 146,
       "correct": 1,
       "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) receives",
+        "(B) is receiving",
+        "(C) had received",
+        "(D) had to receive"
       ],
-      "explanation": "<p>Where will I teach my workshop this month?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) We just sent an e-mail to all instructors.</strong></p><p>(B) Five to seven months.</p><p>(C) Yes, it’s a beautiful building.</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3\"></audio><p><br/></p>",
-      "index": 29,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Why are we moving these sweaters to the back of the store?</p><p>(A) In the new shopping mall.</p><p>(B) Yes, they come in other colors.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Our spring merchandise is arriving soon.</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3\"></audio><p><br/></p>",
-      "index": 30,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you be interested in working on some of these contracts?</p><p>(A) Thank you for meeting me.</p><p>(B) A contact lens prescription.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I have very limited time.</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3\"></audio><p><br/></p>",
-      "index": 31,
-      "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>What type of job are you looking for?</p><p>(A) No, at ten A.M.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I really like working with computers.</strong></p><p>(C) Just a resume is needed.</p>"
+      "explanation": "<p><strong style=\"background-color: transparent;\">Giải thích: </strong><span style=\"background-color: transparent;\">Vì câu này đang có ý giới thiệu sản phẩm, dịch vụ, miêu tả sự thật nên không thể dùng thì HTTD và các thì quá khứ.</span></p><p>=&gt; Chọn (A)</p><p><strong style=\"background-color: transparent;\">Dịch nghĩa:</strong></p><p><span style=\"background-color: transparent;\">Và khi buổi chụp ảnh kết thúc, mọi hình ảnh</span></p><p><strong style=\"background-color: transparent;\">NHẬN ĐƯỢC</strong><span style=\"background-color: transparent;\"> sự chỉnh sửa của chuyên gia.</span></p>"
     }
   ]
 }

@@ -7,379 +7,488 @@
   "duration": "120",
   "questionsJson": [
     {
-      "type": "PART_2",
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090002010.mp3\"></audio><p><br/></p>",
+      "index": 71,
+      "correct": 3,
+      "description": "What feature of a business does the speaker emphasize?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090002010.mp3",
+      "imgLink": [],
+      "answer": [
+        "(A) The quality of its food",
+        "(B) The extended hours it is open",
+        "(C) The style of its decor",
+        "(D) The affordable prices it offers"
+      ],
+      "explanation": "<p>Attention all film lovers! <sup style=\"color: red;\">71</sup> <span style=\"color: rgb(68, 114, 196);\">The Braddon Cinema has just opened. Its interior is designed to resemble the classic cinemas from the 1920s</span>. It offers comfortable, reclining seats and individual tray tables for food and drinks. <sup style=\"color: red;\">72</sup> <span style=\"color: rgb(68, 114, 196);\">The grand opening is next week and will feature showings of classic films from different erasl </span><sup style=\"color: red;\">73</sup> <span style=\"color: rgb(68, 114, 196);\">And here's good advice: to avoid traffic in the city center, the Braddon Cinema is easily reached by riding the train to Center Station.</span></p>"
+    },
+    {
+      "type": "PART_4",
       "passages": "",
-      "index": 7,
+      "index": 72,
+      "correct": 4,
+      "description": "What can attendees do at the grand opening event?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Go on a tour",
+        "(B) Get a free gift",
+        "(C) Talk to an actor",
+        "(D) Watch some movies"
+      ],
+      "explanation": "<p>Attention all film lovers! <sup style=\"color: red;\">71</sup> <span style=\"color: rgb(68, 114, 196);\">The Braddon Cinema has just opened. Its interior is designed to resemble the classic cinemas from the 1920s</span>. It offers comfortable, reclining seats and individual tray tables for food and drinks. <sup style=\"color: red;\">72</sup> <span style=\"color: rgb(68, 114, 196);\">The grand opening is next week and will feature showings of classic films from different erasl </span><sup style=\"color: red;\">73</sup> <span style=\"color: rgb(68, 114, 196);\">And here's good advice: to avoid traffic in the city center, the Braddon Cinema is easily reached by riding the train to Center Station.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 73,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_6_audio_1711939890399.Test_01-07.mp3",
+      "description": "What does the speaker advise event attendees to do?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Arrive early",
+        "(B) Use public transportation",
+        "(C) Order tickets in advance",
+        "(D) Purchase a membership"
       ],
-      "explanation": "<p>How old is this building?</p><p>(A) To ship some materials</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) About ten years old</strong></p><p>(C) Company offices, i think</p>"
+      "explanation": "<p>Attention all film lovers! <sup style=\"color: red;\">71</sup> <span style=\"color: rgb(68, 114, 196);\">The Braddon Cinema has just opened. Its interior is designed to resemble the classic cinemas from the 1920s</span>. It offers comfortable, reclining seats and individual tray tables for food and drinks. <sup style=\"color: red;\">72</sup> <span style=\"color: rgb(68, 114, 196);\">The grand opening is next week and will feature showings of classic films from different erasl </span><sup style=\"color: red;\">73</sup> <span style=\"color: rgb(68, 114, 196);\">And here's good advice: to avoid traffic in the city center, the Braddon Cinema is easily reached by riding the train to Center Station.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3\"></audio><p><br/></p>",
-      "index": 8,
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090018553.mp3\"></audio><p><br/></p>",
+      "index": 74,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3",
+      "description": "What does the listener want to do?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090018553.mp3",
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Request shuttle service",
+        "(B) Extend a hotel stay",
+        "(C) Change a room assignment",
+        "(D) Cancel a reservation"
       ],
-      "explanation": "<p>Can you come to my jazz performance tonight?</p><p>(A) I'm sorry i was late for the meeting</p><p>(B) Mostly just local musicians</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Sure, I'll be there!</strong></p>"
+      "explanation": "<p>Hi. This is Abdi calling from the Springtown Hotel reservation desk. We received your e-mail regarding your upcoming reservation. <sup style=\"color: red;\">74, 75</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">I see that you asked to move to a room facing the ocean.</span> <sup style=\"color: red;\">75</sup> <span style=\"color: rgb(68, 114, 196);\">We make every effort to accommodate such requests, but </span>those rooms are always booked far in advance. Your current room, though, has a lovely view of our garden, which we think you will quite enjoy this time of year. <sup style=\"color: red;\">76</sup> <span style=\"color: rgb(68, 114, 196);\">And don't forget to bring your swimming suit!</span> Our new pool will be open for the first time this weekend.&nbsp;</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3\"></audio><p><br/></p>",
-      "index": 9,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3",
+      "type": "PART_4",
+      "passages": "",
+      "index": 75,
+      "correct": 4,
+      "description": "Why does the speaker say, \"those rooms are always booked far in advance\"?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) To express approval for a room design",
+        "(B) To explain why a hotel is successful",
+        "(C) To indicate his disbelief",
+        "(D) To deny the listener's request"
       ],
-      "explanation": "<p>Which apartment submitted a work order?</p><p>(A) It's what you did for a living</p><p>(B) Submit your assignment here</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) It came from the tenants in B23</strong></p>"
+      "explanation": "<p>Hi. This is Abdi calling from the Springtown Hotel reservation desk. We received your e-mail regarding your upcoming reservation. <sup style=\"color: red;\">74, 75</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">I see that you asked to move to a room facing the ocean.</span> <sup style=\"color: red;\">75</sup> <span style=\"color: rgb(68, 114, 196);\">We make every effort to accommodate such requests, but </span>those rooms are always booked far in advance. Your current room, though, has a lovely view of our garden, which we think you will quite enjoy this time of year. <sup style=\"color: red;\">76</sup> <span style=\"color: rgb(68, 114, 196);\">And don't forget to bring your swimming suit!</span> Our new pool will be open for the first time this weekend.&nbsp;</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3\"></audio><p><br/></p>",
-      "index": 10,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Will you contact the vendor about changing our delivery date?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Of course, I'll take care of it</strong></p><p>(B) An e-mail receipt</p><p>(C) Could I get change for a dollar?</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3\"></audio><p><br/></p>",
-      "index": 11,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Why was the maintenance worker here?</p><p>(A) No, he didn't</p><p>(B) From three o'clock until four</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Because a light needed to be fixed</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3\"></audio><p><br/></p>",
-      "index": 12,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Did management make a hiring decision yet?</p><p>(A) Put it on the highest shelft</p><p>(B) The personnel department</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, they chose Jacob Borgman</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3\"></audio><p><br/></p>",
-      "index": 13,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Do you want to eat here in our cafeteria or go out?</p><p>(A) He went there yesterday</p><p>(B) Well, maybe a sandwich</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Let's eat here</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3\"></audio><p><br/></p>",
-      "index": 14,
+      "type": "PART_4",
+      "passages": "",
+      "index": 76,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3",
+      "description": "According to the speaker, what should the listener bring?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Some warm clothes",
+        "(B) Some swimwear",
+        "(C) A credit card",
+        "(0) A copy of a key"
       ],
-      "explanation": "<p>Didn't you e-mail the employment contract to Mr. Patel yesterday?</p><p>(A) Yes, I would agree</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) No, I'll send it now</strong></p><p>(C) Check the emplyee manual</p>"
+      "explanation": "<p>Hi. This is Abdi calling from the Springtown Hotel reservation desk. We received your e-mail regarding your upcoming reservation. <sup style=\"color: red;\">74, 75</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">I see that you asked to move to a room facing the ocean.</span> <sup style=\"color: red;\">75</sup> <span style=\"color: rgb(68, 114, 196);\">We make every effort to accommodate such requests, but </span>those rooms are always booked far in advance. Your current room, though, has a lovely view of our garden, which we think you will quite enjoy this time of year. <sup style=\"color: red;\">76</sup> <span style=\"color: rgb(68, 114, 196);\">And don't forget to bring your swimming suit!</span> Our new pool will be open for the first time this weekend.&nbsp;</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3\"></audio><p><br/></p>",
-      "index": 15,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Our division's picnic is this Saturday, right?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) There's a lot of rain in the forecast</strong></p><p>(B) Sure, I like salad</p><p>(C) At the end of this corridor</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3\"></audio><p><br/></p>",
-      "index": 16,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you like coffee or tea?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Just water, please</strong></p><p>(B) For a few dollars more</p><p>(C) A fifteen-minute break</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3\"></audio><p><br/></p>",
-      "index": 17,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>We achieved our sales targets this month</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) That's excellent news!</strong></p><p>(B) A few times a day</p><p>(C) To the end of April</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3\"></audio><p><br/></p>",
-      "index": 18,
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090033812.mp3\"></audio><p><br/></p>",
+      "index": 77,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3",
+      "description": "Who most likely is the speaker?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090033812.mp3",
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) An archaeologist",
+        "(B) A marine biologist",
+        "(C) A conservation expert",
+        "(D) An athletic trainer"
       ],
-      "explanation": "<p>How often do you travel for your job?</p><p>(A) It turned out well</p><p>(B) Yes, I did find one</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) About once a month</strong></p>"
+      "explanation": "<p><sup style=\"color: red;\">77</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">Good morning, volunteers. My name is Lisa Campbell. Thank you for coming today to help us maintain the natural habitat here at the Blue Mountain Forest Preserve. </span>Forest conservation is so important! Since this is your first day, I'll cover some of the basics. <sup style=\"color: red;\">78</sup> <span style=\"color: rgb(68, 114, 196);\">I advise you to always carry water with you. </span>We have refillable bottles, and everyone is welcome to take one as a gift from us at the forest preserve. It can get hot in the afternoon, so staying hydrated is important. Now, if you'll follow me, <sup style=\"color: red;\">79</sup> <span style=\"color: rgb(68, 114, 196);\">I’ll show you the steps for planting young tree saplings to support biodiversity.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3\"></audio><p><br/></p>",
-      "index": 19,
+      "type": "PART_4",
+      "passages": "",
+      "index": 78,
+      "correct": 1,
+      "description": "What does the speaker advise the listeners to do?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Take a water bottle",
+        "(B) Consult a site map",
+        "(C) Apply sunscreen regularly",
+        "(D) Write careful notes"
+      ],
+      "explanation": "<p><sup style=\"color: red;\">77</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">Good morning, volunteers. My name is Lisa Campbell. Thank you for coming today to help us maintain the natural habitat here at the Blue Mountain Forest Preserve. </span>Forest conservation is so important! Since this is your first day, I'll cover some of the basics. <sup style=\"color: red;\">78</sup> <span style=\"color: rgb(68, 114, 196);\">I advise you to always carry water with you. </span>We have refillable bottles, and everyone is welcome to take one as a gift from us at the forest preserve. It can get hot in the afternoon, so staying hydrated is important. Now, if you'll follow me, <sup style=\"color: red;\">79</sup> <span style=\"color: rgb(68, 114, 196);\">I’ll show you the steps for planting young tree saplings to support biodiversity.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 79,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3",
+      "description": "What does the speaker say she is going to do next?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Answer some questions",
+        "(B) Demonstrate a process",
+        "(C) Introduce a colleague",
+        "(D) Take the listeners to lunch"
       ],
-      "explanation": "<p>We should hike the Wildflower Trail today</p><p>(A) This seat is available</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I didn't bring boots</strong></p><p>(C) At the visitors' center</p>"
+      "explanation": "<p><sup style=\"color: red;\">77</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">Good morning, volunteers. My name is Lisa Campbell. Thank you for coming today to help us maintain the natural habitat here at the Blue Mountain Forest Preserve. </span>Forest conservation is so important! Since this is your first day, I'll cover some of the basics. <sup style=\"color: red;\">78</sup> <span style=\"color: rgb(68, 114, 196);\">I advise you to always carry water with you. </span>We have refillable bottles, and everyone is welcome to take one as a gift from us at the forest preserve. It can get hot in the afternoon, so staying hydrated is important. Now, if you'll follow me, <sup style=\"color: red;\">79</sup> <span style=\"color: rgb(68, 114, 196);\">I’ll show you the steps for planting young tree saplings to support biodiversity.</span></p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3\"></audio><p><br/></p>",
-      "index": 20,
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090097464.mp3\"></audio><p><br/></p>",
+      "index": 80,
+      "correct": 4,
+      "description": "Why will the speaker be traveling?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090097464.mp3",
+      "imgLink": [],
+      "answer": [
+        "(A) To inspect a factory",
+        "(B) To repair a product",
+        "(C) To perform in a concert",
+        "(D) To attend a workshop"
+      ],
+      "explanation": "<p>Hello. <sup style=\"color: red;\">80</sup> <span style=\"color: rgb(68, 114, 196);\">I'm calling about the financial-management workshop that your company is hosting later this week</span>. I'm with the Archton Group; <sup style=\"color: red;\">80</sup> <span style=\"color: rgb(68, 114, 196);\">we registered for the workshop over a month ago. </span><sup style=\"color: red;\">81</sup> <span style=\"color: rgb(68, 114, 196);\">I realized that we never received the meal vouchers that are supposed to be part of the workshop package. We need these because we have ten people attending, and </span><sup style=\"color: red;\">80,81</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">we are traveling long-distance to attend the conference.</span> <sup style=\"color: red;\">82</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">Would you please send me an e-mail with the meal vouchers included as an attachment as soon as you can?</span> Thank you.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 81,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3",
+      "description": "Why is the speaker concerned?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) A seating arrangement is wrong.",
+        "(B) A company credit card was not charged.",
+        "(C) Some meal tickets were not sent.",
+        "(D) Her taxi driver is unable to find a hotel."
       ],
-      "explanation": "<p>You've booked a hotel in London, haven't you?</p><p>(A) Very enjoyable, thanks</p><p>(B) He usually takes the train</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, I made a reservation last week</strong></p>"
+      "explanation": "<p>Hello. <sup style=\"color: red;\">80</sup> <span style=\"color: rgb(68, 114, 196);\">I'm calling about the financial-management workshop that your company is hosting later this week</span>. I'm with the Archton Group; <sup style=\"color: red;\">80</sup> <span style=\"color: rgb(68, 114, 196);\">we registered for the workshop over a month ago. </span><sup style=\"color: red;\">81</sup> <span style=\"color: rgb(68, 114, 196);\">I realized that we never received the meal vouchers that are supposed to be part of the workshop package. We need these because we have ten people attending, and </span><sup style=\"color: red;\">80,81</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">we are traveling long-distance to attend the conference.</span> <sup style=\"color: red;\">82</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">Would you please send me an e-mail with the meal vouchers included as an attachment as soon as you can?</span> Thank you.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3\"></audio><p><br/></p>",
-      "index": 21,
+      "type": "PART_4",
+      "passages": "",
+      "index": 82,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3",
+      "description": "What does the speaker ask the listener to do?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Send an e-mail",
+        "(B) Meet at an office",
+        "(C) Confirm a schedule",
+        "(D) Look up an account number"
       ],
-      "explanation": "<p>Are there any tickets left for tonight's concert?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) It's sold out</strong></p><p>(B) He's a concert violinist</p><p>(C) They already left</p>"
+      "explanation": "<p>Hello. <sup style=\"color: red;\">80</sup> <span style=\"color: rgb(68, 114, 196);\">I'm calling about the financial-management workshop that your company is hosting later this week</span>. I'm with the Archton Group; <sup style=\"color: red;\">80</sup> <span style=\"color: rgb(68, 114, 196);\">we registered for the workshop over a month ago. </span><sup style=\"color: red;\">81</sup> <span style=\"color: rgb(68, 114, 196);\">I realized that we never received the meal vouchers that are supposed to be part of the workshop package. We need these because we have ten people attending, and </span><sup style=\"color: red;\">80,81</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">we are traveling long-distance to attend the conference.</span> <sup style=\"color: red;\">82</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">Would you please send me an e-mail with the meal vouchers included as an attachment as soon as you can?</span> Thank you.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3\"></audio><p><br/></p>",
-      "index": 22,
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090108155.mp3\"></audio><p><br/></p>",
+      "index": 83,
+      "correct": 4,
+      "description": "What does the speaker remind the listeners to do?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090108155.mp3",
+      "imgLink": [],
+      "answer": [
+        "(A) Keep a gate closed",
+        "(B) Return equipment to a shed",
+        "(C) Check a list of supplies",
+        "(D) Select a free gift"
+      ],
+      "explanation": "<p>This is the end of our tour. Thank you for coming to the Oakton Garden Collective. I hope you've learned a lot about urban gardening. Feel free to spend more time looking around. <sup style=\"color: red;\">83</sup> <span style=\"color: rgb(68, 114, 196);\">Don't forget to pick up your free vegetable seedling before you leave. </span>You can choose a cucumber plant or a tomato plant. Also, <sup style=\"color: red;\">84</sup> <span style=\"color: rgb(68, 114, 196);\">if you'd like to have your own garden plot next spring, applications are now available.</span> You'll get a plot for just a small fee. <sup style=\"color: red;\">85</sup> <span style=\"color: rgb(68, 114, 196);\">We have many other fun activities listed in our monthly newsletter. Consider joining our e-mail list to receive these monthly updates about upcoming events.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 84,
+      "correct": 1,
+      "description": "According to the speaker, what can the listeners apply for?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) A garden plot",
+        "(B) A volunteer opportunity",
+        "(C) A gardening workshop",
+        "(D) A farmers market table"
+      ],
+      "explanation": "<p>This is the end of our tour. Thank you for coming to the Oakton Garden Collective. I hope you've learned a lot about urban gardening. Feel free to spend more time looking around. <sup style=\"color: red;\">83</sup> <span style=\"color: rgb(68, 114, 196);\">Don't forget to pick up your free vegetable seedling before you leave. </span>You can choose a cucumber plant or a tomato plant. Also, <sup style=\"color: red;\">84</sup> <span style=\"color: rgb(68, 114, 196);\">if you'd like to have your own garden plot next spring, applications are now available.</span> You'll get a plot for just a small fee. <sup style=\"color: red;\">85</sup> <span style=\"color: rgb(68, 114, 196);\">We have many other fun activities listed in our monthly newsletter. Consider joining our e-mail list to receive these monthly updates about upcoming events.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 85,
+      "correct": 1,
+      "description": "How can the listeners get information about future events?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) By signing up for a newsletter",
+        "(B) By joining a membership program",
+        "(C) By looking at a Web site",
+        "(D) By attending weekly meetings"
+      ],
+      "explanation": "<p>This is the end of our tour. Thank you for coming to the Oakton Garden Collective. I hope you've learned a lot about urban gardening. Feel free to spend more time looking around. <sup style=\"color: red;\">83</sup> <span style=\"color: rgb(68, 114, 196);\">Don't forget to pick up your free vegetable seedling before you leave. </span>You can choose a cucumber plant or a tomato plant. Also, <sup style=\"color: red;\">84</sup> <span style=\"color: rgb(68, 114, 196);\">if you'd like to have your own garden plot next spring, applications are now available.</span> You'll get a plot for just a small fee. <sup style=\"color: red;\">85</sup> <span style=\"color: rgb(68, 114, 196);\">We have many other fun activities listed in our monthly newsletter. Consider joining our e-mail list to receive these monthly updates about upcoming events.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090120320.mp3\"></audio><p><br/></p>",
+      "index": 86,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3",
+      "description": "What service does the business offer?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090120320.mp3",
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Financial planning",
+        "(B) Digital marketing",
+        "(C) Real estate sales",
+        "(D) International shipping"
       ],
-      "explanation": "<p>Haven't you used this software before?</p><p>(A) Can I take your order?</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I haven't had the chance</strong></p><p>(C) About 40 dollars</p>"
+      "explanation": "<p><sup style=\"color: red;\">86</sup> <span style=\"color: rgb(68, 114, 196);\">Have you developed the perfect product but are unsure how to reach more customers? At Whole Planet Marketing, our team of expert digital marketers is ready: to help you reach your </span></p><p><span style=\"color: rgb(68, 114, 196);\">target audience</span>. <sup style=\"color: red;\">87</sup> <span style=\"color: rgb(68, 114, 196);\">Unlike other marketing firms, we'll connect you with a digital marketer who'll work with you individually</span>. During your one-on-one meetings, you'll develop a marketing plan that will draw in customers. <sup style=\"color: red;\">88</sup> <span style=\"color: rgb(68, 114, 196);\">Just go to wholeplanetmarketing.com today to complete a brief questionnaire. Then, one of our specialists will contact you to make an appointment for a free proposal.</span> Let Whole Planet Marketing bring customers to youl.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3\"></audio><p><br/></p>",
-      "index": 23,
+      "type": "PART_4",
+      "passages": "",
+      "index": 87,
+      "correct": 4,
+      "description": "According to the speaker, how is the business different from its competitors?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) It has several local offices.",
+        "(B) It offers a money-back guarantee.",
+        "(C) Its employees have industry certification.",
+        "(D) Its employees work one-on-one with clients."
+      ],
+      "explanation": "<p><sup style=\"color: red;\">86</sup> <span style=\"color: rgb(68, 114, 196);\">Have you developed the perfect product but are unsure how to reach more customers? At Whole Planet Marketing, our team of expert digital marketers is ready: to help you reach your </span></p><p><span style=\"color: rgb(68, 114, 196);\">target audience</span>. <sup style=\"color: red;\">87</sup> <span style=\"color: rgb(68, 114, 196);\">Unlike other marketing firms, we'll connect you with a digital marketer who'll work with you individually</span>. During your one-on-one meetings, you'll develop a marketing plan that will draw in customers. <sup style=\"color: red;\">88</sup> <span style=\"color: rgb(68, 114, 196);\">Just go to wholeplanetmarketing.com today to complete a brief questionnaire. Then, one of our specialists will contact you to make an appointment for a free proposal.</span> Let Whole Planet Marketing bring customers to youl.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 88,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3",
+      "description": "How can the listeners make an appointment?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) By sending an e-mail",
+        "(B) By calling customer service",
+        "(C) By filling out a questionnaire",
+        "(D) By sending a text message"
       ],
-      "explanation": "<p>When is the new blender going to be released?</p><p>(A) Only with fruits and vegetables</p><p>(B) In the kitchen cabinet</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) The prototype is still being tested</strong></p>"
+      "explanation": "<p><sup style=\"color: red;\">86</sup> <span style=\"color: rgb(68, 114, 196);\">Have you developed the perfect product but are unsure how to reach more customers? At Whole Planet Marketing, our team of expert digital marketers is ready: to help you reach your </span></p><p><span style=\"color: rgb(68, 114, 196);\">target audience</span>. <sup style=\"color: red;\">87</sup> <span style=\"color: rgb(68, 114, 196);\">Unlike other marketing firms, we'll connect you with a digital marketer who'll work with you individually</span>. During your one-on-one meetings, you'll develop a marketing plan that will draw in customers. <sup style=\"color: red;\">88</sup> <span style=\"color: rgb(68, 114, 196);\">Just go to wholeplanetmarketing.com today to complete a brief questionnaire. Then, one of our specialists will contact you to make an appointment for a free proposal.</span> Let Whole Planet Marketing bring customers to youl.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3\"></audio><p><br/></p>",
-      "index": 24,
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090141688.mp3\"></audio><p><br/></p>",
+      "index": 89,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3",
+      "description": "Who most likely are the listeners?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090141688.mp3",
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Marine biologists",
+        "(B) Museum directors",
+        "(C) Rare-book librarians",
+        "(D) Agricultural engineers"
       ],
-      "explanation": "<p>Who's picking up our clients at the airport?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) They decided to drive</strong></p><p>(B) At terminal 2</p><p>(C) It's a marketing position</p>"
+      "explanation": "<p>Hello, everyone. <sup style=\"color: red;\">89</sup> <span style=\"color: rgb(68, 114, 196);\">There's very exciting news for all of us here at the Ziegler Research Institute. We've just been awarded the Sugiyama Grant to support our research into aquatic ecosystems. </span>We can now invest in state-of-the-art equipment to study the biodiversity of coral reefs. As you may know, <sup style=\"color: red;\">90</sup> <span style=\"color: rgb(68, 114, 196);\">the Sugiyama Foundation offers a variety of substantial grants each year</span>. It's notable, though, that <sup style=\"color: red;\">90</sup> <span style=\"color: rgb(68, 114, 196);\">for this particular award</span>, they received over 200 applications. <sup style=\"color: red;\">91</sup> <span style=\"color: rgb(68, 114, 196);\">Our work at the reefs will probably not begin for several months. We still need to order the equipment.</span> But I want to thank you for your efforts on the application.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3\"></audio><p><br/></p>",
-      "index": 25,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Where are the red roses that came in this morning?</p><p>(A) About three liters of water</p><p>(B) No, I didn't check out the sale</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I needed some for a large bouquet</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3\"></audio><p><br/></p>",
-      "index": 26,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>This film has been nominated for several awards</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Why don't we go see it?</strong></p><p>(B) After the annoucement</p><p>(C) He made a great speech</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3\"></audio><p><br/></p>",
-      "index": 27,
+      "type": "PART_4",
+      "passages": "",
+      "index": 90,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3",
+      "description": "What does the speaker mean when he says, \"they received over 200 applications\"?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) An opportunity is unlikely to occur.",
+        "(B) An award is impressive.",
+        "(C) A decision will take longer than usual.",
+        "(D) A competitor has been very successful."
       ],
-      "explanation": "<p>Who's interested in starting a car pool program?</p><p>(A) Thanks, but I can't swim</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) Clara's already organizing one</strong></p><p>(C) It’s a very interesting article.</p>"
+      "explanation": "<p>Hello, everyone. <sup style=\"color: red;\">89</sup> <span style=\"color: rgb(68, 114, 196);\">There's very exciting news for all of us here at the Ziegler Research Institute. We've just been awarded the Sugiyama Grant to support our research into aquatic ecosystems. </span>We can now invest in state-of-the-art equipment to study the biodiversity of coral reefs. As you may know, <sup style=\"color: red;\">90</sup> <span style=\"color: rgb(68, 114, 196);\">the Sugiyama Foundation offers a variety of substantial grants each year</span>. It's notable, though, that <sup style=\"color: red;\">90</sup> <span style=\"color: rgb(68, 114, 196);\">for this particular award</span>, they received over 200 applications. <sup style=\"color: red;\">91</sup> <span style=\"color: rgb(68, 114, 196);\">Our work at the reefs will probably not begin for several months. We still need to order the equipment.</span> But I want to thank you for your efforts on the application.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3\"></audio><p><br/></p>",
-      "index": 28,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3",
+      "type": "PART_4",
+      "passages": "",
+      "index": 91,
+      "correct": 4,
+      "description": "Why does the speaker say that work cannot begin right away?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Additional funds are needed.",
+        "(B) Some special training is required.",
+        "(C) An application has to be approved.",
+        "(D) Some equipment needs to be ordered."
       ],
-      "explanation": "<p>Where will I teach my workshop this month?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) We just sent an e-mail to all instructors.</strong></p><p>(B) Five to seven months.</p><p>(C) Yes, it’s a beautiful building.</p>"
+      "explanation": "<p>Hello, everyone. <sup style=\"color: red;\">89</sup> <span style=\"color: rgb(68, 114, 196);\">There's very exciting news for all of us here at the Ziegler Research Institute. We've just been awarded the Sugiyama Grant to support our research into aquatic ecosystems. </span>We can now invest in state-of-the-art equipment to study the biodiversity of coral reefs. As you may know, <sup style=\"color: red;\">90</sup> <span style=\"color: rgb(68, 114, 196);\">the Sugiyama Foundation offers a variety of substantial grants each year</span>. It's notable, though, that <sup style=\"color: red;\">90</sup> <span style=\"color: rgb(68, 114, 196);\">for this particular award</span>, they received over 200 applications. <sup style=\"color: red;\">91</sup> <span style=\"color: rgb(68, 114, 196);\">Our work at the reefs will probably not begin for several months. We still need to order the equipment.</span> But I want to thank you for your efforts on the application.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3\"></audio><p><br/></p>",
-      "index": 29,
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689090155193.mp3\"></audio><p><br/></p>",
+      "index": 92,
+      "correct": 4,
+      "description": "What is the purpose of the talk?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689090155193.mp3",
+      "imgLink": [],
+      "answer": [
+        "(A) To recognize outstanding achievements",
+        "(B) To introduce new products to the public",
+        "(C) To announce a manager's retirement",
+        "(D) To provide new employees with information"
+      ],
+      "explanation": "<p><sup style=\"color: red;\">93</sup> <span style=\"color: rgb(68, 114, 196);\">On behalf of Onetech Solar, I'd like to welcome you to our manufacturing facility and </span>congratulate you on your employment here. <sup style=\"color: red;\">92</sup> <span style=\"color: rgb(68, 114, 196);\">I'm Yuri Yamakawa, and today I'll be leading this orientation for new hires.</span> We'll start with a video that provides an overview of the production process for the solar panels we make. Then we'll tour the various areas of the factory, including the assembly line and the quality-control inspection center. <sup style=\"color: red;\">94</sup> <span style=\"color: rgb(68, 114, 196);\">After lunch, my colleague Mariko Hara will join you.</span> I have a consultation with a client. And now, let's get started with the video.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 93,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3",
+      "description": "Where is the talk taking place?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) At a banquet hall",
+        "(B) At a government building",
+        "(C) At a factory",
+        "(D) At a construction site"
       ],
-      "explanation": "<p>Why are we moving these sweaters to the back of the store?</p><p>(A) In the new shopping mall.</p><p>(B) Yes, they come in other colors.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Our spring merchandise is arriving soon.</strong></p>"
+      "explanation": "<p><sup style=\"color: red;\">93</sup> <span style=\"color: rgb(68, 114, 196);\">On behalf of Onetech Solar, I'd like to welcome you to our manufacturing facility and </span>congratulate you on your employment here. <sup style=\"color: red;\">92</sup> <span style=\"color: rgb(68, 114, 196);\">I'm Yuri Yamakawa, and today I'll be leading this orientation for new hires.</span> We'll start with a video that provides an overview of the production process for the solar panels we make. Then we'll tour the various areas of the factory, including the assembly line and the quality-control inspection center. <sup style=\"color: red;\">94</sup> <span style=\"color: rgb(68, 114, 196);\">After lunch, my colleague Mariko Hara will join you.</span> I have a consultation with a client. And now, let's get started with the video.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3\"></audio><p><br/></p>",
-      "index": 30,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you be interested in working on some of these contracts?</p><p>(A) Thank you for meeting me.</p><p>(B) A contact lens prescription.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I have very limited time.</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3\"></audio><p><br/></p>",
-      "index": 31,
+      "type": "PART_4",
+      "passages": "",
+      "index": 94,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3",
+      "description": "What does the speaker mean when she says, \"I have a consultation with a client\"?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) She needs to reschedule a meeting.",
+        "(B) She will not be with the listeners in the afternoon.",
+        "(C) A customer has just placed a large order.",
+        "(D) A marketing campaign will begin soon."
       ],
-      "explanation": "<p>What type of job are you looking for?</p><p>(A) No, at ten A.M.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I really like working with computers.</strong></p><p>(C) Just a resume is needed.</p>"
+      "explanation": "<p><sup style=\"color: red;\">93</sup> <span style=\"color: rgb(68, 114, 196);\">On behalf of Onetech Solar, I'd like to welcome you to our manufacturing facility and </span>congratulate you on your employment here. <sup style=\"color: red;\">92</sup> <span style=\"color: rgb(68, 114, 196);\">I'm Yuri Yamakawa, and today I'll be leading this orientation for new hires.</span> We'll start with a video that provides an overview of the production process for the solar panels we make. Then we'll tour the various areas of the factory, including the assembly line and the quality-control inspection center. <sup style=\"color: red;\">94</sup> <span style=\"color: rgb(68, 114, 196);\">After lunch, my colleague Mariko Hara will join you.</span> I have a consultation with a client. And now, let's get started with the video.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689237073216.mp3\"></audio><p><img src=\"/data/ets_2023_test_1/images/0_95.png\"/></p>",
+      "index": 95,
+      "correct": 1,
+      "description": "What is the main purpose of the call?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689237073216.mp3",
+      "imgLink": [
+        "/data/ets_2023_test_1/images/0_95.png"
+      ],
+      "answer": [
+        "(A) To place an order",
+        "(B) To dispute a charge",
+        "(C) To arrange a meeting",
+        "(D) To check a store's inventory"
+      ],
+      "explanation": "<p>Hi. This is Vinod Singh. <sup style=\"color: red;\">95</sup> <span style=\"color: rgb(68, 114, 196);\">I was in your store on Monday looking at refrigerators for my apartment. One of your employees showed me what you have in stock. </span><sup style=\"color: red;\">95,96</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">I've decided to go with the extra-large refrigerator-the one with the stainless-steel finish</span>, because it'll match the other appliances in my apartment. Oh, also, <sup style=\"color: red;\">97</sup> <span style=\"color: rgb(68, 114, 196);\">is there an additional charge for delivering outside of the downtown area?</span> Please call me at 555-0130 so we&nbsp;can finalize the details.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 96,
+      "correct": 4,
+      "description": "Look at the graphic. Which model does the speaker prefer?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) SG-200",
+        "(B) SG-250",
+        "(C) XG-300",
+        "(D) XG-350"
+      ],
+      "explanation": "<p>Hi. This is Vinod Singh. <sup style=\"color: red;\">95</sup> <span style=\"color: rgb(68, 114, 196);\">I was in your store on Monday looking at refrigerators for my apartment. One of your employees showed me what you have in stock. </span><sup style=\"color: red;\">95,96</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">I've decided to go with the extra-large refrigerator-the one with the stainless-steel finish</span>, because it'll match the other appliances in my apartment. Oh, also, <sup style=\"color: red;\">97</sup> <span style=\"color: rgb(68, 114, 196);\">is there an additional charge for delivering outside of the downtown area?</span> Please call me at 555-0130 so we&nbsp;can finalize the details.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 97,
+      "correct": 3,
+      "description": "What does the speaker ask about?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) A warranty",
+        "(B) A return process",
+        "(C) A delivery fee",
+        "(D) Product availability"
+      ],
+      "explanation": "<p>Hi. This is Vinod Singh. <sup style=\"color: red;\">95</sup> <span style=\"color: rgb(68, 114, 196);\">I was in your store on Monday looking at refrigerators for my apartment. One of your employees showed me what you have in stock. </span><sup style=\"color: red;\">95,96</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">I've decided to go with the extra-large refrigerator-the one with the stainless-steel finish</span>, because it'll match the other appliances in my apartment. Oh, also, <sup style=\"color: red;\">97</sup> <span style=\"color: rgb(68, 114, 196);\">is there an additional charge for delivering outside of the downtown area?</span> Please call me at 555-0130 so we&nbsp;can finalize the details.</p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2023_test_1/audios/1689237095714.mp3\"></audio><p><img src=\"/data/ets_2023_test_1/images/0_98.png\"/></p>",
+      "index": 98,
+      "correct": 3,
+      "description": "Who most likely are the listeners?",
+      "audioLink": "/data/ets_2023_test_1/audios/1689237095714.mp3",
+      "imgLink": [
+        "/data/ets_2023_test_1/images/0_98.png"
+      ],
+      "answer": [
+        "(A) Marketing experts",
+        "(B) Product testers",
+        "(C) Product designers",
+        "(D) Audio engineers"
+      ],
+      "explanation": "<p>Good afternoon, everyone. I'd like to go over the product tests for our laptop-computer backpack, because they will require some design changes. As you know, <sup style=\"color: red;\">98</sup> <span style=\"color: rgb(68, 114, 196);\">we hired a marketing firm to test the prototype you designed among consumers.</span> Now, we received very positive feedback overall. Consumers liked the separate computer compartment. However, <sup style=\"color: red;\">99</sup> <span style=\"color: rgb(68, 114, 196);\">many people felt that the shoulder straps were uncomfortable when the bag was full. It's important that the backpack have comfortable shoulder straps, since its purpose is to carry heavy equipment. </span><sup style=\"color: red;\">98,99, 100</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">We need to revise the design as quickly as possible, </span><sup style=\"color: red;\">100</sup><span style=\"color: rgb(68, 114, 196);\"> since we're scheduled to have our official product release early next year.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 99,
+      "correct": 2,
+      "description": "Look at the graphic. What was the approval rating of the feature that will be improved?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) 40 percent",
+        "(B) 50 percent",
+        "(C) 60 percent",
+        "(D) 80 percent"
+      ],
+      "explanation": "<p>Good afternoon, everyone. I'd like to go over the product tests for our laptop-computer backpack, because they will require some design changes. As you know, <sup style=\"color: red;\">98</sup> <span style=\"color: rgb(68, 114, 196);\">we hired a marketing firm to test the prototype you designed among consumers.</span> Now, we received very positive feedback overall. Consumers liked the separate computer compartment. However, <sup style=\"color: red;\">99</sup> <span style=\"color: rgb(68, 114, 196);\">many people felt that the shoulder straps were uncomfortable when the bag was full. It's important that the backpack have comfortable shoulder straps, since its purpose is to carry heavy equipment. </span><sup style=\"color: red;\">98,99, 100</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">We need to revise the design as quickly as possible, </span><sup style=\"color: red;\">100</sup><span style=\"color: rgb(68, 114, 196);\"> since we're scheduled to have our official product release early next year.</span></p>"
+    },
+    {
+      "type": "PART_4",
+      "passages": "",
+      "index": 100,
+      "correct": 2,
+      "description": "According to the speaker, why is a revision urgent?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) A competitor is making a similar product.",
+        "(B) A product will be offered for sale soon.",
+        "(C) A product will be introduced at a trade show.",
+        "(D) The cost of a product's materials will rise soon."
+      ],
+      "explanation": "<p>Good afternoon, everyone. I'd like to go over the product tests for our laptop-computer backpack, because they will require some design changes. As you know, <sup style=\"color: red;\">98</sup> <span style=\"color: rgb(68, 114, 196);\">we hired a marketing firm to test the prototype you designed among consumers.</span> Now, we received very positive feedback overall. Consumers liked the separate computer compartment. However, <sup style=\"color: red;\">99</sup> <span style=\"color: rgb(68, 114, 196);\">many people felt that the shoulder straps were uncomfortable when the bag was full. It's important that the backpack have comfortable shoulder straps, since its purpose is to carry heavy equipment. </span><sup style=\"color: red;\">98,99, 100</sup><span style=\"color: red;\"> </span><span style=\"color: rgb(68, 114, 196);\">We need to revise the design as quickly as possible, </span><sup style=\"color: red;\">100</sup><span style=\"color: rgb(68, 114, 196);\"> since we're scheduled to have our official product release early next year.</span></p>"
     }
   ]
 }

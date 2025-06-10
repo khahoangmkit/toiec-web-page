@@ -7,379 +7,484 @@
   "duration": "120",
   "questionsJson": [
     {
-      "type": "PART_2",
+      "type": "PART_5",
       "passages": "",
-      "index": 7,
+      "index": 101,
+      "correct": 3,
+      "description": " When she held her last meeting, Ms. Toba ______ her sales staff to perform even better  next quarter.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) encourage",
+        "(B) is encouraging",
+        "(C) encouraged",
+        "(D) was encouraged"
+      ],
+      "explanation": "<p><strong><u>Giải thích:</u></strong> Chỗ trống cần điền động từ dạng chủ động thì quá khứ để phù hợp về nghĩa.</p><p><strong><u>Dịch nghĩa:</u></strong> Khi tổ chức cuộc họp cuối cùng, cô Toba <strong>ĐÃ KHUYẾN KHÍCH</strong> các nhân viên bán hàng của mình làm việc tốt hơn nữa trong quý tới.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perform (v) làm việc</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quarter (n) quý</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 102,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_6_audio_1711939890399.Test_01-07.mp3",
+      "description": " All staff have been informed ______ the  proposed partnership with ERI Finance.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) for",
+        "(B) about",
+        "(C) to",
+        "(D) at"
       ],
-      "explanation": "<p>How old is this building?</p><p>(A) To ship some materials</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) About ten years old</strong></p><p>(C) Company offices, i think</p>"
+      "explanation": "<p class=\"ql-align-justify\"><strong><u>Giải thích:</u></strong> Cần nhớ cấu trúc:</p><p class=\"ql-align-justify\"><span style=\"color: rgb(51, 51, 51);\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inform sb about sth: thông báo ai về cái gì</span></p><p class=\"ql-align-justify\">=&gt; sb be informed about sth: ai đó được thông báo về cái gì</p><p class=\"ql-align-justify\"><strong><u>Dịch nghĩa:</u></strong> Tất cả nhân viên đã được thông báo <strong>VỀ</strong> việc hợp tác đã được đề xuất với ERI Finance.</p><p class=\"ql-align-justify\"><strong><u>Từ vựng:</u></strong></p><p class=\"ql-align-justify\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inform (v) thông báo</p><p class=\"ql-align-justify\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proposed (v) đề xuất</p><p class=\"ql-align-justify\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partnership (n) việc hợp tác</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3\"></audio><p><br/></p>",
-      "index": 8,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Can you come to my jazz performance tonight?</p><p>(A) I'm sorry i was late for the meeting</p><p>(B) Mostly just local musicians</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Sure, I'll be there!</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3\"></audio><p><br/></p>",
-      "index": 9,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Which apartment submitted a work order?</p><p>(A) It's what you did for a living</p><p>(B) Submit your assignment here</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) It came from the tenants in B23</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3\"></audio><p><br/></p>",
-      "index": 10,
+      "type": "PART_5",
+      "passages": "",
+      "index": 103,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3",
+      "description": " On Friday, Mr. Nakamura will discuss ______ ideas for supporting busy waiters.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) his",
+        "(B) him",
+        "(C) himself",
+        "(D) he"
       ],
-      "explanation": "<p>Will you contact the vendor about changing our delivery date?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Of course, I'll take care of it</strong></p><p>(B) An e-mail receipt</p><p>(C) Could I get change for a dollar?</p>"
+      "explanation": "<p><strong><u>Giải thích:</u></strong> Cần điền tính từ sở hữu trước danh từ “ideas”.</p><p><strong><u>Dịch nghĩa:</u></strong> Vào thứ Sáu, ông Nakamura sẽ thảo luận về ý tưởng <strong>CỦA ÔNG</strong> cho việc hỗ trợ những người phục vụ bận rộn.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;support: hỗ trợ</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3\"></audio><p><br/></p>",
-      "index": 11,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Why was the maintenance worker here?</p><p>(A) No, he didn't</p><p>(B) From three o'clock until four</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Because a light needed to be fixed</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3\"></audio><p><br/></p>",
-      "index": 12,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Did management make a hiring decision yet?</p><p>(A) Put it on the highest shelft</p><p>(B) The personnel department</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, they chose Jacob Borgman</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3\"></audio><p><br/></p>",
-      "index": 13,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Do you want to eat here in our cafeteria or go out?</p><p>(A) He went there yesterday</p><p>(B) Well, maybe a sandwich</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Let's eat here</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3\"></audio><p><br/></p>",
-      "index": 14,
+      "type": "PART_5",
+      "passages": "",
+      "index": 104,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3",
+      "description": "The Forestry Commission was created to ______ the state's natural resources and  wildlife.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) allow",
+        "(B) manage",
+        "(C) succeed",
+        "(D) finish"
       ],
-      "explanation": "<p>Didn't you e-mail the employment contract to Mr. Patel yesterday?</p><p>(A) Yes, I would agree</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) No, I'll send it now</strong></p><p>(C) Check the emplyee manual</p>"
+      "explanation": "<p><strong><u>Từ vựng:</u></strong></p><p>(A) allow (v) cho phép</p><p>(B) manage (v) quản lý</p><p>(C) succeed (v) thành công</p><p>(D) finish (v) hoàn thành</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Ủy ban Lâm nghiệp được thành lập để <strong>QUẢN LÝ</strong> tài nguyên thiên nhiên và động vật hoang dã của bang này.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3\"></audio><p><br/></p>",
-      "index": 15,
+      "type": "PART_5",
+      "passages": "",
+      "index": 105,
+      "correct": 4,
+      "description": "By following established guidelines, construction workers will be able to complete their tasks ______.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) safety",
+        "(B) safe",
+        "(C) safeness",
+        "(D) safely"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền trạng từ để bổ nghĩa cho động từ “complete”.</p><p>(A) safety (n) sự an toàn</p><p>(B) safe (adj) an toàn</p><p>(C) safeness (n) sự an toàn</p><p>(D) safely (adv) một cách an toàn</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Bằng cách làm theo các hướng dẫn đã được thiết lập, công nhân xây dựng sẽ có thể hoàn thành nhiệm vụ của họ <strong>MỘT CÁCH AN TOÀN</strong>.</p><p><strong><u>Từ vựng:</u></strong> establish (v) thiết lập</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 106,
+      "correct": 4,
+      "description": "With her numerous credentials, Dr. Kwan is  highly _____ to teach medieval history at  Maston University.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) arranged",
+        "(B) ready",
+        "(C) available",
+        "(D) qualified"
+      ],
+      "explanation": "<p><strong><u>Giải thích:</u></strong> Cần điền tính từ thích hợp để bổ nghĩa cho Dr. Kwan.</p><p>(A) arrange (v) sắp xếp</p><p>(B) ready (adj) sẵn sàng</p><p>(C) available (adj) có sẵn</p><p>(D) qualify (v) có đủ điều kiện</p><p><strong><u>Dịch nghĩa:&nbsp;</u></strong></p><p>Với nhiều bằng cấp, Tiến sĩ Kwan rất <strong>ĐỦ ĐIỀU KIỆN</strong> để dạy lịch sử thời trung cổ tại Đại học Maston.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numerous (adj) rất nhiều</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;credential (n) bằng cấp/chứng chỉ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;medieval (adj) trung cổ</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 107,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3",
+      "description": "______ at the annual technology conference  is mandatory for all engineers at the  Treemont Corporation.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Attendance",
+        "(B) Attend",
+        "(C) Attends",
+        "(D) Attended"
       ],
-      "explanation": "<p>Our division's picnic is this Saturday, right?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) There's a lot of rain in the forecast</strong></p><p>(B) Sure, I like salad</p><p>(C) At the end of this corridor</p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền danh từ để ghép với “at the annual technology conference” thành chủ ngữ trong câu.</p><p>(A) attendance (n) sự tham dự</p><p>(B) attend (v) tham dự</p><p>(C) attend (v-s) tham dự</p><p>(D) attended (v-ed) tham dự</p><p><strong><u>Dịch nghĩa:&nbsp;</u></strong></p><p><strong>VIỆC THAM DỰ</strong> hội nghị công nghệ hàng năm là bắt buộc đối với tất cả các kỹ sư tại Tập đoàn Treemont.</p><p><strong><u>Từ vựng:</u></strong></p><p>mandatory (adj) bắt buộc</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3\"></audio><p><br/></p>",
-      "index": 16,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you like coffee or tea?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Just water, please</strong></p><p>(B) For a few dollars more</p><p>(C) A fifteen-minute break</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3\"></audio><p><br/></p>",
-      "index": 17,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>We achieved our sales targets this month</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) That's excellent news!</strong></p><p>(B) A few times a day</p><p>(C) To the end of April</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3\"></audio><p><br/></p>",
-      "index": 18,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>How often do you travel for your job?</p><p>(A) It turned out well</p><p>(B) Yes, I did find one</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) About once a month</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3\"></audio><p><br/></p>",
-      "index": 19,
+      "type": "PART_5",
+      "passages": "",
+      "index": 108,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3",
+      "description": "The café ______ features poets, folk singers, and drama groups on its stage.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) tightly",
+        "(B) occasionally",
+        "(C) vaguely",
+        "(D) realistically"
       ],
-      "explanation": "<p>We should hike the Wildflower Trail today</p><p>(A) This seat is available</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I didn't bring boots</strong></p><p>(C) At the visitors' center</p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn trạng từ phù hợp bổ nghĩa cho động từ “feature”</p><p>(A) tightly (adv) chặt chẽ</p><p>(B) occasionally (adv) thỉnh thoảng</p><p>(C) vaguely (adv) mơ hồ</p><p>(D) realistically (adv) thực tế</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Quán cà phê <strong>THỈNH THOẢNG</strong> có các nhà thơ, ca sĩ dân gian và các nhóm kịch trên sân khấu của quán.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poet (n) nhà thơ</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3\"></audio><p><br/></p>",
-      "index": 20,
+      "type": "PART_5",
+      "passages": "",
+      "index": 109,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3",
+      "description": "Before the seminar began, attendees were assured ______ all scheduled presenters would appear.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) who",
+        "(B) around",
+        "(C) that",
+        "(D) therefore"
       ],
-      "explanation": "<p>You've booked a hotel in London, haven't you?</p><p>(A) Very enjoyable, thanks</p><p>(B) He usually takes the train</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, I made a reservation last week</strong></p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần chọn từ phù hợp để nối động từ “assure” với mệnh đề đằng sau.</p><p>(A) who (pro) người mà</p><p>(B) around (pre) xoay quanh</p><p>(C) that (pro) rằng</p><p>(D) therefore (adv) do đó</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Trước khi hội thảo bắt đầu, những người tham dự được đảm bảo <strong>RẰNG</strong> tất cả những người thuyết trình theo lịch trình sẽ xuất hiện.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attendee (n) người tham dự</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;presenter (n) người thuyết trình</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3\"></audio><p><br/></p>",
-      "index": 21,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3",
+      "type": "PART_5",
+      "passages": "",
+      "index": 110,
+      "correct": 4,
+      "description": " Forever Pet has been a leader in bringing  new products, _______ Fun Bone and Chew  Right, to the market.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) however",
+        "(B) furthermore",
+        "(C) as if",
+        "(D) such as"
       ],
-      "explanation": "<p>Are there any tickets left for tonight's concert?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) It's sold out</strong></p><p>(B) He's a concert violinist</p><p>(C) They already left</p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Điền giới từ thích hợp&nbsp;<strong><u>&nbsp;</u></strong></p><p>(A) however (adv) tuy nhiên</p><p>(B) furthermore (adv) thêm vào đó</p><p>(C) as if (phr) như thể</p><p>(D) such as (phr) như là</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Forever Pet đã dẫn đầu trong việc đưa các sản phẩm mới, <strong>như lÀ</strong> Fun Bone và Chew Right, ra thị trường.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3\"></audio><p><br/></p>",
-      "index": 22,
+      "type": "PART_5",
+      "passages": "",
+      "index": 111,
+      "correct": 3,
+      "description": "Ms. Turner is in charge of _______ the  organization of records in the human  services department.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) improve",
+        "(B) improved",
+        "(C) improving",
+        "(D) improvement"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Khi động từ đứng ngay sau giới từ (of) cần sử dụng dạng danh động từ V-ing<strong><u> </u></strong></p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Cô Turner chịu trách nhiệm <strong>cải thiện</strong> hệ thống hồ sơ trong bộ phận dịch vụ nhân sinh.</p><p><strong><u>Từ vựng:</u></strong></p><ul><li>&nbsp;in charge of (phr) chịu trách nhiệm</li><li>organization (n) hệ thống</li></ul>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 112,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3",
+      "description": "Sheefon Bank clients always receive an  e-mail or text ________ following any change to  their account password.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) issue",
+        "(B) alert",
+        "(C) claim",
+        "(D) member"
       ],
-      "explanation": "<p>Haven't you used this software before?</p><p>(A) Can I take your order?</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I haven't had the chance</strong></p><p>(C) About 40 dollars</p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn từ phù hợp về nghĩa</p><p>(A) issue (n) vấn đề</p><p>(B) alert (n) cảnh báo</p><p>(C) claim (n) thỉnh cầu/sự đòi</p><p>(D) member (n) thành viên</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Khách hàng của Sheefon Bank luôn nhận được <strong>cảnh báo</strong> bằng e-mail hoặc tin nhắn sau bất kỳ thay đổi nào đối với mật khẩu tài khoản của họ.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;following (adv) sau</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3\"></audio><p><br/></p>",
-      "index": 23,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3",
+      "type": "PART_5",
+      "passages": "",
+      "index": 113,
+      "correct": 4,
+      "description": "A drop in consumer demand has led to  a _____ decrease in the production of large  pickup trucks.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) remark",
+        "(B) remarked",
+        "(C) remarking",
+        "(D) remarkable"
       ],
-      "explanation": "<p>When is the new blender going to be released?</p><p>(A) Only with fruits and vegetables</p><p>(B) In the kitchen cabinet</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) The prototype is still being tested</strong></p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền tính từ vì có mạo từ bất định “a” phía trước và danh từ “decrease” phía sau.</p><p>(A) remark (v) chú ý</p><p>(B) remarkable (adj) đáng kể, đáng chú ý</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Một sự sụt giảm trong nhu cầu tiêu dùng đã dẫn đến việc giảm <strong>đáng kể </strong>trong sản xuất xe bán tải cỡ lớn.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;demand (n) nhu cầu</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decrease (n) sự sụt giảm</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;production (n) sự sản xuất</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3\"></audio><p><br/></p>",
-      "index": 24,
+      "type": "PART_5",
+      "passages": "",
+      "index": 114,
+      "correct": 4,
+      "description": "After coating the potatoes in flour and  spices, chefs should place them ________ into  the deep fryer.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) rarely",
+        "(B) honestly",
+        "(C) doubtfully",
+        "(D) directly"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn trạng từ hợp nghĩa</p><p>(A) rarely (adv) hiếm khi</p><p>(B) honestly (adv) trung thực</p><p>(C) doubtfully (adv) nghi ngờ</p><p>(D) directly (adv) ngay (lập tức)</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Sau khi phủ khoai tây qua bột mì và gia vị, đầu bếp nên cho <strong>Ngay</strong> chúng vào nồi chiên ngập dầu.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flour (n) bột mì</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spice (n) gia vị</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;place (v) đặt, để</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deep fryer (phr) nồi chiên ngập dầu</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 115,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3",
+      "description": "Several banks have released applications  that allow _______ customers to pay bills  easily by phone.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) their",
+        "(B) they",
+        "(C) them",
+        "(D) themselves"
       ],
-      "explanation": "<p>Who's picking up our clients at the airport?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) They decided to drive</strong></p><p>(B) At terminal 2</p><p>(C) It's a marketing position</p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền tính từ sở hữu bổ nghĩa cho “customers”</p><p>(A) their (adj-sở hữu) của họ</p><p>(B) they (chủ ngữ) họ</p><p>(C) them (tân ngữ) họ (dạng bổ nghĩa của they)</p><p>(D) themselves (phản thân) tự họ</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Rất nhiều ngân hàng đã phát hành ứng dụng cái mà cho phép khách hàng <strong>CỦA HỌ</strong> thanh toán hoá đơn một cách dễ dàng bằng điện thoại.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;release (v) phát hành</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bill (n) hoá đơn</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3\"></audio><p><br/></p>",
-      "index": 25,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Where are the red roses that came in this morning?</p><p>(A) About three liters of water</p><p>(B) No, I didn't check out the sale</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I needed some for a large bouquet</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3\"></audio><p><br/></p>",
-      "index": 26,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>This film has been nominated for several awards</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Why don't we go see it?</strong></p><p>(B) After the annoucement</p><p>(C) He made a great speech</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3\"></audio><p><br/></p>",
-      "index": 27,
+      "type": "PART_5",
+      "passages": "",
+      "index": 116,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3",
+      "description": "The personnel department will _______ only  those applicants who have five or more  years of experience for the position.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) participate",
+        "(B) consider",
+        "(C) grant",
+        "(D) make"
       ],
-      "explanation": "<p>Who's interested in starting a car pool program?</p><p>(A) Thanks, but I can't swim</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) Clara's already organizing one</strong></p><p>(C) It’s a very interesting article.</p>"
+      "explanation": "<p><strong><u>Giải thích:</u></strong> Chọn động từ phù hợp về nghĩa</p><p>(A) participate (v) tham gia</p><p>(B) consider (v) xem xét</p><p>(C) grant (v) cho</p><p>(D) make (v) làm cho</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Bộ phận nhân sự sẽ chỉ <strong>xem xét</strong> những ứng viên có năm năm kinh nghiệm trở lên cho vị trí này.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personnel department (phr) bộ phận nhân sự</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;applicant (n) ứng viên</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3\"></audio><p><br/></p>",
-      "index": 28,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Where will I teach my workshop this month?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) We just sent an e-mail to all instructors.</strong></p><p>(B) Five to seven months.</p><p>(C) Yes, it’s a beautiful building.</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3\"></audio><p><br/></p>",
-      "index": 29,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Why are we moving these sweaters to the back of the store?</p><p>(A) In the new shopping mall.</p><p>(B) Yes, they come in other colors.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Our spring merchandise is arriving soon.</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3\"></audio><p><br/></p>",
-      "index": 30,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you be interested in working on some of these contracts?</p><p>(A) Thank you for meeting me.</p><p>(B) A contact lens prescription.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I have very limited time.</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3\"></audio><p><br/></p>",
-      "index": 31,
+      "type": "PART_5",
+      "passages": "",
+      "index": 117,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3",
+      "description": "Employees of Belfore Electronics Ltd. are  ________ involved in community-assistance  programs.",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) active",
+        "(B) actively",
+        "(C) activate",
+        "(D) activity"
       ],
-      "explanation": "<p>What type of job are you looking for?</p><p>(A) No, at ten A.M.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I really like working with computers.</strong></p><p>(C) Just a resume is needed.</p>"
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần chọn trạng từ để bổ nghĩa vì có động từ to be “are” ở phía trước và động từ quá khứ “involved” phía sau.</p><p>(A) active (adj) tích cực</p><p>(B) actively (adv) (một cách) tích cực</p><p>(C) activate (v) hoạt hoá</p><p>(D) activity (n) hoạt động</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Các nhân viên của công ty Belfore Electronics đang <strong>TÍCH CỰC </strong>tham gia vào các chương trình hỗ trợ cộng đồng</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;involve (v) liên quan/tham gia</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 118,
+      "correct": 1,
+      "description": "The executives at Macalter Equipment  decided they would not ______ the contract  without major changes.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) renew",
+        "(B) consume",
+        "(C) identify",
+        "(D) resemble"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn động từ phù hợp về nghĩa</p><p>(A) renew (v) gia hạn</p><p>(B) consume (v) tiếp tục</p><p>(C) identify (v) xác định</p><p>(D) resemble (v) tương đồng</p><p><strong><u>Dịch nghĩa: </u></strong></p><p>Những người điều hành tại Macalter Equipment quyết định họ sẽ không <strong>gia hạn</strong> hợp đồng nếu không có những thay đổi lớn.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;executive (n) người điều hành/ban quản trị</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;major (adj) chính</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 119,
+      "correct": 3,
+      "description": "Wet suits are made with a ______ layer of  rubber that traps heat and keeps divers  warm.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) protect",
+        "(B) protects",
+        "(C) protective",
+        "(D) protectively"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền tính từ để bổ nghĩa vì có mạo từ bất định “a” phía trước và danh từ “layer” đằng sau.</p><p>(A) protect (v)</p><p>(C) protective (adj)</p><p>(D) protectively (adv)</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Bộ đồ lặn được làm bằng một lớp cao su <strong>bảo vệ</strong> giúp giữ nhiệt và giữ ấm cho thợ lặn.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wet suit (phr) đồ lặn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer (n) lớp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rubber (n) cao su</p><p>trap (v) giữ lại</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 120,
+      "correct": 4,
+      "description": "Newcamp Services managers will meet to discuss the proposed ______ of three smaller  branches into one large branch.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) security",
+        "(B) bracket",
+        "(C) connector",
+        "(D) merger"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn từ hợp nghĩa</p><p>(A) security (n) sự an toàn</p><p>(B) bracket (n) dấu ngoặc</p><p>(C) connector (n) bộ liên kết</p><p>(D) merger (n) sự sáp nhập</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Các nhà quản lý của Newcamp Services sẽ gặp nhau để thảo luận về đề xuất <strong>sáp nhập</strong> ba chi nhánh nhỏ hơn thành một chi nhánh lớn.</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 121,
+      "correct": 2,
+      "description": " At Yarzen Technology, clients' records are ______ and can only be accessed by a small  group of fund managers.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) confide",
+        "(B) confidential",
+        "(C) confidentially",
+        "(D) confidentiality"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Vì đứng đằng sau động từ to be “are” nên có thể điền tính từ hoặc danh từ. Trong 4 đáp án có B là tính từ và D là danh từ, tuy nhiên D không phù hợp với chủ ngữ “clients’ records” nên đáp án đúng là B.</p><p>(A) confide (v) thổ lộ</p><p>(B) confidential (adj) kín, mật</p><p>(C) confidentially (adv) (một cách) bí mật</p><p>(D) confidentiality (n) sự thầm kín</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Tại Yarzen Technology, hồ sơ của khách hàng được <strong>BẢO MẬT</strong> và chỉ có thể truy cập được bởi một nhóm nhỏ các nhà quản lý quỹ.</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 122,
+      "correct": 3,
+      "description": "The featured panel at the NHJ Medical Conference will discuss recent ______ in  online health-care services.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) memories",
+        "(B) varieties",
+        "(C) trends",
+        "(D) rehearsals"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn danh từ hợp nghĩa</p><p>(A) memories (n) kỷ niệm</p><p>(B) varieties (n) sự đa dạng</p><p>(C) trends (n) xu hướng</p><p>(D) rehearsals (n) sự diễn tập</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Nhóm chuyên gia tại Hội nghị Y tế NHJ sẽ thảo luận về <strong>CÁC</strong> <strong>xu hướng</strong> gần đây trong các dịch vụ chăm sóc sức khỏe trực tuyến.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel (n) nhóm chuyên gia</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 123,
+      "correct": 4,
+      "description": "All of Millville's restaurants _______ several  times a year by the city health department.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) inspect",
+        "(B) inspected",
+        "(C) are inspecting",
+        "(D) are inspected"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền động từ ở thể bị động vì chủ ngữ “All of Millville's restaurants” là sự vật không thể tự tiến hành hành động.</p><p>(A) inspect – hiện tại đơn</p><p>(B) inspected – quá khứ đơn</p><p>(C) are inspecting – hiện tại tiếp diễn</p><p>(D) are inspected – thể bị động thì hiện tại đơn</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Tất cả các nhà hàng của Millville <strong>được kiểm tra</strong> nhiều lần trong năm bởi sở y tế thành phố.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inspect (v) kiểm tra</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 124,
+      "correct": 2,
+      "description": "Sweet Sunlight Bakery has steadily built a _______ base of customers with its delicious cookies and cakes.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) brief",
+        "(B) loyal",
+        "(C) strict",
+        "(D) careful"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn từ hợp nghĩa</p><p>(A) brief (adj) ngắn gọn</p><p>(B) loyal (adj) trung thành</p><p>(C) strict (adj) khó tính</p><p>(D) careful (adj) cẩn thận</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Sweet Sunlight Bakery đã dần xây dựng được một lượng khách hàng <strong>trung thành</strong> với những chiếc bánh quy và bánh ngọt thơm ngon.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steadily (adv) dần, đều đặn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;base (n) cơ sở, nền móng</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 125,
+      "correct": 4,
+      "description": "According to financial analysts, ______ in  medical technology companies are  expected to increase in value.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) invest",
+        "(B) investing",
+        "(C) invested",
+        "(D) investments"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền danh từ làm chủ ngữ, đứng trước động từ “are expected” và được bổ nghĩa bởi cụm giới từ “in medical technology”.</p><p>(A) invest (v) đầu tư</p><p>(D) investments (n) khoản đầu tư, sự đầu tư</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Theo các nhà phân tích tài chính, <strong>các khoản đầu tư</strong> vào các công ty công nghệ y tế dự kiến sẽ tăng giá trị.</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 126,
+      "correct": 1,
+      "description": "The city's harbor is _______ to container ships  and fishing vessels of all sizes.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) accessible",
+        "(B) formal",
+        "(C) reasonable",
+        "(D) likely"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn từ hợp nghĩa</p><p>(A) accessible (adj) có thể tiếp cận</p><p>(B) formal (adj) chính thức</p><p>(C) reasonable (adj) hợp lý</p><p>(D) likely (adj) có khả năng</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Bến cảng của thành phố <strong>có thể</strong> <strong>tiếp cận</strong> bằng các tàu container và tàu cá đủ kích cỡ.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;harbor (n) bến cảng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fishing vessel tàu cá</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 127,
+      "correct": 2,
+      "description": "Maya's Dancewear expanded its advertising markets, and sales have _______ increased.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) controlling",
+        "(B) consequently",
+        "(C) beneath",
+        "(D) even though"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần điền trạng từ vì đứng giữa “have” và động từ p.p “increased”. Đáp án B và C đều là trạng từ, tuy nhiên C không hợp nghĩa nên đáp án đúng là B.</p><p>(A) controlling (v) kiểm soát</p><p>(B) consequently (adv) do đó</p><p>(C) beneath (adv) phía dưới</p><p>(D) even though (phr) mặc dù</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Maya's Dancewear đã mở rộng thị trường quảng cáo của mình và <strong>do đó</strong> doanh số bán hàng đã tăng lên.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expand (v) mở rộng</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 128,
+      "correct": 2,
+      "description": "Dobson Ice Cream will not introduce any  new flavors _______ the customer survey  results are analyzed.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) around",
+        "(B) until",
+        "(C) despite",
+        "(D) past"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn từ hợp nghĩa</p><p>(A) around (pre) xung quanh</p><p>(B) until (pre) cho đến khi</p><p>(C) despite (pre) mặc dù</p><p>(D) past (pre) qua</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Dobson Ice Cream sẽ không giới thiệu bất kỳ hương vị mới nào <strong>cho đến khi</strong> kết quả khảo sát khách hàng được phân tích.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flavor (n) hương vị</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;analyze (v) phân tích</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 129,
+      "correct": 3,
+      "description": " The renovated company gym _______ with  free weights and exercise machines.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) will equip",
+        "(B) to equip",
+        "(C) has been equipped",
+        "(D) is equipping"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Cần chọn động từ dạng bị động vì chủ ngữ “The renovated company gym” là sự vật không thể tự tiến hành hành động. Đáp án C có dạng.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has/ have + been + V-pp là dạng bị động thì hiện tại hoàn thành.</p><p><strong><u>Dịch nghĩa:</u></strong></p><p>Phòng tập thể dục đã được cải tạo của công ty <strong>đã được trang bị</strong> tạ miễn phí và máy tập thể dục.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free weight (phr) tạ miễn phí</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;equip (v) trang bị</p>"
+    },
+    {
+      "type": "PART_5",
+      "passages": "",
+      "index": 130,
+      "correct": 2,
+      "description": "______ driving their cars, workers who travel to the town center should use the bus lines.",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Because of",
+        "(B) Instead of",
+        "(C) Whenever",
+        "(D) Although"
+      ],
+      "explanation": "<p><strong><u>Giải thích: </u></strong>Chọn từ phù hợp về nghĩa</p><p>(A) Because of (pre) bởi vì</p><p>(B) Instead of (pre) mặc dù</p><p>(C) Whenever (conj) mỗi khi</p><p>(D) Although (conj) mặc dù</p><p><strong><u>Dịch nghĩa:</u></strong></p><p><strong>Thay vì</strong> lái ô tô, những người lao động đi đến trung tâm thị trấn nên sử dụng các tuyến xe buýt.</p>"
     }
   ]
 }

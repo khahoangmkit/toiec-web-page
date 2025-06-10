@@ -7,379 +7,906 @@
   "duration": "120",
   "questionsJson": [
     {
-      "type": "PART_2",
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 147-148</strong> refer to the following advertisement.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507346330.jpg\"/></p>",
+      "index": 147,
+      "correct": 1,
+      "description": "What is indicated about Harbis Stationery Store?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507346330.jpg"
+      ],
+      "answer": [
+        "(A) It provides materials for students.",
+        "(B) It has stores in multiple locations.",
+        "(C) lt is celebrating an anniversary.",
+        "(D) lt provides free shipping for online orders."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>stationery (n) văn phòng phẩm</li><li>clearance sale (phr) thanh lý</li><li>indicate (v) chỉ định</li><li>seasonal (adj) theo mùa, mùa vụ</li><li>preprint (adj) in sẵn</li><li>customizable (adj) tuỳ chỉnh, có thể tuỳ biến</li><li>supplies (n) vật tư</li></ul><p class=\"ql-align-justify\">147. Điều gì được chỉ ra về Cửa hàng văn phòng phẩm Harbis?</p><p class=\"ql-align-justify\">(A) Nó cung cấp tài liệu cho học sinh.</p><p class=\"ql-align-justify\">(B) Nó có cửa hàng ở nhiều địa điểm.</p><p class=\"ql-align-justify\">(C) Nó đang tổ chức lễ kỷ niệm.</p><p class=\"ql-align-justify\">(D) Nó cung cấp giao hàng miễn phí cho đơn đặt hàng trực tuyến.</p><p class=\"ql-align-justify\"><strong><u>Giải thích: </u></strong>Dựa vào mục 2 của quảng cáo</p><p class=\"ql-align-justify\">&nbsp;All school supplies 10% off</p><p class=\"ql-align-justify\">&nbsp;= Tất cả đồ dùng học tập giảm 10%</p><p class=\"ql-align-justify\">=&gt; Cửa hàng có bán đồ dùng học sinh.</p><p class=\"ql-align-justify\"><strong><u>Từ vựng: </u></strong></p><p class=\"ql-align-justify\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;materials (n) vật liệu</p><p class=\"ql-align-justify\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiple (adj) nhiều</p><p class=\"ql-align-justify\">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anniversary (n) ngày kỷ niệm</p><p class=\"ql-align-justify\"><strong><u>Paraphrasing</u>:</strong></p><p class=\"ql-align-justify\">school supplies = materials for students</p>"
+    },
+    {
+      "type": "PART_7",
       "passages": "",
-      "index": 7,
+      "index": 148,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_6_audio_1711939890399.Test_01-07.mp3",
+      "description": "What item is discounted by the greatest  percentage?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Box of ten cards",
+        "(B) Box of five invitations",
+        "(C) Wireless mouse",
+        "(D) Desk lamp"
       ],
-      "explanation": "<p>How old is this building?</p><p>(A) To ship some materials</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) About ten years old</strong></p><p>(C) Company offices, i think</p>"
+      "explanation": "<p>148. Mặt hàng nào được giảm giá nhiều nhất?</p><p>(A) Hộp mười thẻ</p><p>(B) Hộp năm thiệp mời.</p><p>(C) Chuột không dây</p><p>(D) Đèn bàn</p><p><strong><u>Giải thích: </u></strong></p><p>- Đáp án (A) Hộp 10 thẻ (Box of ten preprinted seasonal cards) giảm giá 25% (25% off)</p><p>- Đáp án (B) Hộp 5 thiệp mời (Box of five</p><p>customizable seasonal cards or invitations) giá giá 50% (50% off)</p><p>-&nbsp;Đáp án (C) Chuột không dây và (D) Đèn bàn, thuộc mục All school supplies được giảm 10% (10% off)</p><p>=&gt; Đáp án B được giảm giá nhiều nhất</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3\"></audio><p><br/></p>",
-      "index": 8,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_7_audio_1711940398316.Test_01-08.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Can you come to my jazz performance tonight?</p><p>(A) I'm sorry i was late for the meeting</p><p>(B) Mostly just local musicians</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Sure, I'll be there!</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3\"></audio><p><br/></p>",
-      "index": 9,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_8_audio_1711940419150.Test_01-09.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Which apartment submitted a work order?</p><p>(A) It's what you did for a living</p><p>(B) Submit your assignment here</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) It came from the tenants in B23</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3\"></audio><p><br/></p>",
-      "index": 10,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_9_audio_1711940660673.Test_01-10.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Will you contact the vendor about changing our delivery date?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Of course, I'll take care of it</strong></p><p>(B) An e-mail receipt</p><p>(C) Could I get change for a dollar?</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3\"></audio><p><br/></p>",
-      "index": 11,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_10_audio_1711941426473.Test_01-11.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Why was the maintenance worker here?</p><p>(A) No, he didn't</p><p>(B) From three o'clock until four</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Because a light needed to be fixed</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3\"></audio><p><br/></p>",
-      "index": 12,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_11_audio_1711941434022.Test_01-12.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Did management make a hiring decision yet?</p><p>(A) Put it on the highest shelft</p><p>(B) The personnel department</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, they chose Jacob Borgman</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3\"></audio><p><br/></p>",
-      "index": 13,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_12_audio_1711941440243.Test_01-13.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Do you want to eat here in our cafeteria or go out?</p><p>(A) He went there yesterday</p><p>(B) Well, maybe a sandwich</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Let's eat here</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3\"></audio><p><br/></p>",
-      "index": 14,
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 149-150</strong> refer to the following e-mail.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507402689.jpg\"/></p>",
+      "index": 149,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_13_audio_1711941447269.Test_01-14.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
+      "description": "What is the purpose of the e-mail?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507402689.jpg"
       ],
-      "explanation": "<p>Didn't you e-mail the employment contract to Mr. Patel yesterday?</p><p>(A) Yes, I would agree</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) No, I'll send it now</strong></p><p>(C) Check the emplyee manual</p>"
+      "answer": [
+        "(A) To inquire about leasing a vehicle",
+        "(B) To inform a customer of required car  maintenance",
+        "(C) To announce the release of a new car",
+        "(D) To register a used car for an extended  warranty"
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>lease (v) cho thuê</li><li>take possession of (phr) sở hữu</li><li>due (adj) đến hạn</li><li>maintenance (n) sự bảo trì</li><li>book an appointment (phr) đặt lịch hẹn</li></ul><p>149. Mục đích của e-mail là gì?</p><p>(A) Để hỏi về việc thuê một chiếc xe</p><p>(B) Để thông báo cho khách hàng về việc cần thiết bảo dưỡng ô tô</p><p>(C) Để thông báo về việc ra mắt một chiếc xe hơi mới</p><p>(D) Để đăng ký một chiếc ô tô đã qua sử dụng để được bảo hành mở rộng</p><p><strong><u>Giải thích: </u></strong>Dựa vào câu thứ 3 trong email:</p><p>Your car is now due for its required annual service and maintenance check.</p><p>= Xe của bạn hiện đã đến hạn kiểm tra bảo dưỡng và bảo trì yêu cầu hàng năm.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inquire (v) hỏi, thắc mắc</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extended (adj) mở rộng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;warranty (n) sự bảo hành</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3\"></audio><p><br/></p>",
-      "index": 15,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_14_audio_1711941452745.Test_01-15.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Our division's picnic is this Saturday, right?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) There's a lot of rain in the forecast</strong></p><p>(B) Sure, I like salad</p><p>(C) At the end of this corridor</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3\"></audio><p><br/></p>",
-      "index": 16,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_15_audio_1711941459365.Test_01-16.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Would you like coffee or tea?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Just water, please</strong></p><p>(B) For a few dollars more</p><p>(C) A fifteen-minute break</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3\"></audio><p><br/></p>",
-      "index": 17,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_16_audio_1711941464873.Test_01-17.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>We achieved our sales targets this month</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) That's excellent news!</strong></p><p>(B) A few times a day</p><p>(C) To the end of April</p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3\"></audio><p><br/></p>",
-      "index": 18,
+      "type": "PART_7",
+      "passages": "",
+      "index": 150,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_17_audio_1711941470490.Test_01-18.mp3",
+      "description": "What is indicated about Chen Construction?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) It performs the servicing of its company  vehicles.",
+        "(B) It has a new project beginning March 1.",
+        "(C) It provides leased cars to some  employees.",
+        "(D) It will soon begin a construction project  for Toshi Auto Group."
       ],
-      "explanation": "<p>How often do you travel for your job?</p><p>(A) It turned out well</p><p>(B) Yes, I did find one</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) About once a month</strong></p>"
+      "explanation": "<p>150. Điều gì được chỉ ra về Công ty xây dựng Chen?</p><p>(A) Nó thực hiện bảo dưỡng các phương tiện của công ty.</p><p>(B) Nó có một dự án mới bắt đầu từ ngày 1 tháng 3.</p><p>(C) Nó cung cấp xe ô tô thuê cho một số nhân viên.</p><p>(D) Nó sẽ sớm bắt đầu một dự án xây dựng cho Toshi Auto Group.</p><p><strong><u>Giải thích: </u></strong>Dựa vào câu thứ 1 trong email:</p><p>As you know, Toshi Auto Group handles all the service needs for cars leased by employees of Chen Construction.</p><p>= Như bạn đã biết, Tập đoàn ô tô Toshi xử lý tất cả các nhu cầu bảo dưỡng, sửa chữa đối với những chiếc xe được thuê bởi nhân viên của Công ty xây dựng Chen.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perform (v) thực hiện</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;servicing (n) sự bảo dưỡng</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3\"></audio><p><br/></p>",
-      "index": 19,
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 151-153</strong> refer to the following article.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507435813.jpg\"/></p>",
+      "index": 151,
+      "correct": 3,
+      "description": "What is the main purpose of the article?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507435813.jpg"
+      ],
+      "answer": [
+        "(A) To promote a new line of cookware",
+        "(B) To advertise an orchestra concert",
+        "(C) To announce a new series of books",
+        "(D) To provide a calendar of local events"
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>launch (v) tung ra, ra mắt</li><li>imprint (n) ấn phẩm</li><li>feature (v) có (điểm đặc biệt)</li><li>memoir (n) ký sự</li><li>uplifting (adj) cổ động</li><li>volume (n) quyển, tập</li><li>occasion (n) dịp</li><li>greeting (n) lời chào</li><li>card (n) thẻ, thiệp</li><li>complement (v) bổ sung</li><li>conductor (n) nhạc trưởng</li><li>composer (n) nhà soạn nhạc</li><li>release (v) phát hành</li><li>accomplishment (n) thành tựu</li><li>perspective (n) góc nhìn</li><li>be off to a good[great] start (phr) có một khởi đầu tốt</li><li>publication (n) ấn phẩm</li></ul><p>151. Mục đích chính của bài viết là gì?</p><p>(A) Để quảng bá một dòng dụng cụ nấu nướng mới</p><p>(B) Để quảng cáo buổi hòa nhạc của dàn nhạc</p><p>(C) Để thông báo một loạt sách mới</p><p>(D) Để cung cấp lịch các sự kiện địa phương</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 1, câu 1:</p><p>On Thursday, Tillford Press announced the launch of its new imprint, Tillford Exalt.</p><p>= Vào thứ Năm, Tillford Press đã công bố ra mắt ấn phẩm mới của mình, Tillford Exalt.</p><p><strong><u>Từ vựng: </u></strong></p><p>cookware (n) dụng cụ nấu nướng</p><p><strong><u>Paraphrasing: </u></strong></p><p>the launch of its new imprint = a new series of books</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 152,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_18_audio_1711941476528.Test_01-19.mp3",
+      "description": "What is planned for December?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) An awards ceremony",
+        "(B) The publication of a life story",
+        "(C) The release of a new album",
+        "(D) The launch of a celebrity's restaurant"
       ],
-      "explanation": "<p>We should hike the Wildflower Trail today</p><p>(A) This seat is available</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I didn't bring boots</strong></p><p>(C) At the visitors' center</p>"
+      "explanation": "<p>152. Kế hoạch cho tháng 12 là gì?</p><p>(A) Một lễ trao giải</p><p>(B) Việc xuất bản một câu chuyện cuộc đời</p><p>(C) Phát hành album mới</p><p>(D) Khai trương nhà hàng của người nổi tiếng</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 2, dòng 567</p><p>Ms. Lai's story of her life and career will be the first to be launched. It is set for release in December.</p><p>= Câu chuyện về cuộc đời và sự nghiệp của bà Lai sẽ là câu chuyện đầu tiên được ra mắt. Nó được thiết lập để phát hành vào tháng mười hai.</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3\"></audio><p><br/></p>",
-      "index": 20,
+      "type": "PART_7",
+      "passages": "",
+      "index": 153,
+      "correct": 4,
+      "description": "What does Frederick Bissett emphasize  about Tillford Exalt?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Its record-breaking sales",
+        "(B) Its roots in Manchester",
+        "(C) Its focus on fiction and poetry",
+        "(D) Its broad range of authors"
+      ],
+      "explanation": "<p>153. Frederick Bissett nhấn mạnh điều gì về Tillford Exalt?</p><p>(A) Doanh thu phá kỷ lục của nó</p><p>(B) Nguồn gốc của nó ở Manchester</p><p>(C) Nó tập trung vào tiểu thuyết và thơ ca</p><p>(D) Phạm vi tác giá rộng lớn của nó</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 3, dòng 456.</p><p>\"We wanted authors from a wide variety of cultural backgrounds, and we think we're off to a great start,\" he said.</p><p>= “Chúng tôi muốn các tác giả đến từ nhiều nguồn gốc văn hóa khác nhau, và chúng tôi nghĩ rằng chúng tôi đang có một khởi đầu tuyệt vời,” ông ấy nói.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emphasize (v) nhấn mạnh</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fiction (n) truyện viễn tưởng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poetry (n) thơ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a broad range of (phr) nhiều cái gì khác nhau</p><p><strong><u>Paraphrasing: </u></strong></p><p>authors from a wide variety of cultural backgrounds = Its broad range of authors</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 154-155 </strong>refer to the following text-message chain.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507489324.jpg\"/></p>",
+      "index": 154,
+      "correct": 4,
+      "description": " What problem does Mr. Skagen mention?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507489324.jpg"
+      ],
+      "answer": [
+        "(A) Some new employees are absent.",
+        "(B) Some boxes are incorrectly labeled.",
+        "(C) A package delivery is delayed.",
+        "(D) An access door is malfunctioning."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>warehouse (n) nhà kho</li><li>trainee (n) thực tập sinh</li><li>loading dock (phr) bến chất hàng</li><li>act up (phr) không hoạt động bình thường</li><li>label (n) nhãn mác – (v) dán nhãn</li><li>operation (n) hoạt động, công việc</li></ul><p>154. Ông Skagen đề cập đến vấn đề gì?</p><p>(A) Một số nhân viên mới vắng mặt.</p><p>(B) Một số hộp được dán nhãn sai.</p><p>(C) Một gói giao hàng bị trì hoãn.</p><p>(D) Một cửa ra vào bị trục trặc.</p><p><strong><u>Giải thích: </u></strong>Dựa vào tin nhắn đầu tiên của ông Skagen lúc 5:58 AM (cuối câu):</p><p>l noticed the power door at Loading Dock B is acting up</p><p>= Tôi nhận thấy cửa điện tại cảng chất hàng B không hoạt động bình thường</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;absent (adj) vắng mặt</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;incorrectly (adv) (một cách) sai</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;malfunction (v) trục trặc</p><p><strong><u>Paraphrasing: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is acting up = is malfunctioning</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 155,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_19_audio_1711941763741.Test_01-20.mp3",
+      "description": "At 9:02A.M., what does Mr. Skagen most  likely mean when he writes, \"Yes, that  works\"?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) An electrician has arrived at a work  site.",
+        "(B) Some equipment is operating smoothly.",
+        "(C) Trainees can help with some  shipments.",
+        "(D) Ms. Sadauskas is well suited for her  job."
       ],
-      "explanation": "<p>You've booked a hotel in London, haven't you?</p><p>(A) Very enjoyable, thanks</p><p>(B) He usually takes the train</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Yes, I made a reservation last week</strong></p>"
+      "explanation": "<p>155. Lúc 9:02 sáng, ông Skagen rất có thể có ý gì khi viết, \"Vâng, điều đó hiệu quả\"?</p><p>(A) Một thợ điện đã đến nơi làm việc.</p><p>(B) Một số thiết bị đang hoạt động trơn tru.</p><p>(C) Thực tập sinh có thể giúp đỡ một số chuyến hàng.</p><p>(D) Cô Sadauskas rất phù hợp với công việc của cô ấy.</p><p><strong><u>Giải thích: </u></strong>Tin nhắn lúc 9:00 AM của Brenda đề nghị ông Skagen:</p><p>Why don't you bring your trainees to my area? You can teach them … this morning’s shipment</p><p>= Sao bạn không đưa các thực tập sinh của bạn đến khu vực của tôi. Bạn có thể dạy họ … việc gửi hàng sáng nay</p><p>Nên tin nhắn lúc 9:02 của ông Skagen để đồng ý lời đề nghị này để các thực tập sinh hỗ trợ việc chuyển hàng.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;electrician (n) thợ điện</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smoothly (adv) trơn tru</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suited (adj) phù hợp</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3\"></audio><p><br/></p>",
-      "index": 21,
-      "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_20_audio_1711941894954.Test_01-21.mp3",
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 156-157</strong> refer to the following form.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507515182.jpg\"/></p>",
+      "index": 156,
+      "correct": 3,
+      "description": "Why was the form submitted?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507515182.jpg"
+      ],
+      "answer": [
+        "(A) An image is not displaying clearly.",
+        "(B) A projector needs to be set up.",
+        "(C) Audio is not functioning properly.",
+        "(D) A microphone needs to be repaired."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>field (n) mục, trường (dữ liệu)</li><li>requester (n) người yêu cầu</li><li>repair (v) sửa chữa</li><li>installation (n) sự lắp đặt</li><li>description (n) mô tả</li><li>demonstration (n) sự trình diễn, giới thiệu</li></ul><p>156. Tại sao biểu mẫu được gửi?</p><p>(A) Hình ảnh không hiển thị rõ ràng.</p><p>(B) Một máy chiếu cần được thiết lập.</p><p>(C) Âm thanh không hoạt động bình thường.</p><p>(D) Một mic cần được sửa chữa.</p><p><strong><u>Giải thích: </u></strong>Dựa vào mục Description of Request (Mô tả yêu cầu), câu 1:</p><p>There is a problem with the television audio.</p><p>= Có một vấn đề với âm thanh TV.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function (v) hoạt động</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;properly (adv) chính xác</p><p><strong><u>Paraphrasing: </u></strong></p><p>There is a problem = is not functioning properly</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 157,
+      "correct": 4,
+      "description": " What is Ms. Deckow planning to do next  week?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Visit a Client site",
+        "(B) Deliver a product",
+        "(C) Create an online video",
+        "(D) Give a presentation"
       ],
-      "explanation": "<p>Are there any tickets left for tonight's concert?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) It's sold out</strong></p><p>(B) He's a concert violinist</p><p>(C) They already left</p>"
+      "explanation": "<p>157. Cô Deckow định làm gì vào tuần tới?</p><p>(A) Ghé thăm địa điểm của khách hàng</p><p>(B) Cung cấp một sản phẩm</p><p>(C) Tạo video trực tuyến</p><p>(D) Thuyết trình</p><p><strong><u>Giải thích: </u></strong>Dựa vào mục Description of Request, câu 4:</p><p>I'm supposed to deliver a product demonstration … next Monday</p><p>= Tôi phải thực hiện bài giới thiệu sản phẩm… vào thứ Hai tới</p><p><strong><u>Paraphrasing: </u></strong></p><p>deliver a product demonstration = Give a presentation</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3\"></audio><p><br/></p>",
-      "index": 22,
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 158-161</strong> refer to the following text-message chain.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507536248.jpg\"/></p>",
+      "index": 158,
+      "correct": 3,
+      "description": "At what time will the executive board  meeting begin?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507536248.jpg"
+      ],
+      "answer": [
+        "(A) 2:00P.M.",
+        "(B) 2:15P.M.",
+        "(C) 2:30P.M.",
+        "(D) 3:00P.M."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>executive (adj) điều hành</li><li>essential (adj) quan trọng</li><li>quarterly (adv) hàng quý</li><li>commit to (phr) cam kết</li><li>clarify (v) làm rõ</li><li>budget (n) ngân sách</li></ul><p>158. Cuộc họp ban điều hành sẽ bắt đầu lúc mấy giờ?</p><p>(A) 2 giờ chiều</p><p>(B) 2:15 chiều</p><p>(C) 2:30 chiều.</p><p>(D) 3:00 chiều.</p><p><strong><u>Giải thích: </u></strong>Tin nhắn của Stef Goldberg (11:35 A.M.), câu 2:</p><p>I need to be at a different meeting at 2:30.</p><p>= Tôi cần ở một cuộc họp khác lúc 2:30</p><p>- Ella Glatt trả lời lúc (11:36 A.M.)</p><p>Oh, right. I forgot you were going to the executive board meeting.</p><p>= Ô đúng rồi. Tôi quên mất bạn đang đi họp ban điều hành.</p><p>Ở đây “a different meeting” ám chỉ “executive board meeting”</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 159,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_21_audio_1711942111875.Test_01-22.mp3",
+      "description": "In what area does Mr. lverman most likely  work?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Marketing",
+        "(B) Finance",
+        "(C) Advertising",
+        "(D) Executive management"
       ],
-      "explanation": "<p>Haven't you used this software before?</p><p>(A) Can I take your order?</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I haven't had the chance</strong></p><p>(C) About 40 dollars</p>"
+      "explanation": "<p>159. Ông Leverman có thể làm việc trong lĩnh vực nào?</p><p>(A) Tiếp thị</p><p>(B) Tài chính</p><p>(C) Quảng cáo</p><p>(D) Quản lý điều hành</p><p><strong><u>Giải thích: </u></strong>Ella Glatt (11:37 A.M.) đề nghị:</p><p>it would be helpful to have someone from the <strong>finance</strong> department there</p><p>= sẽ rất hữu ích nếu có ai đó từ bộ phận <strong>tài chính</strong> ở đó</p><p>Bill lverman (11:38 A.M.) trả lời để từ chối Ella do bận rộn:</p><p>The quarterly reports just came in, and <strong>Daniel, Stef, and I</strong> need to review them by the end of the day.&nbsp;</p><p>= Các báo cáo hàng quý vừa được gửi đến, <strong>Daniel, Stef và tôi</strong> cần xem lại chúng vào cuối ngày.</p><p>=&gt; Daniel, Stef và<strong> </strong>Bill cùng ở bộ phận tài chính</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3\"></audio><p><br/></p>",
-      "index": 23,
+      "type": "PART_7",
+      "passages": "",
+      "index": 160,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_22_audio_1711942205839.Test_01-23.mp3",
+      "description": "Why does Ms. Glatt want a colleague to  attend a meeting?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) To summarize a previous meeting",
+        "(B) To explain a promotional campaign",
+        "(C) To provide information about a budget",
+        "(D) To review recently approved documents"
       ],
-      "explanation": "<p>When is the new blender going to be released?</p><p>(A) Only with fruits and vegetables</p><p>(B) In the kitchen cabinet</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) The prototype is still being tested</strong></p>"
+      "explanation": "<p>160. Tại sao cô Glatt muốn một đồng nghiệp tham gia cuộc họp?</p><p>(A) Để tóm tắt cuộc họp trước</p><p>(B) Để giải thích một chiến dịch quảng cáo</p><p>(C) Để cung cấp thông tin về ngân sách</p><p>(D) Để xem xét các tài liệu đã được phê duyệt gần đây</p><p><strong><u>Giải thích: </u></strong>Tinh nhắn của Ella Glatt (11:43 A.M.) (tin nhắn cuối cùng)</p><p>We just need one of you to <strong>clarify</strong> <strong>a few quick points about the budget</strong> for the next advertising campaign.</p><p>= Chúng tôi chỉ cần một trong số các bạn <strong>làm rõ</strong> <strong>một số điểm về</strong> <strong>ngân sách</strong> cho chiến dịch quảng cáo tiếp theo.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;summarize (v) tóm tắt</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;previous (adv) trước</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;promotional (adj) quảng cáo</p><p><strong><u>Paraphrasing: </u></strong></p><p>clarify a few quick points = provide information</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3\"></audio><p><br/></p>",
-      "index": 24,
+      "type": "PART_7",
+      "passages": "",
+      "index": 161,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_23_audio_1711942376941.Test_01-24.mp3",
+      "description": "At 11 :43 A.M., what does Ms. Glatt most  likely mean when she writes, \"Sounds  great\"?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) She accepts Mr. Seidal's offer.",
+        "(B) She agrees that Mr. lverman should  attend the meeting at 3:00 P.M.",
+        "(C) She is pleased with the proposed  budget.",
+        "(D) She is happy that a project has been  completed."
       ],
-      "explanation": "<p>Who's picking up our clients at the airport?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) They decided to drive</strong></p><p>(B) At terminal 2</p><p>(C) It's a marketing position</p>"
+      "explanation": "<p>161. Lúc 11:43 sáng, cô Glatt rất có thể có ý gì khi viết, \"Nghe thật tuyệt\"?</p><p>(A) Cô ấy chấp nhận lời đề nghị của ông Seidal.</p><p>(B) Cô ấy đồng ý rằng ông leverman nên tham dự cuộc họp lúc 3:00 chiều.</p><p>(C) Cô ấy hài lòng với ngân sách được đề xuất.</p><p>(D) Cô ấy rất vui vì một dự án đã được hoàn thành.</p><p><strong><u>Giải thích: </u></strong>Tin nhắn 11:43 A.M của Ms. Glatt để trả lời tin nhắn của Daniel Seidal (11:41 A.M.)</p><p>I could come from 2:00 to 2:15. That's all can commit to. = Tôi có thể đến từ 2:00 đến 2:15. Đó là tất cả những gì có thể cam kết.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accept (v) chấp nhận</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;complete (v) hoàn thành</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3\"></audio><p><br/></p>",
-      "index": 25,
-      "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_24_audio_1711942475735.Test_01-25.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
-      ],
-      "explanation": "<p>Where are the red roses that came in this morning?</p><p>(A) About three liters of water</p><p>(B) No, I didn't check out the sale</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I needed some for a large bouquet</strong></p>"
-    },
-    {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3\"></audio><p><br/></p>",
-      "index": 26,
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 162-165 </strong>refer to the following e-mail.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689507559455.jpg\"/></p>",
+      "index": 162,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_25_audio_1711942481494.Test_01-26.mp3",
-      "imgLink": [],
-      "answer": [
-        "A",
-        "B",
-        "C"
+      "description": " What does Ms. McFarland mention about  Mr. Wilkins?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689507559455.jpg"
       ],
-      "explanation": "<p>This film has been nominated for several awards</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) Why don't we go see it?</strong></p><p>(B) After the annoucement</p><p>(C) He made a great speech</p>"
+      "answer": [
+        "(A) He informed her of a job opening.",
+        "(B) He will require a professional reference.",
+        "(C) He would make a good business  partner.",
+        "(D) He is considering resigning from his  position."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>coordinator (n) điều phối viên</li><li>degree (n) bằng cấp</li><li>business (n) việc kinh doanh</li><li>administration (n) sự quản lý</li><li>organizational (adj) (thuộc) tổ chức</li><li>enable (v) cho phép, làm cho có khả năng</li><li>coordinate (v) phối hợp, điều phối</li><li>simultaneously (adv) đồng thời</li><li>convey (n) truyền đạt</li><li>phase (n) giai đoạn</li><li>afford (v) cho = give, provide</li><li>ample (adj) rộng, phong phú</li><li>sustainable (adj) có thể chịu đựng</li><li>housing project (phr) dự án nhà ở</li><li>particularly (adv) đặc biệt</li><li>relevant (adj) liên quan</li><li>geographically (adv) (về mặt) địa lý</li><li>diverse (n) đa dạng</li></ul><p>162. Bà McFarland đề cập gì về ông Wilkins?</p><p>(A) Anh ấy thông báo cho cô ấy về một công việc đang tuyển dụng.</p><p>(B) Anh ấy sẽ yêu cầu một tài liệu tham khảo chuyên nghiệp.</p><p>(C) Anh ấy sẽ là một đối tác kinh doanh tốt.</p><p>(D) Anh ấy đang xem xét từ chức.</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 1, câu 1:</p><p>My friend Josiah Wilkins told me that you are seeking a project coordinator for your company.</p><p>= Bạn tôi Josiah Wilkins nói với tôi rằng ông đang tìm kiếm một điều phối viên dự án cho công ty của ông.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference (n) tài liệu tham khảo</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resign (v) từ chức</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3\"></audio><p><br/></p>",
-      "index": 27,
+      "type": "PART_7",
+      "passages": "",
+      "index": 163,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_26_audio_1711942486016.Test_01-27.mp3",
+      "description": "The word \"convey\" in paragraph 1, line 5, is  closest in meaning to",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) transport",
+        "(B) communicate",
+        "(C) recommend",
+        "(D) adapt"
       ],
-      "explanation": "<p>Who's interested in starting a car pool program?</p><p>(A) Thanks, but I can't swim</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) Clara's already organizing one</strong></p><p>(C) It’s a very interesting article.</p>"
+      "explanation": "<p>163. Từ \"convey\" trong đoạn 1, dòng 5, gần nghĩa nhất với</p><p>(A) vận chuyển</p><p>(B) giao tiếp</p><p>(C) đề nghị</p><p>(D) thích nghi</p><p><strong><u>Giải thích: </u></strong>Từ “covey” trong bài được hiểu với nghĩa là truyền đạt:</p><p>I can <strong>convey</strong> expectations clearly to team members = Tôi có thể <strong>truyền đạt</strong> rõ ràng mong muốn đến các thành viên trông đội</p><p>=&gt; Gần nghĩa nhất với (B) communicate (v) giao tiếp</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3\"></audio><p><br/></p>",
-      "index": 28,
+      "type": "PART_7",
+      "passages": "",
+      "index": 164,
+      "correct": 4,
+      "description": "Why does Ms. McFarland want to leave her  current position?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) She wants a higher salary for her  efforts.",
+        "(B) She wants to work with a more  experienced team.",
+        "(C) She wants more opportunities for  advancement.",
+        "(D) She wants a role that inspires her  more."
+      ],
+      "explanation": "<p>164. Tại sao cô McFarland muốn rời vị trí hiện tại?</p><p>(A) Cô ấy muốn một mức lương cao hơn cho những nỗ lực của mình.</p><p>(B) Cô ấy muốn làm việc với một nhóm có kinh nghiệm hơn.</p><p>(C) Cô ấy muốn có nhiều cơ hội thăng tiến hơn.</p><p>(D) Cô ấy muốn một vai diễn truyền cảm hứng cho cô ấy nhiều hơn.</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 2 câu 2:</p><p>While I enjoy the kind of work I do, it has become clear to me that <strong>I need motivation from a strong mission</strong>. = Mặc dù tôi thích loại công việc mình làm, nhưng tôi thấy rõ rằng <strong>tôi cần động lực từ một sứ mệnh mạnh mẽ</strong>.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;advancement (n) sự thăng tiến</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inspire (v) truyền cảm hứng</p><p><strong><u>Paraphrasing: </u></strong></p><p>need motivation = inspires her more&nbsp;</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 165,
+      "correct": 4,
+      "description": "Why does Ms. McFarland mention her  travels?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) To request a placement in a particular  country",
+        "(B) To discuss how she came to acquire  strategic industry contacts",
+        "(C) To explain how she became aware of  certain world issues",
+        "(D) To emphasize her experience with  people of different backgrounds"
+      ],
+      "explanation": "<p>165. Tại sao cô McFarland lại đề cập đến những chuyến du lịch của mình?</p><p>(A) Để yêu cầu một sự sắp xếp ở một quốc gia cụ thể</p><p>(B) Để thảo luận về cách cô ấy có được các mối quan hệ chiến lược trong ngành</p><p>(C) Để giải thích làm thế nào cô ấy nhận thức được một số vấn đề thế giới</p><p>(D) Để nhấn mạnh trải nghiệm của cô ấy với những người có hoàn cảnh khác nhau</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 3 câu 1,2:</p><p>I have spent many months abroad in various countries throughout Asia and the Middle East. This seems particularly relevant to mention, as <strong>I am comfortable leading geographically and culturally diverse teams</strong>. = Tôi đã dành nhiều tháng ở nước ngoài tại nhiều quốc gia khác nhau trên khắp Châu Á và Trung Đông. Điều này có vẻ đặc biệt phù hợp để đề cập, vì <strong>tôi cảm thấy thoải mái khi lãnh đạo các nhóm đa dạng về mặt địa lý và văn hóa.</strong></p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placement (n) sự sắp xếp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;particular (adj) cụ thể</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acquire (v) có được</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strategic (adj) (thuộc) chiến lược</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emphasize (v) nhấn mạnh</p><p><strong><u>Paraphrasing: </u></strong></p><p>geographically and culturally diverse teams = people of different backgrounds</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 166-168</strong> refer to the following Web page.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689518866694.jpg\"/></p>",
+      "index": 166,
+      "correct": 3,
+      "description": " What does Trexdale Supply make?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689518866694.jpg"
+      ],
+      "answer": [
+        "(A) Medical supplies",
+        "(B) Farming equipment",
+        "(C) Cabinets and furniture",
+        "(D) Glass laboratory equipment"
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>specialize in (phr) chuyên, đặc biệt trong</li><li>aboratory (n) phòng thí nghiệm</li><li>a range of (phr) nhiều loại, một loạt các</li><li>assembled (adj) đã lắp ráp</li><li>workstation (n) máy tính làm việc</li><li>exclusively (adv) chỉ riêng</li><li>configuration (n) cấu hình</li><li>application (n) ứng dụng</li><li>start-up (n) khởi nghiệp</li><li>specialist (n) chuyên gia</li><li>evaluate (v) đánh giá</li><li>specific (adj) cụ thể</li><li>suitable (adj) phù hợp</li><li>biofuel (n) nhiên liệu sinh học</li><li>expert (n) chuyên gia</li><li>layout (n) bố trí</li><li>maximize (v) làm tối đa</li><li>realize (v) đạt được (realize your dream: đạt được ước mơ của bạn)</li><li>substantial (adj) đáng kể</li><li>reduce (v) làm giảm</li><li>usage (n) cách sử dụng&nbsp;</li></ul><p>166. Trexdale Supply làm cái gì?</p><p>(A) Vật tư y tế</p><p>(B) Thiết bị canh tác</p><p>(C) Tủ và đồ nội thất</p><p>(D) Thiết bị thí nghiệm thủy tinh</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 1, câu 2:</p><p>We provide a range of fully assembled <strong>cabinets, workstations, benches, and more</strong></p><p>= Chúng tôi cung cấp nhiều loại<strong> tủ, máy tính làm việc, ghế dài đã được lắp ráp hoàn chỉnh, và hơn nữa</strong></p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 167,
       "correct": 1,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_27_audio_1711942490999.Test_01-28.mp3",
+      "description": "What did Trexdale Supply do in a recent  project?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) It reorganized a client's laboratory.",
+        "(B) It converted its vehicles to use biofuels.",
+        "(C) It expanded staffing at its production  facility.",
+        "(D) It helped a client organize a trade show."
       ],
-      "explanation": "<p>Where will I teach my workshop this month?</p><p><strong style=\"color: rgb(230, 0, 0);\">(A) We just sent an e-mail to all instructors.</strong></p><p>(B) Five to seven months.</p><p>(C) Yes, it’s a beautiful building.</p>"
+      "explanation": "<p>167. Trexdale Supply đã làm gì trong một dự án gần đây?</p><p>(A) Nó đã tổ chức lại phòng thí nghiệm của khách hàng.</p><p>(B) Nó đã chuyển đổi phương tiện của mình sang sử dụng nhiên liệu sinh học.</p><p>(C) Nó mở rộng nhân sự tại cơ sở sản xuất của mình.</p><p>(D) Nó đã giúp một khách hàng tổ chức một triển lãm thương mại.</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 2, câu 3:</p><p>Recently, for example, we were chosen … to provide expert help in <strong>changing the layout of a research laboratory</strong> to maximize available space.</p><p>= Ví dụ, gần đây, chúng tôi đã được chọn… để cung cấp sự trợ giúp của chuyên gia trong việc <strong>thay đổi cách bố trí của phòng thí nghiệm</strong> để tối đa hóa không gian có sẵn.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reorganize (v) tổ chức lại</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;convert (v) chuyển đổi</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expand (v) mở rộng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;staffing (n) nhân sự</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trade show (phr) triển lãm thương mại</p><p><strong><u>Paraphrasing: </u></strong></p><p>changing the layout = reorganized</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3\"></audio><p><br/></p>",
-      "index": 29,
+      "type": "PART_7",
+      "passages": "",
+      "index": 168,
+      "correct": 4,
+      "description": " What method of communicating with  Trexdale Supply is mentioned?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) By e-mail",
+        "(B) By phone",
+        "(C) By instant message",
+        "(D) By an online form"
+      ],
+      "explanation": "<p>168. Phương thức giao tiếp nào với Trexdale Supply được đề cập?</p><p>(A) Bằng e-mail</p><p>(B) Qua điện thoại</p><p>(C) Bằng tin nhắn nhanh</p><p>(D) Bằng một biểu mẫu trực tuyến</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 3:</p><p>Please visit the \"Lab Planning\" section of this <strong>Web site</strong> ... There, you can fill out <strong>an interest form</strong> to contact one of our consultants about your next project. = Vui lòng truy cập phần \"Lập kế hoạch phòng thí nghiệm\" của <strong>trang Web</strong> này... Ở đó, bạn có thể điền vào <strong>biểu mẫu quan tâm</strong> để liên hệ với một trong những chuyên gia tư vấn của chúng tôi về dự án tiếp theo của bạn.</p><p><strong><u>Từ vựng: </u></strong></p><p>instant (adj) ngay, nhanh</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 169-171 </strong>refer to the following job advertisement.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689518892311.jpg\"/></p>",
+      "index": 169,
+      "correct": 1,
+      "description": " What work experience would best qualify a  candidate for the position?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689518892311.jpg"
+      ],
+      "answer": [
+        "(A) Cook",
+        "(B) Cashier",
+        "(C) Interior designer",
+        "(D) Event planner"
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>demonstrator (n) người thuyết minh</li><li>outgoing (adj) dễ gần</li><li>enthusiastic (adj) say mê</li><li>promote (v) quảng bá</li><li>merchandise (n) hàng hoá</li><li>demonstrate (v) trình diễn</li><li>kitchen appliance (phr) thiết bị nhà bếp</li><li>grocery store (phr) tiệm tạp hoá</li><li>venue (n) địa điểm</li><li>familiar with (phr) quen thuộc với</li><li>consumer (n) người tiêu dùng</li><li>candidate (n) ứng viên</li><li>food handler (phr) người/thiết bị xử lý thực phẩm</li><li>certificate (n) chứng chỉ</li></ul><p>169. Kinh nghiệm làm việc nào sẽ giúp ứng viên đủ điều kiện tốt nhất cho vị trí này?</p><p>(A) Đầu bếp</p><p>(B) Thu ngân</p><p>(C) Nhà thiết kế nội thất</p><p>(D) Người lập kế hoạch sự kiện</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 2, câu 4:</p><p>Because many of the demonstrations require working with food, candidates must have a Professional Food Handler certificate.</p><p>= Vì nhiều phần trình diễn yêu cầu phải làm việc với thực phẩm nên các ứng viên phải có chứng chỉ Xử lý Thực phẩm Chuyên nghiệp.</p><p>=&gt; Đầu bếp có kinh nghiệm làm việc với thực phẩm</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 170,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_28_audio_1711942495590.Test_01-29.mp3",
+      "description": "According to the advertisement, what  should people interested in applying do  next?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) Respond to a survey",
+        "(B) Arrange for an interview",
+        "(C) Submit a recording",
+        "(D) Provide references"
       ],
-      "explanation": "<p>Why are we moving these sweaters to the back of the store?</p><p>(A) In the new shopping mall.</p><p>(B) Yes, they come in other colors.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) Our spring merchandise is arriving soon.</strong></p>"
+      "explanation": "<p>170. Theo quảng cáo thì những người quan tâm đến việc ứng tuyển nên làm gì tiếp theo?</p><p>(A) Trả lời một cuộc khảo sát</p><p>(B) Sắp xếp cho một cuộc phỏng vấn</p><p>(C) Gửi bản ghi âm</p><p>(D) Cung cấp thư giới thiệu</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 3:</p><p>To apply, <strong>upload a video</strong> … at www.bbdstaffing.com/ applications.</p><p>= Để đăng ký, <strong>hãy tải lên video</strong> … tại www.bbdstaffing.com/applications.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrange for (phr) sắp xếp cho</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference (n) thư, người giới thiệu</p><p><strong><u>Paraphrasing: </u></strong></p><p>upload a video = submit a recording</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3\"></audio><p><br/></p>",
-      "index": 30,
+      "type": "PART_7",
+      "passages": "",
+      "index": 171,
       "correct": 3,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_29_audio_1711942500400.Test_01-30.mp3",
+      "description": " In which of the positions marked [1 ], [2], [3],  and [4] does the following sentence best  belong?  \"Many of the world's best-known brands rely on our product demonstrators to generate positive impressions of their products.\"",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) [1]",
+        "(B) [2]",
+        "(C) [3]",
+        "(D) [4]"
       ],
-      "explanation": "<p>Would you be interested in working on some of these contracts?</p><p>(A) Thank you for meeting me.</p><p>(B) A contact lens prescription.</p><p><strong style=\"color: rgb(230, 0, 0);\">(C) I have very limited time.</strong></p>"
+      "explanation": "<p>171. Trong các vị trí được đánh dấu [1], [2], [3] và [4], câu sau đây đúng nhất ở vị trí nào?</p><p>\"Nhiều thương hiệu nổi tiếng nhất thế giới dựa vào những người trình diễn sản phẩm của chúng tôi để tạo ấn tượng tích cực về sản phẩm của họ.\"</p><p><strong><u>Giải thích: </u></strong>Vị trí [3] là phù hợp nhất vì: Câu ngay phía trước đề cập BBF đang tuyển người giới thiệu sản phẩm (BBD Staffing is seeking to hire in-store product …to shoppers.), đến câu cần điền phía trên giới thiệu vị thế của công ty được nhiều khách hàng tin tưởng, từ đó thu hút ứng viên nếu trở thành thành viên của họ sẽ có nhiều cơ hội việc làm (As a member of our team, you will demonstrate … and other retail venues.)</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;generate (v) tạo ra</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;impression (n) ấn tượng</p>"
     },
     {
-      "type": "PART_2",
-      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3\"></audio><p><br/></p>",
-      "index": 31,
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 172-175 </strong>refer to the following article.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689518916486.jpg\"/></p>",
+      "index": 172,
       "correct": 2,
-      "description": null,
-      "audioLink": "/data/ets_2024_test_1/audio/question_30_audio_1711942505341.Test_01-31.mp3",
+      "description": "What is the purpose of the article?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689518916486.jpg"
+      ],
+      "answer": [
+        "(A) To promote a technology show",
+        "(B) To introduce a product",
+        "(C) To interview smartphone users",
+        "(D) To announce a recall of a device"
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>unveil (v) tiết lộ</li><li>eager (adj) háo hức</li><li>reception (n) sự đón nhận</li><li>storage (n) dung lượng</li><li>stylus pen (n) bút cảm ứng</li><li>hit the shelves (phr) lên kệ (có mặt tại cửa hàng/có thể mua)</li><li>predecessor (n) người tiền nhiệm</li><li>resolution (n) độ phân giải</li><li>add-on (n) phụ kiện</li><li>respectively (adv) (một cách) tương ứng</li><li>&nbsp;dissuade (v) ngăn cản</li><li>game changer (n) người thay đổi cuộc chơi</li><li>in terms of (phr) về mặt</li><li>sleek (adj) mượt mà</li><li>functionality (n) chức năng</li><li>drawback (n) hạn chế</li><li>prior (adj) trước</li><li>adapt (v) điều chỉnh</li><li>accordingly (adv) sao cho phù hợp</li><li>similarity (n) điểm tương đồng</li><li>charger (n) bộ sạc</li><li>element (n) yếu tố</li><li>overload (n) sự quá tải</li><li>in circulation (phr) đang lưu hành (trong lưu thông)</li></ul><p>172. Mục đích của bài viết là gì?</p><p>(A) Để quảng bá một triển lãm công nghệ</p><p>(B) Để giới thiệu một sản phẩm</p><p>(C) Để phỏng vấn người dùng điện thoại thông minh</p><p>(D) Để thông báo thu hồi thiết bị</p><p><strong><u>Giải thích: </u></strong>Dựa vào:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiêu đề: Gorman Unveils Newest Smartphone Model = Gorman tiết lộ mẫu điện thoại thông minh mới nhất</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đoạn 1: “Gorman Mobile unveiled its newest smartphone….8K-resolution filming capability.”</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đoạn 1 đã giới thiệu Gorman ra mắt sản phẩm mới, ngày lên kệ và các tính năng của sản phẩm.</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 173,
+      "correct": 3,
+      "description": "How much do the Gorman Pro Phone 4  wireless headphones cost?",
+      "audioLink": null,
       "imgLink": [],
       "answer": [
-        "A",
-        "B",
-        "C"
+        "(A) £39",
+        "(B) £59",
+        "(C) £79",
+        "(D) £100"
       ],
-      "explanation": "<p>What type of job are you looking for?</p><p>(A) No, at ten A.M.</p><p><strong style=\"color: rgb(230, 0, 0);\">(B) I really like working with computers.</strong></p><p>(C) Just a resume is needed.</p>"
+      "explanation": "<p>173. Tai nghe không dây Gorman Pro Phone 4 giá bao nhiêu?</p><p>(A) £39</p><p>(B) £59</p><p>(C) £79</p><p>(Đ) £100</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 2, câu 2:</p><p>Add-ons, such as the stylus pen, protective case, and <strong>wireless headphones</strong>, cost an additional £39, £59, and <strong>£79</strong>, <strong>respectively</strong>.</p><p>= Các phụ kiện, chẳng hạn như bút cảm ứng, vỏ bảo vệ và <strong>tai nghe không dây</strong>, tốn thêm £39, £59, and <strong>£79, một cách tương ứng.</strong></p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 174,
+      "correct": 4,
+      "description": "What does the Pro Phone 4 have in  common with prior models?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) The screen size",
+        "(B) The camera resolution",
+        "(C) The price",
+        "(D) The charger"
+      ],
+      "explanation": "<p>174. Điện thoại Pro 4 có điểm gì giống với các mẫu trước đây?</p><p>(A) Kích thước màn hình</p><p>(B) Độ phân giải máy ảnh</p><p>(C) Giá</p><p>(D) Bộ sạc</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 5, câu 1:</p><p>One similarity that the Pro Phone 4 has with previous models is <strong>the charger</strong>.</p><p>= Một điểm tương đồng mà Pro Phone 4 có với các mẫu trước đó là <strong>bộ sạc</strong>.</p><p><strong><u>Từ vựng: </u></strong></p><p>in common with (phr) có điểm chung với</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 175,
+      "correct": 1,
+      "description": "In which of the positions marked [1], [2], [3],  and [4] does the following sentence best  belong?  \"These upgrades do come at a cost.\"",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) [1]",
+        "(B) [2]",
+        "(C) [3]",
+        "(D) [4]"
+      ],
+      "explanation": "<p>175. Trong các vị trí được đánh dấu [1], [2], [3] và [4], câu sau đúng nhất ở vị trí nào?</p><p>\"Những nâng cấp này phải trả giá.\"</p><p><strong><u>Giải thích: </u></strong>Vị trí [1] vì</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“These upgrades” chỉ “a larger screen, an ultrawide camera lens, and 8K-resolution filming capability” ở câu phía trước.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Câu phía sau: “The £999 starting price is £100 more than that of the previous model.” (Giá khởi điểm £999 cao hơn £100 so với mẫu trước đó.) ám chỉ “a cost”</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 176-180</strong> refer to the following work order and e-mail.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689518945526.jpg\"/></p><p><img src=\"/data/ets_2023_test_1/images/1689518955502.jpg\"/></p>",
+      "index": 176,
+      "correct": 3,
+      "description": "What does Ms. Xi's request indicate about  the company?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689518945526.jpg",
+        "/data/ets_2023_test_1/images/1689518955502.jpg"
+      ],
+      "answer": [
+        "(A) It provides mobile phones to some  employees.",
+        "(B) Its employees value confidentiality.",
+        "(C) It has recently changed its phone  system.",
+        "(D) It offers technology training to  employees."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><ul><li>requester (n) người yêu cầu</li><li>end-user (n) người dùng cuối</li><li>assign (v) chỉ định</li><li>degree (n) mức độ</li><li>security (n) sự bảo vệ</li><li>confidential (adj) bí mật</li><li>gain access (phr) giành quyền truy cập</li><li>do harm (phr) gây hại</li></ul><p><strong><u>Từ vựng: </u></strong></p><ul><li>in reference to (phr) liên quan đến</li><li>related (adj) liên quan</li><li>retrieve (v) lấy lại</li><li>material (n) tài liệu</li><li>involved (adj) bị dính dáng</li><li>delete (v) xoá</li><li>greeting (n) lời chào</li><li>override (v) ghi đè</li><li>expire (v) quá hạn</li><li>associate (n) nhân viên</li></ul><p>176. Yêu cầu của cô Xi nói lên điều gì về công ty?</p><p>(A) Nó cung cấp điện thoại di động cho một số nhân viên.</p><p>(B) Nhân viên của nó coi trọng tính bảo mật.</p><p>(C) Gần đây nó đã thay đổi hệ thống điện thoại.</p><p>(D) Nó cung cấp đào tạo công nghệ cho nhân viên.</p><p><strong><u>Giải thích: </u></strong>Dựa vào mục “Description”, câu 1 của work order</p><p>Is it possible to remove the new layers of security on my voice mail in <strong>the new phone system?</strong></p><p>= Có thể xóa các lớp bảo mật mới trên hộp thư thoại của tôi trong <strong>hệ thống điện thoại mới</strong> không?</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value (v) coi trọng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confidentiality (n) bảo mật</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 177,
+      "correct": 1,
+      "description": " In the e-mail, the word \"regular\" in  paragraph 1, line 6, is closest in meaning to",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) periodic",
+        "(B) orderly",
+        "(C) customary",
+        "(D) legitimate"
+      ],
+      "explanation": "<p>177. Trong e-mail, từ \"regular\" trong đoạn 1, dòng 6, gần nghĩa nhất với</p><p>(A) định kỳ</p><p>(B) trật tự</p><p>(C) phong tục</p><p>(D) hợp pháp</p><p><strong><u>Giải thích:</u></strong></p><p>So that you do not have to reset the password on a regular basis</p><p>= để bạn không phải đặt lại mật khẩu <strong>đều đặn</strong>.</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 178,
+      "correct": 2,
+      "description": "Where did Mr. Arnold learn about the details  of Ms. Xi's request?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) In a weekly managers' meeting",
+        "(B) In a work order",
+        "(C) In a phone call",
+        "(D) In a personal voice mail"
+      ],
+      "explanation": "<p>178. Ông Arnold đã biết chi tiết về yêu cầu của bà Xi từ đâu?</p><p>(A) Trong cuộc họp quản lý hàng tuần</p><p>(B) Theo giấy giao việc</p><p>(C) Trong một cuộc điện thoại</p><p>(D) Trong hộp thư thoại cá nhân</p><p><strong><u>Giải thích: </u></strong>Trong email ông Arnold gửi cho bà Xi, đoạn 1, câu 1:</p><p>This is in reference to your <strong>work order</strong> 7549 related to the new phone system.</p><p>= Điều này liên quan đến <strong>giấy giao việc</strong> 7549 của bạn liên quan đến hệ thống điện thoại mới.</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 179,
+      "correct": 4,
+      "description": "How does Mr. Arnold try to satisfy Ms. Xi's  request?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) By agreeing to everything Ms. Xi asked  for",
+        "(B) By resetting the password on Ms. Xi's  phone",
+        "(C) By referring the matter to another  technician",
+        "(D) By proposing to fulfill only part of  Ms. Xi's request"
+      ],
+      "explanation": "<p>179. Ông Arnold cố gắng đáp ứng yêu cầu của bà Xi như thế nào?</p><p>(A) Bằng cách đồng ý với mọi thứ mà bà Xi yêu cầu</p><p>(B) Bằng cách đặt lại mật khẩu trên điện thoại của bà Xi</p><p>(C) Bằng cách chuyển vấn đề cho một kỹ thuật viên khác</p><p>(D) Bằng cách đề xuất chỉ thực hiện một phần yêu cầu của bà Xi</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong work order, mục Description, câu 2 bà Xi có 2 yêu cầu là không muốn dùng mật khẩu và không muốn thay đổi mật khẩu hàng tháng: “I really <strong>don't want to use a password</strong>, and I certainly <strong>don't want to change it every month</strong>.”</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong email ông Arnold gửi bà Xi, ông chỉ nói sẽ cập nhật để bà Xi không phải cập nhật mật khẩu thường xuyên: I can update the security settings <strong>so that you do not have to reset the password on a regular basis.</strong>&nbsp;</p><p>ð&nbsp;Ông Arnold chỉ thực hiện 1 trong 2 yêu cầu của bà Xi</p><p><strong><u>Từ vựng: </u></strong></p><ul><li>satisfy (v) làm thoả mãn</li><li>refer (v) chuyển (đến một chỗ khác/người khác để hỗ trợ)</li><li>fulfill (v) thực hiện</li></ul>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 180,
+      "correct": 3,
+      "description": "What does Mr. Arnold ask Ms. Xi to do?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Make the needed changes to her  voice-mail system",
+        "(B) Attend training about the new  voice-mail system",
+        "(C) Confirm that she wants him to change  her voice-mail system",
+        "(D) Provide a clear description of the  problem with her voice-mail system"
+      ],
+      "explanation": "<p>180. Ông Arnold yêu cầu bà Xi làm gì?</p><p>(A) Thực hiện những thay đổi cần thiết đối với hệ thống thư thoại của cô ấy</p><p>(B) Tham dự khóa đào tạo về hệ thống thư thoại mới</p><p>(C) Xác nhận rằng cô ấy muốn anh ấy thay đổi hệ thống thư thoại của cô ấy</p><p>(D) Cung cấp mô tả rõ ràng về vấn đề với hệ thống thư thoại của cô ấy</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 2 của email, câu cuối:</p><p>If you still feel comfortable with that level of risk, let me know, and I will change the settings so that your password never expires.</p><p>= Nếu bạn vẫn cảm thấy thoải mái với mức độ rủi ro đó, hãy cho tôi biết và tôi sẽ thay đổi cài đặt để mật khẩu của bạn không bao giờ hết hạn.</p><p><strong><u>Paraphrasing: </u></strong></p><p>let me know = confirm</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 181-185</strong> refer to the following e-mail and review.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689518983240.jpg\"/></p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689518993604.jpg\"/></p>",
+      "index": 181,
+      "correct": 1,
+      "description": "In the e-mail, what is suggested about  Mr.Merson?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689518983240.jpg",
+        "/data/ets_2023_test_1/images/1689518993604.jpg"
+      ],
+      "answer": [
+        "(A) He coordinates a game development  team.",
+        "(B) He is convinced that Titan Adventure is  overpriced.",
+        "(C) He is a new employee at Rimerko  Games.",
+        "(D) He will leave on a business trip on  October 10."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reflection (n) sự phản chiếu</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arise (v) lặp lại</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neptune : thần biển Neptune</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;voyage (n) cuộc thám hiểm đại dương (chuyến du lịch xa ở biển)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primarily (adv)&nbsp;chủ yếu</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;underwater (adj) dưới nước</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address (v) xử lý</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;take charge of (phr) phụ trách</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rendering (n) bản kết xuất</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preliminary (adj) sơ bộ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;run-through (n) sự diễn tập</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aspect (n) khía cạnh</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on schedule (phr) đúng tiến độ</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;installment (n) phần bổ sung</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delight (v) gây thích thú</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aficionado (n) người cuồng nhiệt</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;widespread (v) lan rộng, phổ biến</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strip down (phr) tháo dỡ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instructional (adj) (mang tính) hướng dẫn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;task (v) giao nhiệm vụ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rescue (v) giải thoát</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encounter (v) bắt gặp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ruin (n) tàn tích</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creature (n) sinh vật</p><p>·&nbsp;novelty (n) tân phẩm (hàng mới)</p><p>181. Trong e-mail, điều gì được gợi ý về ông Merson?</p><p>(A) Anh ấy điều phối một nhóm phát triển trò chơi.</p><p>(B) Anh ấy tin rằng Titan Adventure được định giá quá cao.</p><p>(C) Anh ấy là nhân viên mới tại Rimerko Games.</p><p>(D) Anh ấy sẽ đi công tác vào ngày 10 tháng 10.</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đoạn 2, câu 1, Mr. Merson thông báo: “All other aspects of <strong>the game</strong> are on schedule” = Mọi khía cạnh khác của game đều đúng tiến độ.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phần ký tên của Mr. Merson: “Project Manager, Rimerko Games” = Quản lý dự án, Công ty Rimerko Games.</p><p><strong><u>Từ vựng:</u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coordinate (v) điều phối</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;convinced (adj) chắc chắn, tin rằng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overpriced (adj) quá đắt</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 182,
+      "correct": 2,
+      "description": "In the review, what is indicated about  Neptune's Voyage ?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) It is a major competitor of Titan  Adventure.",
+        "(B) It features an open-world format.",
+        "(C) It is the first videO game in a series.",
+        "(D) It is Rimerko's most challenging game."
+      ],
+      "explanation": "<p>182. Trong bài đánh giá, những gì được chỉ ra về Neptune's Voyage?</p><p>(A) Nó là đối thủ cạnh tranh chính của Titan Adventure.</p><p>(B) Nó có định dạng thế giới mở.</p><p>(C) Đây là trò chơi điện tử đầu tiên trong sê-ri.</p><p>(D) Đây là trò chơi thử thách nhất của Rimerko.</p><p><strong><u>Giải thích: </u></strong>Dựa vào đoạn 1, câu 2:</p><p>Though <strong>open-world formats</strong> have been widespread in recent years, Neptune's Voyage brings something new to the format.</p><p>= Mặc dù các <strong>định dạng thế giới mở</strong> đã phổ biến trong những năm gần đây, nhưng Neptune's Voyage mang đến một điều gì đó mới mẻ cho định dạng này.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;competitor (n) đối thủ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;challenging (adj) thử thách</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 183,
+      "correct": 2,
+      "description": "What can be concluded about Ms. Hanshu?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) She wrote the script for Neptune's  Voyage",
+        "(B) She successfully addressed  Mr. Merson's concern.",
+        "(C) She won an award for game design.",
+        "(D) She is a project manager."
+      ],
+      "explanation": "<p>183. Có thể kết luận gì về cô Hanshu?</p><p>(A) Cô ấy đã viết kịch bản cho Neptune's Voyage.</p><p>(B) Cô ấy đã giải quyết thành công mối quan tâm của ông Merson.</p><p>(C) Cô ấy đã giành được giải thưởng về thiết kế trò chơi.</p><p>(D) Cô ấy là người quản lý dự án.</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong email Mr. Merson gửi Ms. Hanshu, đoạn 1, câu 2, Mr. Merson nói trong các phiên bản trước, việc khớp chính xác hình ảnh phản chiếu và ánh sáng ở vùng màu xanh lá và xanh dương là một thử thách (In past versions of the game, getting the reflections and lighting in green and blue areas correct has been a particular challenge)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đoạn 1, câu 4 email, Mr. Merson cho biết Ms. Hanshu chịu trách nhiệm về vấn đề và hy vọng cô ấy giải quyết được nó (You said you would take charge of this, and I hope to hear that you have found a solution to the problem)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong bài review, đoạn 1, câu cuối (This newest version also corrects the green and blue image rendering that was sometimes a problem in earlier installments of Titan Adventure.) cho biết vấn đề trên đã được giải quyết.</p><p><strong><u>Paraphrasing: </u></strong></p><p>found a solution to the problem = successfully addressed concern</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 184,
+      "correct": 4,
+      "description": "What does Mr. Weber find exciting about  Neptune's Voyage ?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) It has players act in the role of  Neptune.",
+        "(B) It uses lighting to show players where  to navigate.",
+        "(C) It introduces a completely new set of  characters.",
+        "(D) It lets players explore new features  without guidance."
+      ],
+      "explanation": "<p>184. Ông Weber thấy điều gì thú vị về Chuyến du hành của Neptune?</p><p>(A) Nó có người chơi đóng vai Neptune.</p><p>(B) Nó sử dụng ánh sáng để chỉ cho người chơi nơi di chuyển.</p><p>(C) Nó giới thiệu một bộ ký tự hoàn toàn mới.</p><p>(D) Nó cho phép người chơi khám phá các tính năng mới mà không cần hướng dẫn.</p><p><strong><u>Giải thích: </u></strong>Dựa vào bài review (do Mr. Weber viết) đoạn 1, câu 3</p><p>By stripping down instructional guides, the game gives users the opportunity to discover new areas and devices.</p><p>= Bằng cách loại bỏ các hướng dẫn, trò chơi mang đến cho người dùng cơ hội khám phá các khu vực và thiết bị mới.</p><p><strong><u>Paraphrasing: </u></strong></p><p>stripping down instructional guides = without guidance</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 185,
+      "correct": 4,
+      "description": "When will Neptune's Voyage be available?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) On September 4",
+        "(B) On October 10",
+        "(C) On Apri11",
+        "(D) On May 5"
+      ],
+      "explanation": "<p>185. Khi nào thì Neptune's Voyage sẽ có?</p><p>(A) Vào ngày 4 tháng 9</p><p>(B) Vào ngày 10 tháng 10</p><p>(C) Vào ngày 1 tháng 4</p><p>(D) Vào ngày 5 tháng 5</p><p><strong><u>Giải thích: </u></strong>Dựa vào bài review, đoạn 2, câu 1:</p><p>Neptune's Voyage launches May 5 = Neptune’s Voyage ra mắt ngày 5 tháng 5</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 186-190 </strong>refer to the following schedule, e-mail, and job advertisement.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519012830.jpg\"/></p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519043643.jpg\"/></p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519054438.jpg\"/></p>",
+      "index": 186,
+      "correct": 3,
+      "description": "According to the schedule, who is  Ms. Jones?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689519012830.jpg",
+        "/data/ets_2023_test_1/images/1689519043643.jpg",
+        "/data/ets_2023_test_1/images/1689519054438.jpg"
+      ],
+      "answer": [
+        "(A) The advertising manager at a radio  station",
+        "(B) The host of a community news program",
+        "(C) The music director at Wonder Ridge  Radio",
+        "(D) The host of a sports radio program"
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;traditional (adj) truyền thống&nbsp;</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;folk (adj) dân gian/đồng quê</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frenzy (n) sự điên cuồng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select (v) lựa chọn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host (n) chủ nhà (người dẫn chính)</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;folks (n) mọi người</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be filled with (phr) được lấp đầy với</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description (n) sự mô tả</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perform (v) thực hiện</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function (n) chức năng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry-level (adj) sơ cấp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conduct (v) điều khiển</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background (n) lý lịch/nền tảng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;up-to-date (adj) cập nhật</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;news maker (n) nhà sản xuất tin tức</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;potential (adj) tiềm năng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;biography (n) tiểu sử</p><p>· cover letter (phr) thư giới thiệu</p><p>186. Theo lịch trình, cô Jones là ai?</p><p>(A) Người quản lý quảng cáo tại một đài phát thanh</p><p>(B) Người dẫn chương trình tin tức cộng đồng</p><p>(C) Giám đốc âm nhạc tại Wonder Ridge Radio</p><p>(D) Người dẫn chương trình phát thanh thể thao</p><p><strong><u>Giải thích: </u></strong>Dựa vào cột cuối cùng trong lịch phát sóng của Wonder Ridge Radio</p><p>JOSIE'S JOINT: Modern sounds selected by <strong>our station's own</strong> <strong>music director</strong>.</p><p>Host: <strong>Josie Jones</strong></p><p>= JOSIE'S JOINT: Âm thanh hiện đại do giám đốc âm nhạc của đài chúng tôi lựa chọn.</p><p>Người dẫn chương trình: Josie Jones</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 187,
+      "correct": 1,
+      "description": "What is the purpose of the e-mail?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) To express praise for the radio station",
+        "(B) To ask about job opportunities",
+        "(C) To request more sports talk show  programming",
+        "(D) To inquire about the name of a song"
+      ],
+      "explanation": "<p>187. Mục đích của e-mail là gì?</p><p>(A) Để bày tỏ lời khen ngợi cho đài phát thanh</p><p>(B) Để hỏi về cơ hội việc làm</p><p>(C) Để yêu cầu thêm chương trình trò chuyện về thể thao</p><p>(D) Để hỏi về tên của một bài hát</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mở đầu của email: To the folks at Wonder Ridge Radio = Gửi những người ở Đài phát thanh Wonder Ridge</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Câu cuối của email: Thanks for this experience and for all your great programs. = Cảm ơn vì trải nghiệm này và vì tất cả các chương trình tuyệt vời của bạn.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;express praise (phr) bày tỏ khen ngợi</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inquire (v) hỏi</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 188,
+      "correct": 3,
+      "description": "When did Mr. Fabre most likely first listen to  Wonder Ridge Radio?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Between 6 A.M. and noon",
+        "(B) Between noon and 4 P.M.",
+        "(C) Between 4 P.M. and 7 P.M.",
+        "(D) Between 7 P.M. and 10 P.M."
+      ],
+      "explanation": "<p>188. Lần đầu tiên ông Fabre nghe Wonder Ridge Radio là khi nào?</p><p>(A) Giữa 6 giờ sáng và trưa</p><p>(B) Giữa trưa và 4 giờ chiều.</p><p>(C) Giữa 4 giờ chiều và 7 giờ tối</p><p>(D) Giữa 7 giờ tối và 10 giờ tối</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong email từ Mr. Fabre, câu 3: It was traditional music from France = Đó là nhạc dân gian đến từ Pháp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong lịch phát sóng, cột 3:</p><p>4 P.M. – 7 P.M. FOLK FRENZY: folk music from around the world = âm nhạc dân gian từ khắp nơi trên thế giới</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 189,
+      "correct": 2,
+      "description": "What does the job advertisement suggest  applicants must have?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) A willingness to travel",
+        "(B) Familiarity with computers",
+        "(C) A degree in communications",
+        "(D) Extensive experience in the radio  industry"
+      ],
+      "explanation": "<p>189. Quảng cáo việc làm đề nghị ứng viên phải có những gì?</p><p>(A) Sẵn sàng đi du lịch</p><p>(B) Quen thuộc với máy tính</p><p>(C) Bằng cấp về truyền thông</p><p>(D) Có nhiều kinh nghiệm trong ngành phát thanh</p><p><strong><u>Giải thích: </u></strong>Mục Responsibilities:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dòng 3: Updating the station's Web site and program host biography pages = Cập nhập Website của đài và trang tiểu sử của người dẫn chương trình</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dòng 4: Using scheduling software = Sử dụng phần mềm xếp lịch</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dòng 5: Communicating with listeners, especially via e-mail and social media = Giao lưu với người nghe, đặc biệt qua email và mạng xã hội</p><p>ð&nbsp;Đều cần dùng máy tính</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;willingness (n) sự sẵn lòng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;familiarity (n) sự quen thuộc</p><p>·&nbsp;extensive (adj) rộng</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 190,
+      "correct": 1,
+      "description": "What radio program will probably receive  the most support from the programming  assistant?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Coffee Break",
+        "(B) Afternoon Jazz",
+        "(C) Folk Frenzy",
+        "(D) Josie's Joint"
+      ],
+      "explanation": "<p>190. Chương trình phát thanh nào có thể sẽ nhận được nhiều sự hỗ trợ nhất từ trợ lý chương trình?</p><p><strong><u>Giải thích: </u></strong>2 dòng đầu tiên trong mục Responsibilities:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conducting background research on interviewees = Tiến hành nghiên cứu lý lịch về người được phỏng vấn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keeping up-to-date on news and news makers in order to suggest potential topics and guests for on-air interviews = Cập nhật tin tức và người tạo thông tin để gợi ý các chủ đề và khách mời tiềm năng cho các cuộc phỏng vấn trực tuyến.</p><p>Chỉ phù hợp với chương trình Coffe Break: Local news and interview with community members = Tin tức địa phương và phỏng vấn với các thành viên cộng đồng; 3 chương trình còn lại đều về âm nhạc nên không phù hợp</p><p>=&gt;&nbsp;&nbsp;Coffee Break cần cả 5 sự hỗ trợ, 3 chương trình còn lại chỉ cần 3 dòng cuối</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 191-195</strong> refer to the following instructions, e-mail, and sign.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519083546.jpg\"/></p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519094917.jpg\"/></p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519105773.jpg\"/></p>",
+      "index": 191,
+      "correct": 2,
+      "description": " What do the instructions indicate about  records requests?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689519083546.jpg",
+        "/data/ets_2023_test_1/images/1689519094917.jpg",
+        "/data/ets_2023_test_1/images/1689519105773.jpg"
+      ],
+      "answer": [
+        "(A) They can be made only on certain  days.",
+        "(B) They can be made only online.",
+        "(C) They can be filed only by authorized  personnel.",
+        "(D) They can be filed only after a fee is  paid."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction (n) hướng dẫn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maintain (v) bảo quản</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file (v) sắp xếp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop-down menu (n) trình đơn thả xuống</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;locate (v) xác định vị trí</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confirmation (n) sự xác nhận</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in person (phr) đích thân</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;associated with (phr) liên kết với</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemized (adj) ghi thành từng khoản</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statement (n) bản báo cáo</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail (v) kể chi tiết</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apparently (adv) hình như</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;underground (adj) dưới lòng đất</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline (n) ống dẫn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inform (v) cung cấp thông tin</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;advise (v) tư vấn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wastewater (n) nước thải</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;administrative (adj) hành chính</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;facility (n) cơ sở</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logbook (n) sổ theo dõi</p><p>· Directory (n) thư mục</p><p>191. Các hướng dẫn chỉ ra điều gì về yêu cầu hồ sơ?</p><p>(A) Chúng chỉ có thể được làm vào những ngày nhất định.</p><p>(B) Chúng chỉ có thể được thực hiện trực tuyến.</p><p>(C) Chúng chỉ có thể được nộp bởi nhân viên được ủy quyền.</p><p>(D) Chúng chỉ có thể được nộp sau khi đã thanh toán phí.</p><p><strong><u>Giải thích: </u></strong>Instructions, dòng đánh số 1, câu 2:</p><p>Currently, all requests must be made through the portal.= Hiện tại, tất cả các yêu cầu phải được thực hiện thông qua cổng thông tin.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;certain (adj) nhất định</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authorized (adj) được uỷ quyền</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personnel (n) nhân viên</p><p><strong><u>Paraphrasing:</u></strong></p><p>through the portal = online</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 192,
+      "correct": 2,
+      "description": " According to the e-mail, how does  Mr. Brandenberg plan to use some public  information?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) To add information to a Web portal",
+        "(B) To help his company advise the city",
+        "(C) To identify an accounting error",
+        "(D) To learn how an agency is structured"
+      ],
+      "explanation": "<p>192. Theo e-mail, ông Brandenberg dự định sử dụng một số thông tin công khai như thế nào?</p><p>(A) Để thêm thông tin vào cổng Web</p><p>(B) Để giúp công ty của anh ấy tư vấn cho thành phố</p><p>(C) Để xác định lỗi kế toán</p><p>(D) Để tìm hiểu cách một cơ quan được cơ cấu</p><p><strong><u>Giải thích: </u></strong>Email, đoạn 2, câu cuối:</p><p>In this case, I am only requesting two maps of the city's underground pipelines, <strong>which will inform our firm's current work advising the city on wastewater management.</strong></p><p>= Trong trường hợp này, tôi chỉ yêu cầu hai bản đồ đường ống ngầm của thành phố, cái mà sẽ cung cấp thông tin cho công việc hiện tại của công ty chúng tôi là tư vấn cho thành phố về quản lý nước thải.</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identify (v) xác định</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;structure (v) cơ cấu</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 193,
+      "correct": 4,
+      "description": "What does the sign indicate visitors must  do before entering a building?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Go through a security screening",
+        "(B) Get a parking permit",
+        "(C) Present some identification",
+        "(D) Sign a logbook"
+      ],
+      "explanation": "<p>193. Biển báo cho biết du khách phải làm gì trước khi vào tòa nhà?</p><p>(A) Đi qua kiểm tra an ninh</p><p>(B) Xin giấy phép đậu xe</p><p>(C) Xuất trình một số giấy tờ tùy thân</p><p>(D) Ký vào sổ theo dõi</p><p><strong><u>Giải thích: </u></strong>Đoạn 1, câu 2 của biển báo:</p><p>Please enter your name and the room you will visit in the logbook. = Vui lòng nhập tên của bạn và phòng bạn sẽ đến trong sổ theo dõi.</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;screening (n) máy quét</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permit (n) giấy phép</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identification (n) giầy tờ tuỳ thân</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 194,
+      "correct": 1,
+      "description": "What was Mr. Brandenberg expecting to  receive?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) An itemized statement of fees",
+        "(B) A letter from his company",
+        "(C) A phone call from a city official",
+        "(D) A password for the Web portal"
+      ],
+      "explanation": "<p>194. Ông Brandenberg mong nhận được gì?</p><p>(A) Bảng kê chi tiết các khoản phí</p><p>(B) Một lá thư từ công ty của anh ấy</p><p>(C) Một cú điện thoại từ một quan chức thành phố</p><p>(D) Mật khẩu cho cổng Web</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong email từ Mr. Brandenberg, câu cuối: Please clarify the fee for me = Xin hãy làm rõ khoản phí cho tôi</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong hướng dẫn, dòng đánh số 4: If there are any fees associated with your request, you will receive an itemized statement… = Nếu có bất kỳ khoản phí nào kèm theo yêu cầu của bạn, bạn sẽ nhận được một bản kê chi tiết…</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 195,
+      "correct": 4,
+      "description": "What room will Mr. Brandenberg most likely  visit?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) Room 100",
+        "(B) Room 101",
+        "(C) Room 102",
+        "(D) Room 103"
+      ],
+      "explanation": "<p>195. Ông Brandenberg có thể sẽ ghé thăm phòng nào nhất?</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong email, đoạn 2, câu cuối: In this case,…on <strong>wastewater</strong> management: cho biết công ty đang tư vấn cho thành phố về quản lý nước thải.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trong biển báo, dòng cuối, chỉ dẫn: <strong>Wastewater- Room 103</strong></p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "<p><strong>Questions 196-200</strong> refer to the following review and e-mails.</p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519132413.jpg\"/></p><p><img src=\"/data/ets_2023_test_1/images/1689519141574.jpg\"/></p><p><br/></p><p><img src=\"/data/ets_2023_test_1/images/1689519150286.jpg\"/></p>",
+      "index": 196,
+      "correct": 3,
+      "description": "What does the review mention about  Mr. Eklund?",
+      "audioLink": null,
+      "imgLink": [
+        "/data/ets_2023_test_1/images/1689519132413.jpg",
+        "/data/ets_2023_test_1/images/1689519141574.jpg",
+        "/data/ets_2023_test_1/images/1689519150286.jpg"
+      ],
+      "answer": [
+        "(A) He enjoys his work as a director.",
+        "(B) He has been a mentor to many young  people.",
+        "(C) He is a well-known actor.",
+        "(D) He has written many books."
+      ],
+      "explanation": "<p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autobiography (n) hồi ký</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;storied (adj) được ca ngợi (thành truyện)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;insight (n) cái nhìn thấu suốt</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;native (adj) (thuộc) nơi sinh</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dedicate (v) đề tặng</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fair (adj) hợp lý</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition (n) sự chuyển tiếp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anecdote (n) giai thoại</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disastrous (adj) thảm hoạ</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;captivating (adj) thu hút</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thoroughly (adv) hoàn toàn</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;engaging (adj) lôi cuốn</p><p><strong><u>Từ vựng: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrange (v) sắp xếp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;follow-up (n) công việc tiếp theo</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coincidence (n) sự trùng hợp</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address (v) tiến hành</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diversity (n) sự đa dạng</p><p><strong><u>Từ vựng: </u></strong></p><p>· finalize (v) hoàn thành</p><p>196. Bài đánh giá đề cập gì về ông Eklund?</p><p>(A) Anh ấy thích công việc của mình với tư cách là một đạo diễn.</p><p>(B) Anh ấy đã từng là cố vấn cho nhiều người trẻ tuổi.</p><p>(C) Anh ấy là một diễn viên nổi tiếng.</p><p>(D) Anh ấy đã viết rất nhiều sách.</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiêu đề bài review về Mr. Eklund: Famous Actor, First Book</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đoạn 1, câu 1: Fans of Simon Eklund will be delighted….<strong>his storied career as an actor </strong>= sự nghiệp được ca ngợi của ông ấy với tư cách một diễn viên</p><p><strong><u>Paraphrasing: </u></strong></p><p>famous = well-known</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 197,
+      "correct": 1,
+      "description": "Where most likely will Ms. Joshi meet  Mr. Eklund?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) In Sweden",
+        "(B) In France",
+        "(C) In Italy",
+        "(D) In the United Kingdom"
+      ],
+      "explanation": "<p>197. Bà Joshi sẽ gặp ông Eklund ở đâu?</p><p>(A) Ở Thụy Điển</p><p>(B) Ở Pháp</p><p>(C) Ở Ý</p><p>(D) Ở Vương quốc Anh</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bài review về ông Eklund, đoạn 1, dòng 7: <strong>his native Sweden = quê hương Thuỵ Điển của ông ấy</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email 1 (từ Joshi gửi Edith), đoạn 1, câu 1, Joshi cảm ơn Edith vì đã sắp xếp lịch để Joshi phỏng vấn Mr. Eklund (Thank you for agreeing to arrange an interview with Mr. Eklund for me.)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email 1, đoạn 2, dòng 1, Joshi cho biết cô ấy sẽ đến quê hương ông Eklund (I will be visiting his home country ) sau đó cô ấy nói rằng muốn gặp ông ấy ở đó.</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 198,
+      "correct": 4,
+      "description": "According to the first e-mail, what is one  reason Ms. Joshi will travel in April?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) To go on a vacation",
+        "(B) To interview for a new job",
+        "(C) To attend an international film festival",
+        "(D) To speak at a conference"
+      ],
+      "explanation": "<p>198. Theo e-mail đầu tiên, một lý do khiến cô Joshi sẽ đi du lịch vào tháng 4 là gì?</p><p>(A) Đi nghỉ mát</p><p>(B) Để phỏng vấn cho một công việc mới</p><p>(C) Để tham dự một liên hoan phim quốc tế</p><p>(D) Để phát biểu tại một hội nghị</p><p><strong><u>Giải thích: </u></strong>Trong email 1 từ Joshi:</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: 2 March = Ngày gửi: Mùng 2 tháng 3</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đoạn 2, câu 1: I will be visiting his home country <strong>next month</strong> to <strong>address a journalists' convention</strong> = Tôi sẽ đến thăm quê hương của anh ấy vào tháng tới để phát biểu tại một hội nghị của các nhà báo</p><p><strong><u>Paraphrasing: </u></strong></p><p>address a journalists' convention = speak at a conference&nbsp;</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 199,
+      "correct": 2,
+      "description": "What is the purpose of the second e-mail?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) To reserve a hotel room",
+        "(B) To confirm meeting arrangements",
+        "(C) To discuss an idea for a movie",
+        "(D) To ask for transportation"
+      ],
+      "explanation": "<p>199. Mục đích của e-mail thứ hai là gì?</p><p>(A) Để đặt phòng khách sạn</p><p>(B) Để xác nhận sắp xếp cuộc họp</p><p>(C) Để thảo luận về một ý tưởng cho một bộ phim</p><p>(D) Để yêu cầu vận chuyển</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email 2, đoạn 1, câu 1, người gửi bày tỏ: We are all very excited about your <strong>interview</strong> next month with Mr. Eklund. = Tất cả chúng tôi đều rất vui mừng về <strong>cuộc phỏng vấn</strong> của bạn vào tháng tới với ông Eklund.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email 2, đoạn 2, câu 1, người gửi đề cập: I just wanted to finalize a few details with you = Tôi chỉ muốn hoàn thiện một vài chi tiết với bạn.</p>"
+    },
+    {
+      "type": "PART_7",
+      "passages": "",
+      "index": 200,
+      "correct": 3,
+      "description": "What can be concluded about Mr. Eklund?",
+      "audioLink": null,
+      "imgLink": [],
+      "answer": [
+        "(A) He hopes to write for a British news  site.",
+        "(B) He just hired a new assistant.",
+        "(C) He was pleased with Ms. Joshi's review  of his book.",
+        "(D) He frequently cooks special meals."
+      ],
+      "explanation": "<p>200. Có thể kết luận gì về ông Eklund?</p><p>(A) Anh ấy hy vọng sẽ viết cho một trang tin tức của Anh.</p><p>(B) Anh ấy vừa thuê một trợ lý mới.</p><p>(C) Anh ấy hài lòng với bài đánh giá của cô Joshi về cuốn sách của anh ấy.</p><p>(D) Anh ấy thường xuyên nấu những bữa ăn đặc biệt.</p><p><strong><u>Giải thích: </u></strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bài review, đoạn 1, câu 1 cho biết The Theatre Lights Dimmed là <strong>cuốn sách</strong> đầu tiên của Mr. Eklund (<strong>The Theatre Lights Dimmed, the first book</strong> he has written in his storied career as an actor.)</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email 2 (gửi đến Joshi), đoạn 1, câu 2: He <strong>enjoys</strong> all your writing for Top News U.K…of course, your <strong>recent article about The Theatre Lights Dimmed</strong> = Anh ấy thích tất cả bài viết của bạn cho Top News U.K…tất nhiên, bài báo gần đây của bạn về The Theater Lights Dimmed</p>"
     }
   ]
 }
