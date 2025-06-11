@@ -367,16 +367,12 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   function generateDiffHtml(userText, correctText) {
     if (!userText || !correctText) return {html: "", similarity: 0};
 
-    // Convert to lowercase for better comparison, but preserve line breaks for display
-    const userTextLower = userText.trim();
-    const correctTextLower = correctText.trim();
+    // Trim the texts but preserve line breaks
+    const userTextTrimmed = userText.trim();
+    const correctTextTrimmed = correctText.trim();
 
-    // For comparison, replace line breaks with spaces
-    const userTextForCompare = userTextLower.replace(/\n/g, ' ');
-    const correctTextForCompare = correctTextLower.replace(/\n/g, ' ');
-
-    // Generate diff
-    const diff = Diff.diffWords(userTextForCompare, correctTextForCompare);
+    // Generate diff using diffLines to preserve line structure
+    const diff = Diff.diffWords(userTextTrimmed, correctTextTrimmed);
 
     // Calculate similarity based on diff results
     let totalLength = 0;
@@ -398,19 +394,23 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     const similarity = totalLength > 0 ? matchedLength / totalLength : 0;
 
     // Create HTML with highlighted differences
-    let html = '';
+    let html = '<div style="white-space: pre-wrap;">';
     diff.forEach((part) => {
       const style = part.added ? 'background-color: #e6ffe6; color: green; text-decoration: underline;' :
         part.removed ? 'background-color: #ffe6e6; color: red; text-decoration: line-through;' : '';
 
+      // Get the text with preserved line breaks
+      let displayText = part.value;
+      
       if (part.added) {
-        html += `<span style="${style}">+${part.value}</span>`;
+        html += `<span style="${style}">+${displayText}</span>`;
       } else if (part.removed) {
-        html += `<span style="${style}">-${part.value}</span>`;
+        html += `<span style="${style}">-${displayText}</span>`;
       } else {
-        html += `<span style="${style}">${part.value}</span>`;
+        html += `<span style="${style}">${displayText}</span>`;
       }
     });
+    html += '</div>';
 
     return {html, similarity};
   }
@@ -475,10 +475,6 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         `;
       }
       setCurrentExplanation(explanation);
-      // setDictationGroupResults(pre => ({
-      //   ...pre,
-      //   [currentQuestion.index]: explanation
-      // }));
       setDictationResults(prev => ({
         ...prev,
         [currentQuestion.index]: explanation
