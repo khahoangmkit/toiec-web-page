@@ -10,7 +10,7 @@ export default function handler(req, res) {
     console.log("============", filePath)
     res.status(200).json(JSON.parse(data));
   } catch (err) {
+    console.error(`Error reading file: ${filePath}`, err);
     res.status(404).json({ error: 'Data not found' });
   }
 }
-nha
