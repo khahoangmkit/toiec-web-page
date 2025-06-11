@@ -10,7 +10,7 @@ import {
   Image,
   Checkbox,
   RadioGroup, Input,
-  Dialog, Portal, CloseButton
+  Dialog, Portal, CloseButton, Textarea
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import AudioCommon from "@/components/common/AudioCommon";
@@ -69,6 +69,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   const [dictationText, setDictationText] = useState({}); // Store dictation text for each question
   const [dictationResults, setDictationResults] = useState({}); // Store dictation comparison results
   const [showKeywordsDialog, setShowKeywordsDialog] = useState(false); // State for keywords dialog
+  const [dictationGroupText, setDictationGroupText] = useState({});
+  const [dictationGroupResults, setDictationGroupResults] = useState({}); // Store dictation comparison results
 
   useEffect(() => {
     if (!listQuestion.length) return;
@@ -91,10 +93,22 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
       const groupQuestionsArr = group.map(q => q);
       setCurrentQuestion({
         type: firstQuestion.type,
+        index: firstQuestion.index,
         audioLink: firstQuestion.audioLink,
         imgLink: firstQuestion.imgLink,
-        questions: groupQuestionsArr
+        questions: groupQuestionsArr,
+        explanation: firstQuestion.explanation,
+        dictionary: firstQuestion.dictionary,
+        dictionaryCorrect: firstQuestion.dictionaryCorrect
       });
+
+      if (!dictationGroupText[firstQuestion.index]) {
+        setDictationGroupText(prev => ({
+          ...prev,
+          [firstQuestion.index]: firstQuestion.dictionary
+        }))
+      }
+
     } else {
       setCurrentQuestion(selectedQuestion);
     }
@@ -113,6 +127,12 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         } else {
           setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
         }
+      }
+    } else if (Constant.showDictionaryQuestionV2.includes(currentQuestion.type)) {
+      if (dictationResults[currentQuestion.index]) {
+        setCurrentExplanation(dictationResults[currentQuestion.index]);
+      } else {
+        setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
       }
     } else if (currentQuestion.questions) {
       // For group questions
@@ -257,7 +277,6 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         
         // Generate HTML for each option's comparison
         let dictationHtml = '';
-        let totalSimilarity = 0;
         let optionsCount = 0;
         
         // Process each option that has user input
@@ -424,6 +443,47 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         handleCheckAnswer(question.index);
       }
     });
+
+    // Handle dictation for group questions if enabled
+    if (showDictionary && Constant.showDictionaryQuestionV2.includes(currentQuestion.type)) {
+      // Get the user's dictation input for this group
+      let userDictationText = dictationGroupText[currentQuestion.index] || '';
+      userDictationText = userDictationText.replace(/_/g, '');
+
+      // Get the correct text from the question's dictionary field
+      const correctText = currentQuestion.dictionaryCorrect || '';
+
+      let explanation = currentQuestion.questions[0].explanation || "Không có giải thích cho câu hỏi này.";
+
+      if (userDictationText.trim() && correctText) {
+        // Generate diff HTML and get similarity
+        const {html: diffHtml} = generateDiffHtml(userDictationText, correctText);
+
+        // Add dictation comparison to explanation
+        explanation = `
+          <div class="dictation-comparison">
+            <p><strong>Dictation:</strong></p>
+            <div style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px; margin-bottom: 8px;">
+              ${diffHtml}
+            </div>
+          </div>
+          <hr/>
+          <div class="explanation">
+            <p><strong>Explanation:</strong></p>
+            ${explanation}
+          </div>
+        `;
+      }
+      setCurrentExplanation(explanation);
+      // setDictationGroupResults(pre => ({
+      //   ...pre,
+      //   [currentQuestion.index]: explanation
+      // }));
+      setDictationResults(prev => ({
+        ...prev,
+        [currentQuestion.index]: explanation
+      }));
+    }
   }
 
   // Generate a single explanation for all questions in a group
@@ -453,7 +513,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         height={'100vh'}
         align={'left'}
         divideY="2px">
-        <HStack width={'100%'} direction="row" gap="4">
+        <HStack width={'100%'} direction="row" justifyContent={'end'} gap="4">
           <Box width={'80%'} display={'flex'} gap={4} justifyContent={'end'}>
             <Box display={'flex'} gap={4} alignContent={'center'} justifyContent={'center'}>
               <Checkbox.Root
@@ -686,8 +746,9 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
               </>
             )
           }
-
+          {/*====================================================*/}
           {/*Show List question group */}
+          {/*====================================================*/}
           {
             (!Constant.singleQuestion.includes(currentQuestion.type) && currentQuestion.questions) && (
               <Flex direction="row" height='100%' gap={8}>
@@ -764,39 +825,30 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                           ))}
                         </VStack>
                       </RadioGroup.Root>
-
-                      {/*{*/}
-                      {/*  showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (*/}
-                      {/*    <Box mt={3} mb={3}>*/}
-                      {/*      <Text fontWeight="bold" mb={2}>Dictation:</Text>*/}
-                      {/*      <VStack align="start" spacing={3}>*/}
-                      {/*        {(question.answer && question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (*/}
-                      {/*          <Box key={`dictation-${question.index}-${index}`} width="100%">*/}
-                      {/*            <Text mb={1}>Option {choice}:</Text>*/}
-                      {/*            <Textarea*/}
-                      {/*              placeholder={`Type what you hear for option ${choice}...`}*/}
-                      {/*              value={(dictationText[question.index] && dictationText[question.index][choice]) || ""}*/}
-                      {/*              onChange={(e) => setDictationText(prev => ({*/}
-                      {/*                ...prev,*/}
-                      {/*                [question.index]: {*/}
-                      {/*                  ...(prev[question.index] || {}),*/}
-                      {/*                  [choice]: e.target.value*/}
-                      {/*                }*/}
-                      {/*              }))}*/}
-                      {/*              disabled={isAnswerChecked(question.index)}*/}
-                      {/*              height="80px"*/}
-                      {/*              resize="vertical"*/}
-                      {/*            />*/}
-                      {/*          </Box>*/}
-                      {/*        ))}*/}
-                      {/*      </VStack>*/}
-                      {/*    </Box>*/}
-                      {/*  )*/}
-                      {/*}*/}
                     </Box>
                   ))}
 
                   {/* Single Check Answer button for the entire group */}
+                  {
+                    showDictionary && Constant.showDictionaryQuestionV2.includes(currentQuestion.type) && (
+                      <Box mt={3} mb={3}>
+                        <Text fontWeight="bold" mb={2}>Dictation:</Text>
+                        <VStack align="start" spacing={3}>
+                          <Textarea
+                            placeholder={`Type what you hear...`}
+                            value={(dictationGroupText[currentQuestion.index] && dictationGroupText[currentQuestion.index]) || ""}
+                            onChange={(e) => setDictationGroupText(prev => ({
+                              ...prev,
+                              [currentQuestion.index]: e.target.value
+                            }))}
+                            disabled={isAnyGroupQuestionChecked()}
+                            height="150px"
+                            resize="vertical"
+                          />
+                        </VStack>
+                      </Box>
+                    )
+                  }
                   {areAllGroupQuestionsAnswered() && !isAnyGroupQuestionChecked() && (
                     <Button
                       mt={5}
@@ -815,7 +867,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     <Box mt={4} mb={5} p={4} bg="blue.50" borderRadius="md" boxShadow="md">
                       <Heading size="md" mb={3}>Explanation: </Heading>
                       <Box
-                        dangerouslySetInnerHTML={{__html: generateGroupExplanation()}}
+                        dangerouslySetInnerHTML={{__html: currentExplanation }}
                         maxHeight="400px"
                         overflowY="auto"
                         p={2}
