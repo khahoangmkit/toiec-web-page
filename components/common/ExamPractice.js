@@ -756,11 +756,24 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                 <Box boxShadow="2xl" overflowY={'scroll'} minWidth='40%' maxWidth='60%'
                      style={{maxHeight: 'calc(100% - 80px)'}} bg="gray.100" p={6} borderRadius="md" display="flex"
                      flexDirection="column" alignItems="center" justifyContent="flex-start">
-                  {currentQuestion.audioLink && (
-                    <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
-                                 disabled={false}
-                                 audioLink={currentQuestion.audioLink}/>
-                  )}
+                  <Box display="flex" flexDirection="row" justifyContent="start" alignItems="center">
+                    {currentQuestion.audioLink && (
+                      <AudioCommon onNextQuestion={() => nextQuestion(currentQuestion)}
+                                   disabled={false}
+                                   audioLink={currentQuestion.audioLink}/>
+                    )}
+                    {areAllGroupQuestionsAnswered() && !isAnyGroupQuestionChecked() && (
+                      <Button
+                        mb={4}
+                        colorPalette="blue"
+                        onClick={handleCheckAllGroupAnswers}
+                        size="lg"
+                      >
+                        Check All Answers
+                      </Button>
+                    )}
+                  </Box>
+
                   {currentQuestion.imgLink && currentQuestion.imgLink.length > 0 && (
                     currentQuestion.imgLink.map((src, idx) => (
                       <Box mb={6} key={`img-quest-${idx}`} textAlign="center">
@@ -849,18 +862,6 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       </Box>
                     )
                   }
-                  {areAllGroupQuestionsAnswered() && !isAnyGroupQuestionChecked() && (
-                    <Button
-                      mt={5}
-                      mb={3}
-                      colorPalette="blue"
-                      onClick={handleCheckAllGroupAnswers}
-                      size="lg"
-                      width="100%"
-                    >
-                      Check All Answers
-                    </Button>
-                  )}
 
                   {/* Single explanation for the entire group */}
                   {isAnyGroupQuestionChecked() && (
