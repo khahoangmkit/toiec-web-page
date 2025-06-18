@@ -394,7 +394,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     const similarity = totalLength > 0 ? matchedLength / totalLength : 0;
 
     // Create HTML with highlighted differences
-    let html = '<div style="white-space: pre-wrap;">';
+    let html = '<div style="white-space: pre-wrap; display: inline-block;">';
     diff.forEach((part) => {
       const style = part.added ? 'background-color: #e6ffe6; color: green; text-decoration: underline;' :
         part.removed ? 'background-color: #ffe6e6; color: red; text-decoration: line-through;' : '';
@@ -512,7 +512,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         <HStack width={'100%'} direction="row" justifyContent={'end'} gap="4">
           <Box width={'80%'} display={'flex'} gap={4} justifyContent={'end'}>
             <Box display={'flex'} gap={4} alignContent={'center'} justifyContent={'center'}>
-              <Checkbox.Root
+              { router.query.partId && !Constant.ReadingPractice.includes(router.query.partId) &&
+                  <Checkbox.Root
                 colorPalette={'green'}
                 checked={showDictionary}
                 onCheckedChange={(e) => setShowDictionary(!!e.checked)}
@@ -521,6 +522,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                 <Checkbox.Control/>
                 <Checkbox.Label>Dictation</Checkbox.Label>
               </Checkbox.Root>
+              }
 
               <Button
                 variant="surface"
