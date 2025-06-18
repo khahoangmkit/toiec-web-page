@@ -865,8 +865,6 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       <Heading size="md" mb={3}>Explanation: </Heading>
                       <Box
                         dangerouslySetInnerHTML={{__html: currentExplanation }}
-                        maxHeight="400px"
-                        overflowY="auto"
                         p={2}
                       />
                     </Box>
