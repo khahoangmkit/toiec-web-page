@@ -22,7 +22,7 @@ import * as Diff from 'diff';
 const groupByPartForSelectQuestion = (questions) => {
   const grouped = {};
   for (const q of questions) {
-    const part = q.type || "UNKNOWN";
+    const part = q.source || "UNKNOWN";
     if (!grouped[part]) grouped[part] = [];
     grouped[part].push(q);
   }
@@ -77,23 +77,23 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     setGroupedQuestions(groupQuestions(listQuestion));
     setPartForSelectQuestion(groupByPartForSelectQuestion(listQuestion));
     setCurrentQuestion(listQuestion[0]);
-    setCurrentIndexQuestion(listQuestion[0].index);
+    setCurrentIndexQuestion(listQuestion[0].newIndex);
   }, [listQuestion]);
 
   useEffect(() => {
-    const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
+    const selectedQuestion = listQuestion.find(q => q.newIndex === currentIndexQuestion);
     if (!selectedQuestion) {
       return;
     }
     const isGroupQuestion = !Constant.singleQuestion.includes(selectedQuestion.type);
     if (isGroupQuestion) {
-      const group = groupedQuestions.find(g => g.some(q => q.index === selectedQuestion.index));
+      const group = groupedQuestions.find(g => g.some(q => q.newIndex === selectedQuestion.newIndex));
       if (!group) return;
       const firstQuestion = group[0];
       const groupQuestionsArr = group.map(q => q);
       setCurrentQuestion({
         type: firstQuestion.type,
-        index: firstQuestion.index,
+        index: firstQuestion.newIndex,
         audioLink: firstQuestion.audioLink,
         imgLink: firstQuestion.imgLink,
         questions: groupQuestionsArr,
@@ -102,10 +102,10 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         dictionaryCorrect: firstQuestion.dictionaryCorrect
       });
 
-      if (!dictationGroupText[firstQuestion.index]) {
+      if (!dictationGroupText[firstQuestion.newIndex]) {
         setDictationGroupText(prev => ({
           ...prev,
-          [firstQuestion.index]: firstQuestion.dictionary
+          [firstQuestion.newIndex]: firstQuestion.dictionary
         }))
       }
 
@@ -120,17 +120,17 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
 
     // Update explanation based on current question
     if (Constant.singleQuestion.includes(currentQuestion.type)) {
-      if (isAnswerChecked(currentQuestion.index)) {
+      if (isAnswerChecked(currentQuestion.newIndex)) {
         // If we have stored dictation results, use them
-        if (dictationResults[currentQuestion.index]) {
-          setCurrentExplanation(dictationResults[currentQuestion.index]);
+        if (dictationResults[currentQuestion.newIndex]) {
+          setCurrentExplanation(dictationResults[currentQuestion.newIndex]);
         } else {
           setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
         }
       }
     } else if (Constant.showDictionaryQuestionV2.includes(currentQuestion.type)) {
-      if (dictationResults[currentQuestion.index]) {
-        setCurrentExplanation(dictationResults[currentQuestion.index]);
+      if (dictationResults[currentQuestion.newIndex]) {
+        setCurrentExplanation(dictationResults[currentQuestion.newIndex]);
       } else {
         setCurrentExplanation(currentQuestion.explanation || "Không có giải thích cho câu hỏi này.");
       }
@@ -192,19 +192,19 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   function nextQuestion(question) {
     if (!question) return;
     if (Constant.singleQuestion.includes(question.type)) {
-      const idx = listQuestion.findIndex(q => q.index === question.index);
+      const idx = listQuestion.findIndex(q => q.newIndex === question.newIndex);
       if (idx === -1) return;
       if (idx < listQuestion.length - 1) {
         const nextQ = listQuestion[idx + 1];
-        setCurrentIndexQuestion(nextQ.index);
+        setCurrentIndexQuestion(nextQ.newIndex);
       }
     } else {
       if (question.questions.length) {
         const lastQuestionInGroup = question.questions[question.questions.length - 1];
-        const idx = listQuestion.findIndex(q => q.index === lastQuestionInGroup.index);
+        const idx = listQuestion.findIndex(q => q.newIndex === lastQuestionInGroup.newIndex);
         if (idx < listQuestion.length - 1) {
           const nextQ = listQuestion[idx + 1];
-          setCurrentIndexQuestion(nextQ.index);
+          setCurrentIndexQuestion(nextQ.newIndex);
         }
       }
     }
@@ -213,26 +213,26 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   function previousQuestion(currentQuestion) {
     if (!currentQuestion) return;
     if (Constant.singleQuestion.includes(currentQuestion.type)) {
-      const idx = listQuestion.findIndex(q => q.index === currentQuestion.index);
+      const idx = listQuestion.findIndex(q => q.newIndex === currentQuestion.newIndex);
       if (idx === -1) return;
       if (idx > 0) {
         const prevQ = listQuestion[idx - 1];
-        setCurrentIndexQuestion(prevQ.index);
+        setCurrentIndexQuestion(prevQ.newIndex);
       }
     } else {
       if (currentQuestion.questions.length) {
         const firstQuestionInGroup = currentQuestion.questions[0];
-        const idx = listQuestion.findIndex(q => q.index === firstQuestionInGroup.index);
+        const idx = listQuestion.findIndex(q => q.newIndex === firstQuestionInGroup.newIndex);
         if (idx > 0) {
           const prevQ = listQuestion[idx - 1];
-          setCurrentIndexQuestion(prevQ.index);
+          setCurrentIndexQuestion(prevQ.newIndex);
         }
       }
     }
   }
 
   function showBtnNextQuestion() {
-    const selectedQuestion = listQuestion.find(q => q.index === currentIndexQuestion);
+    const selectedQuestion = listQuestion.find(q => q.newIndex === currentIndexQuestion);
     if (!selectedQuestion) return;
     return true; // Always show navigation buttons in practice mode
   }
@@ -334,7 +334,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   }
 
   function checkAnswer(questionIndex) {
-    const question = listQuestion.find(q => q.index === questionIndex);
+    const question = listQuestion.find(q => q.newIndex === questionIndex);
     if (!question) return false;
 
     return answers[questionIndex] === question.correct;
@@ -420,7 +420,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     if (!currentQuestion || !currentQuestion.questions) return false;
 
     return currentQuestion.questions.every(question =>
-      isQuestionAnswered(question.index)
+      isQuestionAnswered(question.newIndex)
     );
   }
 
@@ -429,7 +429,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     if (!currentQuestion || !currentQuestion.questions) return false;
 
     return currentQuestion.questions.some(question =>
-      isAnswerChecked(question.index)
+      isAnswerChecked(question.newIndex)
     );
   }
 
@@ -439,15 +439,15 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
 
     // Check each question in the group
     currentQuestion.questions.forEach(question => {
-      if (isQuestionAnswered(question.index)) {
-        handleCheckAnswer(question.index);
+      if (isQuestionAnswered(question.newIndex)) {
+        handleCheckAnswer(question.newIndex);
       }
     });
 
     // Handle dictation for group questions if enabled
     if (showDictionary && Constant.showDictionaryQuestionV2.includes(currentQuestion.type)) {
       // Get the user's dictation input for this group
-      let userDictationText = dictationGroupText[currentQuestion.index] || '';
+      let userDictationText = dictationGroupText[currentQuestion.newIndex] || '';
       userDictationText = userDictationText.replace(/_/g, '');
 
       // Get the correct text from the question's dictionary field
@@ -477,7 +477,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
       setCurrentExplanation(explanation);
       setDictationResults(prev => ({
         ...prev,
-        [currentQuestion.index]: explanation
+        [currentQuestion.newIndex]: explanation
       }));
     }
   }
@@ -622,14 +622,14 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                   {/* Cột 2: Câu hỏi */}
                   <Box flex={1}>
                     <Heading size="md" mb={2}>
-                      Question {currentQuestion.index}
+                      Question {currentQuestion.newIndex}
                       <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
-                        setFlaggedQuestions(prev => prev.includes(currentQuestion.index)
-                          ? prev.filter(i => i !== currentQuestion.index)
-                          : [...prev, currentQuestion.index]);
+                        setFlaggedQuestions(prev => prev.includes(currentQuestion.newIndex)
+                          ? prev.filter(i => i !== currentQuestion.newIndex)
+                          : [...prev, currentQuestion.newIndex]);
                       }}>
                         <Image
-                          src={flaggedQuestions.includes(currentQuestion.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
+                          src={flaggedQuestions.includes(currentQuestion.newIndex) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
                           alt="Flag" boxSize="24px" display="inline"/>
                       </Box>
 
@@ -637,11 +637,11 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                       ==============
                       show Icon correct, incorrect
                       */}
-                      {/*{isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) && (*/}
+                      {/*{isQuestionAnswered(currentQuestion.newIndex) && isAnswerChecked(currentQuestion.newIndex) && (*/}
                       {/*  <Box as="span" ml={2}>*/}
                       {/*    <Image*/}
-                      {/*      src={checkAnswer(currentQuestion.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}*/}
-                      {/*      alt={checkAnswer(currentQuestion.index) ? "Correct" : "Wrong"}*/}
+                      {/*      src={checkAnswer(currentQuestion.newIndex) ? '/icons/correct.svg' : '/icons/wrong.svg'}*/}
+                      {/*      alt={checkAnswer(currentQuestion.newIndex) ? "Correct" : "Wrong"}*/}
                       {/*      boxSize="24px"*/}
                       {/*      display="inline"/>*/}
                       {/*  </Box>*/}
@@ -649,24 +649,24 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     </Heading>
                     {currentQuestion.description && <Text mb={2}>{currentQuestion.description}</Text>}
                     <RadioGroup.Root
-                      onValueChange={(e) => handleAnswerChange(e, currentQuestion.index)}
-                      value={answers[currentQuestion.index] || ""}
-                      disabled={isAnswerChecked(currentQuestion.index)}
+                      onValueChange={(e) => handleAnswerChange(e, currentQuestion.newIndex)}
+                      value={answers[currentQuestion.newIndex] || ""}
+                      disabled={isAnswerChecked(currentQuestion.newIndex)}
                     >
                       <VStack align="start" spacing={2}>
                         {(currentQuestion.answer && currentQuestion.answer.length ? currentQuestion.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
                           <RadioGroup.Item
                             key={index}
                             value={(index + 1)}
-                            disabled={isAnswerChecked(currentQuestion.index)}
+                            disabled={isAnswerChecked(currentQuestion.newIndex)}
                             style={{
-                              backgroundColor: isQuestionAnswered(currentQuestion.index) && isAnswerChecked(currentQuestion.index) &&
+                              backgroundColor: isQuestionAnswered(currentQuestion.newIndex) && isAnswerChecked(currentQuestion.newIndex) &&
                                 (currentQuestion.correct === index + 1 ? '#d4edda' :
-                                  (answers[currentQuestion.index] === index + 1 && answers[currentQuestion.index] !== currentQuestion.correct ? '#f8d7da' : 'transparent')),
+                                  (answers[currentQuestion.newIndex] === index + 1 && answers[currentQuestion.newIndex] !== currentQuestion.correct ? '#f8d7da' : 'transparent')),
                               padding: '2px 12px',
                               borderRadius: '4px',
                               width: '100%',
-                              opacity: isAnswerChecked(currentQuestion.index) ? (answers[currentQuestion.index] === index + 1 || currentQuestion.correct === index + 1 ? 1 : 0.6) : 1
+                              opacity: isAnswerChecked(currentQuestion.newIndex) ? (answers[currentQuestion.newIndex] === index + 1 || currentQuestion.correct === index + 1 ? 1 : 0.6) : 1
                             }}
                           >
                             <RadioGroup.ItemHiddenInput/>
@@ -675,15 +675,15 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                             {showDictionary && Constant.showDictionaryQuestion.includes(currentQuestion.type) && (
                               <Input
                                 placeholder={`Type what you hear for option ${choice}...`}
-                                value={(dictationText[currentQuestion.index] && dictationText[currentQuestion.index][choice]) || ""}
+                                value={(dictationText[currentQuestion.newIndex] && dictationText[currentQuestion.newIndex][choice]) || ""}
                                 onChange={(e) => setDictationText(prev => ({
                                   ...prev,
-                                  [currentQuestion.index]: {
-                                    ...(prev[currentQuestion.index] || {}),
+                                  [currentQuestion.newIndex]: {
+                                    ...(prev[currentQuestion.newIndex] || {}),
                                     [choice]: e.target.value
                                   }
                                 }))}
-                                disabled={isAnswerChecked(currentQuestion.index)}
+                                disabled={isAnswerChecked(currentQuestion.newIndex)}
                                 size="sm"
                               />
                             )}
@@ -702,15 +702,15 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     {/*            <Text mb={1}>Option {choice}:</Text>*/}
                     {/*            <Input*/}
                     {/*              placeholder={`Type what you hear for option ${choice}...`}*/}
-                    {/*              value={(dictationText[currentQuestion.index] && dictationText[currentQuestion.index][choice]) || ""}*/}
+                    {/*              value={(dictationText[currentQuestion.newIndex] && dictationText[currentQuestion.newIndex][choice]) || ""}*/}
                     {/*              onChange={(e) => setDictationText(prev => ({*/}
                     {/*                ...prev,*/}
-                    {/*                [currentQuestion.index]: {*/}
-                    {/*                  ...(prev[currentQuestion.index] || {}),*/}
+                    {/*                [currentQuestion.newIndex]: {*/}
+                    {/*                  ...(prev[currentQuestion.newIndex] || {}),*/}
                     {/*                  [choice]: e.target.value*/}
                     {/*                }*/}
                     {/*              }))}*/}
-                    {/*              disabled={isAnswerChecked(currentQuestion.index)}*/}
+                    {/*              disabled={isAnswerChecked(currentQuestion.newIndex)}*/}
                     {/*              resize="vertical"*/}
                     {/*            />*/}
                     {/*          </Box>*/}
@@ -720,18 +720,18 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     {/*  )*/}
                     {/*}*/}
 
-                    {isQuestionAnswered(currentQuestion.index) && !isAnswerChecked(currentQuestion.index) && (
+                    {isQuestionAnswered(currentQuestion.newIndex) && !isAnswerChecked(currentQuestion.newIndex) && (
                       <Button
                         mt={3}
                         colorPalette="blue"
-                        onClick={() => handleCheckAnswer(currentQuestion.index)}
+                        onClick={() => handleCheckAnswer(currentQuestion.newIndex)}
                       >
                         Check Answer
                       </Button>
                     )}
 
                     {/* Show explanation automatically if answer has been checked */}
-                    {isAnswerChecked(currentQuestion.index) && (
+                    {isAnswerChecked(currentQuestion.newIndex) && (
                       <Box mt={4} p={3} bg="blue.50" borderRadius="md">
                         <Text fontWeight="bold">Explanation:</Text>
                         <Box dangerouslySetInnerHTML={{__html: currentExplanation}}/>
@@ -783,48 +783,48 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                   {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
                       <Heading size="md" mt={4} mb={2}>
-                        Question {question.index}: {question.description && question.description}
+                        Question {question.newIndex}: {question.description && question.description}
                         <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
-                          setFlaggedQuestions(prev => prev.includes(question.index)
-                            ? prev.filter(i => i !== question.index)
-                            : [...prev, question.index]);
+                          setFlaggedQuestions(prev => prev.includes(question.newIndex)
+                            ? prev.filter(i => i !== question.newIndex)
+                            : [...prev, question.newIndex]);
                         }}>
                           <Image
-                            src={flaggedQuestions.includes(question.index) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
+                            src={flaggedQuestions.includes(question.newIndex) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
                             alt="Flag" boxSize="24px" display="inline"/>
                         </Box>
                         {/*
                           ==============
                           show Icon correct, incorrect
                         */}
-                        {/*{isQuestionAnswered(question.index) && isAnswerChecked(question.index) && (*/}
+                        {/*{isQuestionAnswered(question.newIndex) && isAnswerChecked(question.newIndex) && (*/}
                         {/*  <Box as="span" ml={2}>*/}
                         {/*    <Image*/}
-                        {/*      src={checkAnswer(question.index) ? '/icons/correct.svg' : '/icons/wrong.svg'}*/}
-                        {/*      alt={checkAnswer(question.index) ? "Correct" : "Wrong"}*/}
+                        {/*      src={checkAnswer(question.newIndex) ? '/icons/correct.svg' : '/icons/wrong.svg'}*/}
+                        {/*      alt={checkAnswer(question.newIndex) ? "Correct" : "Wrong"}*/}
                         {/*      boxSize="24px"*/}
                         {/*      display="inline"/>*/}
                         {/*  </Box>*/}
                         {/*)}*/}
                       </Heading>
                       <RadioGroup.Root
-                        onValueChange={(e) => handleAnswerChange(e, question.index)}
-                        value={answers[question.index] || ""}
-                        disabled={isAnswerChecked(question.index)}
+                        onValueChange={(e) => handleAnswerChange(e, question.newIndex)}
+                        value={answers[question.newIndex] || ""}
+                        disabled={isAnswerChecked(question.newIndex)}
                       >
                         <VStack align="start" spacing={2}>
                           {(question.answer && question.answer.length ? question.answer : ['A', 'B', 'C', 'D']).map((choice, index) => (
                             <RadioGroup.Item
                               key={index}
                               value={(index + 1)}
-                              disabled={isAnswerChecked(question.index)}
+                              disabled={isAnswerChecked(question.newIndex)}
                               style={{
-                                backgroundColor: isQuestionAnswered(question.index) && isAnswerChecked(question.index) &&
+                                backgroundColor: isQuestionAnswered(question.newIndex) && isAnswerChecked(question.newIndex) &&
                                   (question.correct === index + 1 ? '#d4edda' :
-                                    (answers[question.index] === index + 1 && answers[question.index] !== question.correct ? '#f8d7da' : 'transparent')),
+                                    (answers[question.newIndex] === index + 1 && answers[question.newIndex] !== question.correct ? '#f8d7da' : 'transparent')),
                                 padding: '8px 12px',
                                 borderRadius: '4px',
-                                opacity: isAnswerChecked(question.index) ? (answers[question.index] === index + 1 || question.correct === index + 1 ? 1 : 0.6) : 1
+                                opacity: isAnswerChecked(question.newIndex) ? (answers[question.newIndex] === index + 1 || question.correct === index + 1 ? 1 : 0.6) : 1
                               }}
                             >
                               <RadioGroup.ItemHiddenInput/>
@@ -845,10 +845,10 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                         <VStack align="start" spacing={3}>
                           <Textarea
                             placeholder={`Type what you hear...`}
-                            value={(dictationGroupText[currentQuestion.index] && dictationGroupText[currentQuestion.index]) || ""}
+                            value={(dictationGroupText[currentQuestion.newIndex] && dictationGroupText[currentQuestion.newIndex]) || ""}
                             onChange={(e) => setDictationGroupText(prev => ({
                               ...prev,
-                              [currentQuestion.index]: e.target.value
+                              [currentQuestion.newIndex]: e.target.value
                             }))}
                             disabled={isAnyGroupQuestionChecked()}
                             height="150px"
@@ -901,31 +901,31 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
           <VStack align="stretch" minW={"100%"} spacing={4} overflowY={'scroll'}>
             {partForSelectQuestion.map((partGroup, idx) => (
               <Box key={idx} pt={'6px'}>
-                <Text fontWeight="bold" mb={1}>Part {partGroup.part.replace("PART_", "")}</Text>
+                <Box borderBottom="1px solid" borderColor="gray.200" mb={4}></Box>
                 <HStack wrap="wrap" spacing={2}>
                   {partGroup.questions
                     .filter((q) => {
-                      if (filterType === 'flagged') return flaggedQuestions.includes(q.index);
-                      if (filterType === 'unanswered') return !answers[q.index];
+                      if (filterType === 'flagged') return flaggedQuestions.includes(q.newIndex);
+                      if (filterType === 'unanswered') return !answers[q.newIndex];
                       return true;
                     })
                     .map((q) => {
                       // Determine button color based on answer status
                       let colorPalette = "teal";
-                      if (answers[q.index] && isAnswerChecked(q.index)) {
-                        colorPalette = checkAnswer(q.index) ? "green" : "red";
-                      } else if (flaggedQuestions.includes(q.index)) {
+                      if (answers[q.newIndex] && isAnswerChecked(q.newIndex)) {
+                        colorPalette = checkAnswer(q.newIndex) ? "green" : "red";
+                      } else if (flaggedQuestions.includes(q.newIndex)) {
                         colorPalette = "yellow";
                       }
 
                       return (
                         <Button
-                          key={q.index}
+                          key={q.newIndex}
                           minW='46px'
                           size="sm"
-                          variant={flaggedQuestions.includes(q.index) || answers[q.index] ? "solid" : "outline"}
+                          variant={flaggedQuestions.includes(q.newIndex) || answers[q.newIndex] ? "solid" : "outline"}
                           colorPalette={colorPalette}
-                          onClick={() => setCurrentIndexQuestion(q.index)}
+                          onClick={() => setCurrentIndexQuestion(q.newIndex)}
                         >
                           {q.index}
                         </Button>

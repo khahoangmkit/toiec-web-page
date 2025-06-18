@@ -28,7 +28,9 @@
         "eat(v): ăn",
         "food(n): đồ ăn",
         "picnic(n): dã ngoại"
-      ]
+      ],
+      "source": "ets_2024_test_1",
+      "newIndex": 1
     },
     {
       "type": "PART_1",
@@ -47,7 +49,9 @@
         "B": "The man is standing in the snow beside a car",
         "C": "The man is shoveling snow from a walkway",
         "D": "The man is running through the snow"
-      }
+      },
+      "source": "ets_2024_test_1",
+      "newIndex": 2
     },
     {
       "type": "PART_1",
@@ -66,7 +70,9 @@
         "B": "Two of people are having a conversation",
         "C": "One of the men is rearranging cushions on a sofa",
         "D": "One of the men is painting a picture"
-      }
+      },
+      "source": "ets_2024_test_1",
+      "newIndex": 3
     },
     {
       "type": "PART_1",
@@ -85,7 +91,9 @@
         "B": "Clothes hangers are scattered on the ground",
         "C": "Empty racks are lined up next to a building",
         "D": "Clothing is being displayed under a tent."
-      }
+      },
+      "source": "ets_2024_test_1",
+      "newIndex": 4
     },
     {
       "type": "PART_1",
@@ -104,7 +112,9 @@
         "B": "Chairs have been stacked in front of an entryway",
         "C": "A computer station has been set up on a desk",
         "D": "A rug has been rolled up against a wall"
-      }
+      },
+      "source": "ets_2024_test_1",
+      "newIndex": 5
     },
     {
       "type": "PART_1",
@@ -123,7 +133,135 @@
         "B": "One of the men is replacing some flooring",
         "C": "A door has been taken off its frame",
         "D": "A light fixture has been left on the ground"
-      }
+      },
+      "source": "ets_2024_test_1",
+      "newIndex": 6
+    },
+    {
+      "type": "PART_1",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data_by_part/part_1/audios/1687964911227.mp3\"></audio><p><img src=\"/data_by_part/part_1/images/1687964900915.jpg\"/></p>",
+      "index": 1,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data_by_part/part_1/audios/1687964911227.mp3",
+      "imgLink": [
+        "/data_by_part/part_1/images/1687964900915.jpg"
+      ],
+      "answer": [],
+      "explanation": "<p>(A) She’s folding a piece of paper.</p><p>(B) She’s smelling flowers in a garden.</p><p><span style=\"color: rgb(0, 112, 192);\">(C) She’s holding a book in her hands.</span></p><p>(D) She’s closing up a box.</p>",
+      "source": "ets_2017_test_2",
+      "dictionary": {
+        "A": "She’s folding a piece of paper.",
+        "B": "She’s smelling flowers in a garden.",
+        "C": "She’s holding a book in her hands.",
+        "D": "She’s closing up a box."
+      },
+      "newIndex": 7
+    },
+    {
+      "type": "PART_1",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data_by_part/part_1/audios/1686716288631.mp3\"></audio><p><img src=\"/data_by_part/part_1/images/1686733169677.jpg\"/></p>",
+      "index": 2,
+      "correct": 4,
+      "description": null,
+      "audioLink": "/data_by_part/part_1/audios/1686716288631.mp3",
+      "imgLink": [
+        "/data_by_part/part_1/images/1686733169677.jpg"
+      ],
+      "answer": [],
+      "explanation": "<p>(A) He’s looking at a picture.</p><p>(B) She’s opening her handbag.</p><p>(C) They’re fixing a railing.</p><p><span style=\"color: rgb(0, 112, 192);\">(D) They’re walking down some steps.</span></p>",
+      "source": "ets_2017_test_2",
+      "dictionary": {
+        "A": "He’s looking at a picture.",
+        "B": "She’s opening her handbag.",
+        "C": "They’re fixing a railing.",
+        "D": "They’re walking down some steps."
+      },
+      "newIndex": 8
+    },
+    {
+      "type": "PART_1",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data_by_part/part_1/audios/1686711902415.mp3\"></audio><p><img src=\"/data_by_part/part_1/images/1686733191892.jpg\"/></p>",
+      "index": 3,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data_by_part/part_1/audios/1686711902415.mp3",
+      "imgLink": [
+        "/data_by_part/part_1/images/1686733191892.jpg"
+      ],
+      "answer": [],
+      "explanation": "<p>(A) One of the men is taking off his backpack.</p><p><span style=\"color: rgb(0, 112, 192);\">(B) One of the men is reading a brochure.</span></p><p>(C) Some people are assembling a table.</p><p>(D) Some people are rearranging chairs.</p>",
+      "source": "ets_2017_test_2",
+      "dictionary": {
+        "A": "One of the men is taking off his backpack.",
+        "B": "One of the men is reading a brochure.",
+        "C": "Some people are assembling a table.",
+        "D": "Some people are rearranging chairs."
+      },
+      "newIndex": 9
+    },
+    {
+      "type": "PART_1",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data_by_part/part_1/audios/1686711933499.mp3\"></audio><p><img src=\"/data_by_part/part_1/images/1686733219030.jpg\"/></p>",
+      "index": 4,
+      "correct": 3,
+      "description": null,
+      "audioLink": "/data_by_part/part_1/audios/1686711933499.mp3",
+      "imgLink": [
+        "/data_by_part/part_1/images/1686733219030.jpg"
+      ],
+      "answer": [],
+      "explanation": "<p>(A) A server is setting up an umbrella.</p><p>(B) A sign is being carried across a walkway.</p><p><span style=\"color: rgb(0, 112, 192);\">(C) Cars have been parked in the shade.</span></p><p>(D) Customers are seated at a café.</p>",
+      "source": "ets_2017_test_2",
+      "dictionary": {
+        "A": "A server is setting up an umbrella.",
+        "B": "A sign is being carried across a walkway.",
+        "C": "Cars have been parked in the shade.",
+        "D": "Customers are seated at a café."
+      },
+      "newIndex": 10
+    },
+    {
+      "type": "PART_1",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data_by_part/part_1/audios/1686711964534.mp3\"></audio><p><img src=\"/data_by_part/part_1/images/1686733235817.jpg\"/></p>",
+      "index": 5,
+      "correct": 2,
+      "description": null,
+      "audioLink": "/data_by_part/part_1/audios/1686711964534.mp3",
+      "imgLink": [
+        "/data_by_part/part_1/images/1686733235817.jpg"
+      ],
+      "answer": [],
+      "explanation": "<p>(A) A drawer has been pulled open.</p><p><span style=\"color: rgb(0, 112, 192);\">(B) Files are being stored on shelves.</span></p><p>(C) A monitor is being mounted on a wall.</p><p>(D) A light has been hung from the ceiling.</p>",
+      "source": "ets_2017_test_2",
+      "dictionary": {
+        "A": "A drawer has been pulled open.",
+        "B": "Files are being stored on shelves.",
+        "C": "A monitor is being mounted on a wall.",
+        "D": "A light has been hung from the ceiling."
+      },
+      "newIndex": 11
+    },
+    {
+      "type": "PART_1",
+      "passages": "<audio controls=\"\" controlslist=\"nodownload\" src=\"/data_by_part/part_1/audios/1686722318312.mp3\"></audio><p><img src=\"/data_by_part/part_1/images/1686733251997.jpg\"/></p>",
+      "index": 6,
+      "correct": 1,
+      "description": null,
+      "audioLink": "/data_by_part/part_1/audios/1686722318312.mp3",
+      "imgLink": [
+        "/data_by_part/part_1/images/1686733251997.jpg"
+      ],
+      "answer": [],
+      "explanation": "<p><span style=\"color: rgb(0, 112, 192);\">(A) A man is standing near a construction site.</span></p><p>(B) A worker is climbing a ladder.</p><p>(C) A row of trees has been planted alongside a fence.</p><p>(D) Vehicles are transporting materials to a building.</p>",
+      "source": "ets_2017_test_2",
+      "dictionary": {
+        "A": "A man is standing near a construction site.",
+        "B": "A worker is climbing a ladder.",
+        "C": "A row of trees has been planted alongside a fence.",
+        "D": "Vehicles are transporting materials to a building."
+      },
+      "newIndex": 12
     }
   ]
 }

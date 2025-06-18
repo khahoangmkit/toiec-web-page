@@ -76,6 +76,7 @@ export default function Page() {
     fetch(`/api/part/${partId}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log('data', data);
         setListQuestion(data.questionsJson || []);
       })
       .catch(() => setListQuestion([]));
