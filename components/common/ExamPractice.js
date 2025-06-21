@@ -624,7 +624,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                   {/* Cột 2: Câu hỏi */}
                   <Box flex={1}>
                     <Heading size="md" mb={2}>
-                      Question {currentQuestion.newIndex}
+                      Question {currentQuestion.index}
                       <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
                         setFlaggedQuestions(prev => prev.includes(currentQuestion.newIndex)
                           ? prev.filter(i => i !== currentQuestion.newIndex)
@@ -785,7 +785,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                   {currentQuestion.questions.map((question, indexQuestion) => (
                     <Box key={`question-${indexQuestion}`}>
                       <Heading size="md" mt={4} mb={2}>
-                        Question {question.newIndex}: {question.description && question.description}
+                        Question {question.index}: {question.description && question.description}
                         <Box as="span" ml={2} style={{cursor: 'pointer'}} onClick={() => {
                           setFlaggedQuestions(prev => prev.includes(question.newIndex)
                             ? prev.filter(i => i !== question.newIndex)
