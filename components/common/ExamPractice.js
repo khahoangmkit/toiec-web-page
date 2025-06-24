@@ -95,6 +95,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
         type: firstQuestion.type,
         passages: firstQuestion.passages,
         index: firstQuestion.newIndex,
+        newIndex: firstQuestion.newIndex,
         audioLink: firstQuestion.audioLink,
         imgLink: firstQuestion.imgLink,
         questions: groupQuestionsArr,

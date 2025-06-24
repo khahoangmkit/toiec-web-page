@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 // Activation code - in a real application, this should be stored securely
 // and possibly be user-specific or time-limited
-const ACTIVATION_CODE = ["SpU8oZ84C990", "LjTm58aYmeG9", "rQaMU14neN", "e6GjnOZQmB"];
+const ACTIVATION_CODE = ["DONGHANH", "TINCAY", "CAMKET"];
 
 export default async function handler(req, res) {
   // Only allow POST requests
