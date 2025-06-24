@@ -12,7 +12,7 @@ import {
   RadioGroup, Input,
   Dialog, Portal, CloseButton, Textarea
 } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AudioCommon from "@/components/common/AudioCommon";
 import { Constant } from "@/constants";
 import { useRouter } from "next/router";
@@ -71,6 +71,8 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
   const [showKeywordsDialog, setShowKeywordsDialog] = useState(false); // State for keywords dialog
   const [dictationGroupText, setDictationGroupText] = useState({});
   const [dictationGroupResults, setDictationGroupResults] = useState({}); // Store dictation comparison results
+  const [showExplanationDialog, setShowExplanationDialog] = useState(false); // State for explanation dialog
+  const [explanationQuestion, setExplanationQuestion] = useState(""); // State for explanation dialog
 
   useEffect(() => {
     if (!listQuestion.length) return;
@@ -493,6 +495,14 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
     return explanationContent;
   }
 
+  function handleShowExplanation(newIndex) {
+
+    const question = listQuestion.find(q => q.newIndex === newIndex);
+    if (!question || question.type !== 'PART_6') return;
+    setExplanationQuestion(question.explanation);
+    setShowExplanationDialog(true);
+  }
+
   return (
     <Flex
       minH={'calc(100vh - 90px)'}
@@ -590,6 +600,28 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                     ) : (
                       <Text>Không có từ vựng cho câu hỏi này.</Text>
                     )}
+                  </Dialog.Body>
+                </Dialog.Content>
+              </Dialog.Positioner>
+            </Portal>
+          </Dialog.Root>
+
+          {/* Explanation Dialog */}
+          <Dialog.Root lazyMount open={showExplanationDialog} onOpenChange={(e) => {
+            setShowExplanationDialog(e.open);
+          }} size="md" placement="center" scrollBehavior="inside">
+            <Portal>
+              <Dialog.Backdrop/>
+              <Dialog.Positioner>
+                <Dialog.Content>
+                  <Dialog.Header>
+                    <Dialog.Title>Explanation</Dialog.Title>
+                    <Dialog.CloseTrigger asChild>
+                      <CloseButton size="sm"/>
+                    </Dialog.CloseTrigger>
+                  </Dialog.Header>
+                  <Dialog.Body>
+                    <Box dangerouslySetInnerHTML={{__html: explanationQuestion}}/>
                   </Dialog.Body>
                 </Dialog.Content>
               </Dialog.Positioner>
@@ -806,6 +838,11 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                             src={flaggedQuestions.includes(question.newIndex) ? '/icons/flag-solid.svg' : '/icons/flag.svg'}
                             alt="Flag" boxSize="24px" display="inline"/>
                         </Box>
+                        {/* Explanation Button - Show for part_6 questions */}
+                        {question && question.type === "PART_6" && isAnyGroupQuestionChecked() && (
+                          <Image style={{cursor: 'pointer', display: 'inline-block'}} onClick={() => handleShowExplanation(question.newIndex)}
+                                 src="/icons/open-external.svg" alt="open-extenal-icon" boxSize="16px"/>
+                        )}
                         {/*
                           ==============
                           show Icon correct, incorrect
@@ -873,7 +910,7 @@ export default function ExamPractice({listQuestion = [], timer = 7200, onSubmit}
                   }
 
                   {/* Single explanation for the entire group */}
-                  {isAnyGroupQuestionChecked() && (
+                  {isAnyGroupQuestionChecked() && !Constant.hideExplanation.includes(currentQuestion.type) && (
                     <Box mt={4} mb={5} p={4} bg="blue.50" borderRadius="md" boxShadow="md">
                       <Heading size="md" mb={3}>Explanation: </Heading>
                       <Box
